@@ -46,8 +46,8 @@ fp32.
 | Platform | Artifact | p50 | p95 | min | top1 | order_exact |
 |---|---|---|---|---|---|---|
 | **RK3588** (Radxa ROCK 5T) | `oldship.s512.m16.fp16.nanguard.sharedmask.rk3588.rknn` | **509 ms** | ≤598 ms | 493.7 ms | **16/16** | 15/16 |
-| **Jetson Orin NX** | `laya.s512.fp16.engine` | **18.9 ms** | 24.8 ms | — | **16/16** | 16/16 (bit-exact) |
-| Jetson Orin Nano | same engine | 22.0 ms | 22.9 ms | — | **16/16** | 16/16 (bit-exact) |
+| **Jetson Orin NX** | `laya.s512.fp16.engine` | **18.9 ms** | 24.8 ms | — | **16/16** | 16/16 |
+| Jetson Orin Nano | same engine | 22.0 ms | 22.9 ms | — | **16/16** | 16/16 |
 
 The two platforms differ by **27×**. Both match the fp32 reference on top1 for all 16 samples;
 the RKNN model differs on the full ordering of one. Neither is bit-identical to the fp32
