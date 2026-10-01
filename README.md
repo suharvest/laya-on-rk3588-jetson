@@ -108,8 +108,14 @@ The output is a per-sample table of the **live** candidate classes in ranked ord
 Kendall statistic. `--dump` is repeatable: pass several to compare models side by side in one
 table.
 
-Weights and converted artifacts are published separately — see [`ARTIFACTS.md`](ARTIFACTS.md)
-for sizes and md5s.
+Converted artifacts and the ONNX sources are published on Hugging Face:
+
+| Artifact | Where |
+|---|---|
+| `.rknn`, `.engine`, both source `.onnx` files | [`harvestsu/laya-multilingual-rknn-tensorrt`](https://huggingface.co/harvestsu/laya-multilingual-rknn-tensorrt) |
+| calibration + held-out sets, ORT reference | the same repository, under `calib/` and `golden/` (also committed here) |
+
+Sizes and md5s for everything: [`ARTIFACTS.md`](ARTIFACTS.md).
 
 ## Conversion pipeline
 

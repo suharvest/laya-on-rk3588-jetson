@@ -4,7 +4,16 @@ Sizes and md5s for every artifact referenced in this repository, and the exact O
 converted artifact was built from.
 
 Large binaries (`.rknn`, `.engine`, `.onnx` — hundreds of MB each) are **not committed here**.
-They are published separately; see the release/Hugging Face links in the [README](README.md).
+All of them are published at
+**[huggingface.co/harvestsu/laya-multilingual-rknn-tensorrt](https://huggingface.co/harvestsu/laya-multilingual-rknn-tensorrt)**,
+along with `calib/` and `golden/`.
+
+To restore one:
+
+```bash
+hf download harvestsu/laya-multilingual-rknn-tensorrt \
+    oldship.s512.m16.fp16.nanguard.sharedmask.rk3588.rknn --local-dir .
+```
 
 ---
 
