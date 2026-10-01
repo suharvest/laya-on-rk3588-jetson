@@ -1,0 +1,8 @@
+/home/harve/laya-rknn/calib_s512/calib/sample_0000
+/home/harve/laya-rknn/calib_s512/calib/sample_0001
+/home/harve/laya-rknn/calib_s512/calib/sample_0002
+/home/harve/laya-rknn/calib_s512/calib/sample_0003
+/home/harve/laya-rknn/calib_s512/calib/sample_0004
+/home/harve/laya-rknn/calib_s512/calib/sample_0005
+/home/harve/laya-rknn/calib_s512/calib/sample_0006
+/home/harve/laya-rknn/calib_s512/calib/sample_0007

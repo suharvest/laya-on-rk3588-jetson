@@ -1,0 +1,2462 @@
+[
+ {
+  "dq_idx": 0,
+  "dq_out": "wq_0000_dequant",
+  "q_in": "wq_0000_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0010890209814533591,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 1,
+  "dq_out": "wq_0001_dequant",
+  "q_in": "wq_0001_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0009501299355179071,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 2,
+  "dq_out": "wq_0002_dequant",
+  "q_in": "wq_0002_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.001775306067429483,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 3,
+  "dq_out": "wq_0003_dequant",
+  "q_in": "wq_0003_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0018800750840455294,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 4,
+  "dq_out": "wq_0004_dequant",
+  "q_in": "wq_0004_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0014946404844522476,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 5,
+  "dq_out": "wq_0005_dequant",
+  "q_in": "wq_0005_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0011572650400921702,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 6,
+  "dq_out": "wq_0006_dequant",
+  "q_in": "wq_0006_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0028354914393275976,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 7,
+  "dq_out": "wq_0007_dequant",
+  "q_in": "wq_0007_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0017714613350108266,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 8,
+  "dq_out": "wq_0008_dequant",
+  "q_in": "wq_0008_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0008679487509652972,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 9,
+  "dq_out": "wq_0009_dequant",
+  "q_in": "wq_0009_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0012341596884652972,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 10,
+  "dq_out": "wq_0010_dequant",
+  "q_in": "wq_0010_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0013225885340943933,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 11,
+  "dq_out": "wq_0011_dequant",
+  "q_in": "wq_0011_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0017676166025921702,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 12,
+  "dq_out": "wq_0012_dequant",
+  "q_in": "wq_0012_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0016484297811985016,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 13,
+  "dq_out": "wq_0013_dequant",
+  "q_in": "wq_0013_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0010582631221041083,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 14,
+  "dq_out": "wq_0014_dequant",
+  "q_in": "wq_0014_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0016292061191052198,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 15,
+  "dq_out": "wq_0015_dequant",
+  "q_in": "wq_0015_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0023433654569089413,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 16,
+  "dq_out": "wq_0016_dequant",
+  "q_in": "wq_0016_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0014215904520824552,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 17,
+  "dq_out": "wq_0017_dequant",
+  "q_in": "wq_0017_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0020031065214425325,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 18,
+  "dq_out": "wq_0018_dequant",
+  "q_in": "wq_0018_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0015388549072667956,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 19,
+  "dq_out": "wq_0019_dequant",
+  "q_in": "wq_0019_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0030046598985791206,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 20,
+  "dq_out": "wq_0020_dequant",
+  "q_in": "wq_0020_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.001487912144511938,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 21,
+  "dq_out": "wq_0021_dequant",
+  "q_in": "wq_0021_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0019021822372451425,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 22,
+  "dq_out": "wq_0022_dequant",
+  "q_in": "wq_0022_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0014667661162093282,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 23,
+  "dq_out": "wq_0023_dequant",
+  "q_in": "wq_0023_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0027835876680910587,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 24,
+  "dq_out": "wq_0024_dequant",
+  "q_in": "wq_0024_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.001111128251068294,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 25,
+  "dq_out": "wq_0025_dequant",
+  "q_in": "wq_0025_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0012005182215943933,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 26,
+  "dq_out": "wq_0026_dequant",
+  "q_in": "wq_0026_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0013273945078253746,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 27,
+  "dq_out": "wq_0027_dequant",
+  "q_in": "wq_0027_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0018060639267787337,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 28,
+  "dq_out": "wq_0028_dequant",
+  "q_in": "wq_0028_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0012283925898373127,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 29,
+  "dq_out": "wq_0029_dequant",
+  "q_in": "wq_0029_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0006656196201220155,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 30,
+  "dq_out": "wq_0030_dequant",
+  "q_in": "wq_0030_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0013927549589425325,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 31,
+  "dq_out": "wq_0031_dequant",
+  "q_in": "wq_0031_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0013533465098589659,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 32,
+  "dq_out": "wq_0032_dequant",
+  "q_in": "wq_0032_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.001978115877136588,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 33,
+  "dq_out": "wq_0033_dequant",
+  "q_in": "wq_0033_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.00044719065772369504,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 34,
+  "dq_out": "wq_0034_dequant",
+  "q_in": "wq_0034_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0012149360263720155,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 35,
+  "dq_out": "wq_0035_dequant",
+  "q_in": "wq_0035_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0010621078545227647,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 36,
+  "dq_out": "wq_0036_dequant",
+  "q_in": "wq_0036_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0017926073633134365,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 37,
+  "dq_out": "wq_0037_dequant",
+  "q_in": "wq_0037_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0003909614169970155,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 38,
+  "dq_out": "wq_0038_dequant",
+  "q_in": "wq_0038_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0014581154100596905,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 39,
+  "dq_out": "wq_0039_dequant",
+  "q_in": "wq_0039_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0008564145537093282,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 40,
+  "dq_out": "wq_0040_dequant",
+  "q_in": "wq_0040_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0021876536775380373,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 41,
+  "dq_out": "wq_0041_dequant",
+  "q_in": "wq_0041_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.00042003722046501935,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 42,
+  "dq_out": "wq_0042_dequant",
+  "q_in": "wq_0042_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0012072465615347028,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 43,
+  "dq_out": "wq_0043_dequant",
+  "q_in": "wq_0043_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0017176350811496377,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 44,
+  "dq_out": "wq_0044_dequant",
+  "q_in": "wq_0044_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0011572650400921702,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 45,
+  "dq_out": "wq_0045_dequant",
+  "q_in": "wq_0045_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0007559708901681006,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 46,
+  "dq_out": "wq_0046_dequant",
+  "q_in": "wq_0046_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0006944551132619381,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 47,
+  "dq_out": "wq_0047_dequant",
+  "q_in": "wq_0047_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0012389656621962786,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 48,
+  "dq_out": "wq_0048_dequant",
+  "q_in": "wq_0048_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0007511649746447802,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 49,
+  "dq_out": "wq_0049_dequant",
+  "q_in": "wq_0049_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0005089467158541083,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 50,
+  "dq_out": "wq_0050_dequant",
+  "q_in": "wq_0050_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.001277412986382842,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 51,
+  "dq_out": "wq_0051_dequant",
+  "q_in": "wq_0051_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.001853161957114935,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 52,
+  "dq_out": "wq_0052_dequant",
+  "q_in": "wq_0052_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.001000592135824263,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 53,
+  "dq_out": "wq_0053_dequant",
+  "q_in": "wq_0053_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0012072465615347028,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 54,
+  "dq_out": "wq_0054_dequant",
+  "q_in": "wq_0054_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0012754906201735139,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 55,
+  "dq_out": "wq_0055_dequant",
+  "q_in": "wq_0055_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.002339520724490285,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 56,
+  "dq_out": "wq_0056_dequant",
+  "q_in": "wq_0056_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0009794461075216532,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 57,
+  "dq_out": "wq_0057_dequant",
+  "q_in": "wq_0057_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.000499815447255969,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 58,
+  "dq_out": "wq_0058_dequant",
+  "q_in": "wq_0058_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.001155342673882842,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 59,
+  "dq_out": "wq_0059_dequant",
+  "q_in": "wq_0059_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0025259903632104397,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 60,
+  "dq_out": "wq_0060_dequant",
+  "q_in": "wq_0060_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0009145661606453359,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 61,
+  "dq_out": "wq_0061_dequant",
+  "q_in": "wq_0061_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0021280604414641857,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 62,
+  "dq_out": "wq_0062_dequant",
+  "q_in": "wq_0062_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0012966366484761238,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 63,
+  "dq_out": "wq_0063_dequant",
+  "q_in": "wq_0063_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0015849916962906718,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 64,
+  "dq_out": "wq_0064_dequant",
+  "q_in": "wq_0064_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0011659156298264861,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 65,
+  "dq_out": "wq_0065_dequant",
+  "q_in": "wq_0065_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0006468765204772353,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 66,
+  "dq_out": "wq_0066_dequant",
+  "q_in": "wq_0066_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0011745663359761238,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 67,
+  "dq_out": "wq_0067_dequant",
+  "q_in": "wq_0067_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0015888364287093282,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 68,
+  "dq_out": "wq_0068_dequant",
+  "q_in": "wq_0068_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0009054348920471966,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 69,
+  "dq_out": "wq_0069_dequant",
+  "q_in": "wq_0069_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0005911279004067183,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 70,
+  "dq_out": "wq_0070_dequant",
+  "q_in": "wq_0070_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0009828101610764861,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 71,
+  "dq_out": "wq_0071_dequant",
+  "q_in": "wq_0071_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0012408880284056067,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 72,
+  "dq_out": "wq_0072_dequant",
+  "q_in": "wq_0072_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0005815160693600774,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 73,
+  "dq_out": "wq_0073_dequant",
+  "q_in": "wq_0073_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0023068406153470278,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 74,
+  "dq_out": "wq_0074_dequant",
+  "q_in": "wq_0074_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0014792615547776222,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 75,
+  "dq_out": "wq_0075_dequant",
+  "q_in": "wq_0075_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0010188545566052198,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 76,
+  "dq_out": "wq_0076_dequant",
+  "q_in": "wq_0076_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0008386326371692121,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 77,
+  "dq_out": "wq_0077_dequant",
+  "q_in": "wq_0077_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0009054348920471966,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 78,
+  "dq_out": "wq_0078_dequant",
+  "q_in": "wq_0078_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0010236605303362012,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 79,
+  "dq_out": "wq_0079_dequant",
+  "q_in": "wq_0079_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0010342334862798452,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 80,
+  "dq_out": "wq_0080_dequant",
+  "q_in": "wq_0080_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0020607775077223778,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 81,
+  "dq_out": "wq_0081_dequant",
+  "q_in": "wq_0081_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0015946035273373127,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 82,
+  "dq_out": "wq_0082_dequant",
+  "q_in": "wq_0082_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0011745663359761238,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 83,
+  "dq_out": "wq_0083_dequant",
+  "q_in": "wq_0083_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0012168583925813437,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 84,
+  "dq_out": "wq_0084_dequant",
+  "q_in": "wq_0084_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.001684954739175737,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 85,
+  "dq_out": "wq_0085_dequant",
+  "q_in": "wq_0085_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.002572127152234316,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 86,
+  "dq_out": "wq_0086_dequant",
+  "q_in": "wq_0086_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0012024405878037214,
+  "scale_n": 2304
+ },
+ {
+  "dq_idx": 87,
+  "dq_out": "wq_0087_dequant",
+  "q_in": "wq_0087_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0023914247285574675,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 88,
+  "dq_out": "wq_0088_dequant",
+  "q_in": "wq_0088_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0008741964702494442,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 89,
+  "dq_out": "wq_0089_dequant",
+  "q_in": "wq_0089_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0010515347821637988,
+  "scale_n": 3072
+ },
+ {
+  "dq_idx": 90,
+  "dq_out": "wq_0090_dequant",
+  "q_in": "wq_0090_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0008842888637445867,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 91,
+  "dq_out": "wq_0091_dequant",
+  "q_in": "wq_0091_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0006560077890753746,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 92,
+  "dq_out": "wq_0092_dequant",
+  "q_in": "wq_0092_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0004017747414764017,
+  "scale_n": 3072
+ },
+ {
+  "dq_idx": 93,
+  "dq_out": "wq_0093_dequant",
+  "q_in": "wq_0093_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.00048203355981968343,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 94,
+  "dq_out": "wq_0094_dequant",
+  "q_in": "wq_0094_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0008929395116865635,
+  "scale_n": 768
+ },
+ {
+  "dq_idx": 95,
+  "dq_out": "wq_0095_dequant",
+  "q_in": "wq_0095_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.000710314663592726,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 96,
+  "dq_out": "wq_0096_dequant",
+  "q_in": "wq_0096_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0004822738410439342,
+  "scale_n": 256
+ },
+ {
+  "dq_idx": 97,
+  "dq_out": "wq_0097_dequant",
+  "q_in": "wq_0097_int8",
+  "fp": null,
+  "kind": "act",
+  "per_channel": true,
+  "scale": 0.0007127175922505558,
+  "scale_n": 2
+ },
+ {
+  "dq_idx": 1073,
+  "dq_out": "qdq_0051_dequant",
+  "q_in": "qdq_0051_quant",
+  "fp": "/encoder/embeddings/norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.03125384449958801,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1104,
+  "dq_out": "qdq_0001_dequant",
+  "q_in": "qdq_0001_quant",
+  "fp": "/encoder/layers.0/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.1583757996559143,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1166,
+  "dq_out": "qdq_0052_dequant",
+  "q_in": "qdq_0052_quant",
+  "fp": "/encoder/layers.0/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.01853295788168907,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1171,
+  "dq_out": "qdq_0053_dequant",
+  "q_in": "qdq_0053_quant",
+  "fp": "/encoder/layers.0/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.02919410914182663,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1174,
+  "dq_out": "qdq_0002_dequant",
+  "q_in": "qdq_0002_quant",
+  "fp": "/encoder/layers.0/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.08712504804134369,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1190,
+  "dq_out": "qdq_0054_dequant",
+  "q_in": "qdq_0054_quant",
+  "fp": "/encoder/layers.0/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.03714689984917641,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1195,
+  "dq_out": "qdq_0055_dequant",
+  "q_in": "qdq_0055_quant",
+  "fp": "/encoder/layers.1/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.10618598014116287,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1198,
+  "dq_out": "qdq_0003_dequant",
+  "q_in": "qdq_0003_quant",
+  "fp": "/encoder/layers.1/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.06530828028917313,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1237,
+  "dq_out": "qdq_0056_dequant",
+  "q_in": "qdq_0056_quant",
+  "fp": "/encoder/layers.1/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.02226182445883751,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1242,
+  "dq_out": "qdq_0057_dequant",
+  "q_in": "qdq_0057_quant",
+  "fp": "/encoder/layers.1/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.04973137378692627,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1245,
+  "dq_out": "qdq_0004_dequant",
+  "q_in": "qdq_0004_quant",
+  "fp": "/encoder/layers.1/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.06659454107284546,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1261,
+  "dq_out": "qdq_0058_dequant",
+  "q_in": "qdq_0058_quant",
+  "fp": "/encoder/layers.1/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.015387224033474922,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1266,
+  "dq_out": "qdq_0059_dequant",
+  "q_in": "qdq_0059_quant",
+  "fp": "/encoder/layers.2/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.1501096934080124,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1269,
+  "dq_out": "qdq_0005_dequant",
+  "q_in": "qdq_0005_quant",
+  "fp": "/encoder/layers.2/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.05965114012360573,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1308,
+  "dq_out": "qdq_0060_dequant",
+  "q_in": "qdq_0060_quant",
+  "fp": "/encoder/layers.2/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.021842265501618385,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1313,
+  "dq_out": "qdq_0061_dequant",
+  "q_in": "qdq_0061_quant",
+  "fp": "/encoder/layers.2/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.04027777910232544,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1316,
+  "dq_out": "qdq_0006_dequant",
+  "q_in": "qdq_0006_quant",
+  "fp": "/encoder/layers.2/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.045162785798311234,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1332,
+  "dq_out": "qdq_0062_dequant",
+  "q_in": "qdq_0062_quant",
+  "fp": "/encoder/layers.2/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.01603087969124317,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1337,
+  "dq_out": "qdq_0063_dequant",
+  "q_in": "qdq_0063_quant",
+  "fp": "/encoder/layers.3/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.1015143096446991,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1340,
+  "dq_out": "qdq_0007_dequant",
+  "q_in": "qdq_0007_quant",
+  "fp": "/encoder/layers.3/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.06134761869907379,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1379,
+  "dq_out": "qdq_0064_dequant",
+  "q_in": "qdq_0064_quant",
+  "fp": "/encoder/layers.3/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.013499988242983818,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1384,
+  "dq_out": "qdq_0065_dequant",
+  "q_in": "qdq_0065_quant",
+  "fp": "/encoder/layers.3/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.03944114223122597,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1387,
+  "dq_out": "qdq_0008_dequant",
+  "q_in": "qdq_0008_quant",
+  "fp": "/encoder/layers.3/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.053949493914842606,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1403,
+  "dq_out": "qdq_0066_dequant",
+  "q_in": "qdq_0066_quant",
+  "fp": "/encoder/layers.3/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.009158305823802948,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1408,
+  "dq_out": "qdq_0067_dequant",
+  "q_in": "qdq_0067_quant",
+  "fp": "/encoder/layers.4/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.14823445677757263,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1411,
+  "dq_out": "qdq_0009_dequant",
+  "q_in": "qdq_0009_quant",
+  "fp": "/encoder/layers.4/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.05454385653138161,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1450,
+  "dq_out": "qdq_0068_dequant",
+  "q_in": "qdq_0068_quant",
+  "fp": "/encoder/layers.4/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.022989222779870033,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1455,
+  "dq_out": "qdq_0069_dequant",
+  "q_in": "qdq_0069_quant",
+  "fp": "/encoder/layers.4/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.052486661821603775,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1458,
+  "dq_out": "qdq_0010_dequant",
+  "q_in": "qdq_0010_quant",
+  "fp": "/encoder/layers.4/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.03450309485197067,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1474,
+  "dq_out": "qdq_0070_dequant",
+  "q_in": "qdq_0070_quant",
+  "fp": "/encoder/layers.4/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.015356413088738918,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1479,
+  "dq_out": "qdq_0071_dequant",
+  "q_in": "qdq_0071_quant",
+  "fp": "/encoder/layers.5/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.07188279926776886,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1482,
+  "dq_out": "qdq_0011_dequant",
+  "q_in": "qdq_0011_quant",
+  "fp": "/encoder/layers.5/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.05332503467798233,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1521,
+  "dq_out": "qdq_0072_dequant",
+  "q_in": "qdq_0072_quant",
+  "fp": "/encoder/layers.5/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.016519486904144287,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1526,
+  "dq_out": "qdq_0073_dequant",
+  "q_in": "qdq_0073_quant",
+  "fp": "/encoder/layers.5/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.07379299402236938,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1529,
+  "dq_out": "qdq_0012_dequant",
+  "q_in": "qdq_0012_quant",
+  "fp": "/encoder/layers.5/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.03226267173886299,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1545,
+  "dq_out": "qdq_0074_dequant",
+  "q_in": "qdq_0074_quant",
+  "fp": "/encoder/layers.5/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.02607852779328823,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1550,
+  "dq_out": "qdq_0075_dequant",
+  "q_in": "qdq_0075_quant",
+  "fp": "/encoder/layers.6/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.10177942365407944,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1553,
+  "dq_out": "qdq_0013_dequant",
+  "q_in": "qdq_0013_quant",
+  "fp": "/encoder/layers.6/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.06496099382638931,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1592,
+  "dq_out": "qdq_0076_dequant",
+  "q_in": "qdq_0076_quant",
+  "fp": "/encoder/layers.6/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.022557631134986877,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1597,
+  "dq_out": "qdq_0077_dequant",
+  "q_in": "qdq_0077_quant",
+  "fp": "/encoder/layers.6/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.08788228034973145,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1600,
+  "dq_out": "qdq_0014_dequant",
+  "q_in": "qdq_0014_quant",
+  "fp": "/encoder/layers.6/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.037206340581178665,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1616,
+  "dq_out": "qdq_0078_dequant",
+  "q_in": "qdq_0078_quant",
+  "fp": "/encoder/layers.6/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.0322154201567173,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1621,
+  "dq_out": "qdq_0079_dequant",
+  "q_in": "qdq_0079_quant",
+  "fp": "/encoder/layers.7/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.1335042268037796,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1624,
+  "dq_out": "qdq_0015_dequant",
+  "q_in": "qdq_0015_quant",
+  "fp": "/encoder/layers.7/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.060290101915597916,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1663,
+  "dq_out": "qdq_0080_dequant",
+  "q_in": "qdq_0080_quant",
+  "fp": "/encoder/layers.7/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.017040947452187538,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1668,
+  "dq_out": "qdq_0081_dequant",
+  "q_in": "qdq_0081_quant",
+  "fp": "/encoder/layers.7/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.10059826821088791,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1671,
+  "dq_out": "qdq_0016_dequant",
+  "q_in": "qdq_0016_quant",
+  "fp": "/encoder/layers.7/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.04075676202774048,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1687,
+  "dq_out": "qdq_0082_dequant",
+  "q_in": "qdq_0082_quant",
+  "fp": "/encoder/layers.7/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.035852011293172836,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1692,
+  "dq_out": "qdq_0083_dequant",
+  "q_in": "qdq_0083_quant",
+  "fp": "/encoder/layers.8/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.11131571233272552,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1695,
+  "dq_out": "qdq_0017_dequant",
+  "q_in": "qdq_0017_quant",
+  "fp": "/encoder/layers.8/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.05419924482703209,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1734,
+  "dq_out": "qdq_0084_dequant",
+  "q_in": "qdq_0084_quant",
+  "fp": "/encoder/layers.8/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.021969681605696678,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1739,
+  "dq_out": "qdq_0085_dequant",
+  "q_in": "qdq_0085_quant",
+  "fp": "/encoder/layers.8/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.0895601361989975,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1742,
+  "dq_out": "qdq_0018_dequant",
+  "q_in": "qdq_0018_quant",
+  "fp": "/encoder/layers.8/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.04220864549279213,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1758,
+  "dq_out": "qdq_0086_dequant",
+  "q_in": "qdq_0086_quant",
+  "fp": "/encoder/layers.8/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.0194549597799778,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1763,
+  "dq_out": "qdq_0087_dequant",
+  "q_in": "qdq_0087_quant",
+  "fp": "/encoder/layers.9/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.11004313826560974,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1766,
+  "dq_out": "qdq_0019_dequant",
+  "q_in": "qdq_0019_quant",
+  "fp": "/encoder/layers.9/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.07596039772033691,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1805,
+  "dq_out": "qdq_0088_dequant",
+  "q_in": "qdq_0088_quant",
+  "fp": "/encoder/layers.9/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.025713859125971794,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1810,
+  "dq_out": "qdq_0089_dequant",
+  "q_in": "qdq_0089_quant",
+  "fp": "/encoder/layers.9/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.10591040551662445,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1813,
+  "dq_out": "qdq_0020_dequant",
+  "q_in": "qdq_0020_quant",
+  "fp": "/encoder/layers.9/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.07995092868804932,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1829,
+  "dq_out": "qdq_0090_dequant",
+  "q_in": "qdq_0090_quant",
+  "fp": "/encoder/layers.9/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.028855549171566963,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1834,
+  "dq_out": "qdq_0091_dequant",
+  "q_in": "qdq_0091_quant",
+  "fp": "/encoder/layers.10/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.11433179676532745,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1837,
+  "dq_out": "qdq_0021_dequant",
+  "q_in": "qdq_0021_quant",
+  "fp": "/encoder/layers.10/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.05142379179596901,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1876,
+  "dq_out": "qdq_0092_dequant",
+  "q_in": "qdq_0092_quant",
+  "fp": "/encoder/layers.10/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.028346950188279152,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1881,
+  "dq_out": "qdq_0093_dequant",
+  "q_in": "qdq_0093_quant",
+  "fp": "/encoder/layers.10/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.12179595232009888,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1884,
+  "dq_out": "qdq_0022_dequant",
+  "q_in": "qdq_0022_quant",
+  "fp": "/encoder/layers.10/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.09191867709159851,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1900,
+  "dq_out": "qdq_0094_dequant",
+  "q_in": "qdq_0094_quant",
+  "fp": "/encoder/layers.10/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.0660904198884964,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1905,
+  "dq_out": "qdq_0095_dequant",
+  "q_in": "qdq_0095_quant",
+  "fp": "/encoder/layers.11/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.09196887910366058,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1908,
+  "dq_out": "qdq_0023_dequant",
+  "q_in": "qdq_0023_quant",
+  "fp": "/encoder/layers.11/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.05386224389076233,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1947,
+  "dq_out": "qdq_0096_dequant",
+  "q_in": "qdq_0096_quant",
+  "fp": "/encoder/layers.11/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.029820550233125687,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1952,
+  "dq_out": "qdq_0097_dequant",
+  "q_in": "qdq_0097_quant",
+  "fp": "/encoder/layers.11/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.07906652241945267,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1955,
+  "dq_out": "qdq_0024_dequant",
+  "q_in": "qdq_0024_quant",
+  "fp": "/encoder/layers.11/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.2510014474391937,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1971,
+  "dq_out": "qdq_0098_dequant",
+  "q_in": "qdq_0098_quant",
+  "fp": "/encoder/layers.11/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 38.628814697265625,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1976,
+  "dq_out": "qdq_0099_dequant",
+  "q_in": "qdq_0099_quant",
+  "fp": "/encoder/layers.12/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.24068208038806915,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 1979,
+  "dq_out": "qdq_0025_dequant",
+  "q_in": "qdq_0025_quant",
+  "fp": "/encoder/layers.12/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.08527331799268723,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2018,
+  "dq_out": "qdq_0100_dequant",
+  "q_in": "qdq_0100_quant",
+  "fp": "/encoder/layers.12/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.03559812903404236,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2023,
+  "dq_out": "qdq_0101_dequant",
+  "q_in": "qdq_0101_quant",
+  "fp": "/encoder/layers.12/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.07854960113763809,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2026,
+  "dq_out": "qdq_0026_dequant",
+  "q_in": "qdq_0026_quant",
+  "fp": "/encoder/layers.12/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.14132732152938843,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2042,
+  "dq_out": "qdq_0102_dequant",
+  "q_in": "qdq_0102_quant",
+  "fp": "/encoder/layers.12/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 7.735862731933594,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2047,
+  "dq_out": "qdq_0103_dequant",
+  "q_in": "qdq_0103_quant",
+  "fp": "/encoder/layers.13/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.08070128411054611,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2050,
+  "dq_out": "qdq_0027_dequant",
+  "q_in": "qdq_0027_quant",
+  "fp": "/encoder/layers.13/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.07289727032184601,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2089,
+  "dq_out": "qdq_0104_dequant",
+  "q_in": "qdq_0104_quant",
+  "fp": "/encoder/layers.13/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.03452777490019798,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2094,
+  "dq_out": "qdq_0105_dequant",
+  "q_in": "qdq_0105_quant",
+  "fp": "/encoder/layers.13/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.07108756899833679,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2097,
+  "dq_out": "qdq_0028_dequant",
+  "q_in": "qdq_0028_quant",
+  "fp": "/encoder/layers.13/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.05097607150673866,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2113,
+  "dq_out": "qdq_0106_dequant",
+  "q_in": "qdq_0106_quant",
+  "fp": "/encoder/layers.13/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.03833070397377014,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2118,
+  "dq_out": "qdq_0107_dequant",
+  "q_in": "qdq_0107_quant",
+  "fp": "/encoder/layers.14/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.0812603011727333,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2121,
+  "dq_out": "qdq_0029_dequant",
+  "q_in": "qdq_0029_quant",
+  "fp": "/encoder/layers.14/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.07593382149934769,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2160,
+  "dq_out": "qdq_0108_dequant",
+  "q_in": "qdq_0108_quant",
+  "fp": "/encoder/layers.14/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.03205437585711479,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2165,
+  "dq_out": "qdq_0109_dequant",
+  "q_in": "qdq_0109_quant",
+  "fp": "/encoder/layers.14/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.0775941014289856,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2168,
+  "dq_out": "qdq_0030_dequant",
+  "q_in": "qdq_0030_quant",
+  "fp": "/encoder/layers.14/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.043984368443489075,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2184,
+  "dq_out": "qdq_0110_dequant",
+  "q_in": "qdq_0110_quant",
+  "fp": "/encoder/layers.14/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.03197028487920761,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2189,
+  "dq_out": "qdq_0111_dequant",
+  "q_in": "qdq_0111_quant",
+  "fp": "/encoder/layers.15/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.17215262353420258,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2192,
+  "dq_out": "qdq_0031_dequant",
+  "q_in": "qdq_0031_quant",
+  "fp": "/encoder/layers.15/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.08913832157850266,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2231,
+  "dq_out": "qdq_0112_dequant",
+  "q_in": "qdq_0112_quant",
+  "fp": "/encoder/layers.15/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.037074241787195206,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2236,
+  "dq_out": "qdq_0113_dequant",
+  "q_in": "qdq_0113_quant",
+  "fp": "/encoder/layers.15/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.08182144910097122,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2239,
+  "dq_out": "qdq_0032_dequant",
+  "q_in": "qdq_0032_quant",
+  "fp": "/encoder/layers.15/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.06608896702528,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2255,
+  "dq_out": "qdq_0114_dequant",
+  "q_in": "qdq_0114_quant",
+  "fp": "/encoder/layers.15/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.038236577063798904,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2260,
+  "dq_out": "qdq_0115_dequant",
+  "q_in": "qdq_0115_quant",
+  "fp": "/encoder/layers.16/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.108373261988163,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2263,
+  "dq_out": "qdq_0033_dequant",
+  "q_in": "qdq_0033_quant",
+  "fp": "/encoder/layers.16/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.08064548671245575,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2302,
+  "dq_out": "qdq_0116_dequant",
+  "q_in": "qdq_0116_quant",
+  "fp": "/encoder/layers.16/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.03301502391695976,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2307,
+  "dq_out": "qdq_0117_dequant",
+  "q_in": "qdq_0117_quant",
+  "fp": "/encoder/layers.16/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.08305703103542328,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2310,
+  "dq_out": "qdq_0034_dequant",
+  "q_in": "qdq_0034_quant",
+  "fp": "/encoder/layers.16/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.06893833726644516,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2326,
+  "dq_out": "qdq_0118_dequant",
+  "q_in": "qdq_0118_quant",
+  "fp": "/encoder/layers.16/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.04982130229473114,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2331,
+  "dq_out": "qdq_0119_dequant",
+  "q_in": "qdq_0119_quant",
+  "fp": "/encoder/layers.17/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.13452912867069244,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2334,
+  "dq_out": "qdq_0035_dequant",
+  "q_in": "qdq_0035_quant",
+  "fp": "/encoder/layers.17/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.0839412659406662,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2373,
+  "dq_out": "qdq_0120_dequant",
+  "q_in": "qdq_0120_quant",
+  "fp": "/encoder/layers.17/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.035741981118917465,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2378,
+  "dq_out": "qdq_0121_dequant",
+  "q_in": "qdq_0121_quant",
+  "fp": "/encoder/layers.17/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.11590886116027832,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2381,
+  "dq_out": "qdq_0036_dequant",
+  "q_in": "qdq_0036_quant",
+  "fp": "/encoder/layers.17/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.17108827829360962,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2397,
+  "dq_out": "qdq_0122_dequant",
+  "q_in": "qdq_0122_quant",
+  "fp": "/encoder/layers.17/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.07012168318033218,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2402,
+  "dq_out": "qdq_0123_dequant",
+  "q_in": "qdq_0123_quant",
+  "fp": "/encoder/layers.18/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.1622142344713211,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2405,
+  "dq_out": "qdq_0037_dequant",
+  "q_in": "qdq_0037_quant",
+  "fp": "/encoder/layers.18/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.09102637320756912,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2444,
+  "dq_out": "qdq_0124_dequant",
+  "q_in": "qdq_0124_quant",
+  "fp": "/encoder/layers.18/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.03917256370186806,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2449,
+  "dq_out": "qdq_0125_dequant",
+  "q_in": "qdq_0125_quant",
+  "fp": "/encoder/layers.18/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.18047644197940826,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2452,
+  "dq_out": "qdq_0038_dequant",
+  "q_in": "qdq_0038_quant",
+  "fp": "/encoder/layers.18/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.09647351503372192,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2468,
+  "dq_out": "qdq_0126_dequant",
+  "q_in": "qdq_0126_quant",
+  "fp": "/encoder/layers.18/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.24719756841659546,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2473,
+  "dq_out": "qdq_0127_dequant",
+  "q_in": "qdq_0127_quant",
+  "fp": "/encoder/layers.19/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.14496968686580658,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2476,
+  "dq_out": "qdq_0039_dequant",
+  "q_in": "qdq_0039_quant",
+  "fp": "/encoder/layers.19/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.0864521861076355,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2515,
+  "dq_out": "qdq_0128_dequant",
+  "q_in": "qdq_0128_quant",
+  "fp": "/encoder/layers.19/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.03932347521185875,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2520,
+  "dq_out": "qdq_0129_dequant",
+  "q_in": "qdq_0129_quant",
+  "fp": "/encoder/layers.19/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.07595901191234589,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2523,
+  "dq_out": "qdq_0040_dequant",
+  "q_in": "qdq_0040_quant",
+  "fp": "/encoder/layers.19/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.07357346266508102,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2539,
+  "dq_out": "qdq_0130_dequant",
+  "q_in": "qdq_0130_quant",
+  "fp": "/encoder/layers.19/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.0645374208688736,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2544,
+  "dq_out": "qdq_0131_dequant",
+  "q_in": "qdq_0131_quant",
+  "fp": "/encoder/layers.20/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.20238499343395233,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2547,
+  "dq_out": "qdq_0041_dequant",
+  "q_in": "qdq_0041_quant",
+  "fp": "/encoder/layers.20/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.09217221289873123,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2586,
+  "dq_out": "qdq_0132_dequant",
+  "q_in": "qdq_0132_quant",
+  "fp": "/encoder/layers.20/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.037787064909935,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2591,
+  "dq_out": "qdq_0133_dequant",
+  "q_in": "qdq_0133_quant",
+  "fp": "/encoder/layers.20/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.05955079197883606,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2594,
+  "dq_out": "qdq_0042_dequant",
+  "q_in": "qdq_0042_quant",
+  "fp": "/encoder/layers.20/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.10021640360355377,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2610,
+  "dq_out": "qdq_0134_dequant",
+  "q_in": "qdq_0134_quant",
+  "fp": "/encoder/layers.20/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.11789949238300323,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2615,
+  "dq_out": "qdq_0135_dequant",
+  "q_in": "qdq_0135_quant",
+  "fp": "/encoder/layers.21/attn_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.07829288393259048,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2618,
+  "dq_out": "qdq_0043_dequant",
+  "q_in": "qdq_0043_quant",
+  "fp": "/encoder/layers.21/attn/Wqkv/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.09406008571386337,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2657,
+  "dq_out": "qdq_0136_dequant",
+  "q_in": "qdq_0136_quant",
+  "fp": "/encoder/layers.21/attn/Reshape_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.04344616457819939,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2662,
+  "dq_out": "qdq_0137_dequant",
+  "q_in": "qdq_0137_quant",
+  "fp": "/encoder/layers.21/mlp_norm/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.05408377945423126,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2665,
+  "dq_out": "qdq_0044_dequant",
+  "q_in": "qdq_0044_quant",
+  "fp": "/encoder/layers.21/mlp/Wi/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.11746816337108612,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2681,
+  "dq_out": "qdq_0138_dequant",
+  "q_in": "qdq_0138_quant",
+  "fp": "/encoder/layers.21/mlp/Mul_2_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.07271933555603027,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2733,
+  "dq_out": "qdq_0139_dequant",
+  "q_in": "qdq_0139_quant",
+  "fp": "/layers.0/self_attn/Transpose_8_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.024735813960433006,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2739,
+  "dq_out": "qdq_0140_dequant",
+  "q_in": "qdq_0140_quant",
+  "fp": "/layers.0/norm2/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.15730735659599304,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2742,
+  "dq_out": "qdq_0045_dequant",
+  "q_in": "qdq_0045_quant",
+  "fp": "/layers.0/linear1/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.14818458259105682,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2746,
+  "dq_out": "qdq_0141_dequant",
+  "q_in": "qdq_0141_quant",
+  "fp": "/layers.0/Relu_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.15280765295028687,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2797,
+  "dq_out": "qdq_0142_dequant",
+  "q_in": "qdq_0142_quant",
+  "fp": "/layers.1/self_attn/Transpose_8_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.15216098725795746,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2803,
+  "dq_out": "qdq_0143_dequant",
+  "q_in": "qdq_0143_quant",
+  "fp": "/layers.1/norm2/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.02875722013413906,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2806,
+  "dq_out": "qdq_0046_dequant",
+  "q_in": "qdq_0046_quant",
+  "fp": "/layers.1/linear1/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.1661260575056076,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2810,
+  "dq_out": "qdq_0144_dequant",
+  "q_in": "qdq_0144_quant",
+  "fp": "/layers.1/Relu_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.1774825006723404,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2819,
+  "dq_out": "qdq_0145_dequant",
+  "q_in": "qdq_0145_quant",
+  "fp": "/scorer/scorer.0/LayerNormalization_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.024083726108074188,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2822,
+  "dq_out": "qdq_0047_dequant",
+  "q_in": "qdq_0047_quant",
+  "fp": "/scorer/scorer.1/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.26545634865760803,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2830,
+  "dq_out": "qdq_0146_dequant",
+  "q_in": "qdq_0146_quant",
+  "fp": "/scorer/scorer.2/Mul_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.17746958136558533,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2833,
+  "dq_out": "qdq_0048_dequant",
+  "q_in": "qdq_0048_quant",
+  "fp": "/scorer/scorer.3/MatMul_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 0.03640909865498543,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2855,
+  "dq_out": "qdq_0147_dequant",
+  "q_in": "qdq_0147_quant",
+  "fp": "/Concat_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 2.8011903762817383,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2858,
+  "dq_out": "qdq_0049_dequant",
+  "q_in": "qdq_0049_quant",
+  "fp": "/act_head/act_head.0/Gemm_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 11.677353858947754,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2865,
+  "dq_out": "qdq_0148_dequant",
+  "q_in": "qdq_0148_quant",
+  "fp": "/act_head/act_head.1/Mul_1_output_0",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 11.295312881469727,
+  "scale_n": 1
+ },
+ {
+  "dq_idx": 2868,
+  "dq_out": "qdq_0050_dequant",
+  "q_in": "qdq_0050_quant",
+  "fp": "act_logits",
+  "kind": "act",
+  "per_channel": false,
+  "scale": 16.953123092651367,
+  "scale_n": 1
+ }
+]

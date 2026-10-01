@@ -1,0 +1,570 @@
+===== LOADING qdq/laya.s512.qdq.rs.onnx
+ir_version: 8 opset: [('', 18)]
+nodes: 2869 initializers: 563
+
+===== GRAPH INPUTS =====
+  input_ids                INT64      [1, 512]
+  attention_mask           INT64      [1, 512]
+  marker_pos               INT64      [1, 16]
+  marker_mask              BOOL       [1, 16]
+  qtype                    INT64      [1]
+
+===== GRAPH OUTPUTS =====
+  logits                           FLOAT      [1, 16]
+  act_logits                       FLOAT      [1, 2]
+
+===== ALL Q/DQ NODES (graph order) =====
+QuantizeLinear: 148 DequantizeLinear: 246
+
+  idx  op            y  x  scale       127*s    out
+     0 DequantizeLinear wq_0000_dequant              <- wq_0000_int8                       s=('per_channel', (2304,)) 127s=-        
+     1 DequantizeLinear wq_0001_dequant              <- wq_0001_int8                       s=('per_channel', (768,)) 127s=-        
+     2 DequantizeLinear wq_0002_dequant              <- wq_0002_int8                       s=('per_channel', (2304,)) 127s=-        
+     3 DequantizeLinear wq_0003_dequant              <- wq_0003_int8                       s=('per_channel', (768,)) 127s=-        
+     4 DequantizeLinear wq_0004_dequant              <- wq_0004_int8                       s=('per_channel', (2304,)) 127s=-        
+     5 DequantizeLinear wq_0005_dequant              <- wq_0005_int8                       s=('per_channel', (768,)) 127s=-        
+     6 DequantizeLinear wq_0006_dequant              <- wq_0006_int8                       s=('per_channel', (2304,)) 127s=-        
+     7 DequantizeLinear wq_0007_dequant              <- wq_0007_int8                       s=('per_channel', (768,)) 127s=-        
+     8 DequantizeLinear wq_0008_dequant              <- wq_0008_int8                       s=('per_channel', (2304,)) 127s=-        
+     9 DequantizeLinear wq_0009_dequant              <- wq_0009_int8                       s=('per_channel', (768,)) 127s=-        
+    10 DequantizeLinear wq_0010_dequant              <- wq_0010_int8                       s=('per_channel', (2304,)) 127s=-        
+    11 DequantizeLinear wq_0011_dequant              <- wq_0011_int8                       s=('per_channel', (768,)) 127s=-        
+    12 DequantizeLinear wq_0012_dequant              <- wq_0012_int8                       s=('per_channel', (2304,)) 127s=-        
+    13 DequantizeLinear wq_0013_dequant              <- wq_0013_int8                       s=('per_channel', (768,)) 127s=-        
+    14 DequantizeLinear wq_0014_dequant              <- wq_0014_int8                       s=('per_channel', (2304,)) 127s=-        
+    15 DequantizeLinear wq_0015_dequant              <- wq_0015_int8                       s=('per_channel', (768,)) 127s=-        
+    16 DequantizeLinear wq_0016_dequant              <- wq_0016_int8                       s=('per_channel', (2304,)) 127s=-        
+    17 DequantizeLinear wq_0017_dequant              <- wq_0017_int8                       s=('per_channel', (768,)) 127s=-        
+    18 DequantizeLinear wq_0018_dequant              <- wq_0018_int8                       s=('per_channel', (2304,)) 127s=-        
+    19 DequantizeLinear wq_0019_dequant              <- wq_0019_int8                       s=('per_channel', (768,)) 127s=-        
+    20 DequantizeLinear wq_0020_dequant              <- wq_0020_int8                       s=('per_channel', (2304,)) 127s=-        
+    21 DequantizeLinear wq_0021_dequant              <- wq_0021_int8                       s=('per_channel', (768,)) 127s=-        
+    22 DequantizeLinear wq_0022_dequant              <- wq_0022_int8                       s=('per_channel', (2304,)) 127s=-        
+    23 DequantizeLinear wq_0023_dequant              <- wq_0023_int8                       s=('per_channel', (768,)) 127s=-        
+    24 DequantizeLinear wq_0024_dequant              <- wq_0024_int8                       s=('per_channel', (2304,)) 127s=-        
+    25 DequantizeLinear wq_0025_dequant              <- wq_0025_int8                       s=('per_channel', (768,)) 127s=-        
+    26 DequantizeLinear wq_0026_dequant              <- wq_0026_int8                       s=('per_channel', (2304,)) 127s=-        
+    27 DequantizeLinear wq_0027_dequant              <- wq_0027_int8                       s=('per_channel', (768,)) 127s=-        
+    28 DequantizeLinear wq_0028_dequant              <- wq_0028_int8                       s=('per_channel', (2304,)) 127s=-        
+    29 DequantizeLinear wq_0029_dequant              <- wq_0029_int8                       s=('per_channel', (768,)) 127s=-        
+    30 DequantizeLinear wq_0030_dequant              <- wq_0030_int8                       s=('per_channel', (2304,)) 127s=-        
+    31 DequantizeLinear wq_0031_dequant              <- wq_0031_int8                       s=('per_channel', (768,)) 127s=-        
+    32 DequantizeLinear wq_0032_dequant              <- wq_0032_int8                       s=('per_channel', (2304,)) 127s=-        
+    33 DequantizeLinear wq_0033_dequant              <- wq_0033_int8                       s=('per_channel', (768,)) 127s=-        
+    34 DequantizeLinear wq_0034_dequant              <- wq_0034_int8                       s=('per_channel', (2304,)) 127s=-        
+    35 DequantizeLinear wq_0035_dequant              <- wq_0035_int8                       s=('per_channel', (768,)) 127s=-        
+    36 DequantizeLinear wq_0036_dequant              <- wq_0036_int8                       s=('per_channel', (2304,)) 127s=-        
+    37 DequantizeLinear wq_0037_dequant              <- wq_0037_int8                       s=('per_channel', (768,)) 127s=-        
+    38 DequantizeLinear wq_0038_dequant              <- wq_0038_int8                       s=('per_channel', (2304,)) 127s=-        
+    39 DequantizeLinear wq_0039_dequant              <- wq_0039_int8                       s=('per_channel', (768,)) 127s=-        
+    40 DequantizeLinear wq_0040_dequant              <- wq_0040_int8                       s=('per_channel', (2304,)) 127s=-        
+    41 DequantizeLinear wq_0041_dequant              <- wq_0041_int8                       s=('per_channel', (768,)) 127s=-        
+    42 DequantizeLinear wq_0042_dequant              <- wq_0042_int8                       s=('per_channel', (2304,)) 127s=-        
+    43 DequantizeLinear wq_0043_dequant              <- wq_0043_int8                       s=('per_channel', (768,)) 127s=-        
+    44 DequantizeLinear wq_0044_dequant              <- wq_0044_int8                       s=('per_channel', (2304,)) 127s=-        
+    45 DequantizeLinear wq_0045_dequant              <- wq_0045_int8                       s=('per_channel', (768,)) 127s=-        
+    46 DequantizeLinear wq_0046_dequant              <- wq_0046_int8                       s=('per_channel', (2304,)) 127s=-        
+    47 DequantizeLinear wq_0047_dequant              <- wq_0047_int8                       s=('per_channel', (768,)) 127s=-        
+    48 DequantizeLinear wq_0048_dequant              <- wq_0048_int8                       s=('per_channel', (2304,)) 127s=-        
+    49 DequantizeLinear wq_0049_dequant              <- wq_0049_int8                       s=('per_channel', (768,)) 127s=-        
+    50 DequantizeLinear wq_0050_dequant              <- wq_0050_int8                       s=('per_channel', (2304,)) 127s=-        
+    51 DequantizeLinear wq_0051_dequant              <- wq_0051_int8                       s=('per_channel', (768,)) 127s=-        
+    52 DequantizeLinear wq_0052_dequant              <- wq_0052_int8                       s=('per_channel', (2304,)) 127s=-        
+    53 DequantizeLinear wq_0053_dequant              <- wq_0053_int8                       s=('per_channel', (768,)) 127s=-        
+    54 DequantizeLinear wq_0054_dequant              <- wq_0054_int8                       s=('per_channel', (2304,)) 127s=-        
+    55 DequantizeLinear wq_0055_dequant              <- wq_0055_int8                       s=('per_channel', (768,)) 127s=-        
+    56 DequantizeLinear wq_0056_dequant              <- wq_0056_int8                       s=('per_channel', (2304,)) 127s=-        
+    57 DequantizeLinear wq_0057_dequant              <- wq_0057_int8                       s=('per_channel', (768,)) 127s=-        
+    58 DequantizeLinear wq_0058_dequant              <- wq_0058_int8                       s=('per_channel', (2304,)) 127s=-        
+    59 DequantizeLinear wq_0059_dequant              <- wq_0059_int8                       s=('per_channel', (768,)) 127s=-        
+    60 DequantizeLinear wq_0060_dequant              <- wq_0060_int8                       s=('per_channel', (2304,)) 127s=-        
+    61 DequantizeLinear wq_0061_dequant              <- wq_0061_int8                       s=('per_channel', (768,)) 127s=-        
+    62 DequantizeLinear wq_0062_dequant              <- wq_0062_int8                       s=('per_channel', (2304,)) 127s=-        
+    63 DequantizeLinear wq_0063_dequant              <- wq_0063_int8                       s=('per_channel', (768,)) 127s=-        
+    64 DequantizeLinear wq_0064_dequant              <- wq_0064_int8                       s=('per_channel', (2304,)) 127s=-        
+    65 DequantizeLinear wq_0065_dequant              <- wq_0065_int8                       s=('per_channel', (768,)) 127s=-        
+    66 DequantizeLinear wq_0066_dequant              <- wq_0066_int8                       s=('per_channel', (2304,)) 127s=-        
+    67 DequantizeLinear wq_0067_dequant              <- wq_0067_int8                       s=('per_channel', (768,)) 127s=-        
+    68 DequantizeLinear wq_0068_dequant              <- wq_0068_int8                       s=('per_channel', (2304,)) 127s=-        
+    69 DequantizeLinear wq_0069_dequant              <- wq_0069_int8                       s=('per_channel', (768,)) 127s=-        
+    70 DequantizeLinear wq_0070_dequant              <- wq_0070_int8                       s=('per_channel', (2304,)) 127s=-        
+    71 DequantizeLinear wq_0071_dequant              <- wq_0071_int8                       s=('per_channel', (768,)) 127s=-        
+    72 DequantizeLinear wq_0072_dequant              <- wq_0072_int8                       s=('per_channel', (2304,)) 127s=-        
+    73 DequantizeLinear wq_0073_dequant              <- wq_0073_int8                       s=('per_channel', (768,)) 127s=-        
+    74 DequantizeLinear wq_0074_dequant              <- wq_0074_int8                       s=('per_channel', (2304,)) 127s=-        
+    75 DequantizeLinear wq_0075_dequant              <- wq_0075_int8                       s=('per_channel', (768,)) 127s=-        
+    76 DequantizeLinear wq_0076_dequant              <- wq_0076_int8                       s=('per_channel', (2304,)) 127s=-        
+    77 DequantizeLinear wq_0077_dequant              <- wq_0077_int8                       s=('per_channel', (768,)) 127s=-        
+    78 DequantizeLinear wq_0078_dequant              <- wq_0078_int8                       s=('per_channel', (2304,)) 127s=-        
+    79 DequantizeLinear wq_0079_dequant              <- wq_0079_int8                       s=('per_channel', (768,)) 127s=-        
+    80 DequantizeLinear wq_0080_dequant              <- wq_0080_int8                       s=('per_channel', (2304,)) 127s=-        
+    81 DequantizeLinear wq_0081_dequant              <- wq_0081_int8                       s=('per_channel', (768,)) 127s=-        
+    82 DequantizeLinear wq_0082_dequant              <- wq_0082_int8                       s=('per_channel', (2304,)) 127s=-        
+    83 DequantizeLinear wq_0083_dequant              <- wq_0083_int8                       s=('per_channel', (768,)) 127s=-        
+    84 DequantizeLinear wq_0084_dequant              <- wq_0084_int8                       s=('per_channel', (2304,)) 127s=-        
+    85 DequantizeLinear wq_0085_dequant              <- wq_0085_int8                       s=('per_channel', (768,)) 127s=-        
+    86 DequantizeLinear wq_0086_dequant              <- wq_0086_int8                       s=('per_channel', (2304,)) 127s=-        
+    87 DequantizeLinear wq_0087_dequant              <- wq_0087_int8                       s=('per_channel', (768,)) 127s=-        
+    88 DequantizeLinear wq_0088_dequant              <- wq_0088_int8                       s=('per_channel', (768,)) 127s=-        
+    89 DequantizeLinear wq_0089_dequant              <- wq_0089_int8                       s=('per_channel', (3072,)) 127s=-        
+    90 DequantizeLinear wq_0090_dequant              <- wq_0090_int8                       s=('per_channel', (768,)) 127s=-        
+    91 DequantizeLinear wq_0091_dequant              <- wq_0091_int8                       s=('per_channel', (768,)) 127s=-        
+    92 DequantizeLinear wq_0092_dequant              <- wq_0092_int8                       s=('per_channel', (3072,)) 127s=-        
+    93 DequantizeLinear wq_0093_dequant              <- wq_0093_int8                       s=('per_channel', (768,)) 127s=-        
+    94 DequantizeLinear wq_0094_dequant              <- wq_0094_int8                       s=('per_channel', (768,)) 127s=-        
+    95 DequantizeLinear wq_0095_dequant              <- wq_0095_int8                       s=0.00071031466 127s=0.090210 
+    96 DequantizeLinear wq_0096_dequant              <- wq_0096_int8                       s=('per_channel', (256,)) 127s=-        
+    97 DequantizeLinear wq_0097_dequant              <- wq_0097_int8                       s=('per_channel', (2,)) 127s=-        
+  1046 QuantizeLinear qdq_0051_quant               <- /encoder/embeddings/norm/LayerNormalization_output_0 s=0.031253844  127s=3.969238 
+  1073 DequantizeLinear qdq_0051_dequant             <- qdq_0051_quant                     s=0.031253844  127s=3.969238 
+  1096 QuantizeLinear qdq_0001_quant               <- /encoder/layers.0/attn/Wqkv/MatMul_output_0 s=0.1583758    127s=20.113727
+  1104 DequantizeLinear qdq_0001_dequant             <- qdq_0001_quant                     s=0.1583758    127s=20.113727
+  1165 QuantizeLinear qdq_0052_quant               <- /encoder/layers.0/attn/Reshape_1_output_0 s=0.018532958  127s=2.353686 
+  1166 DequantizeLinear qdq_0052_dequant             <- qdq_0052_quant                     s=0.018532958  127s=2.353686 
+  1170 QuantizeLinear qdq_0053_quant               <- /encoder/layers.0/mlp_norm/LayerNormalization_output_0 s=0.029194109  127s=3.707652 
+  1171 DequantizeLinear qdq_0053_dequant             <- qdq_0053_quant                     s=0.029194109  127s=3.707652 
+  1173 QuantizeLinear qdq_0002_quant               <- /encoder/layers.0/mlp/Wi/MatMul_output_0 s=0.087125048  127s=11.064881
+  1174 DequantizeLinear qdq_0002_dequant             <- qdq_0002_quant                     s=0.087125048  127s=11.064881
+  1189 QuantizeLinear qdq_0054_quant               <- /encoder/layers.0/mlp/Mul_2_output_0 s=0.0371469    127s=4.717656 
+  1190 DequantizeLinear qdq_0054_dequant             <- qdq_0054_quant                     s=0.0371469    127s=4.717656 
+  1194 QuantizeLinear qdq_0055_quant               <- /encoder/layers.1/attn_norm/LayerNormalization_output_0 s=0.10618598   127s=13.485619
+  1195 DequantizeLinear qdq_0055_dequant             <- qdq_0055_quant                     s=0.10618598   127s=13.485619
+  1197 QuantizeLinear qdq_0003_quant               <- /encoder/layers.1/attn/Wqkv/MatMul_output_0 s=0.06530828   127s=8.294152 
+  1198 DequantizeLinear qdq_0003_dequant             <- qdq_0003_quant                     s=0.06530828   127s=8.294152 
+  1236 QuantizeLinear qdq_0056_quant               <- /encoder/layers.1/attn/Reshape_1_output_0 s=0.022261824  127s=2.827252 
+  1237 DequantizeLinear qdq_0056_dequant             <- qdq_0056_quant                     s=0.022261824  127s=2.827252 
+  1241 QuantizeLinear qdq_0057_quant               <- /encoder/layers.1/mlp_norm/LayerNormalization_output_0 s=0.049731374  127s=6.315884 
+  1242 DequantizeLinear qdq_0057_dequant             <- qdq_0057_quant                     s=0.049731374  127s=6.315884 
+  1244 QuantizeLinear qdq_0004_quant               <- /encoder/layers.1/mlp/Wi/MatMul_output_0 s=0.066594541  127s=8.457507 
+  1245 DequantizeLinear qdq_0004_dequant             <- qdq_0004_quant                     s=0.066594541  127s=8.457507 
+  1260 QuantizeLinear qdq_0058_quant               <- /encoder/layers.1/mlp/Mul_2_output_0 s=0.015387224  127s=1.954177 
+  1261 DequantizeLinear qdq_0058_dequant             <- qdq_0058_quant                     s=0.015387224  127s=1.954177 
+  1265 QuantizeLinear qdq_0059_quant               <- /encoder/layers.2/attn_norm/LayerNormalization_output_0 s=0.15010969   127s=19.063931
+  1266 DequantizeLinear qdq_0059_dequant             <- qdq_0059_quant                     s=0.15010969   127s=19.063931
+  1268 QuantizeLinear qdq_0005_quant               <- /encoder/layers.2/attn/Wqkv/MatMul_output_0 s=0.05965114   127s=7.575695 
+  1269 DequantizeLinear qdq_0005_dequant             <- qdq_0005_quant                     s=0.05965114   127s=7.575695 
+  1307 QuantizeLinear qdq_0060_quant               <- /encoder/layers.2/attn/Reshape_1_output_0 s=0.021842266  127s=2.773968 
+  1308 DequantizeLinear qdq_0060_dequant             <- qdq_0060_quant                     s=0.021842266  127s=2.773968 
+  1312 QuantizeLinear qdq_0061_quant               <- /encoder/layers.2/mlp_norm/LayerNormalization_output_0 s=0.040277779  127s=5.115278 
+  1313 DequantizeLinear qdq_0061_dequant             <- qdq_0061_quant                     s=0.040277779  127s=5.115278 
+  1315 QuantizeLinear qdq_0006_quant               <- /encoder/layers.2/mlp/Wi/MatMul_output_0 s=0.045162786  127s=5.735674 
+  1316 DequantizeLinear qdq_0006_dequant             <- qdq_0006_quant                     s=0.045162786  127s=5.735674 
+  1331 QuantizeLinear qdq_0062_quant               <- /encoder/layers.2/mlp/Mul_2_output_0 s=0.01603088   127s=2.035922 
+  1332 DequantizeLinear qdq_0062_dequant             <- qdq_0062_quant                     s=0.01603088   127s=2.035922 
+  1336 QuantizeLinear qdq_0063_quant               <- /encoder/layers.3/attn_norm/LayerNormalization_output_0 s=0.10151431   127s=12.892317
+  1337 DequantizeLinear qdq_0063_dequant             <- qdq_0063_quant                     s=0.10151431   127s=12.892317
+  1339 QuantizeLinear qdq_0007_quant               <- /encoder/layers.3/attn/Wqkv/MatMul_output_0 s=0.061347619  127s=7.791148 
+  1340 DequantizeLinear qdq_0007_dequant             <- qdq_0007_quant                     s=0.061347619  127s=7.791148 
+  1378 QuantizeLinear qdq_0064_quant               <- /encoder/layers.3/attn/Reshape_1_output_0 s=0.013499988  127s=1.714499 
+  1379 DequantizeLinear qdq_0064_dequant             <- qdq_0064_quant                     s=0.013499988  127s=1.714499 
+  1383 QuantizeLinear qdq_0065_quant               <- /encoder/layers.3/mlp_norm/LayerNormalization_output_0 s=0.039441142  127s=5.009025 
+  1384 DequantizeLinear qdq_0065_dequant             <- qdq_0065_quant                     s=0.039441142  127s=5.009025 
+  1386 QuantizeLinear qdq_0008_quant               <- /encoder/layers.3/mlp/Wi/MatMul_output_0 s=0.053949494  127s=6.851586 
+  1387 DequantizeLinear qdq_0008_dequant             <- qdq_0008_quant                     s=0.053949494  127s=6.851586 
+  1402 QuantizeLinear qdq_0066_quant               <- /encoder/layers.3/mlp/Mul_2_output_0 s=0.0091583058 127s=1.163105 
+  1403 DequantizeLinear qdq_0066_dequant             <- qdq_0066_quant                     s=0.0091583058 127s=1.163105 
+  1407 QuantizeLinear qdq_0067_quant               <- /encoder/layers.4/attn_norm/LayerNormalization_output_0 s=0.14823446   127s=18.825776
+  1408 DequantizeLinear qdq_0067_dequant             <- qdq_0067_quant                     s=0.14823446   127s=18.825776
+  1410 QuantizeLinear qdq_0009_quant               <- /encoder/layers.4/attn/Wqkv/MatMul_output_0 s=0.054543857  127s=6.927070 
+  1411 DequantizeLinear qdq_0009_dequant             <- qdq_0009_quant                     s=0.054543857  127s=6.927070 
+  1449 QuantizeLinear qdq_0068_quant               <- /encoder/layers.4/attn/Reshape_1_output_0 s=0.022989223  127s=2.919631 
+  1450 DequantizeLinear qdq_0068_dequant             <- qdq_0068_quant                     s=0.022989223  127s=2.919631 
+  1454 QuantizeLinear qdq_0069_quant               <- /encoder/layers.4/mlp_norm/LayerNormalization_output_0 s=0.052486662  127s=6.665806 
+  1455 DequantizeLinear qdq_0069_dequant             <- qdq_0069_quant                     s=0.052486662  127s=6.665806 
+  1457 QuantizeLinear qdq_0010_quant               <- /encoder/layers.4/mlp/Wi/MatMul_output_0 s=0.034503095  127s=4.381893 
+  1458 DequantizeLinear qdq_0010_dequant             <- qdq_0010_quant                     s=0.034503095  127s=4.381893 
+  1473 QuantizeLinear qdq_0070_quant               <- /encoder/layers.4/mlp/Mul_2_output_0 s=0.015356413  127s=1.950264 
+  1474 DequantizeLinear qdq_0070_dequant             <- qdq_0070_quant                     s=0.015356413  127s=1.950264 
+  1478 QuantizeLinear qdq_0071_quant               <- /encoder/layers.5/attn_norm/LayerNormalization_output_0 s=0.071882799  127s=9.129116 
+  1479 DequantizeLinear qdq_0071_dequant             <- qdq_0071_quant                     s=0.071882799  127s=9.129116 
+  1481 QuantizeLinear qdq_0011_quant               <- /encoder/layers.5/attn/Wqkv/MatMul_output_0 s=0.053325035  127s=6.772279 
+  1482 DequantizeLinear qdq_0011_dequant             <- qdq_0011_quant                     s=0.053325035  127s=6.772279 
+  1520 QuantizeLinear qdq_0072_quant               <- /encoder/layers.5/attn/Reshape_1_output_0 s=0.016519487  127s=2.097975 
+  1521 DequantizeLinear qdq_0072_dequant             <- qdq_0072_quant                     s=0.016519487  127s=2.097975 
+  1525 QuantizeLinear qdq_0073_quant               <- /encoder/layers.5/mlp_norm/LayerNormalization_output_0 s=0.073792994  127s=9.371710 
+  1526 DequantizeLinear qdq_0073_dequant             <- qdq_0073_quant                     s=0.073792994  127s=9.371710 
+  1528 QuantizeLinear qdq_0012_quant               <- /encoder/layers.5/mlp/Wi/MatMul_output_0 s=0.032262672  127s=4.097359 
+  1529 DequantizeLinear qdq_0012_dequant             <- qdq_0012_quant                     s=0.032262672  127s=4.097359 
+  1544 QuantizeLinear qdq_0074_quant               <- /encoder/layers.5/mlp/Mul_2_output_0 s=0.026078528  127s=3.311973 
+  1545 DequantizeLinear qdq_0074_dequant             <- qdq_0074_quant                     s=0.026078528  127s=3.311973 
+  1549 QuantizeLinear qdq_0075_quant               <- /encoder/layers.6/attn_norm/LayerNormalization_output_0 s=0.10177942   127s=12.925987
+  1550 DequantizeLinear qdq_0075_dequant             <- qdq_0075_quant                     s=0.10177942   127s=12.925987
+  1552 QuantizeLinear qdq_0013_quant               <- /encoder/layers.6/attn/Wqkv/MatMul_output_0 s=0.064960994  127s=8.250046 
+  1553 DequantizeLinear qdq_0013_dequant             <- qdq_0013_quant                     s=0.064960994  127s=8.250046 
+  1591 QuantizeLinear qdq_0076_quant               <- /encoder/layers.6/attn/Reshape_1_output_0 s=0.022557631  127s=2.864819 
+  1592 DequantizeLinear qdq_0076_dequant             <- qdq_0076_quant                     s=0.022557631  127s=2.864819 
+  1596 QuantizeLinear qdq_0077_quant               <- /encoder/layers.6/mlp_norm/LayerNormalization_output_0 s=0.08788228   127s=11.161050
+  1597 DequantizeLinear qdq_0077_dequant             <- qdq_0077_quant                     s=0.08788228   127s=11.161050
+  1599 QuantizeLinear qdq_0014_quant               <- /encoder/layers.6/mlp/Wi/MatMul_output_0 s=0.037206341  127s=4.725205 
+  1600 DequantizeLinear qdq_0014_dequant             <- qdq_0014_quant                     s=0.037206341  127s=4.725205 
+  1615 QuantizeLinear qdq_0078_quant               <- /encoder/layers.6/mlp/Mul_2_output_0 s=0.03221542   127s=4.091358 
+  1616 DequantizeLinear qdq_0078_dequant             <- qdq_0078_quant                     s=0.03221542   127s=4.091358 
+  1620 QuantizeLinear qdq_0079_quant               <- /encoder/layers.7/attn_norm/LayerNormalization_output_0 s=0.13350423   127s=16.955037
+  1621 DequantizeLinear qdq_0079_dequant             <- qdq_0079_quant                     s=0.13350423   127s=16.955037
+  1623 QuantizeLinear qdq_0015_quant               <- /encoder/layers.7/attn/Wqkv/MatMul_output_0 s=0.060290102  127s=7.656843 
+  1624 DequantizeLinear qdq_0015_dequant             <- qdq_0015_quant                     s=0.060290102  127s=7.656843 
+  1662 QuantizeLinear qdq_0080_quant               <- /encoder/layers.7/attn/Reshape_1_output_0 s=0.017040947  127s=2.164200 
+  1663 DequantizeLinear qdq_0080_dequant             <- qdq_0080_quant                     s=0.017040947  127s=2.164200 
+  1667 QuantizeLinear qdq_0081_quant               <- /encoder/layers.7/mlp_norm/LayerNormalization_output_0 s=0.10059827   127s=12.775980
+  1668 DequantizeLinear qdq_0081_dequant             <- qdq_0081_quant                     s=0.10059827   127s=12.775980
+  1670 QuantizeLinear qdq_0016_quant               <- /encoder/layers.7/mlp/Wi/MatMul_output_0 s=0.040756762  127s=5.176109 
+  1671 DequantizeLinear qdq_0016_dequant             <- qdq_0016_quant                     s=0.040756762  127s=5.176109 
+  1686 QuantizeLinear qdq_0082_quant               <- /encoder/layers.7/mlp/Mul_2_output_0 s=0.035852011  127s=4.553205 
+  1687 DequantizeLinear qdq_0082_dequant             <- qdq_0082_quant                     s=0.035852011  127s=4.553205 
+  1691 QuantizeLinear qdq_0083_quant               <- /encoder/layers.8/attn_norm/LayerNormalization_output_0 s=0.11131571   127s=14.137095
+  1692 DequantizeLinear qdq_0083_dequant             <- qdq_0083_quant                     s=0.11131571   127s=14.137095
+  1694 QuantizeLinear qdq_0017_quant               <- /encoder/layers.8/attn/Wqkv/MatMul_output_0 s=0.054199245  127s=6.883304 
+  1695 DequantizeLinear qdq_0017_dequant             <- qdq_0017_quant                     s=0.054199245  127s=6.883304 
+  1733 QuantizeLinear qdq_0084_quant               <- /encoder/layers.8/attn/Reshape_1_output_0 s=0.021969682  127s=2.790150 
+  1734 DequantizeLinear qdq_0084_dequant             <- qdq_0084_quant                     s=0.021969682  127s=2.790150 
+  1738 QuantizeLinear qdq_0085_quant               <- /encoder/layers.8/mlp_norm/LayerNormalization_output_0 s=0.089560136  127s=11.374137
+  1739 DequantizeLinear qdq_0085_dequant             <- qdq_0085_quant                     s=0.089560136  127s=11.374137
+  1741 QuantizeLinear qdq_0018_quant               <- /encoder/layers.8/mlp/Wi/MatMul_output_0 s=0.042208645  127s=5.360498 
+  1742 DequantizeLinear qdq_0018_dequant             <- qdq_0018_quant                     s=0.042208645  127s=5.360498 
+  1757 QuantizeLinear qdq_0086_quant               <- /encoder/layers.8/mlp/Mul_2_output_0 s=0.01945496   127s=2.470780 
+  1758 DequantizeLinear qdq_0086_dequant             <- qdq_0086_quant                     s=0.01945496   127s=2.470780 
+  1762 QuantizeLinear qdq_0087_quant               <- /encoder/layers.9/attn_norm/LayerNormalization_output_0 s=0.11004314   127s=13.975479
+  1763 DequantizeLinear qdq_0087_dequant             <- qdq_0087_quant                     s=0.11004314   127s=13.975479
+  1765 QuantizeLinear qdq_0019_quant               <- /encoder/layers.9/attn/Wqkv/MatMul_output_0 s=0.075960398  127s=9.646971 
+  1766 DequantizeLinear qdq_0019_dequant             <- qdq_0019_quant                     s=0.075960398  127s=9.646971 
+  1804 QuantizeLinear qdq_0088_quant               <- /encoder/layers.9/attn/Reshape_1_output_0 s=0.025713859  127s=3.265660 
+  1805 DequantizeLinear qdq_0088_dequant             <- qdq_0088_quant                     s=0.025713859  127s=3.265660 
+  1809 QuantizeLinear qdq_0089_quant               <- /encoder/layers.9/mlp_norm/LayerNormalization_output_0 s=0.10591041   127s=13.450622
+  1810 DequantizeLinear qdq_0089_dequant             <- qdq_0089_quant                     s=0.10591041   127s=13.450622
+  1812 QuantizeLinear qdq_0020_quant               <- /encoder/layers.9/mlp/Wi/MatMul_output_0 s=0.079950929  127s=10.153768
+  1813 DequantizeLinear qdq_0020_dequant             <- qdq_0020_quant                     s=0.079950929  127s=10.153768
+  1828 QuantizeLinear qdq_0090_quant               <- /encoder/layers.9/mlp/Mul_2_output_0 s=0.028855549  127s=3.664655 
+  1829 DequantizeLinear qdq_0090_dequant             <- qdq_0090_quant                     s=0.028855549  127s=3.664655 
+  1833 QuantizeLinear qdq_0091_quant               <- /encoder/layers.10/attn_norm/LayerNormalization_output_0 s=0.1143318    127s=14.520138
+  1834 DequantizeLinear qdq_0091_dequant             <- qdq_0091_quant                     s=0.1143318    127s=14.520138
+  1836 QuantizeLinear qdq_0021_quant               <- /encoder/layers.10/attn/Wqkv/MatMul_output_0 s=0.051423792  127s=6.530822 
+  1837 DequantizeLinear qdq_0021_dequant             <- qdq_0021_quant                     s=0.051423792  127s=6.530822 
+  1875 QuantizeLinear qdq_0092_quant               <- /encoder/layers.10/attn/Reshape_1_output_0 s=0.02834695   127s=3.600063 
+  1876 DequantizeLinear qdq_0092_dequant             <- qdq_0092_quant                     s=0.02834695   127s=3.600063 
+  1880 QuantizeLinear qdq_0093_quant               <- /encoder/layers.10/mlp_norm/LayerNormalization_output_0 s=0.12179595   127s=15.468086
+  1881 DequantizeLinear qdq_0093_dequant             <- qdq_0093_quant                     s=0.12179595   127s=15.468086
+  1883 QuantizeLinear qdq_0022_quant               <- /encoder/layers.10/mlp/Wi/MatMul_output_0 s=0.091918677  127s=11.673672
+  1884 DequantizeLinear qdq_0022_dequant             <- qdq_0022_quant                     s=0.091918677  127s=11.673672
+  1899 QuantizeLinear qdq_0094_quant               <- /encoder/layers.10/mlp/Mul_2_output_0 s=0.06609042   127s=8.393483 
+  1900 DequantizeLinear qdq_0094_dequant             <- qdq_0094_quant                     s=0.06609042   127s=8.393483 
+  1904 QuantizeLinear qdq_0095_quant               <- /encoder/layers.11/attn_norm/LayerNormalization_output_0 s=0.091968879  127s=11.680048
+  1905 DequantizeLinear qdq_0095_dequant             <- qdq_0095_quant                     s=0.091968879  127s=11.680048
+  1907 QuantizeLinear qdq_0023_quant               <- /encoder/layers.11/attn/Wqkv/MatMul_output_0 s=0.053862244  127s=6.840505 
+  1908 DequantizeLinear qdq_0023_dequant             <- qdq_0023_quant                     s=0.053862244  127s=6.840505 
+  1946 QuantizeLinear qdq_0096_quant               <- /encoder/layers.11/attn/Reshape_1_output_0 s=0.02982055   127s=3.787210 
+  1947 DequantizeLinear qdq_0096_dequant             <- qdq_0096_quant                     s=0.02982055   127s=3.787210 
+  1951 QuantizeLinear qdq_0097_quant               <- /encoder/layers.11/mlp_norm/LayerNormalization_output_0 s=0.079066522  127s=10.041448
+  1952 DequantizeLinear qdq_0097_dequant             <- qdq_0097_quant                     s=0.079066522  127s=10.041448
+  1954 QuantizeLinear qdq_0024_quant               <- /encoder/layers.11/mlp/Wi/MatMul_output_0 s=0.25100145   127s=31.877184
+  1955 DequantizeLinear qdq_0024_dequant             <- qdq_0024_quant                     s=0.25100145   127s=31.877184
+  1970 QuantizeLinear qdq_0098_quant               <- /encoder/layers.11/mlp/Mul_2_output_0 s=38.628815    127s=4905.859467
+  1971 DequantizeLinear qdq_0098_dequant             <- qdq_0098_quant                     s=38.628815    127s=4905.859467
+  1975 QuantizeLinear qdq_0099_quant               <- /encoder/layers.12/attn_norm/LayerNormalization_output_0 s=0.24068208   127s=30.566624
+  1976 DequantizeLinear qdq_0099_dequant             <- qdq_0099_quant                     s=0.24068208   127s=30.566624
+  1978 QuantizeLinear qdq_0025_quant               <- /encoder/layers.12/attn/Wqkv/MatMul_output_0 s=0.085273318  127s=10.829711
+  1979 DequantizeLinear qdq_0025_dequant             <- qdq_0025_quant                     s=0.085273318  127s=10.829711
+  2017 QuantizeLinear qdq_0100_quant               <- /encoder/layers.12/attn/Reshape_1_output_0 s=0.035598129  127s=4.520962 
+  2018 DequantizeLinear qdq_0100_dequant             <- qdq_0100_quant                     s=0.035598129  127s=4.520962 
+  2022 QuantizeLinear qdq_0101_quant               <- /encoder/layers.12/mlp_norm/LayerNormalization_output_0 s=0.078549601  127s=9.975799 
+  2023 DequantizeLinear qdq_0101_dequant             <- qdq_0101_quant                     s=0.078549601  127s=9.975799 
+  2025 QuantizeLinear qdq_0026_quant               <- /encoder/layers.12/mlp/Wi/MatMul_output_0 s=0.14132732   127s=17.948570
+  2026 DequantizeLinear qdq_0026_dequant             <- qdq_0026_quant                     s=0.14132732   127s=17.948570
+  2041 QuantizeLinear qdq_0102_quant               <- /encoder/layers.12/mlp/Mul_2_output_0 s=7.7358627    127s=982.454567
+  2042 DequantizeLinear qdq_0102_dequant             <- qdq_0102_quant                     s=7.7358627    127s=982.454567
+  2046 QuantizeLinear qdq_0103_quant               <- /encoder/layers.13/attn_norm/LayerNormalization_output_0 s=0.080701284  127s=10.249063
+  2047 DequantizeLinear qdq_0103_dequant             <- qdq_0103_quant                     s=0.080701284  127s=10.249063
+  2049 QuantizeLinear qdq_0027_quant               <- /encoder/layers.13/attn/Wqkv/MatMul_output_0 s=0.07289727   127s=9.257953 
+  2050 DequantizeLinear qdq_0027_dequant             <- qdq_0027_quant                     s=0.07289727   127s=9.257953 
+  2088 QuantizeLinear qdq_0104_quant               <- /encoder/layers.13/attn/Reshape_1_output_0 s=0.034527775  127s=4.385027 
+  2089 DequantizeLinear qdq_0104_dequant             <- qdq_0104_quant                     s=0.034527775  127s=4.385027 
+  2093 QuantizeLinear qdq_0105_quant               <- /encoder/layers.13/mlp_norm/LayerNormalization_output_0 s=0.071087569  127s=9.028121 
+  2094 DequantizeLinear qdq_0105_dequant             <- qdq_0105_quant                     s=0.071087569  127s=9.028121 
+  2096 QuantizeLinear qdq_0028_quant               <- /encoder/layers.13/mlp/Wi/MatMul_output_0 s=0.050976072  127s=6.473961 
+  2097 DequantizeLinear qdq_0028_dequant             <- qdq_0028_quant                     s=0.050976072  127s=6.473961 
+  2112 QuantizeLinear qdq_0106_quant               <- /encoder/layers.13/mlp/Mul_2_output_0 s=0.038330704  127s=4.867999 
+  2113 DequantizeLinear qdq_0106_dequant             <- qdq_0106_quant                     s=0.038330704  127s=4.867999 
+  2117 QuantizeLinear qdq_0107_quant               <- /encoder/layers.14/attn_norm/LayerNormalization_output_0 s=0.081260301  127s=10.320058
+  2118 DequantizeLinear qdq_0107_dequant             <- qdq_0107_quant                     s=0.081260301  127s=10.320058
+  2120 QuantizeLinear qdq_0029_quant               <- /encoder/layers.14/attn/Wqkv/MatMul_output_0 s=0.075933821  127s=9.643595 
+  2121 DequantizeLinear qdq_0029_dequant             <- qdq_0029_quant                     s=0.075933821  127s=9.643595 
+  2159 QuantizeLinear qdq_0108_quant               <- /encoder/layers.14/attn/Reshape_1_output_0 s=0.032054376  127s=4.070906 
+  2160 DequantizeLinear qdq_0108_dequant             <- qdq_0108_quant                     s=0.032054376  127s=4.070906 
+  2164 QuantizeLinear qdq_0109_quant               <- /encoder/layers.14/mlp_norm/LayerNormalization_output_0 s=0.077594101  127s=9.854451 
+  2165 DequantizeLinear qdq_0109_dequant             <- qdq_0109_quant                     s=0.077594101  127s=9.854451 
+  2167 QuantizeLinear qdq_0030_quant               <- /encoder/layers.14/mlp/Wi/MatMul_output_0 s=0.043984368  127s=5.586015 
+  2168 DequantizeLinear qdq_0030_dequant             <- qdq_0030_quant                     s=0.043984368  127s=5.586015 
+  2183 QuantizeLinear qdq_0110_quant               <- /encoder/layers.14/mlp/Mul_2_output_0 s=0.031970285  127s=4.060226 
+  2184 DequantizeLinear qdq_0110_dequant             <- qdq_0110_quant                     s=0.031970285  127s=4.060226 
+  2188 QuantizeLinear qdq_0111_quant               <- /encoder/layers.15/attn_norm/LayerNormalization_output_0 s=0.17215262   127s=21.863383
+  2189 DequantizeLinear qdq_0111_dequant             <- qdq_0111_quant                     s=0.17215262   127s=21.863383
+  2191 QuantizeLinear qdq_0031_quant               <- /encoder/layers.15/attn/Wqkv/MatMul_output_0 s=0.089138322  127s=11.320567
+  2192 DequantizeLinear qdq_0031_dequant             <- qdq_0031_quant                     s=0.089138322  127s=11.320567
+  2230 QuantizeLinear qdq_0112_quant               <- /encoder/layers.15/attn/Reshape_1_output_0 s=0.037074242  127s=4.708429 
+  2231 DequantizeLinear qdq_0112_dequant             <- qdq_0112_quant                     s=0.037074242  127s=4.708429 
+  2235 QuantizeLinear qdq_0113_quant               <- /encoder/layers.15/mlp_norm/LayerNormalization_output_0 s=0.081821449  127s=10.391324
+  2236 DequantizeLinear qdq_0113_dequant             <- qdq_0113_quant                     s=0.081821449  127s=10.391324
+  2238 QuantizeLinear qdq_0032_quant               <- /encoder/layers.15/mlp/Wi/MatMul_output_0 s=0.066088967  127s=8.393299 
+  2239 DequantizeLinear qdq_0032_dequant             <- qdq_0032_quant                     s=0.066088967  127s=8.393299 
+  2254 QuantizeLinear qdq_0114_quant               <- /encoder/layers.15/mlp/Mul_2_output_0 s=0.038236577  127s=4.856045 
+  2255 DequantizeLinear qdq_0114_dequant             <- qdq_0114_quant                     s=0.038236577  127s=4.856045 
+  2259 QuantizeLinear qdq_0115_quant               <- /encoder/layers.16/attn_norm/LayerNormalization_output_0 s=0.10837326   127s=13.763404
+  2260 DequantizeLinear qdq_0115_dequant             <- qdq_0115_quant                     s=0.10837326   127s=13.763404
+  2262 QuantizeLinear qdq_0033_quant               <- /encoder/layers.16/attn/Wqkv/MatMul_output_0 s=0.080645487  127s=10.241977
+  2263 DequantizeLinear qdq_0033_dequant             <- qdq_0033_quant                     s=0.080645487  127s=10.241977
+  2301 QuantizeLinear qdq_0116_quant               <- /encoder/layers.16/attn/Reshape_1_output_0 s=0.033015024  127s=4.192908 
+  2302 DequantizeLinear qdq_0116_dequant             <- qdq_0116_quant                     s=0.033015024  127s=4.192908 
+  2306 QuantizeLinear qdq_0117_quant               <- /encoder/layers.16/mlp_norm/LayerNormalization_output_0 s=0.083057031  127s=10.548243
+  2307 DequantizeLinear qdq_0117_dequant             <- qdq_0117_quant                     s=0.083057031  127s=10.548243
+  2309 QuantizeLinear qdq_0034_quant               <- /encoder/layers.16/mlp/Wi/MatMul_output_0 s=0.068938337  127s=8.755169 
+  2310 DequantizeLinear qdq_0034_dequant             <- qdq_0034_quant                     s=0.068938337  127s=8.755169 
+  2325 QuantizeLinear qdq_0118_quant               <- /encoder/layers.16/mlp/Mul_2_output_0 s=0.049821302  127s=6.327305 
+  2326 DequantizeLinear qdq_0118_dequant             <- qdq_0118_quant                     s=0.049821302  127s=6.327305 
+  2330 QuantizeLinear qdq_0119_quant               <- /encoder/layers.17/attn_norm/LayerNormalization_output_0 s=0.13452913   127s=17.085199
+  2331 DequantizeLinear qdq_0119_dequant             <- qdq_0119_quant                     s=0.13452913   127s=17.085199
+  2333 QuantizeLinear qdq_0035_quant               <- /encoder/layers.17/attn/Wqkv/MatMul_output_0 s=0.083941266  127s=10.660541
+  2334 DequantizeLinear qdq_0035_dequant             <- qdq_0035_quant                     s=0.083941266  127s=10.660541
+  2372 QuantizeLinear qdq_0120_quant               <- /encoder/layers.17/attn/Reshape_1_output_0 s=0.035741981  127s=4.539232 
+  2373 DequantizeLinear qdq_0120_dequant             <- qdq_0120_quant                     s=0.035741981  127s=4.539232 
+  2377 QuantizeLinear qdq_0121_quant               <- /encoder/layers.17/mlp_norm/LayerNormalization_output_0 s=0.11590886   127s=14.720425
+  2378 DequantizeLinear qdq_0121_dequant             <- qdq_0121_quant                     s=0.11590886   127s=14.720425
+  2380 QuantizeLinear qdq_0036_quant               <- /encoder/layers.17/mlp/Wi/MatMul_output_0 s=0.17108828   127s=21.728211
+  2381 DequantizeLinear qdq_0036_dequant             <- qdq_0036_quant                     s=0.17108828   127s=21.728211
+  2396 QuantizeLinear qdq_0122_quant               <- /encoder/layers.17/mlp/Mul_2_output_0 s=0.070121683  127s=8.905454 
+  2397 DequantizeLinear qdq_0122_dequant             <- qdq_0122_quant                     s=0.070121683  127s=8.905454 
+  2401 QuantizeLinear qdq_0123_quant               <- /encoder/layers.18/attn_norm/LayerNormalization_output_0 s=0.16221423   127s=20.601208
+  2402 DequantizeLinear qdq_0123_dequant             <- qdq_0123_quant                     s=0.16221423   127s=20.601208
+  2404 QuantizeLinear qdq_0037_quant               <- /encoder/layers.18/attn/Wqkv/MatMul_output_0 s=0.091026373  127s=11.560349
+  2405 DequantizeLinear qdq_0037_dequant             <- qdq_0037_quant                     s=0.091026373  127s=11.560349
+  2443 QuantizeLinear qdq_0124_quant               <- /encoder/layers.18/attn/Reshape_1_output_0 s=0.039172564  127s=4.974916 
+  2444 DequantizeLinear qdq_0124_dequant             <- qdq_0124_quant                     s=0.039172564  127s=4.974916 
+  2448 QuantizeLinear qdq_0125_quant               <- /encoder/layers.18/mlp_norm/LayerNormalization_output_0 s=0.18047644   127s=22.920508
+  2449 DequantizeLinear qdq_0125_dequant             <- qdq_0125_quant                     s=0.18047644   127s=22.920508
+  2451 QuantizeLinear qdq_0038_quant               <- /encoder/layers.18/mlp/Wi/MatMul_output_0 s=0.096473515  127s=12.252136
+  2452 DequantizeLinear qdq_0038_dequant             <- qdq_0038_quant                     s=0.096473515  127s=12.252136
+  2467 QuantizeLinear qdq_0126_quant               <- /encoder/layers.18/mlp/Mul_2_output_0 s=0.24719757   127s=31.394091
+  2468 DequantizeLinear qdq_0126_dequant             <- qdq_0126_quant                     s=0.24719757   127s=31.394091
+  2472 QuantizeLinear qdq_0127_quant               <- /encoder/layers.19/attn_norm/LayerNormalization_output_0 s=0.14496969   127s=18.411150
+  2473 DequantizeLinear qdq_0127_dequant             <- qdq_0127_quant                     s=0.14496969   127s=18.411150
+  2475 QuantizeLinear qdq_0039_quant               <- /encoder/layers.19/attn/Wqkv/MatMul_output_0 s=0.086452186  127s=10.979428
+  2476 DequantizeLinear qdq_0039_dequant             <- qdq_0039_quant                     s=0.086452186  127s=10.979428
+  2514 QuantizeLinear qdq_0128_quant               <- /encoder/layers.19/attn/Reshape_1_output_0 s=0.039323475  127s=4.994081 
+  2515 DequantizeLinear qdq_0128_dequant             <- qdq_0128_quant                     s=0.039323475  127s=4.994081 
+  2519 QuantizeLinear qdq_0129_quant               <- /encoder/layers.19/mlp_norm/LayerNormalization_output_0 s=0.075959012  127s=9.646795 
+  2520 DequantizeLinear qdq_0129_dequant             <- qdq_0129_quant                     s=0.075959012  127s=9.646795 
+  2522 QuantizeLinear qdq_0040_quant               <- /encoder/layers.19/mlp/Wi/MatMul_output_0 s=0.073573463  127s=9.343830 
+  2523 DequantizeLinear qdq_0040_dequant             <- qdq_0040_quant                     s=0.073573463  127s=9.343830 
+  2538 QuantizeLinear qdq_0130_quant               <- /encoder/layers.19/mlp/Mul_2_output_0 s=0.064537421  127s=8.196252 
+  2539 DequantizeLinear qdq_0130_dequant             <- qdq_0130_quant                     s=0.064537421  127s=8.196252 
+  2543 QuantizeLinear qdq_0131_quant               <- /encoder/layers.20/attn_norm/LayerNormalization_output_0 s=0.20238499   127s=25.702894
+  2544 DequantizeLinear qdq_0131_dequant             <- qdq_0131_quant                     s=0.20238499   127s=25.702894
+  2546 QuantizeLinear qdq_0041_quant               <- /encoder/layers.20/attn/Wqkv/MatMul_output_0 s=0.092172213  127s=11.705871
+  2547 DequantizeLinear qdq_0041_dequant             <- qdq_0041_quant                     s=0.092172213  127s=11.705871
+  2585 QuantizeLinear qdq_0132_quant               <- /encoder/layers.20/attn/Reshape_1_output_0 s=0.037787065  127s=4.798957 
+  2586 DequantizeLinear qdq_0132_dequant             <- qdq_0132_quant                     s=0.037787065  127s=4.798957 
+  2590 QuantizeLinear qdq_0133_quant               <- /encoder/layers.20/mlp_norm/LayerNormalization_output_0 s=0.059550792  127s=7.562951 
+  2591 DequantizeLinear qdq_0133_dequant             <- qdq_0133_quant                     s=0.059550792  127s=7.562951 
+  2593 QuantizeLinear qdq_0042_quant               <- /encoder/layers.20/mlp/Wi/MatMul_output_0 s=0.1002164    127s=12.727483
+  2594 DequantizeLinear qdq_0042_dequant             <- qdq_0042_quant                     s=0.1002164    127s=12.727483
+  2609 QuantizeLinear qdq_0134_quant               <- /encoder/layers.20/mlp/Mul_2_output_0 s=0.11789949   127s=14.973236
+  2610 DequantizeLinear qdq_0134_dequant             <- qdq_0134_quant                     s=0.11789949   127s=14.973236
+  2614 QuantizeLinear qdq_0135_quant               <- /encoder/layers.21/attn_norm/LayerNormalization_output_0 s=0.078292884  127s=9.943196 
+  2615 DequantizeLinear qdq_0135_dequant             <- qdq_0135_quant                     s=0.078292884  127s=9.943196 
+  2617 QuantizeLinear qdq_0043_quant               <- /encoder/layers.21/attn/Wqkv/MatMul_output_0 s=0.094060086  127s=11.945631
+  2618 DequantizeLinear qdq_0043_dequant             <- qdq_0043_quant                     s=0.094060086  127s=11.945631
+  2656 QuantizeLinear qdq_0136_quant               <- /encoder/layers.21/attn/Reshape_1_output_0 s=0.043446165  127s=5.517663 
+  2657 DequantizeLinear qdq_0136_dequant             <- qdq_0136_quant                     s=0.043446165  127s=5.517663 
+  2661 QuantizeLinear qdq_0137_quant               <- /encoder/layers.21/mlp_norm/LayerNormalization_output_0 s=0.054083779  127s=6.868640 
+  2662 DequantizeLinear qdq_0137_dequant             <- qdq_0137_quant                     s=0.054083779  127s=6.868640 
+  2664 QuantizeLinear qdq_0044_quant               <- /encoder/layers.21/mlp/Wi/MatMul_output_0 s=0.11746816   127s=14.918457
+  2665 DequantizeLinear qdq_0044_dequant             <- qdq_0044_quant                     s=0.11746816   127s=14.918457
+  2680 QuantizeLinear qdq_0138_quant               <- /encoder/layers.21/mlp/Mul_2_output_0 s=0.072719336  127s=9.235356 
+  2681 DequantizeLinear qdq_0138_dequant             <- qdq_0138_quant                     s=0.072719336  127s=9.235356 
+  2732 QuantizeLinear qdq_0139_quant               <- /layers.0/self_attn/Transpose_8_output_0 s=0.024735814  127s=3.141448 
+  2733 DequantizeLinear qdq_0139_dequant             <- qdq_0139_quant                     s=0.024735814  127s=3.141448 
+  2738 QuantizeLinear qdq_0140_quant               <- /layers.0/norm2/LayerNormalization_output_0 s=0.15730736   127s=19.978034
+  2739 DequantizeLinear qdq_0140_dequant             <- qdq_0140_quant                     s=0.15730736   127s=19.978034
+  2741 QuantizeLinear qdq_0045_quant               <- /layers.0/linear1/MatMul_output_0  s=0.14818458   127s=18.819442
+  2742 DequantizeLinear qdq_0045_dequant             <- qdq_0045_quant                     s=0.14818458   127s=18.819442
+  2745 QuantizeLinear qdq_0141_quant               <- /layers.0/Relu_output_0            s=0.15280765   127s=19.406572
+  2746 DequantizeLinear qdq_0141_dequant             <- qdq_0141_quant                     s=0.15280765   127s=19.406572
+  2796 QuantizeLinear qdq_0142_quant               <- /layers.1/self_attn/Transpose_8_output_0 s=0.15216099   127s=19.324445
+  2797 DequantizeLinear qdq_0142_dequant             <- qdq_0142_quant                     s=0.15216099   127s=19.324445
+  2802 QuantizeLinear qdq_0143_quant               <- /layers.1/norm2/LayerNormalization_output_0 s=0.02875722   127s=3.652167 
+  2803 DequantizeLinear qdq_0143_dequant             <- qdq_0143_quant                     s=0.02875722   127s=3.652167 
+  2805 QuantizeLinear qdq_0046_quant               <- /layers.1/linear1/MatMul_output_0  s=0.16612606   127s=21.098009
+  2806 DequantizeLinear qdq_0046_dequant             <- qdq_0046_quant                     s=0.16612606   127s=21.098009
+  2809 QuantizeLinear qdq_0144_quant               <- /layers.1/Relu_output_0            s=0.1774825    127s=22.540278
+  2810 DequantizeLinear qdq_0144_dequant             <- qdq_0144_quant                     s=0.1774825    127s=22.540278
+  2818 QuantizeLinear qdq_0145_quant               <- /scorer/scorer.0/LayerNormalization_output_0 s=0.024083726  127s=3.058633 
+  2819 DequantizeLinear qdq_0145_dequant             <- qdq_0145_quant                     s=0.024083726  127s=3.058633 
+  2821 QuantizeLinear qdq_0047_quant               <- /scorer/scorer.1/MatMul_output_0   s=0.26545635   127s=33.712956
+  2822 DequantizeLinear qdq_0047_dequant             <- qdq_0047_quant                     s=0.26545635   127s=33.712956
+  2829 QuantizeLinear qdq_0146_quant               <- /scorer/scorer.2/Mul_1_output_0    s=0.17746958   127s=22.538637
+  2830 DequantizeLinear qdq_0146_dequant             <- qdq_0146_quant                     s=0.17746958   127s=22.538637
+  2832 QuantizeLinear qdq_0048_quant               <- /scorer/scorer.3/MatMul_output_0   s=0.036409099  127s=4.623956 
+  2833 DequantizeLinear qdq_0048_dequant             <- qdq_0048_quant                     s=0.036409099  127s=4.623956 
+  2854 QuantizeLinear qdq_0147_quant               <- /Concat_1_output_0                 s=2.8011904    127s=355.751178
+  2855 DequantizeLinear qdq_0147_dequant             <- qdq_0147_quant                     s=2.8011904    127s=355.751178
+  2857 QuantizeLinear qdq_0049_quant               <- /act_head/act_head.0/Gemm_output_0 s=11.677354    127s=1483.023940
+  2858 DequantizeLinear qdq_0049_dequant             <- qdq_0049_quant                     s=11.677354    127s=1483.023940
+  2864 QuantizeLinear qdq_0148_quant               <- /act_head/act_head.1/Mul_1_output_0 s=11.295313    127s=1434.504736
+  2865 DequantizeLinear qdq_0148_dequant             <- qdq_0148_quant                     s=11.295313    127s=1434.504736
+  2867 QuantizeLinear qdq_0050_quant               <- act_logits                         s=16.953123    127s=2153.046633
+  2868 DequantizeLinear qdq_0050_dequant             <- qdq_0050_quant                     s=16.953123    127s=2153.046633
+
+===== Q/DQ with 127*s in [4.0, 5.2] =====
+  qdq_0054_quant                                 QuantizeLinear s=0.0371469 127s=4.717656
+  qdq_0054_dequant                               DequantizeLinear s=0.0371469 127s=4.717656
+  qdq_0061_quant                                 QuantizeLinear s=0.040277779 127s=5.115278
+  qdq_0061_dequant                               DequantizeLinear s=0.040277779 127s=5.115278
+  qdq_0065_quant                                 QuantizeLinear s=0.039441142 127s=5.009025
+  qdq_0065_dequant                               DequantizeLinear s=0.039441142 127s=5.009025
+  qdq_0010_quant                                 QuantizeLinear s=0.034503095 127s=4.381893
+  qdq_0010_dequant                               DequantizeLinear s=0.034503095 127s=4.381893
+  qdq_0012_quant                                 QuantizeLinear s=0.032262672 127s=4.097359
+  qdq_0012_dequant                               DequantizeLinear s=0.032262672 127s=4.097359
+  qdq_0014_quant                                 QuantizeLinear s=0.037206341 127s=4.725205
+  qdq_0014_dequant                               DequantizeLinear s=0.037206341 127s=4.725205
+  qdq_0078_quant                                 QuantizeLinear s=0.03221542 127s=4.091358
+  qdq_0078_dequant                               DequantizeLinear s=0.03221542 127s=4.091358
+  qdq_0016_quant                                 QuantizeLinear s=0.040756762 127s=5.176109
+  qdq_0016_dequant                               DequantizeLinear s=0.040756762 127s=5.176109
+  qdq_0082_quant                                 QuantizeLinear s=0.035852011 127s=4.553205
+  qdq_0082_dequant                               DequantizeLinear s=0.035852011 127s=4.553205
+  qdq_0100_quant                                 QuantizeLinear s=0.035598129 127s=4.520962
+  qdq_0100_dequant                               DequantizeLinear s=0.035598129 127s=4.520962
+  qdq_0104_quant                                 QuantizeLinear s=0.034527775 127s=4.385027
+  qdq_0104_dequant                               DequantizeLinear s=0.034527775 127s=4.385027
+  qdq_0106_quant                                 QuantizeLinear s=0.038330704 127s=4.867999
+  qdq_0106_dequant                               DequantizeLinear s=0.038330704 127s=4.867999
+  qdq_0108_quant                                 QuantizeLinear s=0.032054376 127s=4.070906
+  qdq_0108_dequant                               DequantizeLinear s=0.032054376 127s=4.070906
+  qdq_0110_quant                                 QuantizeLinear s=0.031970285 127s=4.060226
+  qdq_0110_dequant                               DequantizeLinear s=0.031970285 127s=4.060226
+  qdq_0112_quant                                 QuantizeLinear s=0.037074242 127s=4.708429
+  qdq_0112_dequant                               DequantizeLinear s=0.037074242 127s=4.708429
+  qdq_0114_quant                                 QuantizeLinear s=0.038236577 127s=4.856045
+  qdq_0114_dequant                               DequantizeLinear s=0.038236577 127s=4.856045
+  qdq_0116_quant                                 QuantizeLinear s=0.033015024 127s=4.192908
+  qdq_0116_dequant                               DequantizeLinear s=0.033015024 127s=4.192908
+  qdq_0120_quant                                 QuantizeLinear s=0.035741981 127s=4.539232
+  qdq_0120_dequant                               DequantizeLinear s=0.035741981 127s=4.539232
+  qdq_0124_quant                                 QuantizeLinear s=0.039172564 127s=4.974916
+  qdq_0124_dequant                               DequantizeLinear s=0.039172564 127s=4.974916
+  qdq_0128_quant                                 QuantizeLinear s=0.039323475 127s=4.994081
+  qdq_0128_dequant                               DequantizeLinear s=0.039323475 127s=4.994081
+  qdq_0132_quant                                 QuantizeLinear s=0.037787065 127s=4.798957
+  qdq_0132_dequant                               DequantizeLinear s=0.037787065 127s=4.798957
+  qdq_0048_quant                                 QuantizeLinear s=0.036409099 127s=4.623956
+  qdq_0048_dequant                               DequantizeLinear s=0.036409099 127s=4.623956
+
+===== NODES under /scorer/ =====
+  [1003] Constant         name=/scorer/scorer.2/Constant
+         in : []
+         out: ['/scorer/scorer.2/Constant_output_0']
+  [1004] Constant         name=/scorer/scorer.2/Constant_1
+         in : []
+         out: ['/scorer/scorer.2/Constant_1_output_0']
+  [1005] Constant         name=/scorer/scorer.2/Constant_2
+         in : []
+         out: ['/scorer/scorer.2/Constant_2_output_0']
+  [2816] LayerNormalization name=/scorer/scorer.0/LayerNormalization
+         in : ['/GatherElements_output_0', 'scorer.0.weight', 'scorer.0.bias']
+         out: ['/scorer/scorer.0/LayerNormalization_output_0']
+  [2820] MatMul           name=/scorer/scorer.1/MatMul
+         in : ['qdq_0145_dequant', 'wq_0094_dequant']
+         out: ['/scorer/scorer.1/MatMul_output_0']
+  [2823] Add              name=/scorer/scorer.1/Add
+         in : ['scorer.1.bias', 'qdq_0047_dequant']
+         out: ['/scorer/scorer.1/Add_output_0']
+  [2824] Div              name=/scorer/scorer.2/Div
+         in : ['/scorer/scorer.1/Add_output_0', '/scorer/scorer.2/Constant_output_0']
+         out: ['/scorer/scorer.2/Div_output_0']
+  [2825] Erf              name=/scorer/scorer.2/Erf
+         in : ['/scorer/scorer.2/Div_output_0']
+         out: ['/scorer/scorer.2/Erf_output_0']
+  [2826] Add              name=/scorer/scorer.2/Add
+         in : ['/scorer/scorer.2/Erf_output_0', '/scorer/scorer.2/Constant_1_output_0']
+         out: ['/scorer/scorer.2/Add_output_0']
+  [2827] Mul              name=/scorer/scorer.2/Mul
+         in : ['/scorer/scorer.1/Add_output_0', '/scorer/scorer.2/Add_output_0']
+         out: ['/scorer/scorer.2/Mul_output_0']
+  [2828] Mul              name=/scorer/scorer.2/Mul_1
+         in : ['/scorer/scorer.2/Mul_output_0', '/scorer/scorer.2/Constant_2_output_0']
+         out: ['/scorer/scorer.2/Mul_1_output_0']
+  [2831] MatMul           name=/scorer/scorer.3/MatMul
+         in : ['qdq_0146_dequant', 'wq_0095_dequant']
+         out: ['/scorer/scorer.3/MatMul_output_0']
+  [2834] Add              name=/scorer/scorer.3/Add
+         in : ['scorer.3.bias', 'qdq_0048_dequant']
+         out: ['/scorer/scorer.3/Add_output_0']
+
+===== NODES under /act_head/ =====
+  [1019] Constant         name=/act_head/act_head.1/Constant
+         in : []
+         out: ['/act_head/act_head.1/Constant_output_0']
+  [1020] Constant         name=/act_head/act_head.1/Constant_1
+         in : []
+         out: ['/act_head/act_head.1/Constant_1_output_0']
+  [1021] Constant         name=/act_head/act_head.1/Constant_2
+         in : []
+         out: ['/act_head/act_head.1/Constant_2_output_0']
+  [2856] Gemm             name=/act_head/act_head.0/Gemm
+         in : ['qdq_0147_dequant', 'wq_0096_dequant', 'act_head.0.bias']
+         out: ['/act_head/act_head.0/Gemm_output_0']
+  [2859] Div              name=/act_head/act_head.1/Div
+         in : ['qdq_0049_dequant', '/act_head/act_head.1/Constant_output_0']
+         out: ['/act_head/act_head.1/Div_output_0']
+  [2860] Erf              name=/act_head/act_head.1/Erf
+         in : ['/act_head/act_head.1/Div_output_0']
+         out: ['/act_head/act_head.1/Erf_output_0']
+  [2861] Add              name=/act_head/act_head.1/Add
+         in : ['/act_head/act_head.1/Erf_output_0', '/act_head/act_head.1/Constant_1_output_0']
+         out: ['/act_head/act_head.1/Add_output_0']
+  [2862] Mul              name=/act_head/act_head.1/Mul
+         in : ['qdq_0049_dequant', '/act_head/act_head.1/Add_output_0']
+         out: ['/act_head/act_head.1/Mul_output_0']
+  [2863] Mul              name=/act_head/act_head.1/Mul_1
+         in : ['/act_head/act_head.1/Mul_output_0', '/act_head/act_head.1/Constant_2_output_0']
+         out: ['/act_head/act_head.1/Mul_1_output_0']
+  [2866] Gemm             name=/act_head/act_head.2/Gemm
+         in : ['qdq_0148_dequant', 'wq_0097_dequant', 'act_head.2.bias']
+         out: ['act_logits']
+
+===== CHAIN AROUND SUSPECT /scorer/scorer.3/MatMul_output_0 =====
+  producer [2831] MatMul name=/scorer/scorer.3/MatMul out=['/scorer/scorer.3/MatMul_output_0']
+    in qdq_0146_dequant                         from [2830] DequantizeLinear qdq_0146_DequantizeLinear
+    in wq_0095_dequant                          from [95] DequantizeLinear wq_0095_DequantizeLinear
+  consumer [2832] QuantizeLinear name=qdq_0048_QuantizeLinear
+    in : ['/scorer/scorer.3/MatMul_output_0', 'qdq_0048_scale', 'qdq_0048_zp']
+    out: ['qdq_0048_quant']
+
+===== FINAL NODES (last 25 in graph order) =====
+  [2844] Mul              out=['/Mul_1_output_0']
+  [2845] Unsqueeze        out=['/Unsqueeze_2_output_0']
+  [2846] Sub              out=['/Sub_output_0']
+  [2847] ReduceSum        out=['/ReduceSum_1_output_0']
+  [2848] Unsqueeze        out=['/Unsqueeze_3_output_0']
+  [2849] Neg              out=['/Neg_output_0']
+  [2850] Div              out=['/Div_output_0']
+  [2851] Unsqueeze        out=['/Unsqueeze_4_output_0']
+  [2852] Concat           out=['/Concat_output_0']
+  [2853] Concat           out=['/Concat_1_output_0']
+  [2854] QuantizeLinear   out=['qdq_0147_quant']
+  [2855] DequantizeLinear out=['qdq_0147_dequant']
+  [2856] Gemm             out=['/act_head/act_head.0/Gemm_output_0']
+  [2857] QuantizeLinear   out=['qdq_0049_quant']
+  [2858] DequantizeLinear out=['qdq_0049_dequant']
+  [2859] Div              out=['/act_head/act_head.1/Div_output_0']
+  [2860] Erf              out=['/act_head/act_head.1/Erf_output_0']
+  [2861] Add              out=['/act_head/act_head.1/Add_output_0']
+  [2862] Mul              out=['/act_head/act_head.1/Mul_output_0']
+  [2863] Mul              out=['/act_head/act_head.1/Mul_1_output_0']
+  [2864] QuantizeLinear   out=['qdq_0148_quant']
+  [2865] DequantizeLinear out=['qdq_0148_dequant']
+  [2866] Gemm             out=['act_logits']
+  [2867] QuantizeLinear   out=['qdq_0050_quant']
+  [2868] DequantizeLinear out=['qdq_0050_dequant']
+
+===== DONE =====
+RC=0

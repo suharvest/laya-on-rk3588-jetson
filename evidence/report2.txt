@@ -1,0 +1,405 @@
+============================================================================================================
+S0 — RAW PROFILE SUMMARY + node-sum vs INDEPENDENT end-to-end (same protocol / other tool)
+============================================================================================================
+tag               nodes    sum_avg    sum_med  unprof_mean   unprof_p50  sum/mean   sum/p50
+s512_graph          229    18.5359    18.5347      18.5117      17.4137     1.001     1.064   
+s512_nograph        229    19.4581    18.3403      19.7115      18.5549     0.987     1.049   
+s90_graph           343     7.6480     7.5823       5.3906       5.0449     1.419     1.516   
+s90_nograph         343     8.0028     7.5053       6.4786       6.0781     1.235     1.317   
+nano.s512_graph     229    21.5590    21.5603      20.7953      20.5828     1.037     1.047   NANO
+nano.s512_nograph   229    21.3240    20.7763      21.1974      21.2617     1.006     1.003   NANO
+
+============================================================================================================
+S1 — operator-category aggregation (share of profile Total)
+============================================================================================================
+
+--- s512_graph  (profile Total mean=18.5359 median=18.5347 ms) ---
+category                  sum_avg     %avg    sum_med     %med     n
+ffn_fused_fc               4.5916   24.77%     4.5915   24.77%    49
+attn_core_SDPA             4.0742   21.98%     4.0741   21.98%    24
+attn_qkv_gemm              3.0607   16.51%     3.0607   16.51%    22
+ffn_gemm                   2.0796   11.22%     2.0796   11.22%    24
+norm_residual_ptw          1.7037    9.19%     1.7036    9.19%    47
+attn_out_proj              1.3236    7.14%     1.3236    7.14%    22
+rotary_apply               1.2276    6.62%     1.2275    6.62%    22
+attn_qkv_dec               0.2793    1.51%     0.2793    1.51%     2
+head_ptw                   0.0773    0.42%     0.0773    0.42%     9
+embed_ptw                  0.0642    0.35%     0.0642    0.35%     2
+mask_ptw                   0.0300    0.16%     0.0300    0.16%     2
+reformat_copy              0.0126    0.07%     0.0118    0.06%     2
+rotary_matmul              0.0105    0.06%     0.0105    0.06%     1
+aux_shape                  0.0010    0.01%     0.0010    0.01%     1
+
+--- s512_nograph  (profile Total mean=19.4581 median=18.4131 ms) ---
+category                  sum_avg     %avg    sum_med     %med     n
+ffn_fused_fc               4.8358   24.85%     4.5773   24.86%    49
+attn_core_SDPA             4.2342   21.76%     4.0207   21.84%    24
+attn_qkv_gemm              3.2189   16.54%     3.0478   16.55%    22
+ffn_gemm                   2.1619   11.11%     2.0583   11.18%    24
+norm_residual_ptw          1.7104    8.79%     1.6408    8.91%    47
+attn_out_proj              1.5279    7.85%     1.3112    7.12%    22
+rotary_apply               1.2643    6.50%     1.2176    6.61%    22
+attn_qkv_dec               0.2771    1.42%     0.2767    1.50%     2
+head_ptw                   0.1019    0.52%     0.0701    0.38%     9
+embed_ptw                  0.0735    0.38%     0.0688    0.37%     2
+mask_ptw                   0.0293    0.15%     0.0291    0.16%     2
+rotary_matmul              0.0095    0.05%     0.0095    0.05%     1
+reformat_copy              0.0099    0.05%     0.0092    0.05%     2
+aux_shape                  0.0035    0.02%     0.0033    0.02%     1
+
+--- s90_graph  (profile Total mean=7.6480 median=7.5823 ms) ---
+category                  sum_avg     %avg    sum_med     %med     n
+ffn_fused_fc               2.7436   35.87%     2.7436   36.18%   141
+attn_qkv_gemm              1.5747   20.59%     1.5746   20.77%    22
+ffn_gemm                   0.9322   12.19%     0.8671   11.44%    24
+norm_residual_ptw          0.5759    7.53%     0.5759    7.60%    47
+attn_out_proj              0.5628    7.36%     0.5627    7.42%    22
+attn_core_SDPA             0.4531    5.92%     0.4532    5.98%    24
+rotary_apply               0.2705    3.54%     0.2705    3.57%    22
+other                      0.2465    3.22%     0.2465    3.25%    23
+attn_qkv_dec               0.1415    1.85%     0.1415    1.87%     2
+head_ptw                   0.0774    1.01%     0.0774    1.02%     9
+embed_ptw                  0.0363    0.47%     0.0363    0.48%     2
+reformat_copy              0.0126    0.16%     0.0122    0.16%     2
+rotary_matmul              0.0110    0.14%     0.0110    0.14%     1
+mask_ptw                   0.0074    0.10%     0.0074    0.10%     1
+aux_shape                  0.0025    0.03%     0.0025    0.03%     1
+
+--- s90_nograph  (profile Total mean=8.0028 median=7.4960 ms) ---
+category                  sum_avg     %avg    sum_med     %med     n
+ffn_fused_fc               2.8974   36.20%     2.7325   36.45%   141
+attn_qkv_gemm              1.6508   20.63%     1.5783   21.05%    22
+ffn_gemm                   0.9580   11.97%     0.8640   11.53%    24
+attn_out_proj              0.5974    7.46%     0.5674    7.57%    22
+norm_residual_ptw          0.6068    7.58%     0.5151    6.87%    47
+attn_core_SDPA             0.4539    5.67%     0.4533    6.05%    24
+rotary_apply               0.2798    3.50%     0.2717    3.62%    22
+other                      0.2551    3.19%     0.2485    3.32%    23
+attn_qkv_dec               0.1540    1.92%     0.1425    1.90%     2
+head_ptw                   0.0702    0.88%     0.0698    0.93%     9
+embed_ptw                  0.0501    0.63%     0.0336    0.45%     2
+reformat_copy              0.0100    0.12%     0.0096    0.13%     2
+rotary_matmul              0.0090    0.11%     0.0089    0.12%     1
+mask_ptw                   0.0074    0.09%     0.0073    0.10%     1
+aux_shape                  0.0030    0.04%     0.0029    0.04%     1
+
+--- nano.s512_graph  (profile Total mean=21.5590 median=21.5603 ms) ---
+category                  sum_avg     %avg    sum_med     %med     n
+ffn_fused_fc               5.5167   25.59%     5.5174   25.59%    49
+attn_core_SDPA             4.7059   21.83%     4.7063   21.83%    24
+attn_qkv_gemm              3.5376   16.41%     3.5376   16.41%    22
+ffn_gemm                   2.5578   11.86%     2.5584   11.87%    24
+norm_residual_ptw          1.8203    8.44%     1.8204    8.44%    47
+attn_out_proj              1.5758    7.31%     1.5760    7.31%    22
+rotary_apply               1.3156    6.10%     1.3157    6.10%    22
+attn_qkv_dec               0.3213    1.49%     0.3212    1.49%     2
+head_ptw                   0.0839    0.39%     0.0839    0.39%     9
+embed_ptw                  0.0688    0.32%     0.0686    0.32%     2
+mask_ptw                   0.0308    0.14%     0.0308    0.14%     2
+reformat_copy              0.0130    0.06%     0.0124    0.06%     2
+rotary_matmul              0.0101    0.05%     0.0101    0.05%     1
+aux_shape                  0.0015    0.01%     0.0015    0.01%     1
+
+--- nano.s512_nograph  (profile Total mean=21.3240 median=21.2919 ms) ---
+category                  sum_avg     %avg    sum_med     %med     n
+ffn_fused_fc               5.3996   25.32%     5.2466   24.64%    49
+attn_core_SDPA             4.7173   22.12%     4.5636   21.43%    24
+attn_qkv_gemm              3.5396   16.60%     3.5245   16.55%    22
+ffn_gemm                   2.5083   11.76%     2.4043   11.29%    24
+norm_residual_ptw          1.7590    8.25%     1.7298    8.12%    47
+attn_out_proj              1.5748    7.39%     1.5265    7.17%    22
+rotary_apply               1.2793    6.00%     1.2560    5.90%    22
+attn_qkv_dec               0.3368    1.58%     0.3202    1.50%     2
+head_ptw                   0.0776    0.36%     0.0761    0.36%     9
+embed_ptw                  0.0768    0.36%     0.0749    0.35%     2
+mask_ptw                   0.0311    0.15%     0.0310    0.15%     2
+rotary_matmul              0.0098    0.05%     0.0099    0.05%     1
+reformat_copy              0.0105    0.05%     0.0097    0.05%     2
+aux_shape                  0.0035    0.02%     0.0032    0.02%     1
+
+============================================================================================================
+S2 — layer-prefix aggregation (encoder.layers_00..21 / decoder.layers_0..1 / head-emb)
+============================================================================================================
+
+--- s512_graph ---
+  encoder.layers: 22 groups  sum_avg=6.1133 ms (32.98% of Total 18.5359)  min=0.2735 max=0.2887 mean=0.2779
+  decoder.layers_00  sum_avg=  0.3177 (  1.71%)  sum_med=  0.3177  n=2
+  decoder.layers_01  sum_avg=  0.3227 (  1.74%)  sum_med=  0.3227  n=2
+  head/emb/pre-post  sum_avg= 11.7821 ( 63.56%)  sum_med= 11.7810  n=158
+  per-encoder-layer detail (sum_avg ms): L00=0.289, L01=0.276, L02=0.281, L03=0.279, L04=0.275, L05=0.280, L06=0.278, L07=0.274, L08=0.273, L09=0.278, L10=0.275, L11=0.285, L12=0.278, L13=0.277, L14=0.276, L15=0.276, L16=0.276, L17=0.275, L18=0.275, L19=0.277, L20=0.276, L21=0.285
+
+--- s512_nograph ---
+  encoder.layers: 22 groups  sum_avg=6.5554 ms (33.69% of Total 19.4581)  min=0.2740 max=0.3904 mean=0.2980
+  decoder.layers_00  sum_avg=  0.3186 (  1.64%)  sum_med=  0.3183  n=2
+  decoder.layers_01  sum_avg=  0.3213 (  1.65%)  sum_med=  0.3210  n=2
+  head/emb/pre-post  sum_avg= 12.2628 ( 63.02%)  sum_med= 11.6368  n=158
+  per-encoder-layer detail (sum_avg ms): L00=0.285, L01=0.284, L02=0.390, L03=0.277, L04=0.276, L05=0.375, L06=0.278, L07=0.292, L08=0.274, L09=0.275, L10=0.321, L11=0.278, L12=0.278, L13=0.284, L14=0.276, L15=0.305, L16=0.336, L17=0.276, L18=0.315, L19=0.277, L20=0.275, L21=0.328
+
+--- s90_graph ---
+  encoder.layers: 22 groups  sum_avg=2.9296 ms (38.31% of Total 7.6480)  min=0.1253 max=0.2063 mean=0.1332
+  decoder.layers_00  sum_avg=  0.1460 (  1.91%)  sum_med=  0.1460  n=2
+  decoder.layers_01  sum_avg=  0.1466 (  1.92%)  sum_med=  0.1466  n=2
+  head/emb/pre-post  sum_avg=  4.4258 ( 57.87%)  sum_med=  4.4253  n=272
+  per-encoder-layer detail (sum_avg ms): L00=0.206, L01=0.131, L02=0.129, L03=0.134, L04=0.130, L05=0.129, L06=0.132, L07=0.131, L08=0.128, L09=0.126, L10=0.129, L11=0.131, L12=0.129, L13=0.133, L14=0.132, L15=0.131, L16=0.131, L17=0.129, L18=0.125, L19=0.128, L20=0.128, L21=0.129
+
+--- s90_nograph ---
+  encoder.layers: 22 groups  sum_avg=3.0478 ms (38.08% of Total 8.0028)  min=0.1295 max=0.2069 mean=0.1385
+  decoder.layers_00  sum_avg=  0.1704 (  2.13%)  sum_med=  0.1461  n=2
+  decoder.layers_01  sum_avg=  0.1509 (  1.89%)  sum_med=  0.1456  n=2
+  head/emb/pre-post  sum_avg=  4.6336 ( 57.90%)  sum_med=  4.3443  n=272
+  per-encoder-layer detail (sum_avg ms): L00=0.207, L01=0.132, L02=0.131, L03=0.132, L04=0.131, L05=0.130, L06=0.132, L07=0.166, L08=0.132, L09=0.130, L10=0.132, L11=0.132, L12=0.131, L13=0.133, L14=0.134, L15=0.180, L16=0.130, L17=0.131, L18=0.130, L19=0.130, L20=0.130, L21=0.131
+
+--- nano.s512_graph ---
+  encoder.layers: 22 groups  sum_avg=7.1102 ms (32.98% of Total 21.5590)  min=0.3147 max=0.4037 mean=0.3232
+  decoder.layers_00  sum_avg=  0.3688 (  1.71%)  sum_med=  0.3688  n=2
+  decoder.layers_01  sum_avg=  0.5235 (  2.43%)  sum_med=  0.5240  n=2
+  head/emb/pre-post  sum_avg= 13.5565 ( 62.88%)  sum_med= 13.5570  n=158
+  per-encoder-layer detail (sum_avg ms): L00=0.332, L01=0.333, L02=0.327, L03=0.317, L04=0.404, L05=0.320, L06=0.318, L07=0.320, L08=0.317, L09=0.317, L10=0.317, L11=0.316, L12=0.315, L13=0.315, L14=0.320, L15=0.315, L16=0.318, L17=0.316, L18=0.321, L19=0.315, L20=0.320, L21=0.317
+
+--- nano.s512_nograph ---
+  encoder.layers: 22 groups  sum_avg=7.1632 ms (33.59% of Total 21.3240)  min=0.3205 max=0.3401 mean=0.3256
+  decoder.layers_00  sum_avg=  0.3779 (  1.77%)  sum_med=  0.3695  n=2
+  decoder.layers_01  sum_avg=  0.4284 (  2.01%)  sum_med=  0.3712  n=2
+  head/emb/pre-post  sum_avg= 13.3546 ( 62.63%)  sum_med= 12.9909  n=158
+  per-encoder-layer detail (sum_avg ms): L00=0.340, L01=0.326, L02=0.324, L03=0.328, L04=0.325, L05=0.328, L06=0.326, L07=0.326, L08=0.322, L09=0.322, L10=0.323, L11=0.327, L12=0.327, L13=0.323, L14=0.322, L15=0.327, L16=0.326, L17=0.326, L18=0.328, L19=0.321, L20=0.324, L21=0.320
+
+============================================================================================================
+S3 — Top-20 nodes by averageMs (and by medianMs)
+============================================================================================================
+
+--- s512_graph (Total mean 18.5359) ---
+  avg  0.1816  med  0.1816   0.98%  _gemm_mha_v2_myl0_16
+  avg  0.1810  med  0.1810   0.98%  /layers_1/linear1/MatMul_myl0_215
+  avg  0.1804  med  0.1804   0.97%  __myl_FcAdd_myl0_209
+  avg  0.1801  med  0.1801   0.97%  /layers_0/linear1/MatMul_myl0_208
+  avg  0.1796  med  0.1796   0.97%  __myl_FcAdd_myl0_216
+  avg  0.1755  med  0.1755   0.95%  _gemm_mha_v2_myl0_34
+  avg  0.1739  med  0.1739   0.94%  _gemm_mha_v2_myl0_142
+  avg  0.1735  med  0.1735   0.94%  _gemm_mha_v2_myl0_88
+  avg  0.1731  med  0.1731   0.93%  _gemm_mha_v2_myl0_7
+  avg  0.1731  med  0.1731   0.93%  _gemm_mha_v2_myl0_178
+  avg  0.1729  med  0.1729   0.93%  _gemm_mha_v2_myl0_43
+  avg  0.1727  med  0.1726   0.93%  _gemm_mha_v2_myl0_115
+  avg  0.1724  med  0.1724   0.93%  _gemm_mha_v2_myl0_52
+  avg  0.1720  med  0.1720   0.93%  _gemm_mha_v2_myl0_61
+  avg  0.1716  med  0.1716   0.93%  _gemm_mha_v2_myl0_133
+  avg  0.1712  med  0.1712   0.92%  _gemm_mha_v2_myl0_70
+  avg  0.1712  med  0.1712   0.92%  _gemm_mha_v2_myl0_79
+  avg  0.1712  med  0.1712   0.92%  _gemm_mha_v2_myl0_25
+  avg  0.1711  med  0.1711   0.92%  _gemm_mha_v2_myl0_169
+  avg  0.1708  med  0.1708   0.92%  _gemm_mha_v2_myl0_151
+
+--- s512_nograph (Total mean 19.4581) ---
+  avg  0.2650  med  0.1703   1.36%  _gemm_mha_v2_myl0_124
+  avg  0.2369  med  0.1369   1.22%  /encoder/layers_5/attn/Wqkv/MatMul_myl0_50
+  avg  0.2022  med  0.1700   1.04%  _gemm_mha_v2_myl0_97
+  avg  0.2010  med  0.1685   1.03%  _gemm_mha_v2_myl0_196
+  avg  0.1986  med  0.1376   1.02%  /encoder/layers_16/attn/Wqkv/MatMul_myl0_149
+  avg  0.1969  med  0.0927   1.01%  __myl_FcMul_myl0_74
+  avg  0.1955  med  0.1702   1.00%  _gemm_mha_v2_myl0_25
+  avg  0.1922  med  0.1703   0.99%  _gemm_mha_v2_myl0_52
+  avg  0.1821  med  0.1819   0.94%  /layers_1/linear1/MatMul_myl0_215
+  avg  0.1808  med  0.1806   0.93%  /layers_0/linear1/MatMul_myl0_208
+  avg  0.1802  med  0.1797   0.93%  __myl_FcAdd_myl0_209
+  avg  0.1797  med  0.1793   0.92%  __myl_FcAdd_myl0_216
+  avg  0.1722  med  0.0599   0.88%  /encoder/layers_2/attn/Wo/MatMul_myl0_26
+  avg  0.1708  med  0.1703   0.88%  _gemm_mha_v2_myl0_178
+  avg  0.1708  med  0.1703   0.88%  _gemm_mha_v2_myl0_70
+  avg  0.1707  med  0.1705   0.88%  _gemm_mha_v2_myl0_79
+  avg  0.1707  med  0.1703   0.88%  _gemm_mha_v2_myl0_187
+  avg  0.1706  med  0.1701   0.88%  _gemm_mha_v2_myl0_133
+  avg  0.1706  med  0.1701   0.88%  _gemm_mha_v2_myl0_151
+  avg  0.1706  med  0.1702   0.88%  _gemm_mha_v2_myl0_43
+
+--- s90_graph (Total mean 7.6480) ---
+  avg  0.0972  med  0.0323   1.27%  /encoder/layers_0/mlp/Wo/MatMul_myl0_17
+  avg  0.0764  med  0.0764   1.00%  /layers_1/linear1/MatMul_myl0_325
+  avg  0.0747  med  0.0747   0.98%  /layers_0/linear1/MatMul_myl0_318
+  avg  0.0734  med  0.0734   0.96%  __myl_FcAdd_myl0_326
+  avg  0.0733  med  0.0733   0.96%  /encoder/layers_5/attn/Wqkv/MatMul_myl0_75
+  avg  0.0731  med  0.0731   0.96%  /encoder/layers_3/attn/Wqkv/MatMul_myl0_47
+  avg  0.0729  med  0.0729   0.95%  /encoder/layers_17/attn/Wqkv/MatMul_myl0_243
+  avg  0.0727  med  0.0727   0.95%  /encoder/layers_16/attn/Wqkv/MatMul_myl0_229
+  avg  0.0726  med  0.0726   0.95%  __myl_FcAdd_myl0_319
+  avg  0.0726  med  0.0726   0.95%  /encoder/layers_15/attn/Wqkv/MatMul_myl0_215
+  avg  0.0724  med  0.0724   0.95%  /encoder/layers_14/attn/Wqkv/MatMul_myl0_201
+  avg  0.0724  med  0.0724   0.95%  /encoder/layers_4/attn/Wqkv/MatMul_myl0_61
+  avg  0.0722  med  0.0722   0.94%  /encoder/layers_13/attn/Wqkv/MatMul_myl0_187
+  avg  0.0722  med  0.0722   0.94%  /encoder/layers_6/attn/Wqkv/MatMul_myl0_89
+  avg  0.0718  med  0.0718   0.94%  /encoder/layers_11/attn/Wqkv/MatMul_myl0_159
+  avg  0.0716  med  0.0716   0.94%  /encoder/layers_8/attn/Wqkv/MatMul_myl0_117
+  avg  0.0715  med  0.0714   0.93%  /encoder/layers_1/attn/Wqkv/MatMul_myl0_19
+  avg  0.0713  med  0.0713   0.93%  /encoder/layers_7/attn/Wqkv/MatMul_myl0_103
+  avg  0.0713  med  0.0713   0.93%  /encoder/layers_20/attn/Wqkv/MatMul_myl0_285
+  avg  0.0713  med  0.0713   0.93%  /layers_0/self_attn/MatMul_2+/layers_0/self_attn/MatMul_1+/layers_0/self_attn/MatMul_myl0_313
+
+--- s90_nograph (Total mean 8.0028) ---
+  avg  0.1203  med  0.0720   1.50%  /encoder/layers_15/attn/Wqkv/MatMul_myl0_215
+  avg  0.1166  med  0.0564   1.46%  __myl_Fc_myl0_109
+  avg  0.1114  med  0.0582   1.39%  __mye455853_myl0_111
+  avg  0.0983  med  0.0327   1.23%  /encoder/layers_0/mlp/Wo/MatMul_myl0_17
+  avg  0.0921  med  0.0743   1.15%  /layers_0/linear1/MatMul_myl0_318
+  avg  0.0839  med  0.0720   1.05%  /encoder/layers_7/attn/Wqkv/MatMul_myl0_103
+  avg  0.0784  med  0.0718   0.98%  /layers_0/self_attn/MatMul_2+/layers_0/self_attn/MatMul_1+/layers_0/self_attn/MatMul_myl0_313
+  avg  0.0761  med  0.0718   0.95%  __myl_FcAdd_myl0_319
+  avg  0.0756  med  0.0707   0.95%  /layers_1/self_attn/MatMul_2+/layers_1/self_attn/MatMul_1+/layers_1/self_attn/MatMul_myl0_321
+  avg  0.0753  med  0.0749   0.94%  /layers_1/linear1/MatMul_myl0_325
+  avg  0.0751  med  0.0711   0.94%  /encoder/layers_8/attn/Wqkv/MatMul_myl0_117
+  avg  0.0746  med  0.0733   0.93%  __myl_FcAdd_myl0_326
+  avg  0.0733  med  0.0730   0.92%  /encoder/layers_5/attn/Wqkv/MatMul_myl0_75
+  avg  0.0731  med  0.0729   0.91%  /encoder/layers_17/attn/Wqkv/MatMul_myl0_243
+  avg  0.0727  med  0.0723   0.91%  /encoder/layers_6/attn/Wqkv/MatMul_myl0_89
+  avg  0.0726  med  0.0725   0.91%  /encoder/layers_1/attn/Wqkv/MatMul_myl0_19
+  avg  0.0724  med  0.0723   0.91%  /encoder/layers_2/attn/Wqkv/MatMul_myl0_33
+  avg  0.0724  med  0.0723   0.90%  /encoder/layers_3/attn/Wqkv/MatMul_myl0_47
+  avg  0.0724  med  0.0722   0.90%  /encoder/layers_4/attn/Wqkv/MatMul_myl0_61
+  avg  0.0723  med  0.0720   0.90%  /encoder/layers_12/attn/Wqkv/MatMul_myl0_173
+
+--- nano.s512_graph (Total mean 21.5590) ---
+  avg  0.3626  med  0.3632   1.68%  /layers_1/linear1/MatMul_myl0_215
+  avg  0.2811  med  0.2814   1.30%  _gemm_mha_v2_myl0_43
+  avg  0.2563  med  0.2565   1.19%  __myl_FcAdd_myl0_216
+  avg  0.2338  med  0.2341   1.08%  _gemm_mha_v2_myl0_212
+  avg  0.2084  med  0.2084   0.97%  /layers_0/linear1/MatMul_myl0_208
+  avg  0.2067  med  0.2067   0.96%  __myl_FcAdd_myl0_209
+  avg  0.1947  med  0.1947   0.90%  _gemm_mha_v2_myl0_88
+  avg  0.1937  med  0.1937   0.90%  _gemm_mha_v2_myl0_16
+  avg  0.1935  med  0.1935   0.90%  _gemm_mha_v2_myl0_196
+  avg  0.1927  med  0.1927   0.89%  _gemm_mha_v2_myl0_70
+  avg  0.1923  med  0.1923   0.89%  _gemm_mha_v2_myl0_79
+  avg  0.1921  med  0.1921   0.89%  _gemm_mha_v2_myl0_124
+  avg  0.1921  med  0.1921   0.89%  _gemm_mha_v2_myl0_133
+  avg  0.1921  med  0.1921   0.89%  _gemm_mha_v2_myl0_115
+  avg  0.1920  med  0.1920   0.89%  _gemm_mha_v2_myl0_61
+  avg  0.1918  med  0.1918   0.89%  _gemm_mha_v2_myl0_34
+  avg  0.1918  med  0.1918   0.89%  _gemm_mha_v2_myl0_187
+  avg  0.1917  med  0.1917   0.89%  _gemm_mha_v2_myl0_169
+  avg  0.1917  med  0.1917   0.89%  _gemm_mha_v2_myl0_142
+  avg  0.1916  med  0.1916   0.89%  _gemm_mha_v2_myl0_178
+
+--- nano.s512_nograph (Total mean 21.3240) ---
+  avg  0.2512  med  0.2101   1.18%  /layers_1/linear1/MatMul_myl0_215
+  avg  0.2249  med  0.2056   1.05%  __myl_FcAdd_myl0_216
+  avg  0.2182  med  0.2103   1.02%  /layers_0/linear1/MatMul_myl0_208
+  avg  0.2106  med  0.2056   0.99%  __myl_FcAdd_myl0_209
+  avg  0.2036  med  0.1645   0.95%  _gemm_mha_v2_myl0_212
+  avg  0.2016  med  0.1929   0.95%  _gemm_mha_v2_myl0_133
+  avg  0.2013  med  0.1914   0.94%  _gemm_mha_v2_myl0_16
+  avg  0.2007  med  0.1930   0.94%  _gemm_mha_v2_myl0_43
+  avg  0.2005  med  0.1932   0.94%  _gemm_mha_v2_myl0_25
+  avg  0.1991  med  0.1918   0.93%  _gemm_mha_v2_myl0_115
+  avg  0.1987  med  0.1932   0.93%  _gemm_mha_v2_myl0_124
+  avg  0.1986  med  0.1919   0.93%  _gemm_mha_v2_myl0_61
+  avg  0.1979  med  0.1931   0.93%  _gemm_mha_v2_myl0_178
+  avg  0.1978  med  0.1929   0.93%  _gemm_mha_v2_myl0_52
+  avg  0.1977  med  0.1919   0.93%  _gemm_mha_v2_myl0_34
+  avg  0.1977  med  0.1930   0.93%  _gemm_mha_v2_myl0_160
+  avg  0.1975  med  0.1930   0.93%  _gemm_mha_v2_myl0_79
+  avg  0.1972  med  0.1930   0.92%  _gemm_mha_v2_myl0_70
+  avg  0.1969  med  0.1920   0.92%  _gemm_mha_v2_myl0_142
+  avg  0.1966  med  0.1930   0.92%  _gemm_mha_v2_myl0_151
+
+============================================================================================================
+S4 — graph vs non-graph, per-node delta, MEDIAN based (outlier robust) and AVERAGE based
+============================================================================================================
+
+### s512  named-nodes=229  Total(mean): graph=18.5359 non-graph=19.4581  delta=0.9222 ms (4.74%)
+  [MEDIAN] net=-0.1943 ms | nodes faster=14.4%  slower=59.4%  unchanged(<=0.5us)=26.2%  | sum of all deltas=-0.1943
+    top-10 FASTER under graph:  /encoder/layers_1/mlp/Wo/MatMul_myl0_21 -0.0082 | __myl_CasSum_myl0_1 -0.0047 | /encoder/layers_12/attn/Wqkv/MatMul_myl0_113 -0.0039 | /encoder/layers_18/attn/Wqkv/MatMul_myl0_167 -0.0034 | __myl_Fc_myl0_109 -0.0027 | dummy_shape_call__mye460071_0_myl0_0 -0.0024 | /encoder/layers_4/attn/Wqkv/MatMul_myl0_41 -0.0022 | _gemm_mha_v2_myl0_160 -0.0017 | __myl_FcAdd_myl0_206 -0.0017 | __myl_Fc_myl0_100 -0.0016
+    top-5  SLOWER under graph:  _gemm_mha_v2_myl0_205 +0.0051 | _gemm_mha_v2_myl0_34 +0.0059 | __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAd +0.0060 | /encoder/layers_11/mlp/Wo/MatMul_myl0_111 +0.0116 | _gemm_mha_v2_myl0_16 +0.0140
+    nodes with graph-time <5us: n=1 sum_delta=0.0024 | >=5us: n=228 sum_delta=-0.1967
+  [AVERAGE] net=0.9222 ms | nodes faster=33.2%  slower=42.8%  unchanged(<=0.5us)=24.0%  | sum of all deltas=0.9222
+    top-10 FASTER under graph:  /encoder/layers_2/attn/Wo/MatMul_myl0_26 -0.1106 | __myl_FcMul_myl0_74 -0.1048 | /encoder/layers_5/attn/Wqkv/MatMul_myl0_50 -0.0961 | _gemm_mha_v2_myl0_124 -0.0943 | /encoder/layers_16/attn/Wqkv/MatMul_myl0_149 -0.0598 | __myl_FcMul_myl0_173 -0.0570 | __myl_Fc_myl0_199 -0.0495 | /encoder/layers_10/attn/Wo/MatMul_myl0_98 -0.0455 | /encoder/layers_21/attn/Wo/MatMul_myl0_197 -0.0454 | _gemm_mha_v2_myl0_196 -0.0328
+    top-5  SLOWER under graph:  _gemm_mha_v2_myl0_205 +0.0047 | _gemm_mha_v2_myl0_34 +0.0056 | __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAd +0.0057 | /encoder/layers_11/mlp/Wo/MatMul_myl0_111 +0.0080 | _gemm_mha_v2_myl0_16 +0.0139
+    nodes with graph-time <5us: n=1 sum_delta=0.0025 | >=5us: n=228 sum_delta=0.9197
+
+### s90  named-nodes=343  Total(mean): graph=7.6480 non-graph=8.0028  delta=0.3548 ms (4.43%)
+  [MEDIAN] net=-0.0769 ms | nodes faster=16.3%  slower=27.1%  unchanged(<=0.5us)=56.6%  | sum of all deltas=-0.0769
+    top-10 FASTER under graph:  __mye455997_myl0_167 -0.0034 | /encoder/layers_18/attn/Wo/MatMul_myl0_260 -0.0027 | __myl_Fc_myl0_165 -0.0021 | __myl_TraSliSliResSliNegSliConMulMulAddTraSl -0.0020 | __mye455853_myl0_111 -0.0019 | __mye455745_myl0_69 -0.0018 | /encoder/layers_10/attn/Wqkv/MatMul_myl0_145 -0.0017 | __myl_CasGatCasMeaSubMulMeaAddSqrDivMulCasMu -0.0016 | __myl_Mul_myl0_16 -0.0016 | /encoder/layers_17/mlp/Wo/MatMul_myl0_255 -0.0015
+    top-5  SLOWER under graph:  __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAd +0.0029 | __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAd +0.0029 | /encoder/layers_7/attn/Wo/MatMul_myl0_106 +0.0033 | /encoder/layers_0/attn/Wqkv/MatMul_myl0_3 +0.0037 | __myl_CasSum_myl0_1 +0.0043
+    nodes with graph-time <5us: n=93 sum_delta=0.0004 | >=5us: n=250 sum_delta=-0.0773
+  [AVERAGE] net=0.3548 ms | nodes faster=24.8%  slower=22.2%  unchanged(<=0.5us)=53.1%  | sum of all deltas=0.3548
+    top-10 FASTER under graph:  __myl_Fc_myl0_109 -0.0615 | __mye455853_myl0_111 -0.0550 | __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAd -0.0496 | /encoder/layers_15/attn/Wqkv/MatMul_myl0_215 -0.0476 | /encoder/layers_7/attn/Wo/MatMul_myl0_106 -0.0212 | /layers_0/linear1/MatMul_myl0_318 -0.0174 | __mye456105_myl0_209 -0.0154 | __myl_Fc_myl0_207 -0.0147 | /encoder/layers_7/attn/Wqkv/MatMul_myl0_103 -0.0126 | __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAd -0.0124
+    top-5  SLOWER under graph:  __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAd +0.0024 | __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAd +0.0025 | __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAd +0.0026 | __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAd +0.0028 | __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAd +0.0029
+    nodes with graph-time <5us: n=93 sum_delta=0.0005 | >=5us: n=250 sum_delta=0.3544
+
+============================================================================================================
+S5 — s90 -> s512 per-canonical-node scaling (seq x5.689), MEDIAN based
+============================================================================================================
+matched canonical nodes (both median >0.002ms): 93
+
+by CATEGORY: median / min / max scaling factor
+  attn_core_SDPA         n=  1  median= 8.95x  min= 8.95x  max= 8.95x
+  rotary_apply           n=  2  median= 5.36x  min= 4.41x  max= 6.30x
+  mask_ptw               n=  1  median= 3.13x  min= 3.13x  max= 3.13x
+  norm_residual_ptw      n=  3  median= 2.83x  min= 2.37x  max= 3.47x
+  ffn_gemm               n= 24  median= 2.40x  min= 2.17x  max= 2.83x
+  attn_out_proj          n= 22  median= 2.36x  min= 2.05x  max= 2.65x
+  ffn_fused_fc           n=  2  median= 2.03x  min= 1.64x  max= 2.43x
+  attn_qkv_dec           n=  2  median= 1.97x  min= 1.93x  max= 2.02x
+  attn_qkv_gemm          n= 22  median= 1.94x  min= 1.87x  max= 2.01x
+  embed_ptw              n=  2  median= 1.58x  min= 0.52x  max= 2.65x
+  reformat_copy          n=  2  median= 0.97x  min= 0.94x  max= 1.00x
+  head_ptw               n=  9  median= 0.96x  min= 0.83x  max= 1.23x
+  rotary_matmul          n=  1  median= 0.95x  min= 0.95x  max= 0.95x
+
+top-20 superlinear nodes:
+    8.95x   s90   0.0191 -> s512   0.1712   n=24->24  _gemm_mha_v2
+    6.30x   s90   0.0155 -> s512   0.0974   n=1->1  __myl_TraConSinCosResResTraSliSliResMulSliNegSliConMulAddTraSliResMulS
+    4.41x   s90   0.0122 -> s512   0.0536   n=21->21  __myl_TraSliSliResSliNegSliConMulMulAddTraSliResSliNegSliConMulMulAddR
+    3.47x   s90   0.0354 -> s512   0.1226   n=1->1  __myl_CasGatResAddCasMeaSubMulMeaAddSqrDivMulCasMulAddAddCasMeaSubMulM
+    3.13x   s90   0.0074 -> s512   0.0232   n=1->1  __myl_CasRepOrResNotSubCasSelSel
+    2.83x   s90   0.0124 -> s512   0.0351   n=43->43  __myl_AddCasMeaSubMulMeaAddSqrDivMulCasMulAdd
+    2.83x   s90   0.0308 -> s512   0.0872   n=1->1  /encoder/layers_21/mlp/Wo/MatMul
+    2.70x   s90   0.0325 -> s512   0.0878   n=1->1  /encoder/layers_11/mlp/Wo/MatMul
+    2.65x   s90   0.0213 -> s512   0.0565   n=1->1  __myl_CasGatCasMeaSubMulMeaAddSqrDivMulCasMulAdd
+    2.65x   s90   0.0228 -> s512   0.0602   n=1->1  /encoder/layers_18/attn/Wo/MatMul
+    2.60x   s90   0.0231 -> s512   0.0599   n=1->1  /encoder/layers_16/attn/Wo/MatMul
+    2.54x   s90   0.0242 -> s512   0.0615   n=1->1  /encoder/layers_5/attn/Wo/MatMul
+    2.53x   s90   0.0307 -> s512   0.0776   n=1->1  /encoder/layers_17/mlp/Wo/MatMul
+    2.47x   s90   0.0258 -> s512   0.0638   n=1->1  /encoder/layers_12/attn/Wo/MatMul
+    2.47x   s90   0.0249 -> s512   0.0614   n=1->1  /encoder/layers_19/attn/Wo/MatMul
+    2.46x   s90   0.0311 -> s512   0.0766   n=1->1  /encoder/layers_9/mlp/Wo/MatMul
+    2.46x   s90   0.0311 -> s512   0.0766   n=1->1  /encoder/layers_7/mlp/Wo/MatMul
+    2.45x   s90   0.0317 -> s512   0.0778   n=1->1  /encoder/layers_1/mlp/Wo/MatMul
+    2.45x   s90   0.0248 -> s512   0.0608   n=1->1  /encoder/layers_20/attn/Wo/MatMul
+    2.43x   s90   0.0320 -> s512   0.0778   n=1->1  /encoder/layers_2/mlp/Wo/MatMul
+
+top-10 sublinear nodes:
+    0.52x   s90   0.0149 -> s512   0.0077   n=1->1  __myl_CasSum
+    0.83x   s90   0.0076 -> s512   0.0062   n=1->1  __myl_SliRes
+    0.91x   s90   0.0075 -> s512   0.0068   n=1->1  __myl_DivMulTop
+    0.94x   s90   0.0064 -> s512   0.0060   n=1->1  Reformatting CopyNode for Output Tensor 0 to {ForeignNode[/encoder/Uns
+    0.95x   s90   0.0110 -> s512   0.0105   n=1->1  /encoder/layers_0/attn/rotary_emb/MatMul
+    0.96x   s90   0.0161 -> s512   0.0155   n=1->1  __myl_ResMulSumAdd
+    0.96x   s90   0.0068 -> s512   0.0066   n=1->1  __myl_MulSum
+    0.96x   s90   0.0069 -> s512   0.0066   n=1->1  __myl_MaxMinCasLogDivResSliResSliResSubResNegDivResCon
+    1.00x   s90   0.0071 -> s512   0.0071   n=1->1  __myl_NotAddResSelMaxSubExpSum
+    1.00x   s90   0.0058 -> s512   0.0058   n=1->1  Reformatting CopyNode for Output Tensor 1 to {ForeignNode[/encoder/Uns
+
+============================================================================================================
+S6 — independent end-to-end p50 (laya_trt_run_graph.py bench) on both devices
+============================================================================================================
+orin-nx    bench_s2048_graph.json     graph=True  n=100  p50=118.107  p95=124.041  min=117.502  mean=119.064
+orin-nx    bench_s2048_nograph.json   graph=False n=100  p50=119.314  p95=125.221  min=118.982  mean=120.518
+orin-nx    bench_s512_graph.json      graph=True  n=200  p50=17.563   p95=23.551   min=17.478   mean=18.648
+orin-nx    bench_s512_nograph.json    graph=False n=200  p50=18.994   p95=24.896   min=18.837   mean=20.132
+orin-nx    bench_s90_graph.json       graph=True  n=300  p50=5.076    p95=8.339    min=5.060    mean=5.409
+orin-nx    bench_s90_nograph.json     graph=False n=300  p50=6.543    p95=10.029   min=6.480    mean=6.993
+orin-nano  bench_s512_graph.json      graph=True  n=200  p50=20.406   p95=21.568   min=19.784   mean=20.494
+orin-nano  bench_s512_nograph.json    graph=False n=200  p50=21.451   p95=22.259   min=20.982   mean=21.522
+orin-nano  bench_s90_graph.json       graph=True  n=300  p50=5.575    p95=5.693    min=5.561    mean=5.596
+orin-nano  bench_s90_nograph.json     graph=False n=300  p50=7.169    p95=7.304    min=7.115    mean=7.189
+
+============================================================================================================
+S7 — kernel-count / per-kernel budget for s512_graph
+============================================================================================================
+nodes=229  sum_med=18.5347  mean_per_node=0.0809 ms  median_per_node=0.0766 ms
+  top-  1 nodes account for 0.1816 ms = 1.0% of Total
+  top-  5 nodes account for 0.9028 ms = 4.9% of Total
+  top- 10 nodes account for 1.7718 ms = 9.6% of Total
+  top- 25 nodes account for 4.3383 ms = 23.4% of Total
+  top- 50 nodes account for 7.8623 ms = 42.4% of Total
+  top-100 nodes account for 12.6040 ms = 68.0% of Total
+  nodes with median < 5us: n=1  (sum=0.0010 ms, 0.0%)
+  nodes with median <10us: n=12  (sum=0.0736 ms, 0.4%)

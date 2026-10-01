@@ -1,0 +1,214 @@
+[0;93m2026-09-30 23:31:55.452267232 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"[m
+### scanning Q/DQ sites in qdq/laya.s512.qdq.rs.onnx
+### sites=246 act=246 weight=0  (1.0 s)
+### wrote qdq/out/sites_rs.json
+### scanning fp32 tensor names in onnx/laya-multilingual.s512.m16.fp32.ng.onnx
+### fp32 graph: 2702 names, outputs ['logits', 'act_logits']; act sites missing from it: 98 [None, None, None, None, None] (1.9 s)
+
+===== SAMPLE 0 (calib_s512/sample_0000) =====
+### [fp32] onnx.load onnx/laya-multilingual.s512.m16.fp32.ng.onnx
+### [fp32] added 147 graph outputs (3 already present), serialize...
+### [fp32] serialized 1290265799 bytes, building session
+### [fp32] session ready in 6.4 s
+### fp32 forward 1.2 s
+### [qdq] onnx.load qdq/laya.s512.qdq.rs.onnx
+### [qdq] added 246 graph outputs (2 already present), serialize...
+### [qdq] serialized 925787468 bytes, building session
+### [qdq] session ready in 4.3 s
+### qdq forward 2.0 s
+
+===== SAMPLE 0: FIRST DIVERGENT SITE (rel > 0.050) =====
+  name      : qdq_0051_dequant
+  fp tensor : /encoder/embeddings/norm/LayerNormalization_output_0
+  rel=0.857666  max|delta|=23.9175  (ref absmax=27.8868)
+  ref  min/max : -13.3452 / 27.8868
+  qdq  min/max : -4.00049 / 3.96924
+  scale=0.031253844  127*s=3.969238  128*s=4.000492
+  saturation max|ref|/(127*s)=7.0257   |min|/(128*s)=3.3359
+
+===== SAMPLE 0: DISTRIBUTION OVER ALL 148 ACT SITES =====
+  rel     : min=0.05729 p50=0.72201 mean=0.68959 max=1.38992   sites>0.050: 148/148
+  rel_l2  : min=0.03370 p50=0.74400 mean=0.77400 max=2.30388   sites>0.05: 147/148
+  clipfrac: min=0.00000 p50=0.00002 mean=0.00034 max=0.00917
+  sat_hi  : min=0.2970 p50=1.2933 mean=2.1436 max=10.6275   sites>1.0 (clipping): 118/148
+
+===== SAMPLE 0: FIRST 10 SITES IN TOPOLOGICAL ORDER =====
+  rel=0.85767 rel_l2=0.50381 clip=0.00917 sat=7.026 s127=3.96924 amax=  27.8868  qdq_0051_dequant
+  rel=0.51438 rel_l2=0.45879 clip=0.00183 sat=1.420 s127=20.11373 amax=  28.5566  qdq_0001_dequant
+  rel=0.96825 rel_l2=2.30388 clip=0.00002 sat=1.177 s127=2.35369 amax=   2.7713  qdq_0052_dequant
+  rel=0.80728 rel_l2=0.72190 clip=0.00580 sat=5.189 s127=3.70765 amax=  19.2386  qdq_0053_dequant
+  rel=0.60554 rel_l2=0.59653 clip=0.00110 sat=2.331 s127=11.06488 amax=  25.7973  qdq_0002_dequant
+  rel=0.86211 rel_l2=0.79772 clip=0.00595 sat=7.252 s127=4.71766 amax=  34.2124  qdq_0054_dequant
+  rel=0.78910 rel_l2=0.92581 clip=0.00114 sat=1.314 s127=13.48562 amax=  17.7219  qdq_0055_dequant
+  rel=0.72785 rel_l2=1.08455 clip=0.00002 sat=1.232 s127=8.29415 amax=  10.2190  qdq_0003_dequant
+  rel=0.65611 rel_l2=0.98747 clip=0.00001 sat=1.572 s127=2.82725 amax=   4.4432  qdq_0056_dequant
+  rel=0.80403 rel_l2=0.87006 clip=0.00000 sat=0.925 s127=6.31588 amax=   5.8424  qdq_0057_dequant
+
+===== SAMPLE 0: TOP 15 BY rel =====
+  rel=1.38992 rel_l2=0.79561 clip=0.0000 sat=0.826 s127=4.99408 amax=   4.1254  qdq_0128_dequant
+  rel=1.26402 rel_l2=0.92728 clip=0.0000 sat=0.849 s127=4.19291 amax=   3.5612  qdq_0116_dequant
+  rel=1.21806 rel_l2=0.71743 clip=0.0000 sat=1.011 s127=9.25795 amax=   9.3603  qdq_0027_dequant
+  rel=1.17829 rel_l2=1.06967 clip=0.0000 sat=1.084 s127=4.38503 amax=   4.7523  qdq_0104_dequant
+  rel=1.14011 rel_l2=0.61875 clip=0.0000 sat=1.064 s127=19.97803 amax=  21.2605  qdq_0140_dequant
+  rel=1.13834 rel_l2=0.50301 clip=0.0000 sat=0.959 s127=10.97943 amax=  10.5258  qdq_0039_dequant
+  rel=1.13257 rel_l2=0.53475 clip=0.0000 sat=1.012 s127=25.70289 amax=  26.0219  qdq_0131_dequant
+  rel=1.12765 rel_l2=0.51380 clip=0.0000 sat=1.182 s127=12.25214 amax=  14.4821  qdq_0038_dequant
+  rel=1.11158 rel_l2=0.68026 clip=0.0000 sat=1.132 s127=20.60121 amax=  23.3152  qdq_0123_dequant
+  rel=1.10424 rel_l2=0.63132 clip=0.0000 sat=0.982 s127=9.64360 amax=   9.4699  qdq_0029_dequant
+  rel=1.06403 rel_l2=0.78887 clip=0.0000 sat=1.416 s127=10.82971 amax=  15.3375  qdq_0025_dequant
+  rel=1.05322 rel_l2=0.89448 clip=0.0000 sat=0.898 s127=3.14145 amax=   2.8207  qdq_0139_dequant
+  rel=1.05109 rel_l2=0.49810 clip=0.0000 sat=0.971 s127=11.70587 amax=  11.3669  qdq_0041_dequant
+  rel=1.04538 rel_l2=1.49493 clip=0.0005 sat=1.981 s127=1.95418 amax=   3.8708  qdq_0058_dequant
+  rel=1.03287 rel_l2=0.74368 clip=0.0000 sat=1.220 s127=21.86338 amax=  26.6787  qdq_0111_dequant
+
+===== SAMPLE 0: TOP 15 BY SATURATION max|ref|/(127*s) =====
+  sat=10.6275 satlo=10.5445 rel=0.90516 rel_l2=1.36993 clip=0.0001 s127=4.55321 amax=  48.3892  qdq_0082_dequant
+  sat=7.7829 satlo=0.6687 rel=0.87151 rel_l2=0.71954 clip=0.0000 s127=31.87718 amax= 248.0956  qdq_0024_dequant
+  sat=7.2520 satlo=4.0235 rel=0.86211 rel_l2=0.79772 clip=0.0059 s127=4.71766 amax=  34.2124  qdq_0054_dequant
+  sat=7.1012 satlo=7.0458 rel=0.85807 rel_l2=1.20010 clip=0.0000 s127=8.39348 amax=  59.6041  qdq_0094_dequant
+  sat=7.0760 satlo=7.0207 rel=0.85756 rel_l2=0.72395 clip=0.0003 s127=17.94857 amax= 127.0033  qdq_0026_dequant
+  sat=7.0257 satlo=3.3359 rel=0.85767 rel_l2=0.50381 clip=0.0092 s127=3.96924 amax=  27.8868  qdq_0051_dequant
+  sat=6.8676 satlo=6.8140 rel=0.85324 rel_l2=1.52311 clip=0.0000 s127=3.31197 amax=  22.7453  qdq_0074_dequant
+  sat=6.8108 satlo=0.0068 rel=0.96994 rel_l2=0.96957 clip=0.0000 s127=4905.85947 amax=33412.9062  qdq_0098_dequant
+  sat=6.3503 satlo=6.3007 rel=0.84129 rel_l2=0.85567 clip=0.0008 s127=14.97324 amax=  95.0851  qdq_0134_dequant
+  sat=6.2376 satlo=6.1889 rel=0.94698 rel_l2=0.96887 clip=0.0000 s127=982.45457 amax=6128.1567  qdq_0102_dequant
+  sat=6.2230 satlo=6.1744 rel=0.83804 rel_l2=0.84710 clip=0.0002 s127=6.86864 amax=  42.7436  qdq_0137_dequant
+  sat=5.8447 satlo=5.7990 rel=0.82756 rel_l2=1.12636 clip=0.0004 s127=4.85605 amax=  28.3821  qdq_0114_dequant
+  sat=5.8287 satlo=4.8482 rel=0.82844 rel_l2=1.30422 clip=0.0003 s127=2.47078 amax=  14.4015  qdq_0086_dequant
+  sat=5.6215 satlo=1.7292 rel=1.00140 rel_l2=0.78670 clip=0.0000 s127=31.39409 amax= 176.4811  qdq_0126_dequant
+  sat=5.1889 satlo=3.3107 rel=0.80728 rel_l2=0.72190 clip=0.0058 s127=3.70765 amax=  19.2386  qdq_0053_dequant
+
+===== SAMPLE 0: TOP 15 BY rel_l2 (energy, not tail) =====
+  rel_l2=2.30388 rel=0.96825 clip=0.0000 sat=1.177 s127=2.35369 amax=   2.7713  qdq_0052_dequant
+  rel_l2=1.52311 rel=0.85324 clip=0.0000 sat=6.868 s127=3.31197 amax=  22.7453  qdq_0074_dequant
+  rel_l2=1.49493 rel=1.04538 clip=0.0005 sat=1.981 s127=1.95418 amax=   3.8708  qdq_0058_dequant
+  rel_l2=1.43515 rel=0.68210 clip=0.0008 sat=3.146 s127=1.95026 amax=   6.1349  qdq_0070_dequant
+  rel_l2=1.40740 rel=0.72620 clip=0.0000 sat=3.681 s127=4.09136 amax=  15.0603  qdq_0078_dequant
+  rel_l2=1.40134 rel=0.82365 clip=0.0000 sat=1.247 s127=4.70843 amax=   5.8727  qdq_0112_dequant
+  rel_l2=1.39806 rel=0.70698 clip=0.0004 sat=3.440 s127=1.16310 amax=   4.0006  qdq_0066_dequant
+  rel_l2=1.36993 rel=0.90516 clip=0.0001 sat=10.628 s127=4.55321 amax=  48.3892  qdq_0082_dequant
+  rel_l2=1.34875 rel=0.55620 clip=0.0002 sat=2.271 s127=2.03592 amax=   4.6236  qdq_0062_dequant
+  rel_l2=1.34576 rel=0.68762 clip=0.0001 sat=1.911 s127=1.71450 amax=   3.2763  qdq_0064_dequant
+  rel_l2=1.30422 rel=0.82844 clip=0.0003 sat=5.829 s127=2.47078 amax=  14.4015  qdq_0086_dequant
+  rel_l2=1.27672 rel=0.87948 clip=0.0003 sat=3.780 s127=4.06023 amax=  15.3466  qdq_0110_dequant
+  rel_l2=1.24492 rel=0.80317 clip=0.0002 sat=4.792 s127=4.86800 amax=  23.3252  qdq_0106_dequant
+  rel_l2=1.23717 rel=0.67380 clip=0.0000 sat=1.347 s127=4.97492 amax=   6.7009  qdq_0124_dequant
+  rel_l2=1.20010 rel=0.85807 clip=0.0000 sat=7.101 s127=8.39348 amax=  59.6041  qdq_0094_dequant
+
+  [topo] qdq_0048_dequant is act site #241 of 246
+
+===== SAMPLE 0: THE SUSPECT SITE =====
+  qdq_0048_dequant (/scorer/scorer.3/MatMul_output_0): rel=0.64399 rel_l2=1.18781 clip=0.00000
+    ref min/max/absmax = -1.3731 / 0.622231 / 1.3731
+    qdq min/max        = -2.25736 / 0.4005
+    scale=0.036409099 127*s=4.623956 128*s=4.660365 sat_hi=0.2970 sat_lo=0.2946
+
+===== SAMPLE 0: LOGITS vs fp32 =====
+  logits       ref=[-1.3534, 0.642, 0.1891, -10000.0, -10000.0, -10000.0]
+               qdq=[-2.2376, 0.4202, -0.672, -10000.0, -10000.0, -10000.0]
+               rel=0.000088 min_ref=-10000.000000 min_qdq=-10000.000000
+
+===== SAMPLE 14 (calib_s512/sample_0014) =====
+### [fp32] onnx.load onnx/laya-multilingual.s512.m16.fp32.ng.onnx
+### [fp32] added 147 graph outputs (3 already present), serialize...
+### [fp32] serialized 1290265799 bytes, building session
+### [fp32] session ready in 6.4 s
+### fp32 forward 1.2 s
+### [qdq] onnx.load qdq/laya.s512.qdq.rs.onnx
+### [qdq] added 246 graph outputs (2 already present), serialize...
+### [qdq] serialized 925787468 bytes, building session
+### [qdq] session ready in 4.4 s
+### qdq forward 2.0 s
+
+===== SAMPLE 14: FIRST DIVERGENT SITE (rel > 0.050) =====
+  name      : qdq_0051_dequant
+  fp tensor : /encoder/embeddings/norm/LayerNormalization_output_0
+  rel=0.857666  max|delta|=23.9175  (ref absmax=27.8868)
+  ref  min/max : -13.3452 / 27.8868
+  qdq  min/max : -4.00049 / 3.96924
+  scale=0.031253844  127*s=3.969238  128*s=4.000492
+  saturation max|ref|/(127*s)=7.0257   |min|/(128*s)=3.3359
+
+===== SAMPLE 14: DISTRIBUTION OVER ALL 148 ACT SITES =====
+  rel     : min=0.25857 p50=0.83078 mean=0.79725 max=2.00302   sites>0.050: 148/148
+  rel_l2  : min=0.25085 p50=0.72225 mean=0.76713 max=1.87770   sites>0.05: 148/148
+  clipfrac: min=0.00000 p50=0.00004 mean=0.00074 max=0.06250
+  sat_hi  : min=0.6375 p50=1.3287 mean=2.3784 max=13.6587   sites>1.0 (clipping): 135/148
+
+===== SAMPLE 14: FIRST 10 SITES IN TOPOLOGICAL ORDER =====
+  rel=0.85767 rel_l2=0.45242 clip=0.00711 sat=7.026 s127=3.96924 amax=  27.8868  qdq_0051_dequant
+  rel=0.51438 rel_l2=0.45008 clip=0.00123 sat=1.420 s127=20.11373 amax=  28.5566  qdq_0001_dequant
+  rel=0.95746 rel_l2=1.15738 clip=0.00002 sat=1.184 s127=2.35369 amax=   2.7874  qdq_0052_dequant
+  rel=0.80679 rel_l2=0.68118 clip=0.00474 sat=5.176 s127=3.70765 amax=  19.1895  qdq_0053_dequant
+  rel=0.62803 rel_l2=0.54196 clip=0.00081 sat=2.249 s127=11.06488 amax=  24.8901  qdq_0002_dequant
+  rel=0.86728 rel_l2=0.78178 clip=0.00451 sat=7.535 s127=4.71766 amax=  35.5460  qdq_0054_dequant
+  rel=0.79570 rel_l2=0.82219 clip=0.00132 sat=1.295 s127=13.48562 amax=  17.4700  qdq_0055_dequant
+  rel=0.64444 rel_l2=0.78422 clip=0.00005 sat=1.270 s127=8.29415 amax=  10.5350  qdq_0003_dequant
+  rel=1.10767 rel_l2=0.86419 clip=0.00008 sat=1.189 s127=2.82725 amax=   3.3626  qdq_0056_dequant
+  rel=0.71035 rel_l2=0.72474 clip=0.00001 sat=1.078 s127=6.31588 amax=   6.8077  qdq_0057_dequant
+
+===== SAMPLE 14: TOP 15 BY rel =====
+  rel=2.00302 rel_l2=1.17828 clip=0.0000 sat=0.849 s127=19.32445 amax=  16.4028  qdq_0142_dequant
+  rel=1.57999 rel_l2=1.30290 clip=0.0000 sat=0.991 s127=21.09801 amax=  20.9184  qdq_0046_dequant
+  rel=1.47517 rel_l2=1.14059 clip=0.0002 sat=1.475 s127=4.70843 amax=   6.9441  qdq_0112_dequant
+  rel=1.39772 rel_l2=1.29226 clip=0.0000 sat=0.964 s127=3.65217 amax=   3.5205  qdq_0143_dequant
+  rel=1.35790 rel_l2=0.82600 clip=0.0000 sat=1.019 s127=11.56035 amax=  11.7765  qdq_0037_dequant
+  rel=1.33722 rel_l2=0.72834 clip=0.0000 sat=1.166 s127=21.86338 amax=  25.4949  qdq_0111_dequant
+  rel=1.32689 rel_l2=1.19097 clip=0.0000 sat=0.878 s127=3.14145 amax=   2.7586  qdq_0139_dequant
+  rel=1.30475 rel_l2=0.44565 clip=0.0000 sat=0.931 s127=3.05863 amax=   2.8481  qdq_0145_dequant
+  rel=1.28057 rel_l2=1.17295 clip=0.0625 sat=3.592 s127=4.62396 amax=  16.6101  qdq_0048_dequant
+  rel=1.25997 rel_l2=1.02104 clip=0.0000 sat=0.957 s127=4.19291 amax=   4.0145  qdq_0116_dequant
+  rel=1.25542 rel_l2=0.53976 clip=0.0000 sat=1.275 s127=30.56662 amax=  38.9659  qdq_0099_dequant
+  rel=1.24790 rel_l2=0.96564 clip=0.0000 sat=1.105 s127=19.97803 amax=  22.0841  qdq_0140_dequant
+  rel=1.22053 rel_l2=0.67663 clip=0.0000 sat=1.181 s127=12.25214 amax=  14.4717  qdq_0038_dequant
+  rel=1.20012 rel_l2=0.64410 clip=0.0000 sat=1.434 s127=10.82971 amax=  15.5352  qdq_0025_dequant
+  rel=1.13607 rel_l2=1.11143 clip=0.0021 sat=4.032 s127=8.19625 amax=  33.0460  qdq_0130_dequant
+
+===== SAMPLE 14: TOP 15 BY SATURATION max|ref|/(127*s) =====
+  sat=13.6587 satlo=13.5520 rel=0.92621 rel_l2=0.92419 clip=0.0002 s127=4.55321 amax=  62.1908  qdq_0082_dequant
+  sat=10.8336 satlo=3.2739 rel=0.90769 rel_l2=1.01664 clip=0.0004 s127=2.03592 amax=  22.0563  qdq_0062_dequant
+  sat=8.9259 satlo=6.9961 rel=0.88797 rel_l2=0.84887 clip=0.0010 s127=2.47078 amax=  22.0539  qdq_0086_dequant
+  sat=7.7168 satlo=0.7408 rel=0.87041 rel_l2=0.60460 clip=0.0000 s127=31.87718 amax= 245.9893  qdq_0024_dequant
+  sat=7.6853 satlo=7.6252 rel=0.86886 rel_l2=0.67460 clip=0.0001 s127=17.94857 amax= 137.9396  qdq_0026_dequant
+  sat=7.5347 satlo=4.3265 rel=0.86728 rel_l2=0.78178 clip=0.0045 s127=4.71766 amax=  35.5460  qdq_0054_dequant
+  sat=7.0257 satlo=3.3359 rel=0.85767 rel_l2=0.45242 clip=0.0071 s127=3.96924 amax=  27.8868  qdq_0051_dequant
+  sat=6.9711 satlo=6.9166 rel=0.85542 rel_l2=0.97424 clip=0.0002 s127=3.31197 amax=  23.0879  qdq_0074_dequant
+  sat=6.9029 satlo=6.8489 rel=0.85399 rel_l2=0.93366 clip=0.0001 s127=8.39348 amax=  57.9390  qdq_0094_dequant
+  sat=6.7513 satlo=6.6986 rel=0.85071 rel_l2=1.29741 clip=0.0004 s127=14.97324 amax= 101.0889  qdq_0134_dequant
+  sat=6.6562 satlo=0.0075 rel=0.96924 rel_l2=0.96880 clip=0.0000 s127=4905.85947 amax=32654.4199  qdq_0098_dequant
+  sat=6.5130 satlo=5.6607 rel=0.84646 rel_l2=0.99130 clip=0.0007 s127=1.16310 amax=   7.5753  qdq_0066_dequant
+  sat=6.3044 satlo=6.2551 rel=0.94754 rel_l2=0.95219 clip=0.0000 s127=982.45457 amax=6193.7500  qdq_0102_dequant
+  sat=6.2563 satlo=3.5580 rel=0.84016 rel_l2=1.03849 clip=0.0006 s127=4.06023 amax=  25.4021  qdq_0110_dequant
+  sat=6.2373 satlo=6.1886 rel=0.93309 rel_l2=1.11721 clip=0.0005 s127=6.86864 amax=  42.8417  qdq_0137_dequant
+
+===== SAMPLE 14: TOP 15 BY rel_l2 (energy, not tail) =====
+  rel_l2=1.87770 rel=0.81937 clip=0.0009 sat=5.536 s127=9.23536 amax=  51.1274  qdq_0138_dequant
+  rel_l2=1.30290 rel=1.57999 clip=0.0000 sat=0.991 s127=21.09801 amax=  20.9184  qdq_0046_dequant
+  rel_l2=1.29741 rel=0.85071 clip=0.0004 sat=6.751 s127=14.97324 amax= 101.0889  qdq_0134_dequant
+  rel_l2=1.29226 rel=1.39772 clip=0.0000 sat=0.964 s127=3.65217 amax=   3.5205  qdq_0143_dequant
+  rel_l2=1.21730 rel=0.82353 clip=0.0000 sat=1.083 s127=18.81944 amax=  20.3882  qdq_0045_dequant
+  rel_l2=1.20938 rel=1.13313 clip=0.0000 sat=1.301 s127=5.51766 amax=   7.1794  qdq_0136_dequant
+  rel_l2=1.19097 rel=1.32689 clip=0.0000 sat=0.878 s127=3.14145 amax=   2.7586  qdq_0139_dequant
+  rel_l2=1.18690 rel=0.67416 clip=0.0002 sat=3.093 s127=1.95418 amax=   6.0446  qdq_0058_dequant
+  rel_l2=1.17828 rel=2.00302 clip=0.0000 sat=0.849 s127=19.32445 amax=  16.4028  qdq_0142_dequant
+  rel_l2=1.17295 rel=1.28057 clip=0.0625 sat=3.592 s127=4.62396 amax=  16.6101  qdq_0048_dequant
+  rel_l2=1.15738 rel=0.95746 clip=0.0000 sat=1.184 s127=2.35369 amax=   2.7874  qdq_0052_dequant
+  rel_l2=1.14995 rel=1.01337 clip=0.0007 sat=4.016 s127=6.32731 amax=  25.4128  qdq_0118_dequant
+  rel_l2=1.14059 rel=1.47517 clip=0.0002 sat=1.475 s127=4.70843 amax=   6.9441  qdq_0112_dequant
+  rel_l2=1.13644 rel=1.00189 clip=0.0007 sat=4.168 s127=4.86800 amax=  20.2885  qdq_0106_dequant
+  rel_l2=1.13413 rel=0.91713 clip=0.0000 sat=1.048 s127=14.91846 amax=  15.6288  qdq_0044_dequant
+
+  [topo] qdq_0048_dequant is act site #241 of 246
+
+===== SAMPLE 14: THE SUSPECT SITE =====
+  qdq_0048_dequant (/scorer/scorer.3/MatMul_output_0): rel=1.28057 rel_l2=1.17295 clip=0.06250
+    ref min/max/absmax = -4.60763 / 16.6101 / 16.6101
+    qdq min/max        = -4.66036 / 0.4005
+    scale=0.036409099 127*s=4.623956 128*s=4.660365 sat_hi=3.5922 sat_lo=0.9887
+
+===== SAMPLE 14: LOGITS vs fp32 =====
+  logits       ref=[16.6298, -4.5879, -3.4726, -10000.0, -10000.0, -10000.0]
+               qdq=[-4.6406, -3.4391, -3.0022, -10000.0, -10000.0, -10000.0]
+               rel=0.002127 min_ref=-10000.000000 min_qdq=-10000.000000
+
+### wrote qdq/out/trace_rs_s0_14.json

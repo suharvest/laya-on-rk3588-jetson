@@ -1,0 +1,476 @@
+{
+  "seq_len": 512,
+  "num_markers": 16,
+  "input_names": [
+    "input_ids",
+    "attention_mask",
+    "marker_pos",
+    "marker_mask",
+    "qtype"
+  ],
+  "splits": {
+    "calib": {
+      "n": 8,
+      "seed": 20260929,
+      "dropped": 0,
+      "attempts": 8,
+      "dir": "/home/harve/laya-rknn/calib_s512/calib",
+      "qtype_counts": {
+        "choice": 3,
+        "score": 3,
+        "noul": 2
+      },
+      "n_marker_hist": {
+        "1": 1,
+        "2": 3,
+        "4": 1,
+        "10": 1,
+        "12": 1,
+        "14": 1
+      },
+      "seq_len_hist": {
+        "61": 1,
+        "63": 1,
+        "70": 1,
+        "128": 1,
+        "154": 1,
+        "158": 1,
+        "188": 1,
+        "239": 1
+      },
+      "truncated": 0,
+      "samples": [
+        {
+          "qtype": "score",
+          "n_options": 12,
+          "n_markers": 12,
+          "seq_len": 158,
+          "truncated": false,
+          "state_sentences": 4,
+          "instructions": "Score.",
+          "options": [
+            "level 0: ship",
+            "level 1: new",
+            "level 2: no",
+            "level 3: old",
+            "level 4: yes",
+            "level 5: pay",
+            "level 6: old",
+            "level 7: lost",
+            "level 8: lost",
+            "level 9: fix",
+            "level 10: new",
+            "level 11: new"
+          ]
+        },
+        {
+          "qtype": "noul",
+          "n_options": 2,
+          "n_markers": 2,
+          "seq_len": 188,
+          "truncated": false,
+          "state_sentences": 8,
+          "instructions": "Answer the yes or no question about the state.",
+          "options": [
+            "false: the shipping fee should be removed",
+            "true: the ticket can be closed once confirmed"
+          ]
+        },
+        {
+          "qtype": "choice",
+          "n_options": 1,
+          "n_markers": 1,
+          "seq_len": 61,
+          "truncated": false,
+          "state_sentences": 2,
+          "instructions": "Which of these applies to the request?",
+          "options": [
+            "callback: waiting on the customer to reply"
+          ]
+        },
+        {
+          "qtype": "score",
+          "n_options": 10,
+          "n_markers": 10,
+          "seq_len": 128,
+          "truncated": false,
+          "state_sentences": 3,
+          "instructions": "How bad?",
+          "options": [
+            "level 0: pay",
+            "level 1: old",
+            "level 2: lost",
+            "level 3: help",
+            "level 4: ship",
+            "level 5: fix",
+            "level 6: ok",
+            "level 7: late",
+            "level 8: new",
+            "level 9: ok"
+          ]
+        },
+        {
+          "qtype": "score",
+          "n_options": 4,
+          "n_markers": 4,
+          "seq_len": 70,
+          "truncated": false,
+          "state_sentences": 1,
+          "instructions": "Score the urgency of the request.",
+          "options": [
+            "level 0: slows the customer down",
+            "level 1: the customer is threatening to churn",
+            "level 2: the customer is blocked",
+            "level 3: slows the customer down"
+          ]
+        },
+        {
+          "qtype": "choice",
+          "n_options": 2,
+          "n_markers": 2,
+          "seq_len": 239,
+          "truncated": false,
+          "state_sentences": 12,
+          "instructions": "Which of these applies to the request?",
+          "options": [
+            "transfer: the customer changed their mind",
+            "verify"
+          ]
+        },
+        {
+          "qtype": "choice",
+          "n_options": 14,
+          "n_markers": 14,
+          "seq_len": 63,
+          "truncated": false,
+          "state_sentences": 1,
+          "instructions": "Choose.",
+          "options": [
+            "schedule: help",
+            "standard",
+            "inform: new",
+            "credit",
+            "close",
+            "priority: bug",
+            "reship",
+            "cancel",
+            "replacement",
+            "transfer: no",
+            "refund",
+            "repair",
+            "waive",
+            "return"
+          ]
+        },
+        {
+          "qtype": "noul",
+          "n_options": 2,
+          "n_markers": 2,
+          "seq_len": 154,
+          "truncated": false,
+          "state_sentences": 6,
+          "instructions": "Answer the yes or no question about the state.",
+          "options": [
+            "false: the ticket can follow the normal queue",
+            "true: a technician has to look at the photos"
+          ]
+        }
+      ]
+    },
+    "heldout": {
+      "n": 16,
+      "seed": 771,
+      "dropped": 0,
+      "attempts": 16,
+      "dir": "/home/harve/laya-rknn/calib_s512/heldout",
+      "qtype_counts": {
+        "choice": 5,
+        "score": 5,
+        "noul": 6
+      },
+      "n_marker_hist": {
+        "2": 7,
+        "3": 2,
+        "4": 1,
+        "8": 4,
+        "12": 2
+      },
+      "seq_len_hist": {
+        "72": 1,
+        "74": 1,
+        "78": 1,
+        "80": 1,
+        "96": 1,
+        "110": 1,
+        "120": 1,
+        "128": 1,
+        "130": 2,
+        "133": 1,
+        "144": 1,
+        "168": 1,
+        "202": 1,
+        "221": 1,
+        "264": 1
+      },
+      "truncated": 0,
+      "samples": [
+        {
+          "qtype": "score",
+          "n_options": 3,
+          "n_markers": 3,
+          "seq_len": 80,
+          "truncated": false,
+          "state_sentences": 2,
+          "instructions": "Rate how severe the reported problem is.",
+          "options": [
+            "level 0: needs attention this week",
+            "level 1: needs attention this week",
+            "level 2: the customer is blocked"
+          ]
+        },
+        {
+          "qtype": "choice",
+          "n_options": 12,
+          "n_markers": 12,
+          "seq_len": 128,
+          "truncated": false,
+          "state_sentences": 5,
+          "instructions": "Choose.",
+          "options": [
+            "refund",
+            "repair",
+            "close: ship",
+            "credit",
+            "reship",
+            "inform: new",
+            "schedule",
+            "callback",
+            "priority",
+            "hold",
+            "waive",
+            "escalate"
+          ]
+        },
+        {
+          "qtype": "score",
+          "n_options": 8,
+          "n_markers": 8,
+          "seq_len": 78,
+          "truncated": false,
+          "state_sentences": 1,
+          "instructions": "Rate it.",
+          "options": [
+            "level 0: old",
+            "level 1: fix",
+            "level 2: pay",
+            "level 3: pay",
+            "level 4: new",
+            "level 5: help",
+            "level 6: ship",
+            "level 7: help"
+          ]
+        },
+        {
+          "qtype": "score",
+          "n_options": 12,
+          "n_markers": 12,
+          "seq_len": 120,
+          "truncated": false,
+          "state_sentences": 2,
+          "instructions": "Rate it.",
+          "options": [
+            "level 0: no",
+            "level 1: fix",
+            "level 2: fix",
+            "level 3: help",
+            "level 4: fix",
+            "level 5: help",
+            "level 6: ok",
+            "level 7: yes",
+            "level 8: lost",
+            "level 9: yes",
+            "level 10: new",
+            "level 11: fix"
+          ]
+        },
+        {
+          "qtype": "choice",
+          "n_options": 8,
+          "n_markers": 8,
+          "seq_len": 96,
+          "truncated": false,
+          "state_sentences": 3,
+          "instructions": "Choose.",
+          "options": [
+            "inform: yes",
+            "replacement: ok",
+            "hold: lost",
+            "cancel: pay",
+            "verify: late",
+            "standard: old",
+            "reject: pay",
+            "refund: help"
+          ]
+        },
+        {
+          "qtype": "noul",
+          "n_options": 2,
+          "n_markers": 2,
+          "seq_len": 130,
+          "truncated": false,
+          "state_sentences": 5,
+          "instructions": "Decide whether the claim holds.",
+          "options": [
+            "false: the ticket can follow the normal queue",
+            "true: the item can be fixed on site"
+          ]
+        },
+        {
+          "qtype": "choice",
+          "n_options": 8,
+          "n_markers": 8,
+          "seq_len": 74,
+          "truncated": false,
+          "state_sentences": 2,
+          "instructions": "Which one?",
+          "options": [
+            "repair",
+            "callback",
+            "schedule",
+            "inspect: no",
+            "cancel: pay",
+            "priority: bug",
+            "reship: late",
+            "standard"
+          ]
+        },
+        {
+          "qtype": "noul",
+          "n_options": 2,
+          "n_markers": 2,
+          "seq_len": 72,
+          "truncated": false,
+          "state_sentences": 2,
+          "instructions": "Answer the yes or no question about the state.",
+          "options": [
+            "false: the customer changed their mind",
+            "true: the customer wants a call back today"
+          ]
+        },
+        {
+          "qtype": "noul",
+          "n_options": 2,
+          "n_markers": 2,
+          "seq_len": 144,
+          "truncated": false,
+          "state_sentences": 6,
+          "instructions": "Answer the yes or no question about the state.",
+          "options": [
+            "false: a new unit is required",
+            "true: the item can be fixed on site"
+          ]
+        },
+        {
+          "qtype": "choice",
+          "n_options": 2,
+          "n_markers": 2,
+          "seq_len": 168,
+          "truncated": false,
+          "state_sentences": 8,
+          "instructions": "Pick the single best matching option.",
+          "options": [
+            "inspect: the customer wants a call back today",
+            "escalate: no action is needed yet"
+          ]
+        },
+        {
+          "qtype": "score",
+          "n_options": 4,
+          "n_markers": 4,
+          "seq_len": 202,
+          "truncated": false,
+          "state_sentences": 8,
+          "instructions": "How advanced is the request right now?",
+          "options": [
+            "level 0: needs attention this week",
+            "level 1: needs attention today",
+            "level 2: the customer is threatening to churn",
+            "level 3: not blocking anything"
+          ]
+        },
+        {
+          "qtype": "noul",
+          "n_options": 2,
+          "n_markers": 2,
+          "seq_len": 264,
+          "truncated": false,
+          "state_sentences": 12,
+          "instructions": "Is the statement below true for this request?",
+          "options": [
+            "false: the item can be fixed on site",
+            "true: the request is outside the return period"
+          ]
+        },
+        {
+          "qtype": "noul",
+          "n_options": 2,
+          "n_markers": 2,
+          "seq_len": 110,
+          "truncated": false,
+          "state_sentences": 4,
+          "instructions": "Answer the yes or no question about the state.",
+          "options": [
+            "false: a new unit is required",
+            "true: a new unit is required"
+          ]
+        },
+        {
+          "qtype": "score",
+          "n_options": 8,
+          "n_markers": 8,
+          "seq_len": 133,
+          "truncated": false,
+          "state_sentences": 4,
+          "instructions": "Rate it.",
+          "options": [
+            "level 0: old",
+            "level 1: new",
+            "level 2: pay",
+            "level 3: help",
+            "level 4: yes",
+            "level 5: new",
+            "level 6: ok",
+            "level 7: help"
+          ]
+        },
+        {
+          "qtype": "choice",
+          "n_options": 3,
+          "n_markers": 3,
+          "seq_len": 221,
+          "truncated": false,
+          "state_sentences": 10,
+          "instructions": "Which of these applies to the request?",
+          "options": [
+            "transfer: the parcel has to go out again",
+            "inform: no action is needed yet",
+            "priority: waiting on the customer to reply"
+          ]
+        },
+        {
+          "qtype": "noul",
+          "n_options": 2,
+          "n_markers": 2,
+          "seq_len": 130,
+          "truncated": false,
+          "state_sentences": 5,
+          "instructions": "Answer the yes or no question about the state.",
+          "options": [
+            "false: the customer asked for money back",
+            "true: the goods have to come back to the warehouse"
+          ]
+        }
+      ]
+    }
+  }
+}
