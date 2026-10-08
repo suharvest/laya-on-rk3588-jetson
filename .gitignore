@@ -4,6 +4,5 @@
 # 内部资料：保留在工作区，不纳入版本控制
 /taskbooks/
 /outreach/
-/README.zh.md
 /MANIFEST.internal.md
 /ARTIFACTS.internal.md
