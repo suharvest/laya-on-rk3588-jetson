@@ -187,6 +187,9 @@ class DecisionService:
         result = {"status": "ok", "model_ready": bool(self.backend.ready), "backend": self.backend.info.backend,
                   "name": self.backend.info.name, "max_sequence_tokens": self.settings.seq_len,
                   "max_options": self.settings.max_options}
+        runtime_version = getattr(getattr(self.backend, "adapter", None), "runtime_version", None)
+        if runtime_version is not None:
+            result["runtime_version"] = str(runtime_version)
         if not self.backend.ready:
             result["reason"] = self.backend.reason or "model unavailable"
         return result

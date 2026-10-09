@@ -205,6 +205,19 @@ class RKNNBackend:
             if runtime.init_runtime(core_mask=cores[core_mask]) != 0:
                 raise RuntimeError("init_runtime failed")
             rt = getattr(runtime, "rknn_runtime", runtime)
+            try:
+                sdk_version = rt.get_sdk_version()
+                # rknnlite returns (banner, SDK version, driver version) on boards.
+                # Health exposes the semantic SDK version; the raw banner is not a version.
+                if isinstance(sdk_version, (tuple, list)) and len(sdk_version) > 1:
+                    self.runtime_version = str(sdk_version[1])
+                    self.driver_version = str(sdk_version[2]) if len(sdk_version) > 2 else None
+                else:
+                    self.runtime_version = str(sdk_version)
+                    self.driver_version = None
+            except Exception:
+                self.runtime_version = None
+                self.driver_version = None
             n_in, n_out = rt.get_in_out_num()
             self.inputs = [rt.get_tensor_attr(i, is_output=False) for i in range(n_in)]
             self.outputs = [rt.get_tensor_attr(i, is_output=True) for i in range(n_out)]
@@ -295,6 +308,7 @@ class TensorRTBackend:
             import cuda.cudart as cudart
             import tensorrt as trt
             self.cudart, self.trt = cudart, trt
+            self.runtime_version = str(getattr(trt, "__version__", "unknown"))
             if _cuda_code(cudart.cudaSetDevice(0)) != 0:
                 raise RuntimeError("cudaSetDevice(0) failed")
             if runtime is None:

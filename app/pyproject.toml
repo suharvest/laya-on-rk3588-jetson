@@ -1,6 +1,6 @@
 [project]
 name = "edge-workbench"
-version = "0.1.1"
+version = "0.2.0"
 description = "Local command selection service for the SenseCraft workbench"
 requires-python = ">=3.10"
 dependencies = [
@@ -16,6 +16,7 @@ dependencies = [
 
 [project.optional-dependencies]
 test = ["pytest>=8,<9", "pytest-asyncio>=0.23,<1"]
+jetson = ["cuda-python>=12,<13"]
 
 [project.scripts]
 edge-workbench = "edge_workbench.__main__:main"

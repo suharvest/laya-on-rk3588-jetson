@@ -5,7 +5,9 @@ FROM ${PYTHON_IMAGE} AS builder
 ARG UV_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
 ENV UV_INDEX_URL=${UV_INDEX_URL} \
     UV_LINK_MODE=copy \
-    UV_PROJECT_ENVIRONMENT=/opt/venv
+    UV_PROJECT_ENVIRONMENT=/opt/venv \
+    UV_HTTP_TIMEOUT=120 \
+    UV_CONCURRENT_DOWNLOADS=2
 
 WORKDIR /src
 RUN python -m venv /opt/uv-bootstrap \

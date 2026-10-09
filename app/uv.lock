@@ -67,8 +67,55 @@ wheels = [
 ]
 
 [[package]]
+name = "cuda-bindings"
+version = "12.9.9"
+source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
+dependencies = [
+    { name = "cuda-pathfinder" },
+]
+wheels = [
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/2d/20/65c41e170e9ffb124152b31693ea00fb28371fb6325efae6a05c8498f23a/cuda_bindings-12.9.9-cp310-cp310-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:ed5d6cadb36313cdc8a43fc8c8818ff54e5369449b96e21f53de556c606c4d1f", size = 7096115, upload-time = "2026-09-23T03:20:31.048Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/e1/84/f4c28c65ccd80fca8b6e66788ff221115777c06b68920bb31198e361224f/cuda_bindings-12.9.9-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:71e84bcdf477a989c31994023f353d6cbbb6d5cba58deab9bc5e7d961d8b832d", size = 7601181, upload-time = "2026-09-23T03:20:33.745Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/c0/11/ff8814a0825129073905565864fd9ef169dca6391034b79a09e84020d5b9/cuda_bindings-12.9.9-cp310-cp310-win_amd64.whl", hash = "sha256:f74777eb8e83ff076b8759a9ea65521ec5fa2b46d59d15ab93d9155d4a9f0f19", size = 7352037, upload-time = "2026-09-23T03:20:35.925Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/17/d3/9f5b9b2411d089e81fbcdb20195693c919a8c6fb4f6168a3fdaf2dffe351/cuda_bindings-12.9.9-cp311-cp311-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:1c91d66b9467c21190e531bd1bc09893c6384542189cf880ab15213a16266063", size = 7083806, upload-time = "2026-09-23T03:20:38.077Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/4e/34/f04a14693b6f6ad395124288dff45b2441742598b188bead9054c32c56b3/cuda_bindings-12.9.9-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:5fd8ab78c4ddd9a909fb4f1fa9a914d5e83e223b77320df63ddfe3c46e559337", size = 7607428, upload-time = "2026-09-23T03:20:40.329Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/3a/38/9bbc80b2e3d61f0004c6fb4dc5b8950f2fa2048d15547766aa4a37d57ed7/cuda_bindings-12.9.9-cp311-cp311-win_amd64.whl", hash = "sha256:074f9d7bd14fa80c596bfcdbac7a131636abe333a3b40da769979d6f87be39f3", size = 7384497, upload-time = "2026-09-23T03:20:43.532Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/15/d5/572ced1aecc8c8f3e617c3af58d3b1ed5378ed71531c607c960a3e48b516/cuda_bindings-12.9.9-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:88c41afe5be41acb17e57977dd534e335f86d0c96d284d71457168525f6327c0", size = 7063842, upload-time = "2026-09-23T03:20:45.94Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/96/e3/62c521e36276008c5e53798e7751ca33e16a16d05f517426c2ffb4356e47/cuda_bindings-12.9.9-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:fb842851be2ed9e80fce988dd68c8ea27a506a71e0e29d228b35cbd0a333dac2", size = 7627343, upload-time = "2026-09-23T03:20:48.555Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/92/42/52df0f62daa28e9fe19d70d778fa73bddfd3f42966b1dc97443b2344576e/cuda_bindings-12.9.9-cp312-cp312-win_amd64.whl", hash = "sha256:c578d2ad525f844b663236b280d72446521e44ee115d2bacba320f79eba2a936", size = 7600761, upload-time = "2026-09-23T03:20:50.982Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/f3/53/5feb797383018479eb678e6415294b6bc850fce0912994ca8b37cee432a6/cuda_bindings-12.9.9-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:fc8a97efcb14e48664fc15479b621002ba4e0a6fba34e617a70b07f4bd638390", size = 6927391, upload-time = "2026-09-23T03:20:53.352Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/ef/c8/0d7703abc9df0871965f9b6eafd881a261f156a168beca9050052ca3e4ab/cuda_bindings-12.9.9-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:d399447bf5d929d6f59ec4e2c7b26d11ef21e8be5e88995e41c705db1a7c1363", size = 7398149, upload-time = "2026-09-23T03:20:55.718Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/92/71/2a0778d244f9b122e537de88e5d6192a8619af4015a67fc60aa9955c6582/cuda_bindings-12.9.9-cp313-cp313-win_amd64.whl", hash = "sha256:d8d535cba3a3374e7069e875061bfaca48f044db988fa6497928478ab00a797f", size = 7546324, upload-time = "2026-09-23T03:20:58.13Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/a6/a4/368a3ee347a72f52f8f486014e9a6fa04b90f5ddec991b926a53fbbf1993/cuda_bindings-12.9.9-cp314-cp314-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:7647dab9d264d117952528f2403810debb04ba74f756575eba3b72f66d20311f", size = 7005534, upload-time = "2026-09-23T03:21:00.634Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/e3/95/182a020efbe1bade0de1f5ec0d3e4101cb6deba7216b219f07ce08fa6146/cuda_bindings-12.9.9-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:94e4f9bd6b9b21aad545e0d441707094e4ff88ab420d62b85fcdc8b6da1e039f", size = 7440112, upload-time = "2026-09-23T03:21:02.947Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/01/33/1f107543ffc3a3a25a47e460d0ceaef6769c070ac3316fec6aff5a7d76e2/cuda_bindings-12.9.9-cp314-cp314-win_amd64.whl", hash = "sha256:af8cb9540c9a3d04df7f52584326279a10ef017021ae8246642a2339dc94e98b", size = 7690278, upload-time = "2026-09-23T03:21:05.411Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/bd/4c/0fc57c8015acb6f07711fa82e5dfe84c0ca6642cbd0f47747fe28da39936/cuda_bindings-12.9.9-cp314-cp314t-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:607c13eb76c244cacfb955675f8bea2c5b942be9ef4affd41d5a7368d211b260", size = 6938003, upload-time = "2026-09-23T03:21:08.005Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/ab/53/fee25c85263bbe3d17bafcc5feaa894245863460f8443138b1dcc246fff3/cuda_bindings-12.9.9-cp314-cp314t-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:b4cc44252c7835d63876df352564b1a39e0091bc67cee7a9a271286b2771348f", size = 7362170, upload-time = "2026-09-23T03:21:10.548Z" },
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/ab/5c/cbba6f1f3c53299845a2e927ef47ccaa7533a8b165a47e7b0328177f2c66/cuda_bindings-12.9.9-cp314-cp314t-win_amd64.whl", hash = "sha256:e570b6ed83fe8d2ed45c2e9951cea6120ee490df258ed5a2b1ebfb2bf35541e9", size = 8469680, upload-time = "2026-09-23T03:21:13.373Z" },
+]
+
+[[package]]
+name = "cuda-pathfinder"
+version = "1.8.3"
+source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
+wheels = [
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/b9/fb/f8e1890428f9f590b4beebd63b068aac1ce32a3331510c847b9f9a78f261/cuda_pathfinder-1.8.3-py3-none-any.whl", hash = "sha256:e29e59829c297a7a5233bd9cc71094fc5bddbd076951482670178f9eade39b1f", size = 62561, upload-time = "2026-10-02T03:20:23.712Z" },
+]
+
+[[package]]
+name = "cuda-python"
+version = "12.9.7"
+source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
+dependencies = [
+    { name = "cuda-bindings" },
+]
+wheels = [
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/c1/9d/05e753afbaac3f92691059b3ba875589c98a425d69e5808cec32b31b580c/cuda_python-12.9.7-py3-none-any.whl", hash = "sha256:23a1fc406d491eef7a7e985095725cb7b20a04a7bd9b7a66400e5c86e082e0aa", size = 7597, upload-time = "2026-05-27T19:50:32.605Z" },
+]
+
+[[package]]
 name = "edge-workbench"
-version = "0.1.1"
+version = "0.2.0"
 source = { editable = "." }
 dependencies = [
     { name = "fastapi" },
@@ -84,6 +131,9 @@ dependencies = [
 ]
 
 [package.optional-dependencies]
+jetson = [
+    { name = "cuda-python" },
+]
 test = [
     { name = "pytest" },
     { name = "pytest-asyncio" },
@@ -91,6 +141,7 @@ test = [
 
 [package.metadata]
 requires-dist = [
+    { name = "cuda-python", marker = "extra == 'jetson'", specifier = ">=12,<13" },
     { name = "fastapi", specifier = ">=0.115,<1" },
     { name = "httpx", specifier = ">=0.27,<1" },
     { name = "numpy", specifier = ">=1.26,<3" },
@@ -102,7 +153,7 @@ requires-dist = [
     { name = "uvicorn", extras = ["standard"], specifier = ">=0.30,<1" },
     { name = "websockets", specifier = ">=12,<14" },
 ]
-provides-extras = ["test"]
+provides-extras = ["test", "jetson"]
 
 [[package]]
 name = "exceptiongroup"

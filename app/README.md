@@ -75,7 +75,7 @@ The first complete container target is the RK3576 `seq=90`, 16-option choice art
 
 The wheel is the official file `rknn_toolkit_lite2-2.3.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl` from the `airockchip/rknn-toolkit2` repository at commit `59a913d172e7f5ff03c9076e2ec7b1b1288ffd08`. GitHub reports blob SHA `bf57672255cc7ce2fa141d6e0ae3f7dafcee2527`, size `569160` bytes; the downloaded file must also verify SHA256 `bda74f1179e15fccb8726054a24898982522784b65bb340b20146955d254e800`. The SDK license is `RKNN-TOOLKIT2-LICENSE` from the same commit and must remain available to the image reviewer.
 
-Prepare a temporary build context outside the repository with `docker/vendor/` containing the wheel and license, then build the ARM64 image as `edge-command-workbench:rk3576-0.1.1`. The provided [`docker/Dockerfile`](docker/Dockerfile) runs `uv sync --frozen --no-dev`, installs the vendor wheel with `uv pip --no-deps`, copies only `edge_workbench` and `web`, and starts on port `18768`.
+Prepare a temporary build context outside the repository with `docker/vendor/` containing the wheel and license, then build the ARM64 image as `edge-command-workbench:rockchip-0.2.0`. The provided [`docker/Dockerfile`](docker/Dockerfile) runs `uv sync --frozen --no-dev`, installs the vendor wheel with `uv pip --no-deps`, copies only `edge_workbench` and `web`, and starts on port `18768`.
 
 At runtime, provide a RK3576 model directory containing `laya-multilingual.s90.m16.fp16.nanfix.rk3576.rknn`, `tokenizer/`, and mount the board's matching `librknnrt.so` file read-only to both loader paths. `MODEL_METADATA_PATH` is empty for this bundle. A minimal invocation is:
 
@@ -90,7 +90,7 @@ docker run --rm --name edge-command-workbench \
   -v /usr/lib/librknnrt.so:/usr/lib/librknnrt.so:ro \
   -v /usr/lib/librknnrt.so:/opt/rknn/librknnrt.so:ro \
   -e MODEL_PATH=/models/model.rknn \
-  edge-command-workbench:rk3576-0.1.1
+  edge-command-workbench:rockchip-0.2.0
 ```
 
 `--network host` lets an optional `VOICE_SERVICE_URL=http://127.0.0.1:<port>` reach a Local Voice service on the host. Use the actual single host `librknnrt.so` file; do not bind the whole host `/usr/lib`. On the validated cat RK3576, `/dev/dri/card1` is the NPU DRM primary node, so the complete `/dev/dri` directory is mapped. The image healthcheck requires `/api/health` to report `model_ready=true`, `backend=rknn`, `max_sequence_tokens=90`, and `max_options=16`; an HTTP 200 response with an unavailable model fails the healthcheck. `VOICE_SERVICE_URL` remains optional and points to an already running Local Voice service.
@@ -115,3 +115,11 @@ The 0.1.1 development candidate was opened from Spark at `:18868` with `DECISION
 ![English Spark result](docs/media/07-spark-english-result.jpg)
 
 ![Chinese Spark result](docs/media/08-spark-chinese-result.jpg)
+
+### Jetson Orin TensorRT container (development target)
+
+`docker/Dockerfile.jetson` is a separate ARM64 candidate for Orin NX/Nano. It uses Ubuntu 22.04 with Python 3.10 and the locked `jetson` extra (`cuda-python>=12,<13`). TensorRT Python bindings, CUDA libraries, and the serialized engine remain host supplied; the image does not claim Jetson hardware validation. Build with `docker build -f docker/Dockerfile.jetson -t edge-command-workbench:jetson-jp6-0.2.0 .` on an ARM64 build host using the configured PyPI mirror.
+
+`docker/docker-compose.jetson.yml` mounts `/usr/local/cuda/lib64`, `/usr/lib/aarch64-linux-gnu/nvidia`, `/lib/aarch64-linux-gnu`, and the host Python 3.10 TensorRT package read-only. Set `LAYA_JETSON_MODEL_DIR` to a directory containing `model.engine`, `model_metadata.json`, and `tokenizer/`. The sample target metadata in `docker/target-metadata.jetson.json` records the minimum contract: TensorRT, `seq_len=90`, `max_options=16`, five named inputs with fixed shapes, and a `[1,16]` choice output. The serialized engine must be inspected and tested on the target Jetson; the historical Orin figures are not a current Workbench acceptance.
+
+The RKNN Dockerfile remains the shared Rockchip image path. Its healthcheck now requires `status=ok` and `model_ready=true`, then compares the reported backend and shapes with `EXPECTED_BACKEND`, `EXPECTED_SEQ_LEN`, and `EXPECTED_MAX_OPTIONS` when supplied. This keeps RK3576 `seq=90` and a separately supplied RK3588 model configurable without embedding one target in the checker.

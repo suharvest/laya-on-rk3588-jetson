@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import os
 
 import uvicorn
 
@@ -26,4 +27,4 @@ def _restore_logging_levels() -> None:
 
 app = create_app()
 _restore_logging_levels()
-uvicorn.run(app, host="0.0.0.0", port=18768)
+uvicorn.run(app, host=os.getenv("HOST", "0.0.0.0"), port=int(os.getenv("PORT", "18768")))
