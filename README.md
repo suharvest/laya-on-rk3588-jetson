@@ -194,3 +194,9 @@ TensorRT 10.3.0, onnx-graphsurgeon, ONNX Runtime.
 
 This project is not affiliated with TypeSafe AI, Inc. "Jev" is their product; the references
 here are descriptive.
+
+## Command Selection Workbench
+
+`app/` contains the local FastAPI service and static UI for the RK3576 `seq=90` command-selection artifact. The first complete target is RK3576; RK3588 and Jetson artifacts documented elsewhere are historical targets and are not claimed ready by this workbench. The ARM64 image, model, tokenizer, and metadata are published under the recorded release path in the `harvestsu/laya-multilingual-rknn-tensorrt` Hugging Face repository.
+
+The UI supports Chinese and English. Language switching localizes only an untouched built-in scene; user-edited prompt, candidate fields, input, history, and device settings remain as entered. See [`app/README.md`](app/README.md) for the remote API, RKNN runtime mounts, health requirements, and validation record. The device evidence is in [`docs/rk3576-cat-validation-20261009.md`](docs/rk3576-cat-validation-20261009.md); conversion constraints are in [`docs/rk3576-conversion-20261009.md`](docs/rk3576-conversion-20261009.md).

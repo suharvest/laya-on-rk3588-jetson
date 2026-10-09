@@ -282,3 +282,9 @@ gemm 也没掉出 int8（48 个变成带残差 Add 的 int8 融合核），**唯
 - **`/dev/shm` 会被静默清空**（radxa，累计实测多次）——传输+测量须在一条 detached 驱动里原子完成。
 - RK3588 交付依赖固定版本工具链（torch 2.14 + transformers 5.17 的导出链路，
   环境在 wsl2-local `/mnt/f/laya-oldship/.venv`）。**换导出环境必须重跑 16 条排序验收。**
+
+## 命令选择工作台
+
+`app/` 包含 RK3576 `seq=90` 命令选择模型的 FastAPI 服务和静态界面。首个完整目标是 RK3576；其他文档中的 RK3588 与 Jetson 产物属于历史目标，本工作台不宣称它们已就绪。ARM64 镜像、模型、tokenizer 与元数据发布在 `harvestsu/laya-multilingual-rknn-tensorrt` Hugging Face 仓库的记录路径中。
+
+界面支持中文和英文。只有未编辑的内置场景会在语言切换时本地化；用户编辑过的提示词、候选字段、输入、历史记录和设备配置保持原样。远端 API、RKNN 挂载、health 条件与验证记录见 [`app/README.md`](app/README.md)。 设备实测记录见 [`docs/rk3576-cat-validation-20261009.md`](docs/rk3576-cat-validation-20261009.md)，转换约束见 [`docs/rk3576-conversion-20261009.md`](docs/rk3576-conversion-20261009.md)。

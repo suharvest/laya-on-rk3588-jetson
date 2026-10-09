@@ -1,0 +1,14 @@
+OpenVoiceStream frontend microphone files
+
+Source repository: https://github.com/Seeed-Solution/openvoicestream
+Pinned source commit: 8fdc52ea65ce9a5dfd5dfe7e8b5d25943c269a11
+Source paths:
+- demos/common/frontend/mic-capture.js
+- demos/common/frontend/mic-worklet.js
+Source blob SHAs:
+- mic-capture.js: 19cd5289de0acdd0826849c05e8db0f3813fd85c
+- mic-worklet.js: 4f24e585e1944a338a0a14bfb920b7d8ee8ab0bf
+Local SHA256 matches the source files at the pinned commit.
+
+License: MIT, reproduced in LICENSE from the same pinned commit.
+Copyright: Harvest Su, 2025-2026.

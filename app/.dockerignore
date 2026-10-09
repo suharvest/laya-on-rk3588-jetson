@@ -1,0 +1,13 @@
+.git
+.gitignore
+.DS_Store
+.venv
+__pycache__
+*.pyc
+*.pyo
+tests
+prototype
+uv.lock.bak
+models
+*.rknn
+*.engine

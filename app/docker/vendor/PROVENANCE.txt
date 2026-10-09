@@ -1,0 +1,7 @@
+RKNN Lite2 provenance
+Repository: https://github.com/airockchip/rknn-toolkit2
+Commit: 59a913d172e7f5ff03c9076e2ec7b1b1288ffd08
+Wheel: rknn_toolkit_lite2-2.3.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+GitHub blob SHA: bf57672255cc7ce2fa141d6e0ae3f7dafcee2527
+Size: 569160
+SHA256: bda74f1179e15fccb8726054a24898982522784b65bb340b20146955d254e800
