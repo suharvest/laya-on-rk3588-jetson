@@ -1,0 +1,30 @@
+{
+  "python": "3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]",
+  "native_sha256": "6cd1d9c67c63caef3a8fc2789e547e65a917e9a9d9957f6a8b597bbd4187af30",
+  "native_size": 21863,
+  "tensorrt": {
+    "ok": true,
+    "version": "10.3.0",
+    "file": "/usr/lib/python3.10/dist-packages/tensorrt/__init__.py"
+  },
+  "numpy": {
+    "ok": true,
+    "version": "1.26.4",
+    "file": "/home/harvest/.local/lib/python3.10/site-packages/numpy/__init__.py"
+  },
+  "tokenizers": {
+    "ok": true,
+    "version": "0.23.1",
+    "file": "/home/harvest/.local/lib/python3.10/site-packages/tokenizers/__init__.py"
+  },
+  "cuda.cudart": {
+    "ok": true,
+    "version": "12.9.6",
+    "file": "None"
+  },
+  "device": {
+    "memory_available": "see_preflight",
+    "engine": "not_loaded",
+    "reason": "available memory below 2.5 GiB gate"
+  }
+}

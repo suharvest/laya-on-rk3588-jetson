@@ -1,0 +1,7 @@
+~/.rpty/bin/fleet status orin-nx
+~/.rpty/bin/fleet status orin-nano
+~/.rpty/bin/fleet exec orin-nx -- "hostname; id -un; df -h / /dev/shm; free -h; nvidia-smi --query-gpu=name,memory.total,memory.used,memory.free --format=csv,noheader"
+~/.rpty/bin/fleet exec orin-nano -- "hostname; id -un; df -h / /dev/shm; free -h; nvidia-smi --query-gpu=name,memory.total,memory.used,memory.free --format=csv,noheader"
+~/.rpty/bin/fleet transfer spark:/home/harvest/worktrees/laya-edge-workbench/app/edge_workbench/native.py orin-nx:/dev/shm/jetson-workbench-native-20261009/code/native.py
+~/.rpty/bin/fleet push orin-nx /tmp/edge-workbench-hf-upload-source/tokenizer.json /dev/shm/jetson-workbench-native-20261009/tokenizer/tokenizer.json
+python3 scripts/validate_workbench_native.py --backend tensorrt --model /home/harvest/laya-trt/out/laya.s90.fp16.engine --tokenizer-dir /dev/shm/jetson-workbench-native-20261009/tokenizer --native /dev/shm/jetson-workbench-native-20261009/code/native.py --warmup 5 --iters 20

@@ -1,0 +1,249 @@
+{
+  "engine": "/home/harvest/laya-trt/out/laya.s90.fp16.engine",
+  "engine_sha256": "e95ca6a6c5824c54c7e7c6959a7ccff98d0d85139b915751dfec23ee132f5068",
+  "engine_size": 648134580,
+  "runtime_version": "10.3.0",
+  "semantic_cases": [
+    {
+      "name": "en_speed",
+      "text": "Reduce conveyor 3 speed to 60%",
+      "scores": [
+        5.93359375,
+        -3.794921875,
+        -4.484375
+      ],
+      "order": [
+        "speed",
+        "pause",
+        "status"
+      ],
+      "top1": "speed",
+      "expected": "speed",
+      "finite": true,
+      "input_shapes": {
+        "input_ids": [
+          1,
+          90
+        ],
+        "attention_mask": [
+          1,
+          90
+        ],
+        "marker_pos": [
+          1,
+          16
+        ],
+        "marker_mask": [
+          1,
+          16
+        ],
+        "qtype": [
+          1
+        ]
+      }
+    },
+    {
+      "name": "en_pause",
+      "text": "Pause the production line now",
+      "scores": [
+        -4.55859375,
+        3.65625,
+        -3.16796875
+      ],
+      "order": [
+        "pause",
+        "status",
+        "speed"
+      ],
+      "top1": "pause",
+      "expected": "pause",
+      "finite": true,
+      "input_shapes": {
+        "input_ids": [
+          1,
+          90
+        ],
+        "attention_mask": [
+          1,
+          90
+        ],
+        "marker_pos": [
+          1,
+          16
+        ],
+        "marker_mask": [
+          1,
+          16
+        ],
+        "qtype": [
+          1
+        ]
+      }
+    },
+    {
+      "name": "en_status",
+      "text": "Show camera 2 temperature",
+      "scores": [
+        -4.578125,
+        -0.2646484375,
+        -1.169921875
+      ],
+      "order": [
+        "pause",
+        "status",
+        "speed"
+      ],
+      "top1": "pause",
+      "expected": "status",
+      "finite": true,
+      "input_shapes": {
+        "input_ids": [
+          1,
+          90
+        ],
+        "attention_mask": [
+          1,
+          90
+        ],
+        "marker_pos": [
+          1,
+          16
+        ],
+        "marker_mask": [
+          1,
+          16
+        ],
+        "qtype": [
+          1
+        ]
+      }
+    },
+    {
+      "name": "zh_speed",
+      "text": "把三号输送带速度降到60%",
+      "scores": [
+        4.95703125,
+        -3.482421875,
+        -4.5625
+      ],
+      "order": [
+        "speed",
+        "pause",
+        "status"
+      ],
+      "top1": "speed",
+      "expected": "speed",
+      "finite": true,
+      "input_shapes": {
+        "input_ids": [
+          1,
+          90
+        ],
+        "attention_mask": [
+          1,
+          90
+        ],
+        "marker_pos": [
+          1,
+          16
+        ],
+        "marker_mask": [
+          1,
+          16
+        ],
+        "qtype": [
+          1
+        ]
+      }
+    },
+    {
+      "name": "zh_pause",
+      "text": "停止当前生产线",
+      "scores": [
+        -4.53515625,
+        2.921875,
+        -3.74609375
+      ],
+      "order": [
+        "pause",
+        "status",
+        "speed"
+      ],
+      "top1": "pause",
+      "expected": "pause",
+      "finite": true,
+      "input_shapes": {
+        "input_ids": [
+          1,
+          90
+        ],
+        "attention_mask": [
+          1,
+          90
+        ],
+        "marker_pos": [
+          1,
+          16
+        ],
+        "marker_mask": [
+          1,
+          16
+        ],
+        "qtype": [
+          1
+        ]
+      }
+    },
+    {
+      "name": "zh_status",
+      "text": "查询设备当前运行状态",
+      "scores": [
+        -4.51171875,
+        -2.712890625,
+        3.2265625
+      ],
+      "order": [
+        "status",
+        "pause",
+        "speed"
+      ],
+      "top1": "status",
+      "expected": "status",
+      "finite": true,
+      "input_shapes": {
+        "input_ids": [
+          1,
+          90
+        ],
+        "attention_mask": [
+          1,
+          90
+        ],
+        "marker_pos": [
+          1,
+          16
+        ],
+        "marker_mask": [
+          1,
+          16
+        ],
+        "qtype": [
+          1
+        ]
+      }
+    }
+  ],
+  "bench": {
+    "n": 20,
+    "p50_ms": 8.449122309684753,
+    "p95_ms": 12.971682474017143,
+    "min_ms": 8.30988958477974,
+    "max_ms": 12.971682474017143,
+    "mean_ms": 8.912018965929747
+  },
+  "summary": {
+    "semantic_top1": 5,
+    "semantic_total": 6,
+    "finite_active": 6
+  }
+}

@@ -1,0 +1,5 @@
+Orin NX initial preflight: memory available 6.3 GiB; /dev/shm available 2.2 GiB; root disk 0 bytes.
+Orin Nano initial preflight: memory available 1.8 GiB; /dev/shm available 1.6 GiB; root disk 617 MB.
+Orin Nano engine deserialization was intentionally skipped because available memory was below the 2.5 GiB gate.
+Both hosts: Python 3.10.12, TensorRT 10.3.0. NX cuda.cudart 11.8.7; Nano cuda.cudart 12.9.6.
+Both hosts: current Spark native.py imported successfully; no Docker load, deployment, process stop, package install, or model download was performed.

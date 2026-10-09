@@ -1,0 +1,294 @@
+{
+  "model_sha256": "a194c9504d38173525fb1aedb513c3261c01ff4860c9d4a0743abdc953b88b97",
+  "model_size": 658662315,
+  "runtime_version": "('==============================================\\nRKNN VERSION:\\n  API: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)\\n  DRV: 0.9.8\\n==============================================\\n', '2.3.2 (429f97ae6b@2025-04-09T09:09:27)', '0.9.8')",
+  "rknn_inputs": [
+    {
+      "name": "input_ids",
+      "type": 8,
+      "dims": [
+        1,
+        90
+      ],
+      "fmt": 3
+    },
+    {
+      "name": "attention_mask",
+      "type": 8,
+      "dims": [
+        1,
+        90
+      ],
+      "fmt": 3
+    },
+    {
+      "name": "marker_pos",
+      "type": 8,
+      "dims": [
+        1,
+        16
+      ],
+      "fmt": 3
+    },
+    {
+      "name": "marker_mask",
+      "type": 9,
+      "dims": [
+        1,
+        16
+      ],
+      "fmt": 3
+    },
+    {
+      "name": "qtype",
+      "type": 8,
+      "dims": [
+        1
+      ],
+      "fmt": 3
+    }
+  ],
+  "semantic_cases": [
+    {
+      "name": "en_speed",
+      "text": "Reduce conveyor 3 speed to 60%",
+      "scores": [
+        5.87109375,
+        -3.76171875,
+        -4.46875
+      ],
+      "order": [
+        "speed",
+        "pause",
+        "status"
+      ],
+      "top1": "speed",
+      "expected": "speed",
+      "finite": true,
+      "input_shapes": {
+        "input_ids": [
+          1,
+          90
+        ],
+        "attention_mask": [
+          1,
+          90
+        ],
+        "marker_pos": [
+          1,
+          16
+        ],
+        "marker_mask": [
+          1,
+          16
+        ],
+        "qtype": [
+          1
+        ]
+      }
+    },
+    {
+      "name": "en_pause",
+      "text": "Pause the production line now",
+      "scores": [
+        -4.5546875,
+        3.634765625,
+        -3.146484375
+      ],
+      "order": [
+        "pause",
+        "status",
+        "speed"
+      ],
+      "top1": "pause",
+      "expected": "pause",
+      "finite": true,
+      "input_shapes": {
+        "input_ids": [
+          1,
+          90
+        ],
+        "attention_mask": [
+          1,
+          90
+        ],
+        "marker_pos": [
+          1,
+          16
+        ],
+        "marker_mask": [
+          1,
+          16
+        ],
+        "qtype": [
+          1
+        ]
+      }
+    },
+    {
+      "name": "en_status",
+      "text": "Show camera 2 temperature",
+      "scores": [
+        -4.5703125,
+        -0.286865234375,
+        -1.1640625
+      ],
+      "order": [
+        "pause",
+        "status",
+        "speed"
+      ],
+      "top1": "pause",
+      "expected": "status",
+      "finite": true,
+      "input_shapes": {
+        "input_ids": [
+          1,
+          90
+        ],
+        "attention_mask": [
+          1,
+          90
+        ],
+        "marker_pos": [
+          1,
+          16
+        ],
+        "marker_mask": [
+          1,
+          16
+        ],
+        "qtype": [
+          1
+        ]
+      }
+    },
+    {
+      "name": "zh_speed",
+      "text": "把三号输送带速度降到60%",
+      "scores": [
+        4.91796875,
+        -3.4375,
+        -4.54296875
+      ],
+      "order": [
+        "speed",
+        "pause",
+        "status"
+      ],
+      "top1": "speed",
+      "expected": "speed",
+      "finite": true,
+      "input_shapes": {
+        "input_ids": [
+          1,
+          90
+        ],
+        "attention_mask": [
+          1,
+          90
+        ],
+        "marker_pos": [
+          1,
+          16
+        ],
+        "marker_mask": [
+          1,
+          16
+        ],
+        "qtype": [
+          1
+        ]
+      }
+    },
+    {
+      "name": "zh_pause",
+      "text": "停止当前生产线",
+      "scores": [
+        -4.51953125,
+        2.888671875,
+        -3.69921875
+      ],
+      "order": [
+        "pause",
+        "status",
+        "speed"
+      ],
+      "top1": "pause",
+      "expected": "pause",
+      "finite": true,
+      "input_shapes": {
+        "input_ids": [
+          1,
+          90
+        ],
+        "attention_mask": [
+          1,
+          90
+        ],
+        "marker_pos": [
+          1,
+          16
+        ],
+        "marker_mask": [
+          1,
+          16
+        ],
+        "qtype": [
+          1
+        ]
+      }
+    },
+    {
+      "name": "zh_status",
+      "text": "查询设备当前运行状态",
+      "scores": [
+        -4.50390625,
+        -2.73828125,
+        3.22265625
+      ],
+      "order": [
+        "status",
+        "pause",
+        "speed"
+      ],
+      "top1": "status",
+      "expected": "status",
+      "finite": true,
+      "input_shapes": {
+        "input_ids": [
+          1,
+          90
+        ],
+        "attention_mask": [
+          1,
+          90
+        ],
+        "marker_pos": [
+          1,
+          16
+        ],
+        "marker_mask": [
+          1,
+          16
+        ],
+        "qtype": [
+          1
+        ]
+      }
+    }
+  ],
+  "bench": {
+    "n": 20,
+    "p50_ms": 279.4177539763041,
+    "p95_ms": 282.37474599154666,
+    "min_ms": 278.87290401849896,
+    "max_ms": 282.37474599154666,
+    "mean_ms": 279.521252802806
+  },
+  "summary": {
+    "semantic_top1": 5,
+    "semantic_total": 6,
+    "finite_active": 6
+  }
+}
