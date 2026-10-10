@@ -1,0 +1,52 @@
+{
+  "primary_original": {
+    "clarify": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 20,
+      "support": 20,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "reject": {
+      "tp": 1,
+      "fp": 2,
+      "fn": 19,
+      "support": 20,
+      "precision": 0.3333333333333333,
+      "recall": 0.05
+    },
+    "gold_clarify_reject_joint": {
+      "support": 40,
+      "selected_clarify_or_reject": 2,
+      "selected_action_errors": 38,
+      "rate": 0.95
+    }
+  },
+  "deterministic_reversed": {
+    "clarify": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 20,
+      "support": 20,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "reject": {
+      "tp": 3,
+      "fp": 4,
+      "fn": 17,
+      "support": 20,
+      "precision": 0.42857142857142855,
+      "recall": 0.15
+    },
+    "gold_clarify_reject_joint": {
+      "support": 40,
+      "selected_clarify_or_reject": 6,
+      "selected_action_errors": 34,
+      "rate": 0.85
+    },
+    "source_raw": "laya512-baseline-reversed-20261010.json"
+  },
+  "undefined": null
+}

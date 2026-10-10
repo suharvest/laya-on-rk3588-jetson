@@ -1,0 +1,6621 @@
+{
+  "schema": "jev-laya512-baseline-20261010.v1",
+  "dataset_sha256": "a1c18d3f86aa92eb11d06a5034ee1884de5b1228089b77648aeefa42fdd25a8a",
+  "dataset_n": 120,
+  "source_sha256": "5c434fa631efe7b60ea32353707ca2ee57c1adcba2e5772042928a192c2fa152",
+  "tokenizer_sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+  "tokenizer_config_sha256": "424b69444bf7b5809dc2cd2e36d0bd71b8055124dd24274d6db3c655d38205e7",
+  "engine_sha256": "0d90bf8cb2e61f8ffc9ec0c3604bfd276ede5e0ba5d501241b2a73b845dc8938",
+  "engine_bytes": 650779868,
+  "config": {
+    "seq_len": 512,
+    "max_options": 16,
+    "backend": "TensorRT",
+    "runtime": "10.3.0",
+    "warmup": 20,
+    "timed_iters": 50,
+    "timing_scope": "backend.infer_request; native backend synchronizes CUDA",
+    "p95": "nearest-rank"
+  },
+  "preflight": {
+    "mem_available_bytes": 7787180032,
+    "gpu": {
+      "rc": 0,
+      "stdout": "Orin (nvgpu), [N/A], [N/A], [N/A]",
+      "stderr": ""
+    }
+  },
+  "during_after": {
+    "mem_available_bytes": 7101083648,
+    "gpu": {
+      "rc": 0,
+      "stdout": "Orin (nvgpu), [N/A], [N/A], [N/A]",
+      "stderr": ""
+    }
+  },
+  "passes": {
+    "original": {
+      "metrics": {
+        "correct": 70,
+        "n": 120,
+        "accuracy": 0.5833333333333334,
+        "errors": [],
+        "by_language": {
+          "en": {
+            "correct": 36,
+            "n": 60,
+            "errors": [],
+            "accuracy": 0.6
+          },
+          "zh": {
+            "correct": 34,
+            "n": 60,
+            "errors": [],
+            "accuracy": 0.5666666666666667
+          }
+        },
+        "by_category": {
+          "direct": {
+            "correct": 40,
+            "n": 40,
+            "errors": [],
+            "accuracy": 1.0
+          },
+          "paraphrase": {
+            "correct": 15,
+            "n": 20,
+            "errors": [],
+            "accuracy": 0.75
+          },
+          "negation": {
+            "correct": 14,
+            "n": 20,
+            "errors": [],
+            "accuracy": 0.7
+          },
+          "ambiguous": {
+            "correct": 0,
+            "n": 20,
+            "errors": [],
+            "accuracy": 0.0
+          },
+          "OOS": {
+            "correct": 1,
+            "n": 20,
+            "errors": [],
+            "accuracy": 0.05
+          }
+        },
+        "by_scenario": {
+          "conveyor": {
+            "correct": 14,
+            "n": 26,
+            "errors": [],
+            "accuracy": 0.5384615384615384
+          },
+          "pump": {
+            "correct": 14,
+            "n": 26,
+            "errors": [],
+            "accuracy": 0.5384615384615384
+          },
+          "temperature": {
+            "correct": 13,
+            "n": 22,
+            "errors": [],
+            "accuracy": 0.5909090909090909
+          },
+          "camera": {
+            "correct": 17,
+            "n": 26,
+            "errors": [],
+            "accuracy": 0.6538461538461539
+          },
+          "alarms": {
+            "correct": 12,
+            "n": 20,
+            "errors": [],
+            "accuracy": 0.6
+          }
+        }
+      },
+      "records": [
+        {
+          "id": "jev-001-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "set_speed",
+          "correct": true,
+          "scores": {
+            "start": -4.58984375,
+            "stop": -4.5234375,
+            "set_speed": 17.609375,
+            "status": -4.53515625,
+            "clarify": -4.50390625,
+            "reject": -4.58984375
+          },
+          "ranking": [
+            "set_speed",
+            "clarify",
+            "stop",
+            "status",
+            "start",
+            "reject"
+          ],
+          "tokens": 93,
+          "finite": true
+        },
+        {
+          "id": "jev-001-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "set_speed",
+          "correct": true,
+          "scores": {
+            "start": -4.55859375,
+            "stop": -4.5234375,
+            "set_speed": 16.6875,
+            "status": -4.52734375,
+            "clarify": -4.53125,
+            "reject": -4.59375
+          },
+          "ranking": [
+            "set_speed",
+            "stop",
+            "status",
+            "clarify",
+            "start",
+            "reject"
+          ],
+          "tokens": 111,
+          "finite": true
+        },
+        {
+          "id": "jev-002-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "status",
+          "expected_id": "status",
+          "correct": true,
+          "scores": {
+            "start": -4.515625,
+            "stop": -4.57421875,
+            "set_speed": -4.57421875,
+            "status": 7.37890625,
+            "clarify": -4.5703125,
+            "reject": -4.21875
+          },
+          "ranking": [
+            "status",
+            "reject",
+            "start",
+            "clarify",
+            "stop",
+            "set_speed"
+          ],
+          "tokens": 89,
+          "finite": true
+        },
+        {
+          "id": "jev-002-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "status",
+          "expected_id": "status",
+          "correct": true,
+          "scores": {
+            "start": -4.54296875,
+            "stop": -4.578125,
+            "set_speed": -4.54296875,
+            "status": 2.41796875,
+            "clarify": -4.578125,
+            "reject": -4.5859375
+          },
+          "ranking": [
+            "status",
+            "start",
+            "set_speed",
+            "stop",
+            "clarify",
+            "reject"
+          ],
+          "tokens": 108,
+          "finite": true
+        },
+        {
+          "id": "jev-003-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "start",
+          "correct": true,
+          "scores": {
+            "start": 12.1484375,
+            "stop": -4.56640625,
+            "set_rate": -4.57421875,
+            "read_rate": -4.57421875,
+            "status": -4.578125,
+            "clarify": -4.57421875,
+            "reject": -4.19140625
+          },
+          "ranking": [
+            "start",
+            "reject",
+            "stop",
+            "set_rate",
+            "read_rate",
+            "clarify",
+            "status"
+          ],
+          "tokens": 95,
+          "finite": true
+        },
+        {
+          "id": "jev-003-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "start",
+          "correct": true,
+          "scores": {
+            "start": 7.9453125,
+            "stop": -4.390625,
+            "set_rate": -3.802734375,
+            "read_rate": -4.45703125,
+            "status": -4.453125,
+            "clarify": -4.54296875,
+            "reject": -4.06640625
+          },
+          "ranking": [
+            "start",
+            "set_rate",
+            "reject",
+            "stop",
+            "status",
+            "read_rate",
+            "clarify"
+          ],
+          "tokens": 108,
+          "finite": true
+        },
+        {
+          "id": "jev-004-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "stop",
+          "expected_id": "stop",
+          "correct": true,
+          "scores": {
+            "start": -4.58203125,
+            "stop": 12.015625,
+            "set_rate": -4.578125,
+            "read_rate": -4.5546875,
+            "status": -4.58203125,
+            "clarify": -4.578125,
+            "reject": -4.40234375
+          },
+          "ranking": [
+            "stop",
+            "reject",
+            "read_rate",
+            "set_rate",
+            "clarify",
+            "start",
+            "status"
+          ],
+          "tokens": 95,
+          "finite": true
+        },
+        {
+          "id": "jev-004-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "stop",
+          "expected_id": "stop",
+          "correct": true,
+          "scores": {
+            "start": -4.5546875,
+            "stop": 7.7265625,
+            "set_rate": -4.578125,
+            "read_rate": -4.5703125,
+            "status": -4.57421875,
+            "clarify": -4.578125,
+            "reject": -4.578125
+          },
+          "ranking": [
+            "stop",
+            "start",
+            "read_rate",
+            "status",
+            "set_rate",
+            "clarify",
+            "reject"
+          ],
+          "tokens": 109,
+          "finite": true
+        },
+        {
+          "id": "jev-005-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": 3.87109375,
+            "set_temp": -4.1875,
+            "clarify": -4.2265625,
+            "reject": -3.841796875
+          },
+          "ranking": [
+            "read_temp",
+            "reject",
+            "set_temp",
+            "clarify"
+          ],
+          "tokens": 72,
+          "finite": true
+        },
+        {
+          "id": "jev-005-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": 3.884765625,
+            "set_temp": -4.40234375,
+            "clarify": -4.58203125,
+            "reject": -4.57421875
+          },
+          "ranking": [
+            "read_temp",
+            "set_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 81,
+          "finite": true
+        },
+        {
+          "id": "jev-006-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "set_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": -4.55859375,
+            "set_temp": 11.96875,
+            "clarify": -4.57421875,
+            "reject": -4.5625
+          },
+          "ranking": [
+            "set_temp",
+            "read_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 77,
+          "finite": true
+        },
+        {
+          "id": "jev-006-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "set_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": -4.578125,
+            "set_temp": 7.796875,
+            "clarify": -4.56640625,
+            "reject": -4.5859375
+          },
+          "ranking": [
+            "set_temp",
+            "clarify",
+            "read_temp",
+            "reject"
+          ],
+          "tokens": 86,
+          "finite": true
+        },
+        {
+          "id": "jev-007-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "start_stream",
+          "correct": true,
+          "scores": {
+            "start_stream": 7.5859375,
+            "stop_stream": -4.58203125,
+            "camera_status": -4.58203125,
+            "camera_auto": -4.56640625,
+            "clarify": -4.57421875,
+            "reject": -4.54296875
+          },
+          "ranking": [
+            "start_stream",
+            "reject",
+            "camera_auto",
+            "clarify",
+            "stop_stream",
+            "camera_status"
+          ],
+          "tokens": 88,
+          "finite": true
+        },
+        {
+          "id": "jev-007-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "start_stream",
+          "correct": true,
+          "scores": {
+            "start_stream": 6.50390625,
+            "stop_stream": -4.58203125,
+            "camera_status": -4.5703125,
+            "camera_auto": -4.58203125,
+            "clarify": -4.57421875,
+            "reject": -4.578125
+          },
+          "ranking": [
+            "start_stream",
+            "camera_status",
+            "clarify",
+            "reject",
+            "stop_stream",
+            "camera_auto"
+          ],
+          "tokens": 104,
+          "finite": true
+        },
+        {
+          "id": "jev-008-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "stop_stream",
+          "correct": true,
+          "scores": {
+            "start_stream": -4.5546875,
+            "stop_stream": 6.08203125,
+            "camera_status": -4.57421875,
+            "camera_auto": -4.5703125,
+            "clarify": -4.5546875,
+            "reject": -4.31640625
+          },
+          "ranking": [
+            "stop_stream",
+            "reject",
+            "start_stream",
+            "clarify",
+            "camera_auto",
+            "camera_status"
+          ],
+          "tokens": 88,
+          "finite": true
+        },
+        {
+          "id": "jev-008-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "stop_stream",
+          "correct": true,
+          "scores": {
+            "start_stream": -4.53125,
+            "stop_stream": 3.978515625,
+            "camera_status": -4.5546875,
+            "camera_auto": -4.5546875,
+            "clarify": -4.5859375,
+            "reject": -4.5859375
+          },
+          "ranking": [
+            "stop_stream",
+            "start_stream",
+            "camera_status",
+            "camera_auto",
+            "clarify",
+            "reject"
+          ],
+          "tokens": 105,
+          "finite": true
+        },
+        {
+          "id": "jev-009-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "alarms",
+          "selected_id": "list_alarms",
+          "expected_id": "list_alarms",
+          "correct": true,
+          "scores": {
+            "list_alarms": 4.84375,
+            "ack_alarm": -4.58203125,
+            "alarm_count": -4.5625,
+            "clarify": -4.578125,
+            "reject": -4.51171875
+          },
+          "ranking": [
+            "list_alarms",
+            "reject",
+            "alarm_count",
+            "clarify",
+            "ack_alarm"
+          ],
+          "tokens": 79,
+          "finite": true
+        },
+        {
+          "id": "jev-009-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "alarms",
+          "selected_id": "list_alarms",
+          "expected_id": "list_alarms",
+          "correct": true,
+          "scores": {
+            "list_alarms": 2.2265625,
+            "ack_alarm": -3.248046875,
+            "alarm_count": -4.5859375,
+            "clarify": -4.58984375,
+            "reject": -4.58984375
+          },
+          "ranking": [
+            "list_alarms",
+            "ack_alarm",
+            "alarm_count",
+            "clarify",
+            "reject"
+          ],
+          "tokens": 102,
+          "finite": true
+        },
+        {
+          "id": "jev-010-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "ack_alarm",
+          "correct": true,
+          "scores": {
+            "list_alarms": -4.57421875,
+            "ack_alarm": 4.609375,
+            "alarm_count": -4.58203125,
+            "clarify": -4.57421875,
+            "reject": -4.55859375
+          },
+          "ranking": [
+            "ack_alarm",
+            "reject",
+            "list_alarms",
+            "clarify",
+            "alarm_count"
+          ],
+          "tokens": 80,
+          "finite": true
+        },
+        {
+          "id": "jev-010-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "ack_alarm",
+          "correct": true,
+          "scores": {
+            "list_alarms": -4.5859375,
+            "ack_alarm": 1.830078125,
+            "alarm_count": -4.58203125,
+            "clarify": -4.58984375,
+            "reject": -4.57421875
+          },
+          "ranking": [
+            "ack_alarm",
+            "reject",
+            "alarm_count",
+            "list_alarms",
+            "clarify"
+          ],
+          "tokens": 101,
+          "finite": true
+        },
+        {
+          "id": "jev-011-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "set_rate",
+          "correct": true,
+          "scores": {
+            "start": -4.44140625,
+            "stop": -4.5859375,
+            "set_rate": 17.4375,
+            "read_rate": -4.5859375,
+            "status": -4.5859375,
+            "clarify": -4.53125,
+            "reject": -4.578125
+          },
+          "ranking": [
+            "set_rate",
+            "start",
+            "clarify",
+            "reject",
+            "stop",
+            "read_rate",
+            "status"
+          ],
+          "tokens": 101,
+          "finite": true
+        },
+        {
+          "id": "jev-011-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "set_rate",
+          "correct": true,
+          "scores": {
+            "start": -4.578125,
+            "stop": -4.58984375,
+            "set_rate": 17.265625,
+            "read_rate": -4.5859375,
+            "status": -4.58203125,
+            "clarify": -4.5234375,
+            "reject": -4.58984375
+          },
+          "ranking": [
+            "set_rate",
+            "clarify",
+            "start",
+            "status",
+            "read_rate",
+            "stop",
+            "reject"
+          ],
+          "tokens": 114,
+          "finite": true
+        },
+        {
+          "id": "jev-012-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "camera_status",
+          "expected_id": "camera_status",
+          "correct": true,
+          "scores": {
+            "start_stream": -4.5390625,
+            "stop_stream": -4.56640625,
+            "camera_status": 4.93359375,
+            "camera_auto": -4.5703125,
+            "clarify": -4.484375,
+            "reject": -4.25
+          },
+          "ranking": [
+            "camera_status",
+            "reject",
+            "clarify",
+            "start_stream",
+            "stop_stream",
+            "camera_auto"
+          ],
+          "tokens": 88,
+          "finite": true
+        },
+        {
+          "id": "jev-012-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "camera_status",
+          "expected_id": "camera_status",
+          "correct": true,
+          "scores": {
+            "start_stream": -4.58203125,
+            "stop_stream": -4.55859375,
+            "camera_status": 5.09765625,
+            "camera_auto": -4.57421875,
+            "clarify": -4.55859375,
+            "reject": -4.578125
+          },
+          "ranking": [
+            "camera_status",
+            "stop_stream",
+            "clarify",
+            "camera_auto",
+            "reject",
+            "start_stream"
+          ],
+          "tokens": 103,
+          "finite": true
+        },
+        {
+          "id": "jev-013-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "set_speed",
+          "correct": true,
+          "scores": {
+            "start": 1.8037109375,
+            "stop": -2.505859375,
+            "set_speed": 4.6484375,
+            "status": -4.22265625,
+            "clarify": -4.53515625,
+            "reject": -3.076171875
+          },
+          "ranking": [
+            "set_speed",
+            "start",
+            "stop",
+            "reject",
+            "status",
+            "clarify"
+          ],
+          "tokens": 91,
+          "finite": true
+        },
+        {
+          "id": "jev-013-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "conveyor",
+          "selected_id": "start",
+          "expected_id": "set_speed",
+          "correct": false,
+          "scores": {
+            "start": 2.306640625,
+            "stop": -2.68359375,
+            "set_speed": 1.6318359375,
+            "status": -4.15625,
+            "clarify": -4.30859375,
+            "reject": -2.8515625
+          },
+          "ranking": [
+            "start",
+            "set_speed",
+            "stop",
+            "reject",
+            "status",
+            "clarify"
+          ],
+          "tokens": 110,
+          "finite": true
+        },
+        {
+          "id": "jev-014-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "pump",
+          "selected_id": "status",
+          "expected_id": "status",
+          "correct": true,
+          "scores": {
+            "start": -1.1669921875,
+            "stop": -4.3203125,
+            "set_rate": -4.55078125,
+            "read_rate": -4.51953125,
+            "status": 4.58203125,
+            "clarify": -2.0078125,
+            "reject": -3.32421875
+          },
+          "ranking": [
+            "status",
+            "start",
+            "clarify",
+            "reject",
+            "stop",
+            "read_rate",
+            "set_rate"
+          ],
+          "tokens": 99,
+          "finite": true
+        },
+        {
+          "id": "jev-014-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "pump",
+          "selected_id": "status",
+          "expected_id": "status",
+          "correct": true,
+          "scores": {
+            "start": 0.248046875,
+            "stop": -2.50390625,
+            "set_rate": -4.578125,
+            "read_rate": -3.703125,
+            "status": 3.306640625,
+            "clarify": -2.13671875,
+            "reject": -3.2578125
+          },
+          "ranking": [
+            "status",
+            "start",
+            "clarify",
+            "stop",
+            "reject",
+            "read_rate",
+            "set_rate"
+          ],
+          "tokens": 112,
+          "finite": true
+        },
+        {
+          "id": "jev-015-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": 3.451171875,
+            "set_temp": -3.748046875,
+            "clarify": -2.322265625,
+            "reject": -3.298828125
+          },
+          "ranking": [
+            "read_temp",
+            "clarify",
+            "reject",
+            "set_temp"
+          ],
+          "tokens": 74,
+          "finite": true
+        },
+        {
+          "id": "jev-015-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": 4.3828125,
+            "set_temp": -4.484375,
+            "clarify": -4.57421875,
+            "reject": -4.53125
+          },
+          "ranking": [
+            "read_temp",
+            "set_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 84,
+          "finite": true
+        },
+        {
+          "id": "jev-016-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "start_stream",
+          "correct": true,
+          "scores": {
+            "start_stream": 1.412109375,
+            "stop_stream": -2.279296875,
+            "camera_status": -2.8203125,
+            "camera_auto": -4.2734375,
+            "clarify": -4.55078125,
+            "reject": -2.123046875
+          },
+          "ranking": [
+            "start_stream",
+            "reject",
+            "stop_stream",
+            "camera_status",
+            "camera_auto",
+            "clarify"
+          ],
+          "tokens": 89,
+          "finite": true
+        },
+        {
+          "id": "jev-016-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "start_stream",
+          "correct": true,
+          "scores": {
+            "start_stream": 4.234375,
+            "stop_stream": -4.5390625,
+            "camera_status": -4.578125,
+            "camera_auto": -4.5703125,
+            "clarify": -4.5625,
+            "reject": -4.48828125
+          },
+          "ranking": [
+            "start_stream",
+            "reject",
+            "stop_stream",
+            "clarify",
+            "camera_auto",
+            "camera_status"
+          ],
+          "tokens": 104,
+          "finite": true
+        },
+        {
+          "id": "jev-017-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "alarms",
+          "selected_id": "list_alarms",
+          "expected_id": "list_alarms",
+          "correct": true,
+          "scores": {
+            "list_alarms": 5.2109375,
+            "ack_alarm": -3.716796875,
+            "alarm_count": -4.58203125,
+            "clarify": -4.55859375,
+            "reject": -4.3984375
+          },
+          "ranking": [
+            "list_alarms",
+            "ack_alarm",
+            "reject",
+            "clarify",
+            "alarm_count"
+          ],
+          "tokens": 83,
+          "finite": true
+        },
+        {
+          "id": "jev-017-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "list_alarms",
+          "correct": false,
+          "scores": {
+            "list_alarms": -0.498291015625,
+            "ack_alarm": 0.362548828125,
+            "alarm_count": -4.26171875,
+            "clarify": -4.55859375,
+            "reject": -4.58984375
+          },
+          "ranking": [
+            "ack_alarm",
+            "list_alarms",
+            "alarm_count",
+            "clarify",
+            "reject"
+          ],
+          "tokens": 104,
+          "finite": true
+        },
+        {
+          "id": "jev-018-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "set_rate",
+          "correct": false,
+          "scores": {
+            "start": 3.42578125,
+            "stop": -0.1185302734375,
+            "set_rate": 2.470703125,
+            "read_rate": -3.82421875,
+            "status": -3.107421875,
+            "clarify": -4.55859375,
+            "reject": -3.2734375
+          },
+          "ranking": [
+            "start",
+            "set_rate",
+            "stop",
+            "status",
+            "reject",
+            "read_rate",
+            "clarify"
+          ],
+          "tokens": 98,
+          "finite": true
+        },
+        {
+          "id": "jev-018-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "set_rate",
+          "correct": true,
+          "scores": {
+            "start": -0.7431640625,
+            "stop": -0.62158203125,
+            "set_rate": 0.51220703125,
+            "read_rate": -3.1875,
+            "status": -1.474609375,
+            "clarify": -4.5625,
+            "reject": -3.23046875
+          },
+          "ranking": [
+            "set_rate",
+            "stop",
+            "start",
+            "status",
+            "read_rate",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 112,
+          "finite": true
+        },
+        {
+          "id": "jev-019-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "conveyor",
+          "selected_id": "clarify",
+          "expected_id": "status",
+          "correct": false,
+          "scores": {
+            "start": -1.5947265625,
+            "stop": -1.6142578125,
+            "set_speed": -4.3515625,
+            "status": -0.75732421875,
+            "clarify": 0.360595703125,
+            "reject": -0.890625
+          },
+          "ranking": [
+            "clarify",
+            "status",
+            "reject",
+            "start",
+            "stop",
+            "set_speed"
+          ],
+          "tokens": 91,
+          "finite": true
+        },
+        {
+          "id": "jev-019-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "conveyor",
+          "selected_id": "start",
+          "expected_id": "status",
+          "correct": false,
+          "scores": {
+            "start": 2.298828125,
+            "stop": -2.40625,
+            "set_speed": -4.49609375,
+            "status": -0.685546875,
+            "clarify": -4.40625,
+            "reject": -3.9609375
+          },
+          "ranking": [
+            "start",
+            "status",
+            "stop",
+            "reject",
+            "clarify",
+            "set_speed"
+          ],
+          "tokens": 110,
+          "finite": true
+        },
+        {
+          "id": "jev-020-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "ack_alarm",
+          "correct": true,
+          "scores": {
+            "list_alarms": -3.55859375,
+            "ack_alarm": 3.248046875,
+            "alarm_count": -4.1796875,
+            "clarify": -4.56640625,
+            "reject": -4.10546875
+          },
+          "ranking": [
+            "ack_alarm",
+            "list_alarms",
+            "reject",
+            "alarm_count",
+            "clarify"
+          ],
+          "tokens": 82,
+          "finite": true
+        },
+        {
+          "id": "jev-020-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "ack_alarm",
+          "correct": true,
+          "scores": {
+            "list_alarms": -4.5859375,
+            "ack_alarm": 4.328125,
+            "alarm_count": -4.58203125,
+            "clarify": -4.5703125,
+            "reject": -4.5859375
+          },
+          "ranking": [
+            "ack_alarm",
+            "clarify",
+            "alarm_count",
+            "list_alarms",
+            "reject"
+          ],
+          "tokens": 104,
+          "finite": true
+        },
+        {
+          "id": "jev-021-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "stop_stream",
+          "correct": true,
+          "scores": {
+            "start_stream": -1.39453125,
+            "stop_stream": -0.66943359375,
+            "camera_status": -4.10546875,
+            "camera_auto": -2.697265625,
+            "clarify": -4.56640625,
+            "reject": -1.6181640625
+          },
+          "ranking": [
+            "stop_stream",
+            "start_stream",
+            "reject",
+            "camera_auto",
+            "camera_status",
+            "clarify"
+          ],
+          "tokens": 89,
+          "finite": true
+        },
+        {
+          "id": "jev-021-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "stop_stream",
+          "correct": true,
+          "scores": {
+            "start_stream": -2.005859375,
+            "stop_stream": 0.6962890625,
+            "camera_status": -4.13671875,
+            "camera_auto": -2.900390625,
+            "clarify": -4.13671875,
+            "reject": -2.4375
+          },
+          "ranking": [
+            "stop_stream",
+            "start_stream",
+            "reject",
+            "camera_auto",
+            "camera_status",
+            "clarify"
+          ],
+          "tokens": 105,
+          "finite": true
+        },
+        {
+          "id": "jev-022-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": 4.5078125,
+            "set_temp": -4.56640625,
+            "clarify": -1.3349609375,
+            "reject": -3.578125
+          },
+          "ranking": [
+            "read_temp",
+            "clarify",
+            "reject",
+            "set_temp"
+          ],
+          "tokens": 74,
+          "finite": true
+        },
+        {
+          "id": "jev-022-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": 4.578125,
+            "set_temp": -4.16015625,
+            "clarify": -4.57421875,
+            "reject": -4.5
+          },
+          "ranking": [
+            "read_temp",
+            "set_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 84,
+          "finite": true
+        },
+        {
+          "id": "jev-023-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "pump",
+          "selected_id": "stop",
+          "expected_id": "stop",
+          "correct": true,
+          "scores": {
+            "start": 3.10546875,
+            "stop": 3.912109375,
+            "set_rate": -4.55859375,
+            "read_rate": -4.5703125,
+            "status": -4.51953125,
+            "clarify": -4.54296875,
+            "reject": -1.974609375
+          },
+          "ranking": [
+            "stop",
+            "start",
+            "reject",
+            "status",
+            "clarify",
+            "set_rate",
+            "read_rate"
+          ],
+          "tokens": 104,
+          "finite": true
+        },
+        {
+          "id": "jev-023-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "stop",
+          "correct": false,
+          "scores": {
+            "start": 1.068359375,
+            "stop": 0.55810546875,
+            "set_rate": -3.591796875,
+            "read_rate": -4.26171875,
+            "status": -3.7890625,
+            "clarify": -4.03515625,
+            "reject": -3.07421875
+          },
+          "ranking": [
+            "start",
+            "stop",
+            "reject",
+            "set_rate",
+            "status",
+            "clarify",
+            "read_rate"
+          ],
+          "tokens": 115,
+          "finite": true
+        },
+        {
+          "id": "jev-024-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "status",
+          "correct": false,
+          "scores": {
+            "start": -2.9921875,
+            "stop": 0.5185546875,
+            "set_speed": 1.62109375,
+            "status": -1.78515625,
+            "clarify": -3.96484375,
+            "reject": -0.386474609375
+          },
+          "ranking": [
+            "set_speed",
+            "stop",
+            "reject",
+            "status",
+            "start",
+            "clarify"
+          ],
+          "tokens": 94,
+          "finite": true
+        },
+        {
+          "id": "jev-024-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "status",
+          "correct": false,
+          "scores": {
+            "start": -4.3359375,
+            "stop": -3.583984375,
+            "set_speed": 2.38671875,
+            "status": -2.4453125,
+            "clarify": -3.76953125,
+            "reject": -2.578125
+          },
+          "ranking": [
+            "set_speed",
+            "status",
+            "reject",
+            "stop",
+            "clarify",
+            "start"
+          ],
+          "tokens": 112,
+          "finite": true
+        },
+        {
+          "id": "jev-025-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": 1.0087890625,
+            "set_temp": -1.6005859375,
+            "clarify": -2.904296875,
+            "reject": -1.330078125
+          },
+          "ranking": [
+            "read_temp",
+            "reject",
+            "set_temp",
+            "clarify"
+          ],
+          "tokens": 80,
+          "finite": true
+        },
+        {
+          "id": "jev-025-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": 1.28125,
+            "set_temp": -2.412109375,
+            "clarify": -3.2109375,
+            "reject": -2.908203125
+          },
+          "ranking": [
+            "read_temp",
+            "set_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 87,
+          "finite": true
+        },
+        {
+          "id": "jev-026-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "stop_stream",
+          "correct": false,
+          "scores": {
+            "start_stream": 2.806640625,
+            "stop_stream": 0.79833984375,
+            "camera_status": -4.375,
+            "camera_auto": -4.5703125,
+            "clarify": -4.57421875,
+            "reject": -1.458984375
+          },
+          "ranking": [
+            "start_stream",
+            "stop_stream",
+            "reject",
+            "camera_status",
+            "camera_auto",
+            "clarify"
+          ],
+          "tokens": 95,
+          "finite": true
+        },
+        {
+          "id": "jev-026-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "stop_stream",
+          "correct": true,
+          "scores": {
+            "start_stream": 0.326416015625,
+            "stop_stream": 0.94580078125,
+            "camera_status": -4.5859375,
+            "camera_auto": -4.58984375,
+            "clarify": -4.04296875,
+            "reject": -2.8671875
+          },
+          "ranking": [
+            "stop_stream",
+            "start_stream",
+            "reject",
+            "clarify",
+            "camera_status",
+            "camera_auto"
+          ],
+          "tokens": 111,
+          "finite": true
+        },
+        {
+          "id": "jev-027-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "list_alarms",
+          "correct": false,
+          "scores": {
+            "list_alarms": -0.364990234375,
+            "ack_alarm": 3.904296875,
+            "alarm_count": -4.2578125,
+            "clarify": -4.515625,
+            "reject": -2.93359375
+          },
+          "ranking": [
+            "ack_alarm",
+            "list_alarms",
+            "reject",
+            "alarm_count",
+            "clarify"
+          ],
+          "tokens": 86,
+          "finite": true
+        },
+        {
+          "id": "jev-027-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "alarms",
+          "selected_id": "list_alarms",
+          "expected_id": "list_alarms",
+          "correct": true,
+          "scores": {
+            "list_alarms": 0.86767578125,
+            "ack_alarm": -3.51171875,
+            "alarm_count": -4.578125,
+            "clarify": -4.46875,
+            "reject": -4.26953125
+          },
+          "ranking": [
+            "list_alarms",
+            "ack_alarm",
+            "reject",
+            "clarify",
+            "alarm_count"
+          ],
+          "tokens": 108,
+          "finite": true
+        },
+        {
+          "id": "jev-028-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "set_rate",
+          "correct": true,
+          "scores": {
+            "start": -3.451171875,
+            "stop": 0.572265625,
+            "set_rate": 4.96875,
+            "read_rate": -4.1640625,
+            "status": -4.4609375,
+            "clarify": -4.53125,
+            "reject": -2.037109375
+          },
+          "ranking": [
+            "set_rate",
+            "stop",
+            "reject",
+            "start",
+            "read_rate",
+            "status",
+            "clarify"
+          ],
+          "tokens": 106,
+          "finite": true
+        },
+        {
+          "id": "jev-028-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "set_rate",
+          "correct": true,
+          "scores": {
+            "start": -4.5859375,
+            "stop": -4.58203125,
+            "set_rate": 7.90234375,
+            "read_rate": -4.58203125,
+            "status": -4.5625,
+            "clarify": -4.58203125,
+            "reject": -4.52734375
+          },
+          "ranking": [
+            "set_rate",
+            "reject",
+            "status",
+            "stop",
+            "read_rate",
+            "clarify",
+            "start"
+          ],
+          "tokens": 117,
+          "finite": true
+        },
+        {
+          "id": "jev-029-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "conveyor",
+          "selected_id": "status",
+          "expected_id": "status",
+          "correct": true,
+          "scores": {
+            "start": -2.25390625,
+            "stop": -1.6416015625,
+            "set_speed": -4.36328125,
+            "status": 2.517578125,
+            "clarify": -4.0703125,
+            "reject": -1.5751953125
+          },
+          "ranking": [
+            "status",
+            "reject",
+            "stop",
+            "start",
+            "clarify",
+            "set_speed"
+          ],
+          "tokens": 93,
+          "finite": true
+        },
+        {
+          "id": "jev-029-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "conveyor",
+          "selected_id": "status",
+          "expected_id": "status",
+          "correct": true,
+          "scores": {
+            "start": -3.171875,
+            "stop": -0.85302734375,
+            "set_speed": -4.2421875,
+            "status": 0.22119140625,
+            "clarify": -4.45703125,
+            "reject": -3.912109375
+          },
+          "ranking": [
+            "status",
+            "stop",
+            "start",
+            "reject",
+            "set_speed",
+            "clarify"
+          ],
+          "tokens": 111,
+          "finite": true
+        },
+        {
+          "id": "jev-030-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "start_stream",
+          "correct": true,
+          "scores": {
+            "start_stream": 3.5234375,
+            "stop_stream": -1.4404296875,
+            "camera_status": -3.646484375,
+            "camera_auto": -3.06640625,
+            "clarify": -4.3046875,
+            "reject": -0.65869140625
+          },
+          "ranking": [
+            "start_stream",
+            "reject",
+            "stop_stream",
+            "camera_auto",
+            "camera_status",
+            "clarify"
+          ],
+          "tokens": 94,
+          "finite": true
+        },
+        {
+          "id": "jev-030-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "start_stream",
+          "correct": true,
+          "scores": {
+            "start_stream": 5.2265625,
+            "stop_stream": -3.58203125,
+            "camera_status": -4.04296875,
+            "camera_auto": -2.806640625,
+            "clarify": -3.6015625,
+            "reject": -3.427734375
+          },
+          "ranking": [
+            "start_stream",
+            "camera_auto",
+            "reject",
+            "stop_stream",
+            "clarify",
+            "camera_status"
+          ],
+          "tokens": 109,
+          "finite": true
+        },
+        {
+          "id": "jev-031-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "ack_alarm",
+          "correct": true,
+          "scores": {
+            "list_alarms": -4.4140625,
+            "ack_alarm": 4.359375,
+            "alarm_count": -4.49609375,
+            "clarify": -4.37890625,
+            "reject": -2.5
+          },
+          "ranking": [
+            "ack_alarm",
+            "reject",
+            "clarify",
+            "list_alarms",
+            "alarm_count"
+          ],
+          "tokens": 86,
+          "finite": true
+        },
+        {
+          "id": "jev-031-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "ack_alarm",
+          "correct": true,
+          "scores": {
+            "list_alarms": -4.44140625,
+            "ack_alarm": -0.1624755859375,
+            "alarm_count": -4.45703125,
+            "clarify": -4.4453125,
+            "reject": -4.34375
+          },
+          "ranking": [
+            "ack_alarm",
+            "reject",
+            "list_alarms",
+            "clarify",
+            "alarm_count"
+          ],
+          "tokens": 105,
+          "finite": true
+        },
+        {
+          "id": "jev-032-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": 0.5693359375,
+            "set_temp": -0.78369140625,
+            "clarify": -2.740234375,
+            "reject": -0.483154296875
+          },
+          "ranking": [
+            "read_temp",
+            "reject",
+            "set_temp",
+            "clarify"
+          ],
+          "tokens": 76,
+          "finite": true
+        },
+        {
+          "id": "jev-032-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "temperature",
+          "selected_id": "reject",
+          "expected_id": "read_temp",
+          "correct": false,
+          "scores": {
+            "read_temp": -1.92578125,
+            "set_temp": -2.4375,
+            "clarify": -2.47265625,
+            "reject": -1.6923828125
+          },
+          "ranking": [
+            "reject",
+            "read_temp",
+            "set_temp",
+            "clarify"
+          ],
+          "tokens": 84,
+          "finite": true
+        },
+        {
+          "id": "jev-033-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "start": -1.11328125,
+            "stop": -2.095703125,
+            "set_speed": 1.6220703125,
+            "status": -3.283203125,
+            "clarify": -4.5546875,
+            "reject": -2.666015625
+          },
+          "ranking": [
+            "set_speed",
+            "start",
+            "stop",
+            "reject",
+            "status",
+            "clarify"
+          ],
+          "tokens": 87,
+          "finite": true
+        },
+        {
+          "id": "jev-033-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "start": -3.228515625,
+            "stop": -2.947265625,
+            "set_speed": -0.0911865234375,
+            "status": -4.06640625,
+            "clarify": -3.05859375,
+            "reject": -3.927734375
+          },
+          "ranking": [
+            "set_speed",
+            "stop",
+            "clarify",
+            "start",
+            "reject",
+            "status"
+          ],
+          "tokens": 107,
+          "finite": true
+        },
+        {
+          "id": "jev-034-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "start": 2.04296875,
+            "stop": -3.4375,
+            "set_rate": -3.369140625,
+            "read_rate": -3.7578125,
+            "status": -2.212890625,
+            "clarify": -4.18359375,
+            "reject": -3.0859375
+          },
+          "ranking": [
+            "start",
+            "status",
+            "reject",
+            "set_rate",
+            "stop",
+            "read_rate",
+            "clarify"
+          ],
+          "tokens": 95,
+          "finite": true
+        },
+        {
+          "id": "jev-034-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "pump",
+          "selected_id": "stop",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "start": -1.568359375,
+            "stop": -0.876953125,
+            "set_rate": -2.865234375,
+            "read_rate": -2.119140625,
+            "status": -1.298828125,
+            "clarify": -4.34375,
+            "reject": -3.46875
+          },
+          "ranking": [
+            "stop",
+            "status",
+            "start",
+            "read_rate",
+            "set_rate",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 108,
+          "finite": true
+        },
+        {
+          "id": "jev-035-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "read_temp": -1.59375,
+            "set_temp": 3.927734375,
+            "clarify": -3.166015625,
+            "reject": -2.32421875
+          },
+          "ranking": [
+            "set_temp",
+            "read_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 72,
+          "finite": true
+        },
+        {
+          "id": "jev-035-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "read_temp": -3.28515625,
+            "set_temp": 3.556640625,
+            "clarify": -3.416015625,
+            "reject": -4.2890625
+          },
+          "ranking": [
+            "set_temp",
+            "read_temp",
+            "clarify",
+            "reject"
+          ],
+          "tokens": 82,
+          "finite": true
+        },
+        {
+          "id": "jev-036-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "start_stream": 0.03387451171875,
+            "stop_stream": 0.9345703125,
+            "camera_status": -2.73046875,
+            "camera_auto": -3.97265625,
+            "clarify": -4.3125,
+            "reject": -0.464599609375
+          },
+          "ranking": [
+            "stop_stream",
+            "start_stream",
+            "reject",
+            "camera_status",
+            "camera_auto",
+            "clarify"
+          ],
+          "tokens": 88,
+          "finite": true
+        },
+        {
+          "id": "jev-036-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "start_stream": 0.35595703125,
+            "stop_stream": -2.134765625,
+            "camera_status": -2.69140625,
+            "camera_auto": -3.498046875,
+            "clarify": -4.390625,
+            "reject": -2.935546875
+          },
+          "ranking": [
+            "start_stream",
+            "stop_stream",
+            "camera_status",
+            "reject",
+            "camera_auto",
+            "clarify"
+          ],
+          "tokens": 102,
+          "finite": true
+        },
+        {
+          "id": "jev-037-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "list_alarms": -3.076171875,
+            "ack_alarm": 0.65625,
+            "alarm_count": -2.80859375,
+            "clarify": -2.84375,
+            "reject": -2.357421875
+          },
+          "ranking": [
+            "ack_alarm",
+            "reject",
+            "alarm_count",
+            "clarify",
+            "list_alarms"
+          ],
+          "tokens": 81,
+          "finite": true
+        },
+        {
+          "id": "jev-037-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "list_alarms": -2.7734375,
+            "ack_alarm": -1.5048828125,
+            "alarm_count": -2.654296875,
+            "clarify": -4.3359375,
+            "reject": -3.185546875
+          },
+          "ranking": [
+            "ack_alarm",
+            "alarm_count",
+            "list_alarms",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 99,
+          "finite": true
+        },
+        {
+          "id": "jev-038-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "start": -4.55859375,
+            "stop": -4.578125,
+            "set_speed": 5.453125,
+            "status": -4.578125,
+            "clarify": -4.38671875,
+            "reject": -2.875
+          },
+          "ranking": [
+            "set_speed",
+            "reject",
+            "clarify",
+            "start",
+            "stop",
+            "status"
+          ],
+          "tokens": 91,
+          "finite": true
+        },
+        {
+          "id": "jev-038-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "start": -4.58203125,
+            "stop": -4.5390625,
+            "set_speed": 5.171875,
+            "status": -4.578125,
+            "clarify": -4.58203125,
+            "reject": -4.58203125
+          },
+          "ranking": [
+            "set_speed",
+            "stop",
+            "status",
+            "start",
+            "clarify",
+            "reject"
+          ],
+          "tokens": 109,
+          "finite": true
+        },
+        {
+          "id": "jev-039-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "start": -4.57421875,
+            "stop": -4.58203125,
+            "set_rate": 15.5859375,
+            "read_rate": -4.53125,
+            "status": -4.58203125,
+            "clarify": -4.5703125,
+            "reject": -4.5625
+          },
+          "ranking": [
+            "set_rate",
+            "read_rate",
+            "reject",
+            "clarify",
+            "start",
+            "stop",
+            "status"
+          ],
+          "tokens": 98,
+          "finite": true
+        },
+        {
+          "id": "jev-039-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "start": -4.5703125,
+            "stop": -4.56640625,
+            "set_rate": 8.625,
+            "read_rate": -4.49609375,
+            "status": -4.58203125,
+            "clarify": -4.58203125,
+            "reject": -4.57421875
+          },
+          "ranking": [
+            "set_rate",
+            "read_rate",
+            "stop",
+            "start",
+            "reject",
+            "status",
+            "clarify"
+          ],
+          "tokens": 112,
+          "finite": true
+        },
+        {
+          "id": "jev-040-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "read_temp": -0.419189453125,
+            "set_temp": -1.1474609375,
+            "clarify": -0.810546875,
+            "reject": -2.806640625
+          },
+          "ranking": [
+            "read_temp",
+            "clarify",
+            "set_temp",
+            "reject"
+          ],
+          "tokens": 72,
+          "finite": true
+        },
+        {
+          "id": "jev-040-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "read_temp": -1.068359375,
+            "set_temp": -1.3759765625,
+            "clarify": -2.86328125,
+            "reject": -2.85546875
+          },
+          "ranking": [
+            "read_temp",
+            "set_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 81,
+          "finite": true
+        },
+        {
+          "id": "jev-041-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "camera",
+          "selected_id": "camera_auto",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "start_stream": -2.03125,
+            "stop_stream": -4.09375,
+            "camera_status": -4.578125,
+            "camera_auto": -0.90478515625,
+            "clarify": -4.53515625,
+            "reject": -1.2919921875
+          },
+          "ranking": [
+            "camera_auto",
+            "reject",
+            "start_stream",
+            "stop_stream",
+            "clarify",
+            "camera_status"
+          ],
+          "tokens": 87,
+          "finite": true
+        },
+        {
+          "id": "jev-041-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "start_stream": -1.3779296875,
+            "stop_stream": -2.91796875,
+            "camera_status": -3.689453125,
+            "camera_auto": -3.185546875,
+            "clarify": -4.5859375,
+            "reject": -4.5546875
+          },
+          "ranking": [
+            "start_stream",
+            "stop_stream",
+            "camera_auto",
+            "camera_status",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 103,
+          "finite": true
+        },
+        {
+          "id": "jev-042-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "alarms",
+          "selected_id": "reject",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "list_alarms": -0.6767578125,
+            "ack_alarm": -1.09375,
+            "alarm_count": -4.14453125,
+            "clarify": -3.421875,
+            "reject": 0.0933837890625
+          },
+          "ranking": [
+            "reject",
+            "list_alarms",
+            "ack_alarm",
+            "clarify",
+            "alarm_count"
+          ],
+          "tokens": 81,
+          "finite": true
+        },
+        {
+          "id": "jev-042-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "list_alarms": -1.767578125,
+            "ack_alarm": -0.56298828125,
+            "alarm_count": -1.978515625,
+            "clarify": -3.314453125,
+            "reject": -0.68017578125
+          },
+          "ranking": [
+            "ack_alarm",
+            "reject",
+            "list_alarms",
+            "alarm_count",
+            "clarify"
+          ],
+          "tokens": 101,
+          "finite": true
+        },
+        {
+          "id": "jev-043-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "conveyor",
+          "selected_id": "reject",
+          "expected_id": "reject",
+          "correct": true,
+          "scores": {
+            "start": -1.9794921875,
+            "stop": -1.8544921875,
+            "set_speed": -4.203125,
+            "status": -2.828125,
+            "clarify": -0.78515625,
+            "reject": -0.6484375
+          },
+          "ranking": [
+            "reject",
+            "clarify",
+            "stop",
+            "start",
+            "status",
+            "set_speed"
+          ],
+          "tokens": 90,
+          "finite": true
+        },
+        {
+          "id": "jev-043-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "conveyor",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "start": -0.732421875,
+            "stop": -1.3798828125,
+            "set_speed": -2.935546875,
+            "status": -3.24609375,
+            "clarify": -3.947265625,
+            "reject": -3.484375
+          },
+          "ranking": [
+            "start",
+            "stop",
+            "set_speed",
+            "status",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 109,
+          "finite": true
+        },
+        {
+          "id": "jev-044-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "start": -0.139892578125,
+            "stop": -3.400390625,
+            "set_rate": -3.9921875,
+            "read_rate": -4.58984375,
+            "status": -4.40234375,
+            "clarify": -3.87890625,
+            "reject": -2.349609375
+          },
+          "ranking": [
+            "start",
+            "reject",
+            "stop",
+            "clarify",
+            "set_rate",
+            "status",
+            "read_rate"
+          ],
+          "tokens": 96,
+          "finite": true
+        },
+        {
+          "id": "jev-044-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "pump",
+          "selected_id": "stop",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "start": -0.80908203125,
+            "stop": 0.81591796875,
+            "set_rate": -2.1015625,
+            "read_rate": -3.6484375,
+            "status": -3.484375,
+            "clarify": -4.296875,
+            "reject": -2.419921875
+          },
+          "ranking": [
+            "stop",
+            "start",
+            "set_rate",
+            "reject",
+            "status",
+            "read_rate",
+            "clarify"
+          ],
+          "tokens": 111,
+          "finite": true
+        },
+        {
+          "id": "jev-045-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "read_temp": 0.81591796875,
+            "set_temp": 0.06585693359375,
+            "clarify": -4.04296875,
+            "reject": -2.017578125
+          },
+          "ranking": [
+            "read_temp",
+            "set_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 73,
+          "finite": true
+        },
+        {
+          "id": "jev-045-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "read_temp": -1.091796875,
+            "set_temp": -1.193359375,
+            "clarify": -3.87890625,
+            "reject": -2.91015625
+          },
+          "ranking": [
+            "read_temp",
+            "set_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 83,
+          "finite": true
+        },
+        {
+          "id": "jev-046-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "start_stream": -0.78125,
+            "stop_stream": -1.2744140625,
+            "camera_status": -1.82421875,
+            "camera_auto": -3.45703125,
+            "clarify": -1.5166015625,
+            "reject": -0.84228515625
+          },
+          "ranking": [
+            "start_stream",
+            "reject",
+            "stop_stream",
+            "clarify",
+            "camera_status",
+            "camera_auto"
+          ],
+          "tokens": 91,
+          "finite": true
+        },
+        {
+          "id": "jev-046-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "start_stream": 0.369873046875,
+            "stop_stream": -1.6640625,
+            "camera_status": -2.02734375,
+            "camera_auto": -3.248046875,
+            "clarify": -3.310546875,
+            "reject": -2.455078125
+          },
+          "ranking": [
+            "start_stream",
+            "stop_stream",
+            "camera_status",
+            "reject",
+            "camera_auto",
+            "clarify"
+          ],
+          "tokens": 107,
+          "finite": true
+        },
+        {
+          "id": "jev-047-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "list_alarms": -0.56689453125,
+            "ack_alarm": 0.055389404296875,
+            "alarm_count": -3.80859375,
+            "clarify": -4.55078125,
+            "reject": -0.52197265625
+          },
+          "ranking": [
+            "ack_alarm",
+            "reject",
+            "list_alarms",
+            "alarm_count",
+            "clarify"
+          ],
+          "tokens": 80,
+          "finite": true
+        },
+        {
+          "id": "jev-047-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "list_alarms": -3.783203125,
+            "ack_alarm": -0.44189453125,
+            "alarm_count": -4.40234375,
+            "clarify": -3.501953125,
+            "reject": -2.484375
+          },
+          "ranking": [
+            "ack_alarm",
+            "reject",
+            "clarify",
+            "list_alarms",
+            "alarm_count"
+          ],
+          "tokens": 101,
+          "finite": true
+        },
+        {
+          "id": "jev-048-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "start": 2.669921875,
+            "stop": 0.448486328125,
+            "set_rate": -3.830078125,
+            "read_rate": -4.15625,
+            "status": -1.986328125,
+            "clarify": -4.2109375,
+            "reject": -0.9931640625
+          },
+          "ranking": [
+            "start",
+            "stop",
+            "reject",
+            "status",
+            "set_rate",
+            "read_rate",
+            "clarify"
+          ],
+          "tokens": 96,
+          "finite": true
+        },
+        {
+          "id": "jev-048-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "start": 4.18359375,
+            "stop": -1.22265625,
+            "set_rate": -2.744140625,
+            "read_rate": -4.328125,
+            "status": -3.529296875,
+            "clarify": -4.5,
+            "reject": -3.78125
+          },
+          "ranking": [
+            "start",
+            "stop",
+            "set_rate",
+            "status",
+            "reject",
+            "read_rate",
+            "clarify"
+          ],
+          "tokens": 110,
+          "finite": true
+        },
+        {
+          "id": "jev-049-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "start_stream": 0.9833984375,
+            "stop_stream": -3.322265625,
+            "camera_status": -3.4453125,
+            "camera_auto": -1.8125,
+            "clarify": -2.3515625,
+            "reject": -2.875
+          },
+          "ranking": [
+            "start_stream",
+            "camera_auto",
+            "clarify",
+            "reject",
+            "stop_stream",
+            "camera_status"
+          ],
+          "tokens": 89,
+          "finite": true
+        },
+        {
+          "id": "jev-049-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "start_stream": -1.9599609375,
+            "stop_stream": -1.8681640625,
+            "camera_status": -3.517578125,
+            "camera_auto": -3.16015625,
+            "clarify": -2.994140625,
+            "reject": -3.361328125
+          },
+          "ranking": [
+            "stop_stream",
+            "start_stream",
+            "clarify",
+            "camera_auto",
+            "reject",
+            "camera_status"
+          ],
+          "tokens": 104,
+          "finite": true
+        },
+        {
+          "id": "jev-050-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "read_temp": 0.289794921875,
+            "set_temp": 1.1240234375,
+            "clarify": -4.23046875,
+            "reject": -1.943359375
+          },
+          "ranking": [
+            "set_temp",
+            "read_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 74,
+          "finite": true
+        },
+        {
+          "id": "jev-050-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "read_temp": -2.498046875,
+            "set_temp": 2.96875,
+            "clarify": -4.57421875,
+            "reject": -4.27734375
+          },
+          "ranking": [
+            "set_temp",
+            "read_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 85,
+          "finite": true
+        },
+        {
+          "id": "jev-051-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "conveyor",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "start": 7.51171875,
+            "stop": -3.720703125,
+            "set_speed": -4.03515625,
+            "status": -4.48828125,
+            "clarify": -4.5625,
+            "reject": -2.154296875
+          },
+          "ranking": [
+            "start",
+            "reject",
+            "stop",
+            "set_speed",
+            "status",
+            "clarify"
+          ],
+          "tokens": 90,
+          "finite": true
+        },
+        {
+          "id": "jev-051-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "conveyor",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "start": 4.41796875,
+            "stop": -3.189453125,
+            "set_speed": -3.10546875,
+            "status": -4.56640625,
+            "clarify": -3.634765625,
+            "reject": -3.580078125
+          },
+          "ranking": [
+            "start",
+            "set_speed",
+            "stop",
+            "reject",
+            "clarify",
+            "status"
+          ],
+          "tokens": 108,
+          "finite": true
+        },
+        {
+          "id": "jev-052-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "start": 3.05078125,
+            "stop": -0.07568359375,
+            "set_rate": -3.9375,
+            "read_rate": -3.2109375,
+            "status": -1.12890625,
+            "clarify": 1.0634765625,
+            "reject": 0.5048828125
+          },
+          "ranking": [
+            "start",
+            "clarify",
+            "reject",
+            "stop",
+            "status",
+            "read_rate",
+            "set_rate"
+          ],
+          "tokens": 99,
+          "finite": true
+        },
+        {
+          "id": "jev-052-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "start": 0.81640625,
+            "stop": -0.76611328125,
+            "set_rate": -2.849609375,
+            "read_rate": -1.78125,
+            "status": -1.435546875,
+            "clarify": -1.73828125,
+            "reject": -1.3701171875
+          },
+          "ranking": [
+            "start",
+            "stop",
+            "reject",
+            "status",
+            "clarify",
+            "read_rate",
+            "set_rate"
+          ],
+          "tokens": 112,
+          "finite": true
+        },
+        {
+          "id": "jev-053-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "set_speed",
+          "correct": true,
+          "scores": {
+            "start": -4.5859375,
+            "stop": -4.54296875,
+            "set_speed": 17.640625,
+            "status": -4.55078125,
+            "clarify": -4.50390625,
+            "reject": -4.58203125
+          },
+          "ranking": [
+            "set_speed",
+            "clarify",
+            "stop",
+            "status",
+            "reject",
+            "start"
+          ],
+          "tokens": 93,
+          "finite": true
+        },
+        {
+          "id": "jev-053-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "set_speed",
+          "correct": true,
+          "scores": {
+            "start": -4.5703125,
+            "stop": -4.53515625,
+            "set_speed": 16.40625,
+            "status": -4.546875,
+            "clarify": -4.55078125,
+            "reject": -4.5859375
+          },
+          "ranking": [
+            "set_speed",
+            "stop",
+            "status",
+            "clarify",
+            "start",
+            "reject"
+          ],
+          "tokens": 111,
+          "finite": true
+        },
+        {
+          "id": "jev-054-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "stop",
+          "expected_id": "stop",
+          "correct": true,
+          "scores": {
+            "start": -4.578125,
+            "stop": 10.9609375,
+            "set_speed": -4.58203125,
+            "status": -4.56640625,
+            "clarify": -4.55859375,
+            "reject": -4.015625
+          },
+          "ranking": [
+            "stop",
+            "reject",
+            "clarify",
+            "status",
+            "start",
+            "set_speed"
+          ],
+          "tokens": 87,
+          "finite": true
+        },
+        {
+          "id": "jev-054-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "stop",
+          "expected_id": "stop",
+          "correct": true,
+          "scores": {
+            "start": -4.56640625,
+            "stop": 6.69140625,
+            "set_speed": -4.578125,
+            "status": -4.5546875,
+            "clarify": -4.56640625,
+            "reject": -4.58203125
+          },
+          "ranking": [
+            "stop",
+            "status",
+            "start",
+            "clarify",
+            "set_speed",
+            "reject"
+          ],
+          "tokens": 107,
+          "finite": true
+        },
+        {
+          "id": "jev-055-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "read_rate",
+          "expected_id": "read_rate",
+          "correct": true,
+          "scores": {
+            "start": -4.5234375,
+            "stop": -4.578125,
+            "set_rate": -4.546875,
+            "read_rate": 13.015625,
+            "status": -2.880859375,
+            "clarify": -4.57421875,
+            "reject": -4.44140625
+          },
+          "ranking": [
+            "read_rate",
+            "status",
+            "reject",
+            "start",
+            "set_rate",
+            "clarify",
+            "stop"
+          ],
+          "tokens": 96,
+          "finite": true
+        },
+        {
+          "id": "jev-055-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "read_rate",
+          "expected_id": "read_rate",
+          "correct": true,
+          "scores": {
+            "start": -4.56640625,
+            "stop": -4.57421875,
+            "set_rate": -4.546875,
+            "read_rate": 4.953125,
+            "status": -3.927734375,
+            "clarify": -4.578125,
+            "reject": -4.5703125
+          },
+          "ranking": [
+            "read_rate",
+            "status",
+            "set_rate",
+            "start",
+            "reject",
+            "stop",
+            "clarify"
+          ],
+          "tokens": 110,
+          "finite": true
+        },
+        {
+          "id": "jev-056-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "camera_auto",
+          "expected_id": "camera_auto",
+          "correct": true,
+          "scores": {
+            "start_stream": -4.56640625,
+            "stop_stream": -4.50390625,
+            "camera_status": -4.53125,
+            "camera_auto": 9.8828125,
+            "clarify": -4.53125,
+            "reject": -4.5859375
+          },
+          "ranking": [
+            "camera_auto",
+            "stop_stream",
+            "camera_status",
+            "clarify",
+            "start_stream",
+            "reject"
+          ],
+          "tokens": 90,
+          "finite": true
+        },
+        {
+          "id": "jev-056-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "camera_auto",
+          "expected_id": "camera_auto",
+          "correct": true,
+          "scores": {
+            "start_stream": -4.53515625,
+            "stop_stream": -4.5078125,
+            "camera_status": -4.53125,
+            "camera_auto": 6.1796875,
+            "clarify": -4.5703125,
+            "reject": -4.5859375
+          },
+          "ranking": [
+            "camera_auto",
+            "stop_stream",
+            "camera_status",
+            "start_stream",
+            "clarify",
+            "reject"
+          ],
+          "tokens": 105,
+          "finite": true
+        },
+        {
+          "id": "jev-057-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "alarms",
+          "selected_id": "alarm_count",
+          "expected_id": "alarm_count",
+          "correct": true,
+          "scores": {
+            "list_alarms": -4.578125,
+            "ack_alarm": -4.578125,
+            "alarm_count": 4.66015625,
+            "clarify": -4.57421875,
+            "reject": -4.515625
+          },
+          "ranking": [
+            "alarm_count",
+            "reject",
+            "clarify",
+            "list_alarms",
+            "ack_alarm"
+          ],
+          "tokens": 80,
+          "finite": true
+        },
+        {
+          "id": "jev-057-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "alarms",
+          "selected_id": "alarm_count",
+          "expected_id": "alarm_count",
+          "correct": true,
+          "scores": {
+            "list_alarms": -4.59375,
+            "ack_alarm": -4.55078125,
+            "alarm_count": 1.916015625,
+            "clarify": -4.59375,
+            "reject": -4.55078125
+          },
+          "ranking": [
+            "alarm_count",
+            "ack_alarm",
+            "reject",
+            "list_alarms",
+            "clarify"
+          ],
+          "tokens": 100,
+          "finite": true
+        },
+        {
+          "id": "jev-058-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "set_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": -4.5625,
+            "set_temp": 10.7734375,
+            "clarify": -4.57421875,
+            "reject": -4.55859375
+          },
+          "ranking": [
+            "set_temp",
+            "reject",
+            "read_temp",
+            "clarify"
+          ],
+          "tokens": 77,
+          "finite": true
+        },
+        {
+          "id": "jev-058-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "set_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": -4.58203125,
+            "set_temp": 7.33203125,
+            "clarify": -4.5703125,
+            "reject": -4.5859375
+          },
+          "ranking": [
+            "set_temp",
+            "clarify",
+            "read_temp",
+            "reject"
+          ],
+          "tokens": 86,
+          "finite": true
+        },
+        {
+          "id": "jev-059-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "start",
+          "expected_id": "start",
+          "correct": true,
+          "scores": {
+            "start": 12.640625,
+            "stop": -4.51953125,
+            "set_speed": -3.716796875,
+            "status": -4.55859375,
+            "clarify": -4.57421875,
+            "reject": -4.27734375
+          },
+          "ranking": [
+            "start",
+            "set_speed",
+            "reject",
+            "stop",
+            "status",
+            "clarify"
+          ],
+          "tokens": 87,
+          "finite": true
+        },
+        {
+          "id": "jev-059-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "start",
+          "expected_id": "start",
+          "correct": true,
+          "scores": {
+            "start": 9.546875,
+            "stop": -4.5,
+            "set_speed": -3.328125,
+            "status": -4.57421875,
+            "clarify": -4.5390625,
+            "reject": -4.5390625
+          },
+          "ranking": [
+            "start",
+            "set_speed",
+            "stop",
+            "clarify",
+            "reject",
+            "status"
+          ],
+          "tokens": 106,
+          "finite": true
+        },
+        {
+          "id": "jev-060-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "stop_stream",
+          "correct": true,
+          "scores": {
+            "start_stream": -4.5625,
+            "stop_stream": 7.4140625,
+            "camera_status": -4.578125,
+            "camera_auto": -4.5625,
+            "clarify": -4.53125,
+            "reject": -4.36328125
+          },
+          "ranking": [
+            "stop_stream",
+            "reject",
+            "clarify",
+            "start_stream",
+            "camera_auto",
+            "camera_status"
+          ],
+          "tokens": 92,
+          "finite": true
+        },
+        {
+          "id": "jev-060-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "stop_stream",
+          "correct": true,
+          "scores": {
+            "start_stream": -4.58203125,
+            "stop_stream": 5.98828125,
+            "camera_status": -4.5703125,
+            "camera_auto": -4.55078125,
+            "clarify": -4.58203125,
+            "reject": -4.57421875
+          },
+          "ranking": [
+            "stop_stream",
+            "camera_auto",
+            "camera_status",
+            "reject",
+            "start_stream",
+            "clarify"
+          ],
+          "tokens": 109,
+          "finite": true
+        }
+      ]
+    },
+    "fixed_seed_permutation": {
+      "seed": 20261010,
+      "metrics": {
+        "correct": 72,
+        "n": 120,
+        "accuracy": 0.6,
+        "errors": [],
+        "by_language": {
+          "en": {
+            "correct": 37,
+            "n": 60,
+            "errors": [],
+            "accuracy": 0.6166666666666667
+          },
+          "zh": {
+            "correct": 35,
+            "n": 60,
+            "errors": [],
+            "accuracy": 0.5833333333333334
+          }
+        },
+        "by_category": {
+          "direct": {
+            "correct": 40,
+            "n": 40,
+            "errors": [],
+            "accuracy": 1.0
+          },
+          "paraphrase": {
+            "correct": 18,
+            "n": 20,
+            "errors": [],
+            "accuracy": 0.9
+          },
+          "negation": {
+            "correct": 12,
+            "n": 20,
+            "errors": [],
+            "accuracy": 0.6
+          },
+          "ambiguous": {
+            "correct": 0,
+            "n": 20,
+            "errors": [],
+            "accuracy": 0.0
+          },
+          "OOS": {
+            "correct": 2,
+            "n": 20,
+            "errors": [],
+            "accuracy": 0.1
+          }
+        },
+        "by_scenario": {
+          "conveyor": {
+            "correct": 15,
+            "n": 26,
+            "errors": [],
+            "accuracy": 0.5769230769230769
+          },
+          "pump": {
+            "correct": 14,
+            "n": 26,
+            "errors": [],
+            "accuracy": 0.5384615384615384
+          },
+          "temperature": {
+            "correct": 13,
+            "n": 22,
+            "errors": [],
+            "accuracy": 0.5909090909090909
+          },
+          "camera": {
+            "correct": 18,
+            "n": 26,
+            "errors": [],
+            "accuracy": 0.6923076923076923
+          },
+          "alarms": {
+            "correct": 12,
+            "n": 20,
+            "errors": [],
+            "accuracy": 0.6
+          }
+        }
+      },
+      "records": [
+        {
+          "id": "jev-001-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "set_speed",
+          "correct": true,
+          "scores": {
+            "status": -4.5625,
+            "clarify": -4.50390625,
+            "reject": -4.578125,
+            "start": -4.5390625,
+            "stop": -4.5859375,
+            "set_speed": 12.125
+          },
+          "ranking": [
+            "set_speed",
+            "clarify",
+            "start",
+            "status",
+            "reject",
+            "stop"
+          ],
+          "tokens": 93,
+          "finite": true
+        },
+        {
+          "id": "jev-001-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "set_speed",
+          "correct": true,
+          "scores": {
+            "start": -4.58203125,
+            "clarify": -4.57421875,
+            "stop": -4.578125,
+            "reject": -4.578125,
+            "status": -4.57421875,
+            "set_speed": 11.34375
+          },
+          "ranking": [
+            "set_speed",
+            "clarify",
+            "status",
+            "stop",
+            "reject",
+            "start"
+          ],
+          "tokens": 111,
+          "finite": true
+        },
+        {
+          "id": "jev-002-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "status",
+          "expected_id": "status",
+          "correct": true,
+          "scores": {
+            "start": -4.4609375,
+            "set_speed": -4.57421875,
+            "status": 5.18359375,
+            "clarify": -4.56640625,
+            "stop": -4.5234375,
+            "reject": -3.681640625
+          },
+          "ranking": [
+            "status",
+            "reject",
+            "start",
+            "stop",
+            "clarify",
+            "set_speed"
+          ],
+          "tokens": 89,
+          "finite": true
+        },
+        {
+          "id": "jev-002-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "status",
+          "expected_id": "status",
+          "correct": true,
+          "scores": {
+            "reject": -4.54296875,
+            "status": 2.623046875,
+            "stop": -4.46875,
+            "set_speed": -4.2265625,
+            "clarify": -4.4296875,
+            "start": -4.5546875
+          },
+          "ranking": [
+            "status",
+            "set_speed",
+            "clarify",
+            "stop",
+            "reject",
+            "start"
+          ],
+          "tokens": 108,
+          "finite": true
+        },
+        {
+          "id": "jev-003-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "start",
+          "correct": true,
+          "scores": {
+            "start": 9.4921875,
+            "read_rate": -4.5703125,
+            "reject": -4.52734375,
+            "set_rate": -4.54296875,
+            "clarify": -4.57421875,
+            "stop": -4.5390625,
+            "status": -4.25390625
+          },
+          "ranking": [
+            "start",
+            "status",
+            "reject",
+            "stop",
+            "set_rate",
+            "read_rate",
+            "clarify"
+          ],
+          "tokens": 95,
+          "finite": true
+        },
+        {
+          "id": "jev-003-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "start",
+          "correct": true,
+          "scores": {
+            "read_rate": -3.740234375,
+            "set_rate": -1.375,
+            "stop": -3.435546875,
+            "status": -2.64453125,
+            "clarify": -4.29296875,
+            "reject": -4.28125,
+            "start": 3.92578125
+          },
+          "ranking": [
+            "start",
+            "set_rate",
+            "status",
+            "stop",
+            "read_rate",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 108,
+          "finite": true
+        },
+        {
+          "id": "jev-004-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "stop",
+          "expected_id": "stop",
+          "correct": true,
+          "scores": {
+            "clarify": -4.5703125,
+            "status": -4.57421875,
+            "stop": 11.625,
+            "start": -4.30078125,
+            "set_rate": -4.57421875,
+            "read_rate": -4.57421875,
+            "reject": -3.935546875
+          },
+          "ranking": [
+            "stop",
+            "reject",
+            "start",
+            "clarify",
+            "status",
+            "set_rate",
+            "read_rate"
+          ],
+          "tokens": 95,
+          "finite": true
+        },
+        {
+          "id": "jev-004-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "stop",
+          "expected_id": "stop",
+          "correct": true,
+          "scores": {
+            "status": -3.689453125,
+            "reject": -4.30859375,
+            "set_rate": -4.40625,
+            "start": -2.80859375,
+            "read_rate": -3.26953125,
+            "clarify": -4.578125,
+            "stop": 2.19140625
+          },
+          "ranking": [
+            "stop",
+            "start",
+            "read_rate",
+            "status",
+            "reject",
+            "set_rate",
+            "clarify"
+          ],
+          "tokens": 109,
+          "finite": true
+        },
+        {
+          "id": "jev-005-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "reject": -4.171875,
+            "read_temp": 2.994140625,
+            "clarify": -3.74609375,
+            "set_temp": -4.3125
+          },
+          "ranking": [
+            "read_temp",
+            "clarify",
+            "reject",
+            "set_temp"
+          ],
+          "tokens": 72,
+          "finite": true
+        },
+        {
+          "id": "jev-005-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "reject": -3.01171875,
+            "set_temp": -2.474609375,
+            "clarify": -3.689453125,
+            "read_temp": 0.101806640625
+          },
+          "ranking": [
+            "read_temp",
+            "set_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 81,
+          "finite": true
+        },
+        {
+          "id": "jev-006-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "set_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": -4.578125,
+            "set_temp": 13.03125,
+            "reject": -4.578125,
+            "clarify": -4.57421875
+          },
+          "ranking": [
+            "set_temp",
+            "clarify",
+            "read_temp",
+            "reject"
+          ],
+          "tokens": 77,
+          "finite": true
+        },
+        {
+          "id": "jev-006-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "set_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": -4.02734375,
+            "reject": -4.5703125,
+            "clarify": -4.58203125,
+            "set_temp": 4.359375
+          },
+          "ranking": [
+            "set_temp",
+            "read_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 86,
+          "finite": true
+        },
+        {
+          "id": "jev-007-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "start_stream",
+          "correct": true,
+          "scores": {
+            "reject": -4.578125,
+            "stop_stream": -4.578125,
+            "clarify": -4.578125,
+            "camera_status": -4.578125,
+            "start_stream": 5.40625,
+            "camera_auto": -4.546875
+          },
+          "ranking": [
+            "start_stream",
+            "camera_auto",
+            "reject",
+            "stop_stream",
+            "clarify",
+            "camera_status"
+          ],
+          "tokens": 88,
+          "finite": true
+        },
+        {
+          "id": "jev-007-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "start_stream",
+          "correct": true,
+          "scores": {
+            "stop_stream": -4.55859375,
+            "reject": -4.57421875,
+            "start_stream": 5.0703125,
+            "camera_status": -4.546875,
+            "clarify": -4.5078125,
+            "camera_auto": -4.578125
+          },
+          "ranking": [
+            "start_stream",
+            "clarify",
+            "camera_status",
+            "stop_stream",
+            "reject",
+            "camera_auto"
+          ],
+          "tokens": 104,
+          "finite": true
+        },
+        {
+          "id": "jev-008-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "stop_stream",
+          "correct": true,
+          "scores": {
+            "camera_status": -4.50390625,
+            "camera_auto": -4.5234375,
+            "stop_stream": 7.5078125,
+            "start_stream": -4.58203125,
+            "clarify": -4.5390625,
+            "reject": -4.48046875
+          },
+          "ranking": [
+            "stop_stream",
+            "reject",
+            "camera_status",
+            "camera_auto",
+            "clarify",
+            "start_stream"
+          ],
+          "tokens": 88,
+          "finite": true
+        },
+        {
+          "id": "jev-008-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "stop_stream",
+          "correct": true,
+          "scores": {
+            "start_stream": -4.50390625,
+            "stop_stream": 4.8828125,
+            "camera_status": -4.54296875,
+            "reject": -4.5859375,
+            "camera_auto": -4.55078125,
+            "clarify": -4.5859375
+          },
+          "ranking": [
+            "stop_stream",
+            "start_stream",
+            "camera_status",
+            "camera_auto",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 105,
+          "finite": true
+        },
+        {
+          "id": "jev-009-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "alarms",
+          "selected_id": "list_alarms",
+          "expected_id": "list_alarms",
+          "correct": true,
+          "scores": {
+            "clarify": -4.5859375,
+            "list_alarms": 3.2421875,
+            "alarm_count": -4.5859375,
+            "ack_alarm": -4.58984375,
+            "reject": -4.36328125
+          },
+          "ranking": [
+            "list_alarms",
+            "reject",
+            "clarify",
+            "alarm_count",
+            "ack_alarm"
+          ],
+          "tokens": 79,
+          "finite": true
+        },
+        {
+          "id": "jev-009-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "alarms",
+          "selected_id": "list_alarms",
+          "expected_id": "list_alarms",
+          "correct": true,
+          "scores": {
+            "reject": -4.5859375,
+            "list_alarms": 1.95703125,
+            "ack_alarm": -2.849609375,
+            "alarm_count": -4.57421875,
+            "clarify": -4.5859375
+          },
+          "ranking": [
+            "list_alarms",
+            "ack_alarm",
+            "alarm_count",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 102,
+          "finite": true
+        },
+        {
+          "id": "jev-010-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "ack_alarm",
+          "correct": true,
+          "scores": {
+            "reject": -4.5859375,
+            "clarify": -4.57421875,
+            "ack_alarm": 3.677734375,
+            "alarm_count": -4.58984375,
+            "list_alarms": -4.58984375
+          },
+          "ranking": [
+            "ack_alarm",
+            "clarify",
+            "reject",
+            "alarm_count",
+            "list_alarms"
+          ],
+          "tokens": 80,
+          "finite": true
+        },
+        {
+          "id": "jev-010-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "ack_alarm",
+          "correct": true,
+          "scores": {
+            "ack_alarm": 0.9736328125,
+            "clarify": -4.58984375,
+            "alarm_count": -4.3125,
+            "reject": -4.56640625,
+            "list_alarms": -4.4765625
+          },
+          "ranking": [
+            "ack_alarm",
+            "alarm_count",
+            "list_alarms",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 101,
+          "finite": true
+        },
+        {
+          "id": "jev-011-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "set_rate",
+          "correct": true,
+          "scores": {
+            "reject": -4.5390625,
+            "status": -4.5234375,
+            "read_rate": -4.52734375,
+            "start": -4.58984375,
+            "set_rate": 17.421875,
+            "clarify": -4.53125,
+            "stop": -4.57421875
+          },
+          "ranking": [
+            "set_rate",
+            "status",
+            "read_rate",
+            "clarify",
+            "reject",
+            "stop",
+            "start"
+          ],
+          "tokens": 101,
+          "finite": true
+        },
+        {
+          "id": "jev-011-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "set_rate",
+          "correct": true,
+          "scores": {
+            "reject": -4.58203125,
+            "read_rate": -4.5859375,
+            "set_rate": 16.5,
+            "start": -4.578125,
+            "status": -4.578125,
+            "clarify": -4.5703125,
+            "stop": -4.56640625
+          },
+          "ranking": [
+            "set_rate",
+            "stop",
+            "clarify",
+            "start",
+            "status",
+            "reject",
+            "read_rate"
+          ],
+          "tokens": 114,
+          "finite": true
+        },
+        {
+          "id": "jev-012-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "camera_status",
+          "expected_id": "camera_status",
+          "correct": true,
+          "scores": {
+            "camera_status": 5.23828125,
+            "start_stream": -4.5703125,
+            "camera_auto": -4.57421875,
+            "reject": -4.421875,
+            "stop_stream": -4.57421875,
+            "clarify": -4.203125
+          },
+          "ranking": [
+            "camera_status",
+            "clarify",
+            "reject",
+            "start_stream",
+            "camera_auto",
+            "stop_stream"
+          ],
+          "tokens": 88,
+          "finite": true
+        },
+        {
+          "id": "jev-012-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "camera_status",
+          "expected_id": "camera_status",
+          "correct": true,
+          "scores": {
+            "camera_auto": -4.58203125,
+            "camera_status": 4.9609375,
+            "start_stream": -4.5234375,
+            "reject": -4.45703125,
+            "stop_stream": -4.5703125,
+            "clarify": -4.57421875
+          },
+          "ranking": [
+            "camera_status",
+            "reject",
+            "start_stream",
+            "stop_stream",
+            "clarify",
+            "camera_auto"
+          ],
+          "tokens": 103,
+          "finite": true
+        },
+        {
+          "id": "jev-013-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "set_speed",
+          "correct": true,
+          "scores": {
+            "stop": -2.73046875,
+            "reject": -4.34765625,
+            "set_speed": 4.40234375,
+            "clarify": -4.55859375,
+            "status": -4.56640625,
+            "start": 2.365234375
+          },
+          "ranking": [
+            "set_speed",
+            "start",
+            "stop",
+            "reject",
+            "clarify",
+            "status"
+          ],
+          "tokens": 91,
+          "finite": true
+        },
+        {
+          "id": "jev-013-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "set_speed",
+          "correct": true,
+          "scores": {
+            "set_speed": 3.83203125,
+            "reject": -3.7890625,
+            "status": -3.931640625,
+            "clarify": -4.578125,
+            "stop": -3.08984375,
+            "start": -1.384765625
+          },
+          "ranking": [
+            "set_speed",
+            "start",
+            "stop",
+            "reject",
+            "status",
+            "clarify"
+          ],
+          "tokens": 110,
+          "finite": true
+        },
+        {
+          "id": "jev-014-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "pump",
+          "selected_id": "status",
+          "expected_id": "status",
+          "correct": true,
+          "scores": {
+            "clarify": -1.4140625,
+            "reject": -4.15625,
+            "set_rate": -4.55078125,
+            "start": -2.029296875,
+            "read_rate": -4.42578125,
+            "status": 3.876953125,
+            "stop": -4.4609375
+          },
+          "ranking": [
+            "status",
+            "clarify",
+            "start",
+            "reject",
+            "read_rate",
+            "stop",
+            "set_rate"
+          ],
+          "tokens": 99,
+          "finite": true
+        },
+        {
+          "id": "jev-014-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "pump",
+          "selected_id": "status",
+          "expected_id": "status",
+          "correct": true,
+          "scores": {
+            "start": -0.69580078125,
+            "set_rate": -4.57421875,
+            "clarify": -3.01171875,
+            "read_rate": -3.861328125,
+            "stop": -3.30859375,
+            "status": 3.458984375,
+            "reject": -3.51953125
+          },
+          "ranking": [
+            "status",
+            "start",
+            "clarify",
+            "stop",
+            "reject",
+            "read_rate",
+            "set_rate"
+          ],
+          "tokens": 112,
+          "finite": true
+        },
+        {
+          "id": "jev-015-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "set_temp": -3.9375,
+            "reject": -3.580078125,
+            "read_temp": 1.5283203125,
+            "clarify": -2.388671875
+          },
+          "ranking": [
+            "read_temp",
+            "clarify",
+            "reject",
+            "set_temp"
+          ],
+          "tokens": 74,
+          "finite": true
+        },
+        {
+          "id": "jev-015-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": 4.0546875,
+            "reject": -4.26953125,
+            "clarify": -4.5625,
+            "set_temp": -4.12109375
+          },
+          "ranking": [
+            "read_temp",
+            "set_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 84,
+          "finite": true
+        },
+        {
+          "id": "jev-016-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "start_stream",
+          "correct": true,
+          "scores": {
+            "clarify": -4.4765625,
+            "start_stream": 0.83935546875,
+            "camera_status": -2.818359375,
+            "stop_stream": -2.529296875,
+            "camera_auto": -4.3671875,
+            "reject": -1.6962890625
+          },
+          "ranking": [
+            "start_stream",
+            "reject",
+            "stop_stream",
+            "camera_status",
+            "camera_auto",
+            "clarify"
+          ],
+          "tokens": 89,
+          "finite": true
+        },
+        {
+          "id": "jev-016-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "start_stream",
+          "correct": true,
+          "scores": {
+            "clarify": -4.56640625,
+            "start_stream": 4.28515625,
+            "stop_stream": -4.171875,
+            "camera_auto": -4.578125,
+            "reject": -3.275390625,
+            "camera_status": -4.58203125
+          },
+          "ranking": [
+            "start_stream",
+            "reject",
+            "stop_stream",
+            "clarify",
+            "camera_auto",
+            "camera_status"
+          ],
+          "tokens": 104,
+          "finite": true
+        },
+        {
+          "id": "jev-017-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "alarms",
+          "selected_id": "list_alarms",
+          "expected_id": "list_alarms",
+          "correct": true,
+          "scores": {
+            "list_alarms": 4.5390625,
+            "alarm_count": -4.58203125,
+            "clarify": -4.57421875,
+            "reject": -4.5546875,
+            "ack_alarm": -4.5859375
+          },
+          "ranking": [
+            "list_alarms",
+            "reject",
+            "clarify",
+            "alarm_count",
+            "ack_alarm"
+          ],
+          "tokens": 83,
+          "finite": true
+        },
+        {
+          "id": "jev-017-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "list_alarms",
+          "correct": false,
+          "scores": {
+            "ack_alarm": 1.06640625,
+            "reject": -4.54296875,
+            "list_alarms": 0.70068359375,
+            "alarm_count": -3.505859375,
+            "clarify": -4.58984375
+          },
+          "ranking": [
+            "ack_alarm",
+            "list_alarms",
+            "alarm_count",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 104,
+          "finite": true
+        },
+        {
+          "id": "jev-018-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "set_rate",
+          "correct": true,
+          "scores": {
+            "status": -3.14453125,
+            "reject": -4.33984375,
+            "clarify": -4.57421875,
+            "stop": 0.408935546875,
+            "start": 2.263671875,
+            "set_rate": 3.37890625,
+            "read_rate": -3.03515625
+          },
+          "ranking": [
+            "set_rate",
+            "start",
+            "stop",
+            "read_rate",
+            "status",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 98,
+          "finite": true
+        },
+        {
+          "id": "jev-018-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "set_rate",
+          "correct": true,
+          "scores": {
+            "set_rate": 3.693359375,
+            "status": -2.416015625,
+            "read_rate": -2.7265625,
+            "stop": -1.806640625,
+            "reject": -3.287109375,
+            "start": -0.8427734375,
+            "clarify": -4.38671875
+          },
+          "ranking": [
+            "set_rate",
+            "start",
+            "stop",
+            "status",
+            "read_rate",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 112,
+          "finite": true
+        },
+        {
+          "id": "jev-019-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "conveyor",
+          "selected_id": "status",
+          "expected_id": "status",
+          "correct": true,
+          "scores": {
+            "stop": -1.869140625,
+            "start": -1.74609375,
+            "clarify": -0.94384765625,
+            "status": 1.4873046875,
+            "reject": -1.9287109375,
+            "set_speed": -3.82421875
+          },
+          "ranking": [
+            "status",
+            "clarify",
+            "start",
+            "stop",
+            "reject",
+            "set_speed"
+          ],
+          "tokens": 91,
+          "finite": true
+        },
+        {
+          "id": "jev-019-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "conveyor",
+          "selected_id": "start",
+          "expected_id": "status",
+          "correct": false,
+          "scores": {
+            "clarify": -4.08984375,
+            "start": 0.9638671875,
+            "reject": -2.763671875,
+            "status": -1.14453125,
+            "stop": -2.02734375,
+            "set_speed": -3.9453125
+          },
+          "ranking": [
+            "start",
+            "status",
+            "stop",
+            "reject",
+            "set_speed",
+            "clarify"
+          ],
+          "tokens": 110,
+          "finite": true
+        },
+        {
+          "id": "jev-020-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "ack_alarm",
+          "correct": true,
+          "scores": {
+            "reject": -4.546875,
+            "ack_alarm": 3.0234375,
+            "alarm_count": -4.2734375,
+            "list_alarms": -3.259765625,
+            "clarify": -4.578125
+          },
+          "ranking": [
+            "ack_alarm",
+            "list_alarms",
+            "alarm_count",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 82,
+          "finite": true
+        },
+        {
+          "id": "jev-020-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "ack_alarm",
+          "correct": true,
+          "scores": {
+            "list_alarms": -4.58203125,
+            "reject": -4.5859375,
+            "clarify": -4.58984375,
+            "alarm_count": -4.55859375,
+            "ack_alarm": 2.494140625
+          },
+          "ranking": [
+            "ack_alarm",
+            "alarm_count",
+            "list_alarms",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 104,
+          "finite": true
+        },
+        {
+          "id": "jev-021-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "stop_stream",
+          "correct": true,
+          "scores": {
+            "camera_status": -3.708984375,
+            "stop_stream": -1.1484375,
+            "reject": -3.02734375,
+            "clarify": -4.35546875,
+            "start_stream": -2.619140625,
+            "camera_auto": -3.439453125
+          },
+          "ranking": [
+            "stop_stream",
+            "start_stream",
+            "reject",
+            "camera_auto",
+            "camera_status",
+            "clarify"
+          ],
+          "tokens": 89,
+          "finite": true
+        },
+        {
+          "id": "jev-021-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "stop_stream",
+          "correct": true,
+          "scores": {
+            "reject": -3.09375,
+            "stop_stream": -0.047027587890625,
+            "camera_auto": -1.8046875,
+            "camera_status": -4.09375,
+            "clarify": -4.1015625,
+            "start_stream": -2.857421875
+          },
+          "ranking": [
+            "stop_stream",
+            "camera_auto",
+            "start_stream",
+            "reject",
+            "camera_status",
+            "clarify"
+          ],
+          "tokens": 105,
+          "finite": true
+        },
+        {
+          "id": "jev-022-en",
+          "language": "en",
+          "category": "paraphrase",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "set_temp": -4.52734375,
+            "reject": -3.560546875,
+            "clarify": -0.84326171875,
+            "read_temp": 2.50390625
+          },
+          "ranking": [
+            "read_temp",
+            "clarify",
+            "reject",
+            "set_temp"
+          ],
+          "tokens": 74,
+          "finite": true
+        },
+        {
+          "id": "jev-022-zh",
+          "language": "zh",
+          "category": "paraphrase",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "set_temp": -4.35546875,
+            "read_temp": 4.12890625,
+            "clarify": -4.578125,
+            "reject": -4.55078125
+          },
+          "ranking": [
+            "read_temp",
+            "set_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 84,
+          "finite": true
+        },
+        {
+          "id": "jev-023-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "stop",
+          "correct": false,
+          "scores": {
+            "stop": 1.3212890625,
+            "set_rate": -4.5859375,
+            "read_rate": -4.58203125,
+            "reject": -2.2109375,
+            "status": -4.55078125,
+            "start": 2.748046875,
+            "clarify": -4.09765625
+          },
+          "ranking": [
+            "start",
+            "stop",
+            "reject",
+            "clarify",
+            "status",
+            "read_rate",
+            "set_rate"
+          ],
+          "tokens": 104,
+          "finite": true
+        },
+        {
+          "id": "jev-023-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "stop",
+          "correct": false,
+          "scores": {
+            "reject": -3.064453125,
+            "start": 2.673828125,
+            "stop": -0.79736328125,
+            "set_rate": -2.671875,
+            "clarify": -3.826171875,
+            "read_rate": -3.142578125,
+            "status": -2.90234375
+          },
+          "ranking": [
+            "start",
+            "stop",
+            "set_rate",
+            "status",
+            "reject",
+            "read_rate",
+            "clarify"
+          ],
+          "tokens": 115,
+          "finite": true
+        },
+        {
+          "id": "jev-024-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "status",
+          "correct": false,
+          "scores": {
+            "set_speed": -0.65673828125,
+            "stop": -0.66259765625,
+            "clarify": -2.857421875,
+            "reject": -1.2978515625,
+            "status": -1.685546875,
+            "start": -0.88916015625
+          },
+          "ranking": [
+            "set_speed",
+            "stop",
+            "start",
+            "reject",
+            "status",
+            "clarify"
+          ],
+          "tokens": 94,
+          "finite": true
+        },
+        {
+          "id": "jev-024-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "status",
+          "correct": false,
+          "scores": {
+            "stop": -2.1875,
+            "clarify": -3.36328125,
+            "start": -2.330078125,
+            "reject": -2.330078125,
+            "status": -1.42578125,
+            "set_speed": -1.26171875
+          },
+          "ranking": [
+            "set_speed",
+            "status",
+            "stop",
+            "start",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 112,
+          "finite": true
+        },
+        {
+          "id": "jev-025-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "set_temp": -2.771484375,
+            "reject": -2.466796875,
+            "clarify": -3.587890625,
+            "read_temp": 0.252197265625
+          },
+          "ranking": [
+            "read_temp",
+            "reject",
+            "set_temp",
+            "clarify"
+          ],
+          "tokens": 80,
+          "finite": true
+        },
+        {
+          "id": "jev-025-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "clarify": -3.98046875,
+            "read_temp": -0.1099853515625,
+            "reject": -3.671875,
+            "set_temp": -2.18359375
+          },
+          "ranking": [
+            "read_temp",
+            "set_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 87,
+          "finite": true
+        },
+        {
+          "id": "jev-026-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "stop_stream",
+          "correct": false,
+          "scores": {
+            "clarify": -4.57421875,
+            "camera_auto": -4.578125,
+            "camera_status": -4.57421875,
+            "start_stream": 3.787109375,
+            "stop_stream": -1.0478515625,
+            "reject": -1.9052734375
+          },
+          "ranking": [
+            "start_stream",
+            "stop_stream",
+            "reject",
+            "clarify",
+            "camera_status",
+            "camera_auto"
+          ],
+          "tokens": 95,
+          "finite": true
+        },
+        {
+          "id": "jev-026-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "stop_stream",
+          "correct": false,
+          "scores": {
+            "clarify": -4.3671875,
+            "camera_auto": -4.5859375,
+            "start_stream": 1.322265625,
+            "stop_stream": 0.58740234375,
+            "camera_status": -4.58203125,
+            "reject": -2.279296875
+          },
+          "ranking": [
+            "start_stream",
+            "stop_stream",
+            "reject",
+            "clarify",
+            "camera_status",
+            "camera_auto"
+          ],
+          "tokens": 111,
+          "finite": true
+        },
+        {
+          "id": "jev-027-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "list_alarms",
+          "correct": false,
+          "scores": {
+            "alarm_count": -3.60546875,
+            "reject": -3.35546875,
+            "list_alarms": 0.11865234375,
+            "ack_alarm": 2.984375,
+            "clarify": -4.046875
+          },
+          "ranking": [
+            "ack_alarm",
+            "list_alarms",
+            "reject",
+            "alarm_count",
+            "clarify"
+          ],
+          "tokens": 86,
+          "finite": true
+        },
+        {
+          "id": "jev-027-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "alarms",
+          "selected_id": "list_alarms",
+          "expected_id": "list_alarms",
+          "correct": true,
+          "scores": {
+            "reject": -4.1015625,
+            "clarify": -4.49609375,
+            "list_alarms": -1.0751953125,
+            "ack_alarm": -3.056640625,
+            "alarm_count": -4.4140625
+          },
+          "ranking": [
+            "list_alarms",
+            "ack_alarm",
+            "reject",
+            "alarm_count",
+            "clarify"
+          ],
+          "tokens": 108,
+          "finite": true
+        },
+        {
+          "id": "jev-028-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "set_rate",
+          "correct": true,
+          "scores": {
+            "set_rate": 3.080078125,
+            "read_rate": -4.41015625,
+            "start": -2.486328125,
+            "clarify": -4.5703125,
+            "stop": 1.12890625,
+            "status": -4.25,
+            "reject": -1.5205078125
+          },
+          "ranking": [
+            "set_rate",
+            "stop",
+            "reject",
+            "start",
+            "status",
+            "read_rate",
+            "clarify"
+          ],
+          "tokens": 106,
+          "finite": true
+        },
+        {
+          "id": "jev-028-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "set_rate",
+          "correct": true,
+          "scores": {
+            "set_rate": 7.8671875,
+            "stop": -4.28515625,
+            "reject": -3.966796875,
+            "read_rate": -4.578125,
+            "status": -4.5703125,
+            "start": -4.58203125,
+            "clarify": -4.54296875
+          },
+          "ranking": [
+            "set_rate",
+            "reject",
+            "stop",
+            "clarify",
+            "status",
+            "read_rate",
+            "start"
+          ],
+          "tokens": 117,
+          "finite": true
+        },
+        {
+          "id": "jev-029-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "conveyor",
+          "selected_id": "status",
+          "expected_id": "status",
+          "correct": true,
+          "scores": {
+            "start": -2.279296875,
+            "status": 2.8125,
+            "reject": -3.357421875,
+            "set_speed": -4.4453125,
+            "stop": -2.232421875,
+            "clarify": -3.52734375
+          },
+          "ranking": [
+            "status",
+            "stop",
+            "start",
+            "reject",
+            "clarify",
+            "set_speed"
+          ],
+          "tokens": 93,
+          "finite": true
+        },
+        {
+          "id": "jev-029-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "conveyor",
+          "selected_id": "status",
+          "expected_id": "status",
+          "correct": true,
+          "scores": {
+            "set_speed": -4.11328125,
+            "reject": -3.921875,
+            "status": 1.6513671875,
+            "clarify": -4.57421875,
+            "stop": -1.49609375,
+            "start": -3.064453125
+          },
+          "ranking": [
+            "status",
+            "stop",
+            "start",
+            "reject",
+            "set_speed",
+            "clarify"
+          ],
+          "tokens": 111,
+          "finite": true
+        },
+        {
+          "id": "jev-030-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "start_stream",
+          "correct": true,
+          "scores": {
+            "clarify": -4.375,
+            "start_stream": 4.2421875,
+            "reject": -2.53515625,
+            "stop_stream": -2.4921875,
+            "camera_status": -4.4453125,
+            "camera_auto": -3.21875
+          },
+          "ranking": [
+            "start_stream",
+            "stop_stream",
+            "reject",
+            "camera_auto",
+            "clarify",
+            "camera_status"
+          ],
+          "tokens": 94,
+          "finite": true
+        },
+        {
+          "id": "jev-030-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "start_stream",
+          "correct": true,
+          "scores": {
+            "reject": -2.240234375,
+            "stop_stream": -2.736328125,
+            "camera_status": -3.845703125,
+            "clarify": -3.380859375,
+            "camera_auto": -1.6181640625,
+            "start_stream": 1.57421875
+          },
+          "ranking": [
+            "start_stream",
+            "camera_auto",
+            "reject",
+            "stop_stream",
+            "clarify",
+            "camera_status"
+          ],
+          "tokens": 109,
+          "finite": true
+        },
+        {
+          "id": "jev-031-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "ack_alarm",
+          "correct": true,
+          "scores": {
+            "ack_alarm": 3.66015625,
+            "list_alarms": -3.796875,
+            "alarm_count": -4.46484375,
+            "reject": -2.412109375,
+            "clarify": -3.9921875
+          },
+          "ranking": [
+            "ack_alarm",
+            "reject",
+            "list_alarms",
+            "clarify",
+            "alarm_count"
+          ],
+          "tokens": 86,
+          "finite": true
+        },
+        {
+          "id": "jev-031-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "ack_alarm",
+          "correct": true,
+          "scores": {
+            "list_alarms": -4.3359375,
+            "clarify": -4.5859375,
+            "reject": -4.3984375,
+            "alarm_count": -4.08984375,
+            "ack_alarm": 0.7412109375
+          },
+          "ranking": [
+            "ack_alarm",
+            "alarm_count",
+            "list_alarms",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 105,
+          "finite": true
+        },
+        {
+          "id": "jev-032-en",
+          "language": "en",
+          "category": "negation",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "read_temp",
+          "correct": true,
+          "scores": {
+            "clarify": -2.994140625,
+            "read_temp": -0.92578125,
+            "reject": -1.0986328125,
+            "set_temp": -2.228515625
+          },
+          "ranking": [
+            "read_temp",
+            "reject",
+            "set_temp",
+            "clarify"
+          ],
+          "tokens": 76,
+          "finite": true
+        },
+        {
+          "id": "jev-032-zh",
+          "language": "zh",
+          "category": "negation",
+          "scenario": "temperature",
+          "selected_id": "reject",
+          "expected_id": "read_temp",
+          "correct": false,
+          "scores": {
+            "reject": -1.1318359375,
+            "set_temp": -2.3046875,
+            "read_temp": -2.32421875,
+            "clarify": -2.251953125
+          },
+          "ranking": [
+            "reject",
+            "clarify",
+            "set_temp",
+            "read_temp"
+          ],
+          "tokens": 84,
+          "finite": true
+        },
+        {
+          "id": "jev-033-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "stop": -1.6376953125,
+            "reject": -3.47265625,
+            "clarify": -4.50390625,
+            "start": 0.11181640625,
+            "set_speed": 0.19580078125,
+            "status": -3.599609375
+          },
+          "ranking": [
+            "set_speed",
+            "start",
+            "stop",
+            "reject",
+            "status",
+            "clarify"
+          ],
+          "tokens": 87,
+          "finite": true
+        },
+        {
+          "id": "jev-033-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "start": -2.6171875,
+            "reject": -4.08984375,
+            "set_speed": -0.74365234375,
+            "clarify": -4.23828125,
+            "status": -3.51171875,
+            "stop": -2.416015625
+          },
+          "ranking": [
+            "set_speed",
+            "stop",
+            "start",
+            "status",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 107,
+          "finite": true
+        },
+        {
+          "id": "jev-034-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "clarify": -2.08203125,
+            "start": -0.06689453125,
+            "reject": -3.15625,
+            "stop": -2.4140625,
+            "set_rate": -3.560546875,
+            "read_rate": -3.337890625,
+            "status": -2.6484375
+          },
+          "ranking": [
+            "start",
+            "clarify",
+            "stop",
+            "status",
+            "reject",
+            "read_rate",
+            "set_rate"
+          ],
+          "tokens": 95,
+          "finite": true
+        },
+        {
+          "id": "jev-034-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "pump",
+          "selected_id": "status",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "clarify": -4.14453125,
+            "stop": -2.486328125,
+            "status": -1.5947265625,
+            "read_rate": -2.06640625,
+            "reject": -3.646484375,
+            "start": -2.1171875,
+            "set_rate": -3.3359375
+          },
+          "ranking": [
+            "status",
+            "read_rate",
+            "start",
+            "stop",
+            "set_rate",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 108,
+          "finite": true
+        },
+        {
+          "id": "jev-035-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "clarify": -2.9140625,
+            "reject": -1.962890625,
+            "set_temp": -0.7216796875,
+            "read_temp": -2.572265625
+          },
+          "ranking": [
+            "set_temp",
+            "reject",
+            "read_temp",
+            "clarify"
+          ],
+          "tokens": 72,
+          "finite": true
+        },
+        {
+          "id": "jev-035-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "clarify": -3.873046875,
+            "set_temp": 0.7646484375,
+            "reject": -3.455078125,
+            "read_temp": -2.966796875
+          },
+          "ranking": [
+            "set_temp",
+            "read_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 82,
+          "finite": true
+        },
+        {
+          "id": "jev-036-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "stop_stream": 1.0673828125,
+            "reject": -2.4765625,
+            "clarify": -3.751953125,
+            "camera_status": -3.51953125,
+            "start_stream": -2.564453125,
+            "camera_auto": -4.15234375
+          },
+          "ranking": [
+            "stop_stream",
+            "reject",
+            "start_stream",
+            "camera_status",
+            "clarify",
+            "camera_auto"
+          ],
+          "tokens": 88,
+          "finite": true
+        },
+        {
+          "id": "jev-036-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "clarify": -4.14453125,
+            "start_stream": -1.052734375,
+            "camera_auto": -3.650390625,
+            "stop_stream": -2.041015625,
+            "camera_status": -3.419921875,
+            "reject": -2.6328125
+          },
+          "ranking": [
+            "start_stream",
+            "stop_stream",
+            "reject",
+            "camera_status",
+            "camera_auto",
+            "clarify"
+          ],
+          "tokens": 102,
+          "finite": true
+        },
+        {
+          "id": "jev-037-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "list_alarms": -3.306640625,
+            "alarm_count": -2.765625,
+            "ack_alarm": 0.83837890625,
+            "reject": -2.8359375,
+            "clarify": -3.0
+          },
+          "ranking": [
+            "ack_alarm",
+            "alarm_count",
+            "reject",
+            "clarify",
+            "list_alarms"
+          ],
+          "tokens": 81,
+          "finite": true
+        },
+        {
+          "id": "jev-037-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "alarms",
+          "selected_id": "alarm_count",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "clarify": -4.328125,
+            "alarm_count": -2.5390625,
+            "list_alarms": -3.63671875,
+            "ack_alarm": -2.87109375,
+            "reject": -3.3125
+          },
+          "ranking": [
+            "alarm_count",
+            "ack_alarm",
+            "reject",
+            "list_alarms",
+            "clarify"
+          ],
+          "tokens": 99,
+          "finite": true
+        },
+        {
+          "id": "jev-038-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "status": -4.58203125,
+            "clarify": -4.51953125,
+            "reject": -4.5625,
+            "set_speed": 4.359375,
+            "start": -3.970703125,
+            "stop": -4.5859375
+          },
+          "ranking": [
+            "set_speed",
+            "start",
+            "clarify",
+            "reject",
+            "status",
+            "stop"
+          ],
+          "tokens": 91,
+          "finite": true
+        },
+        {
+          "id": "jev-038-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "stop": -4.53125,
+            "reject": -4.58203125,
+            "clarify": -4.58203125,
+            "set_speed": 5.09765625,
+            "start": -4.58984375,
+            "status": -4.5859375
+          },
+          "ranking": [
+            "set_speed",
+            "stop",
+            "reject",
+            "clarify",
+            "status",
+            "start"
+          ],
+          "tokens": 109,
+          "finite": true
+        },
+        {
+          "id": "jev-039-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "reject": -4.36328125,
+            "status": -4.51171875,
+            "set_rate": 6.62890625,
+            "start": -3.046875,
+            "clarify": -3.732421875,
+            "stop": -4.1328125,
+            "read_rate": -1.84375
+          },
+          "ranking": [
+            "set_rate",
+            "read_rate",
+            "start",
+            "clarify",
+            "stop",
+            "reject",
+            "status"
+          ],
+          "tokens": 98,
+          "finite": true
+        },
+        {
+          "id": "jev-039-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "read_rate": -3.701171875,
+            "status": -4.3359375,
+            "reject": -4.46875,
+            "stop": -4.54296875,
+            "start": -4.55859375,
+            "set_rate": 4.86328125,
+            "clarify": -4.546875
+          },
+          "ranking": [
+            "set_rate",
+            "read_rate",
+            "status",
+            "reject",
+            "stop",
+            "clarify",
+            "start"
+          ],
+          "tokens": 112,
+          "finite": true
+        },
+        {
+          "id": "jev-040-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "reject": -3.1484375,
+            "clarify": -2.478515625,
+            "set_temp": -2.9609375,
+            "read_temp": -2.302734375
+          },
+          "ranking": [
+            "read_temp",
+            "clarify",
+            "set_temp",
+            "reject"
+          ],
+          "tokens": 72,
+          "finite": true
+        },
+        {
+          "id": "jev-040-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "clarify": -3.1484375,
+            "set_temp": -1.8056640625,
+            "read_temp": -1.369140625,
+            "reject": -3.12890625
+          },
+          "ranking": [
+            "read_temp",
+            "set_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 81,
+          "finite": true
+        },
+        {
+          "id": "jev-041-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "camera",
+          "selected_id": "camera_auto",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "camera_status": -4.5859375,
+            "camera_auto": -0.94921875,
+            "stop_stream": -3.99609375,
+            "start_stream": -2.712890625,
+            "clarify": -4.50390625,
+            "reject": -1.1103515625
+          },
+          "ranking": [
+            "camera_auto",
+            "reject",
+            "start_stream",
+            "stop_stream",
+            "clarify",
+            "camera_status"
+          ],
+          "tokens": 87,
+          "finite": true
+        },
+        {
+          "id": "jev-041-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "clarify": -4.578125,
+            "start_stream": -1.2490234375,
+            "stop_stream": -2.380859375,
+            "reject": -3.9453125,
+            "camera_status": -3.240234375,
+            "camera_auto": -2.322265625
+          },
+          "ranking": [
+            "start_stream",
+            "camera_auto",
+            "stop_stream",
+            "camera_status",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 103,
+          "finite": true
+        },
+        {
+          "id": "jev-042-en",
+          "language": "en",
+          "category": "ambiguous",
+          "scenario": "alarms",
+          "selected_id": "reject",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "clarify": -2.421875,
+            "alarm_count": -3.85546875,
+            "reject": -0.207275390625,
+            "list_alarms": -1.0888671875,
+            "ack_alarm": -4.10546875
+          },
+          "ranking": [
+            "reject",
+            "list_alarms",
+            "clarify",
+            "alarm_count",
+            "ack_alarm"
+          ],
+          "tokens": 81,
+          "finite": true
+        },
+        {
+          "id": "jev-042-zh",
+          "language": "zh",
+          "category": "ambiguous",
+          "scenario": "alarms",
+          "selected_id": "reject",
+          "expected_id": "clarify",
+          "correct": false,
+          "scores": {
+            "reject": -0.286865234375,
+            "list_alarms": -0.5078125,
+            "alarm_count": -1.9208984375,
+            "ack_alarm": -1.1142578125,
+            "clarify": -1.8408203125
+          },
+          "ranking": [
+            "reject",
+            "list_alarms",
+            "ack_alarm",
+            "clarify",
+            "alarm_count"
+          ],
+          "tokens": 101,
+          "finite": true
+        },
+        {
+          "id": "jev-043-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "conveyor",
+          "selected_id": "clarify",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "status": -2.126953125,
+            "set_speed": -3.375,
+            "reject": -1.3720703125,
+            "stop": -1.166015625,
+            "start": -1.71484375,
+            "clarify": -0.406005859375
+          },
+          "ranking": [
+            "clarify",
+            "stop",
+            "reject",
+            "start",
+            "status",
+            "set_speed"
+          ],
+          "tokens": 90,
+          "finite": true
+        },
+        {
+          "id": "jev-043-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "conveyor",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "stop": -1.1142578125,
+            "reject": -3.1875,
+            "status": -2.330078125,
+            "set_speed": -2.62109375,
+            "clarify": -3.74609375,
+            "start": -0.94482421875
+          },
+          "ranking": [
+            "start",
+            "stop",
+            "status",
+            "set_speed",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 109,
+          "finite": true
+        },
+        {
+          "id": "jev-044-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "read_rate": -4.5859375,
+            "clarify": -3.9921875,
+            "set_rate": -3.90234375,
+            "start": -1.0234375,
+            "reject": -2.435546875,
+            "stop": -2.52734375,
+            "status": -4.265625
+          },
+          "ranking": [
+            "start",
+            "reject",
+            "stop",
+            "set_rate",
+            "clarify",
+            "status",
+            "read_rate"
+          ],
+          "tokens": 96,
+          "finite": true
+        },
+        {
+          "id": "jev-044-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "pump",
+          "selected_id": "set_rate",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "read_rate": -3.359375,
+            "clarify": -4.34765625,
+            "stop": -2.48828125,
+            "start": -2.38671875,
+            "status": -2.193359375,
+            "reject": -3.517578125,
+            "set_rate": -1.8828125
+          },
+          "ranking": [
+            "set_rate",
+            "status",
+            "start",
+            "stop",
+            "read_rate",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 111,
+          "finite": true
+        },
+        {
+          "id": "jev-045-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "reject": -2.40625,
+            "set_temp": -0.7783203125,
+            "read_temp": -0.64013671875,
+            "clarify": -3.701171875
+          },
+          "ranking": [
+            "read_temp",
+            "set_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 73,
+          "finite": true
+        },
+        {
+          "id": "jev-045-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "temperature",
+          "selected_id": "read_temp",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "reject": -2.111328125,
+            "read_temp": -1.1103515625,
+            "set_temp": -1.8701171875,
+            "clarify": -3.138671875
+          },
+          "ranking": [
+            "read_temp",
+            "set_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 83,
+          "finite": true
+        },
+        {
+          "id": "jev-046-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "camera",
+          "selected_id": "reject",
+          "expected_id": "reject",
+          "correct": true,
+          "scores": {
+            "camera_status": -2.029296875,
+            "camera_auto": -3.4609375,
+            "start_stream": -1.677734375,
+            "clarify": -1.6806640625,
+            "stop_stream": -1.7744140625,
+            "reject": -0.76708984375
+          },
+          "ranking": [
+            "reject",
+            "start_stream",
+            "clarify",
+            "stop_stream",
+            "camera_status",
+            "camera_auto"
+          ],
+          "tokens": 91,
+          "finite": true
+        },
+        {
+          "id": "jev-046-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "camera",
+          "selected_id": "reject",
+          "expected_id": "reject",
+          "correct": true,
+          "scores": {
+            "reject": -0.998046875,
+            "stop_stream": -1.05859375,
+            "clarify": -4.11328125,
+            "camera_auto": -2.564453125,
+            "camera_status": -2.7421875,
+            "start_stream": -2.22265625
+          },
+          "ranking": [
+            "reject",
+            "stop_stream",
+            "start_stream",
+            "camera_auto",
+            "camera_status",
+            "clarify"
+          ],
+          "tokens": 107,
+          "finite": true
+        },
+        {
+          "id": "jev-047-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "alarms",
+          "selected_id": "list_alarms",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "reject": -1.3720703125,
+            "list_alarms": -0.7236328125,
+            "ack_alarm": -1.48828125,
+            "clarify": -4.40234375,
+            "alarm_count": -3.73046875
+          },
+          "ranking": [
+            "list_alarms",
+            "reject",
+            "ack_alarm",
+            "alarm_count",
+            "clarify"
+          ],
+          "tokens": 80,
+          "finite": true
+        },
+        {
+          "id": "jev-047-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "alarms",
+          "selected_id": "ack_alarm",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "alarm_count": -4.1484375,
+            "list_alarms": -3.595703125,
+            "ack_alarm": -1.6904296875,
+            "clarify": -3.49609375,
+            "reject": -2.515625
+          },
+          "ranking": [
+            "ack_alarm",
+            "reject",
+            "clarify",
+            "list_alarms",
+            "alarm_count"
+          ],
+          "tokens": 101,
+          "finite": true
+        },
+        {
+          "id": "jev-048-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "set_rate": -4.15625,
+            "read_rate": -2.568359375,
+            "start": 1.3896484375,
+            "stop": -0.50732421875,
+            "reject": -2.484375,
+            "clarify": -4.16015625,
+            "status": -1.6748046875
+          },
+          "ranking": [
+            "start",
+            "stop",
+            "status",
+            "reject",
+            "read_rate",
+            "set_rate",
+            "clarify"
+          ],
+          "tokens": 96,
+          "finite": true
+        },
+        {
+          "id": "jev-048-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "status": -1.7880859375,
+            "reject": -3.578125,
+            "read_rate": -2.162109375,
+            "stop": -1.6689453125,
+            "set_rate": -2.056640625,
+            "clarify": -4.38671875,
+            "start": 2.357421875
+          },
+          "ranking": [
+            "start",
+            "stop",
+            "status",
+            "set_rate",
+            "read_rate",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 110,
+          "finite": true
+        },
+        {
+          "id": "jev-049-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "camera",
+          "selected_id": "start_stream",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "clarify": -1.826171875,
+            "stop_stream": -3.556640625,
+            "camera_auto": -2.580078125,
+            "camera_status": -2.798828125,
+            "start_stream": 0.0882568359375,
+            "reject": -2.865234375
+          },
+          "ranking": [
+            "start_stream",
+            "clarify",
+            "camera_auto",
+            "camera_status",
+            "reject",
+            "stop_stream"
+          ],
+          "tokens": 89,
+          "finite": true
+        },
+        {
+          "id": "jev-049-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "camera",
+          "selected_id": "camera_status",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "camera_auto": -2.72265625,
+            "camera_status": -2.5625,
+            "stop_stream": -2.658203125,
+            "reject": -2.8203125,
+            "clarify": -2.576171875,
+            "start_stream": -3.78515625
+          },
+          "ranking": [
+            "camera_status",
+            "clarify",
+            "stop_stream",
+            "camera_auto",
+            "reject",
+            "start_stream"
+          ],
+          "tokens": 104,
+          "finite": true
+        },
+        {
+          "id": "jev-050-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "set_temp": 1.3720703125,
+            "reject": -2.263671875,
+            "read_temp": -0.751953125,
+            "clarify": -4.26171875
+          },
+          "ranking": [
+            "set_temp",
+            "read_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 74,
+          "finite": true
+        },
+        {
+          "id": "jev-050-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "reject": -2.8828125,
+            "read_temp": -2.029296875,
+            "set_temp": 2.13671875,
+            "clarify": -3.75
+          },
+          "ranking": [
+            "set_temp",
+            "read_temp",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 85,
+          "finite": true
+        },
+        {
+          "id": "jev-051-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "conveyor",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "set_speed": -4.53125,
+            "clarify": -4.57421875,
+            "start": 10.4296875,
+            "reject": -4.05859375,
+            "status": -4.5625,
+            "stop": -4.27734375
+          },
+          "ranking": [
+            "start",
+            "reject",
+            "stop",
+            "set_speed",
+            "status",
+            "clarify"
+          ],
+          "tokens": 90,
+          "finite": true
+        },
+        {
+          "id": "jev-051-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "conveyor",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "start": 3.5234375,
+            "set_speed": -3.451171875,
+            "status": -4.44140625,
+            "reject": -3.427734375,
+            "clarify": -3.564453125,
+            "stop": -2.873046875
+          },
+          "ranking": [
+            "start",
+            "stop",
+            "reject",
+            "set_speed",
+            "clarify",
+            "status"
+          ],
+          "tokens": 108,
+          "finite": true
+        },
+        {
+          "id": "jev-052-en",
+          "language": "en",
+          "category": "OOS",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "read_rate": -2.509765625,
+            "clarify": -0.0926513671875,
+            "stop": -1.2939453125,
+            "status": -1.37890625,
+            "start": 3.505859375,
+            "reject": -0.79345703125,
+            "set_rate": -1.63671875
+          },
+          "ranking": [
+            "start",
+            "clarify",
+            "reject",
+            "stop",
+            "status",
+            "set_rate",
+            "read_rate"
+          ],
+          "tokens": 99,
+          "finite": true
+        },
+        {
+          "id": "jev-052-zh",
+          "language": "zh",
+          "category": "OOS",
+          "scenario": "pump",
+          "selected_id": "start",
+          "expected_id": "reject",
+          "correct": false,
+          "scores": {
+            "clarify": -3.140625,
+            "reject": -2.650390625,
+            "read_rate": -1.30078125,
+            "stop": -2.056640625,
+            "status": -1.1162109375,
+            "start": -0.306396484375,
+            "set_rate": -0.98046875
+          },
+          "ranking": [
+            "start",
+            "set_rate",
+            "status",
+            "read_rate",
+            "stop",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 112,
+          "finite": true
+        },
+        {
+          "id": "jev-053-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "set_speed",
+          "correct": true,
+          "scores": {
+            "clarify": -4.5234375,
+            "status": -4.54296875,
+            "stop": -4.546875,
+            "reject": -4.578125,
+            "start": -4.4140625,
+            "set_speed": 10.265625
+          },
+          "ranking": [
+            "set_speed",
+            "start",
+            "clarify",
+            "status",
+            "stop",
+            "reject"
+          ],
+          "tokens": 93,
+          "finite": true
+        },
+        {
+          "id": "jev-053-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "set_speed",
+          "expected_id": "set_speed",
+          "correct": true,
+          "scores": {
+            "clarify": -4.57421875,
+            "stop": -4.578125,
+            "status": -4.57421875,
+            "reject": -4.58203125,
+            "start": -4.58203125,
+            "set_speed": 12.6953125
+          },
+          "ranking": [
+            "set_speed",
+            "clarify",
+            "status",
+            "stop",
+            "reject",
+            "start"
+          ],
+          "tokens": 111,
+          "finite": true
+        },
+        {
+          "id": "jev-054-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "stop",
+          "expected_id": "stop",
+          "correct": true,
+          "scores": {
+            "status": -4.44921875,
+            "set_speed": -4.54296875,
+            "clarify": -4.5703125,
+            "reject": -4.30078125,
+            "start": -3.46484375,
+            "stop": 4.546875
+          },
+          "ranking": [
+            "stop",
+            "start",
+            "reject",
+            "status",
+            "set_speed",
+            "clarify"
+          ],
+          "tokens": 87,
+          "finite": true
+        },
+        {
+          "id": "jev-054-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "stop",
+          "expected_id": "stop",
+          "correct": true,
+          "scores": {
+            "status": -4.578125,
+            "set_speed": -4.578125,
+            "reject": -4.578125,
+            "stop": 4.86328125,
+            "clarify": -4.58203125,
+            "start": -4.5390625
+          },
+          "ranking": [
+            "stop",
+            "start",
+            "status",
+            "set_speed",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 107,
+          "finite": true
+        },
+        {
+          "id": "jev-055-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "read_rate",
+          "expected_id": "read_rate",
+          "correct": true,
+          "scores": {
+            "stop": -4.49609375,
+            "start": -3.78125,
+            "reject": -4.53125,
+            "status": -2.458984375,
+            "clarify": -4.5703125,
+            "set_rate": -4.453125,
+            "read_rate": 5.30859375
+          },
+          "ranking": [
+            "read_rate",
+            "status",
+            "start",
+            "set_rate",
+            "stop",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 96,
+          "finite": true
+        },
+        {
+          "id": "jev-055-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "pump",
+          "selected_id": "read_rate",
+          "expected_id": "read_rate",
+          "correct": true,
+          "scores": {
+            "read_rate": 7.16015625,
+            "status": -1.5703125,
+            "reject": -4.5390625,
+            "start": -4.4921875,
+            "stop": -4.5390625,
+            "set_rate": -4.13671875,
+            "clarify": -4.5625
+          },
+          "ranking": [
+            "read_rate",
+            "status",
+            "set_rate",
+            "start",
+            "reject",
+            "stop",
+            "clarify"
+          ],
+          "tokens": 110,
+          "finite": true
+        },
+        {
+          "id": "jev-056-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "camera_auto",
+          "expected_id": "camera_auto",
+          "correct": true,
+          "scores": {
+            "reject": -4.5078125,
+            "camera_status": -4.51171875,
+            "start_stream": -4.515625,
+            "camera_auto": 12.6171875,
+            "stop_stream": -4.515625,
+            "clarify": -4.52734375
+          },
+          "ranking": [
+            "camera_auto",
+            "reject",
+            "camera_status",
+            "start_stream",
+            "stop_stream",
+            "clarify"
+          ],
+          "tokens": 90,
+          "finite": true
+        },
+        {
+          "id": "jev-056-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "camera_auto",
+          "expected_id": "camera_auto",
+          "correct": true,
+          "scores": {
+            "camera_status": -4.56640625,
+            "start_stream": -4.57421875,
+            "camera_auto": 6.96875,
+            "stop_stream": -4.55078125,
+            "clarify": -4.5546875,
+            "reject": -4.58203125
+          },
+          "ranking": [
+            "camera_auto",
+            "stop_stream",
+            "clarify",
+            "camera_status",
+            "start_stream",
+            "reject"
+          ],
+          "tokens": 105,
+          "finite": true
+        },
+        {
+          "id": "jev-057-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "alarms",
+          "selected_id": "alarm_count",
+          "expected_id": "alarm_count",
+          "correct": true,
+          "scores": {
+            "list_alarms": -4.578125,
+            "ack_alarm": -4.5625,
+            "reject": -4.55859375,
+            "alarm_count": 4.3515625,
+            "clarify": -4.55859375
+          },
+          "ranking": [
+            "alarm_count",
+            "reject",
+            "clarify",
+            "ack_alarm",
+            "list_alarms"
+          ],
+          "tokens": 80,
+          "finite": true
+        },
+        {
+          "id": "jev-057-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "alarms",
+          "selected_id": "alarm_count",
+          "expected_id": "alarm_count",
+          "correct": true,
+          "scores": {
+            "alarm_count": 1.7763671875,
+            "list_alarms": -4.56640625,
+            "clarify": -4.58984375,
+            "reject": -4.55859375,
+            "ack_alarm": -4.5078125
+          },
+          "ranking": [
+            "alarm_count",
+            "ack_alarm",
+            "reject",
+            "list_alarms",
+            "clarify"
+          ],
+          "tokens": 100,
+          "finite": true
+        },
+        {
+          "id": "jev-058-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "set_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": -4.5703125,
+            "clarify": -4.57421875,
+            "set_temp": 9.9609375,
+            "reject": -4.515625
+          },
+          "ranking": [
+            "set_temp",
+            "reject",
+            "read_temp",
+            "clarify"
+          ],
+          "tokens": 77,
+          "finite": true
+        },
+        {
+          "id": "jev-058-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "temperature",
+          "selected_id": "set_temp",
+          "expected_id": "set_temp",
+          "correct": true,
+          "scores": {
+            "read_temp": -4.5546875,
+            "reject": -4.58203125,
+            "set_temp": 6.45703125,
+            "clarify": -4.578125
+          },
+          "ranking": [
+            "set_temp",
+            "read_temp",
+            "clarify",
+            "reject"
+          ],
+          "tokens": 86,
+          "finite": true
+        },
+        {
+          "id": "jev-059-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "start",
+          "expected_id": "start",
+          "correct": true,
+          "scores": {
+            "start": 12.7109375,
+            "stop": -4.546875,
+            "set_speed": -3.75390625,
+            "status": -4.55078125,
+            "reject": -4.47265625,
+            "clarify": -4.57421875
+          },
+          "ranking": [
+            "start",
+            "set_speed",
+            "reject",
+            "stop",
+            "status",
+            "clarify"
+          ],
+          "tokens": 87,
+          "finite": true
+        },
+        {
+          "id": "jev-059-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "conveyor",
+          "selected_id": "start",
+          "expected_id": "start",
+          "correct": true,
+          "scores": {
+            "reject": -4.578125,
+            "status": -4.57421875,
+            "clarify": -4.578125,
+            "start": 7.39453125,
+            "stop": -4.57421875,
+            "set_speed": -3.60546875
+          },
+          "ranking": [
+            "start",
+            "set_speed",
+            "status",
+            "stop",
+            "reject",
+            "clarify"
+          ],
+          "tokens": 106,
+          "finite": true
+        },
+        {
+          "id": "jev-060-en",
+          "language": "en",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "stop_stream",
+          "correct": true,
+          "scores": {
+            "start_stream": -4.53515625,
+            "camera_auto": -4.51953125,
+            "camera_status": -4.58203125,
+            "stop_stream": 7.9921875,
+            "clarify": -4.5390625,
+            "reject": -4.4921875
+          },
+          "ranking": [
+            "stop_stream",
+            "reject",
+            "camera_auto",
+            "start_stream",
+            "clarify",
+            "camera_status"
+          ],
+          "tokens": 92,
+          "finite": true
+        },
+        {
+          "id": "jev-060-zh",
+          "language": "zh",
+          "category": "direct",
+          "scenario": "camera",
+          "selected_id": "stop_stream",
+          "expected_id": "stop_stream",
+          "correct": true,
+          "scores": {
+            "clarify": -4.578125,
+            "camera_status": -4.5703125,
+            "stop_stream": 4.93359375,
+            "camera_auto": -4.5859375,
+            "start_stream": -4.53125,
+            "reject": -4.52734375
+          },
+          "ranking": [
+            "stop_stream",
+            "reject",
+            "start_stream",
+            "camera_status",
+            "clarify",
+            "camera_auto"
+          ],
+          "tokens": 109,
+          "finite": true
+        }
+      ]
+    }
+  },
+  "permutation_invariance": {
+    "same_selected": 106,
+    "n": 120,
+    "changed_ids": [
+      "jev-013-zh",
+      "jev-018-en",
+      "jev-019-en",
+      "jev-023-en",
+      "jev-026-zh",
+      "jev-034-zh",
+      "jev-037-zh",
+      "jev-042-zh",
+      "jev-043-en",
+      "jev-044-zh",
+      "jev-046-en",
+      "jev-046-zh",
+      "jev-047-en",
+      "jev-049-zh"
+    ]
+  },
+  "timing_ms": {
+    "min": 19.571026787161827,
+    "median": 19.66879330575466,
+    "p95_nearest_rank": 19.809182733297348,
+    "max": 19.83574405312538,
+    "samples": [
+      19.610296934843063,
+      19.61701549589634,
+      19.571026787161827,
+      19.638072699308395,
+      19.676217809319496,
+      19.616950303316116,
+      19.618231803178787,
+      19.61688883602619,
+      19.68463324010372,
+      19.597431644797325,
+      19.617272540926933,
+      19.743002951145172,
+      19.66623216867447,
+      19.619159400463104,
+      19.771195948123932,
+      19.780926406383514,
+      19.66879330575466,
+      19.702108576893806,
+      19.624024629592896,
+      19.61592584848404,
+      19.633911550045013,
+      19.71285790205002,
+      19.744573161005974,
+      19.766494631767273,
+      19.63343285024166,
+      19.65564116835594,
+      19.646774977445602,
+      19.63404007256031,
+      19.66232806444168,
+      19.672665745019913,
+      19.658584147691727,
+      19.64578405022621,
+      19.6485985070467,
+      19.70956288278103,
+      19.717564806342125,
+      19.669050350785255,
+      19.643928855657578,
+      19.711865112185478,
+      19.737372174859047,
+      19.710680469870567,
+      19.753439351916313,
+      19.758814945816994,
+      19.686231389641762,
+      19.607480615377426,
+      19.61742900311947,
+      19.809182733297348,
+      19.83574405312538,
+      19.821440801024437,
+      19.741788506507874,
+      19.759131595492363
+    ]
+  }
+}

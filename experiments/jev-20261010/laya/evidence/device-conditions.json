@@ -1,0 +1,32 @@
+{
+  "device": "orin-nx",
+  "runtime": "/home/harvest/edge-security-jetson/.venv/bin/python",
+  "python": "3.10.12",
+  "tensorrt": "10.3.0",
+  "cuda_cudart": "12.9.7",
+  "power_mode": "MAXN_SUPER (nvpmodel -q => 0)",
+  "nvidia_smi": "Orin (nvgpu), [N/A], [N/A], [N/A], [N/A]",
+  "tegrastats_sample_during_reversed": [
+    "RAM 8472/15656MB; GR3D_FREQ 91%; VDD_IN 27134mW",
+    "RAM 8479/15656MB; GR3D_FREQ 92%; VDD_IN 27894mW",
+    "RAM 8481/15656MB; GR3D_FREQ 88%; VDD_IN 28202mW"
+  ],
+  "memory_gate_before_reversed_bytes": 7382466560,
+  "memory_gate_after_reversed_bytes": 7382605824,
+  "timing_scope": "backend.infer_request only; CUDA synchronize before enqueue and after execute in native.py lines 406-411",
+  "timing_status": "exploratory inference-only; original 50-sample timing predates tegrastats sample; GPU load not measured for original timing",
+  "model_inputs": "input_ids (1,512), attention_mask (1,512), marker_pos (1,16), marker_mask (1,16), qtype (1,)",
+  "token_count_field": "records.tokens is assembled active attention length per request; min/max/mean available in raw JSON",
+  "token_counts_active_attention_length": {
+    "min": 72,
+    "max": 117,
+    "mean": 95.40833333333333,
+    "median": 95.0,
+    "n": 120
+  },
+  "evidence_script_lines": {
+    "native.py": "LayaCodec.encode lines 118-162; TensorRTBackend.infer_request lines 371-439",
+    "run_baseline.py": "dataset pass lines 44-58; timing warmup/timed loop lines 73-78",
+    "run_reversed.py": "deterministic options reversal line 46; model_visible/option_order fields line 51"
+  }
+}
