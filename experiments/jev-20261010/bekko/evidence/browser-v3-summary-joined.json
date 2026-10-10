@@ -1,0 +1,3680 @@
+{
+  "dataset_sha256": "a1c18d3f86aa92eb11d06a5034ee1884de5b1228089b77648aeefa42fdd25a8a",
+  "denominator": 120,
+  "variants": {
+    "browser_v3": "browser-quality-120-v3.json",
+    "browser_reverse_v3": "browser-quality-120-reverse-v3.json",
+    "browser_fixed_v3": "browser-quality-120-fixed-v3.json",
+    "native_fp32": "native-quality-120.json"
+  },
+  "overall": {
+    "browser_v3": {
+      "n": 120,
+      "correct": 79,
+      "accuracy": 0.6583333333333333,
+      "wilson95": [
+        0.5697483143197224,
+        0.7370956163143549
+      ]
+    },
+    "browser_reverse_v3": {
+      "n": 120,
+      "correct": 79,
+      "accuracy": 0.6583333333333333,
+      "wilson95": [
+        0.5697483143197224,
+        0.7370956163143549
+      ]
+    },
+    "browser_fixed_v3": {
+      "n": 120,
+      "correct": 77,
+      "accuracy": 0.6416666666666667,
+      "wilson95": [
+        0.5527053600179013,
+        0.7218392094967996
+      ]
+    },
+    "native_fp32": {
+      "n": 120,
+      "correct": 77,
+      "accuracy": 0.6416666666666667,
+      "wilson95": [
+        0.5527053600179013,
+        0.7218392094967996
+      ]
+    }
+  },
+  "by_language": {
+    "en": {
+      "browser_v3": {
+        "n": 60,
+        "correct": 40,
+        "accuracy": 0.6666666666666666,
+        "wilson95": [
+          0.5405686645211968,
+          0.7727073847647731
+        ]
+      },
+      "browser_reverse_v3": {
+        "n": 60,
+        "correct": 40,
+        "accuracy": 0.6666666666666666,
+        "wilson95": [
+          0.5405686645211968,
+          0.7727073847647731
+        ]
+      },
+      "browser_fixed_v3": {
+        "n": 60,
+        "correct": 41,
+        "accuracy": 0.6833333333333333,
+        "wilson95": [
+          0.5576623297382323,
+          0.7869413244763347
+        ]
+      },
+      "native_fp32": {
+        "n": 60,
+        "correct": 40,
+        "accuracy": 0.6666666666666666,
+        "wilson95": [
+          0.5405686645211968,
+          0.7727073847647731
+        ]
+      }
+    },
+    "zh": {
+      "browser_v3": {
+        "n": 60,
+        "correct": 39,
+        "accuracy": 0.65,
+        "wilson95": [
+          0.5236261884175486,
+          0.7583222559398244
+        ]
+      },
+      "browser_reverse_v3": {
+        "n": 60,
+        "correct": 39,
+        "accuracy": 0.65,
+        "wilson95": [
+          0.5236261884175486,
+          0.7583222559398244
+        ]
+      },
+      "browser_fixed_v3": {
+        "n": 60,
+        "correct": 36,
+        "accuracy": 0.6,
+        "wilson95": [
+          0.4736605349204075,
+          0.7143050946511744
+        ]
+      },
+      "native_fp32": {
+        "n": 60,
+        "correct": 37,
+        "accuracy": 0.6166666666666667,
+        "wilson95": [
+          0.49017595824099924,
+          0.7291172762591798
+        ]
+      }
+    }
+  },
+  "by_category": {
+    "OOS": {
+      "browser_v3": {
+        "n": 20,
+        "correct": 3,
+        "accuracy": 0.15,
+        "wilson95": [
+          0.052368745896216595,
+          0.36041886474075696
+        ]
+      },
+      "browser_reverse_v3": {
+        "n": 20,
+        "correct": 3,
+        "accuracy": 0.15,
+        "wilson95": [
+          0.052368745896216595,
+          0.36041886474075696
+        ]
+      },
+      "browser_fixed_v3": {
+        "n": 20,
+        "correct": 4,
+        "accuracy": 0.2,
+        "wilson95": [
+          0.08065766257979806,
+          0.41601743225189364
+        ]
+      },
+      "native_fp32": {
+        "n": 20,
+        "correct": 2,
+        "accuracy": 0.1,
+        "wilson95": [
+          0.027866481213768224,
+          0.3010336452284873
+        ]
+      }
+    },
+    "ambiguous": {
+      "browser_v3": {
+        "n": 20,
+        "correct": 3,
+        "accuracy": 0.15,
+        "wilson95": [
+          0.052368745896216595,
+          0.36041886474075696
+        ]
+      },
+      "browser_reverse_v3": {
+        "n": 20,
+        "correct": 3,
+        "accuracy": 0.15,
+        "wilson95": [
+          0.052368745896216595,
+          0.36041886474075696
+        ]
+      },
+      "browser_fixed_v3": {
+        "n": 20,
+        "correct": 2,
+        "accuracy": 0.1,
+        "wilson95": [
+          0.027866481213768224,
+          0.3010336452284873
+        ]
+      },
+      "native_fp32": {
+        "n": 20,
+        "correct": 4,
+        "accuracy": 0.2,
+        "wilson95": [
+          0.08065766257979806,
+          0.41601743225189364
+        ]
+      }
+    },
+    "direct": {
+      "browser_v3": {
+        "n": 40,
+        "correct": 40,
+        "accuracy": 1.0,
+        "wilson95": [
+          0.9123783988027135,
+          1.0000000000000002
+        ]
+      },
+      "browser_reverse_v3": {
+        "n": 40,
+        "correct": 40,
+        "accuracy": 1.0,
+        "wilson95": [
+          0.9123783988027135,
+          1.0000000000000002
+        ]
+      },
+      "browser_fixed_v3": {
+        "n": 40,
+        "correct": 40,
+        "accuracy": 1.0,
+        "wilson95": [
+          0.9123783988027135,
+          1.0000000000000002
+        ]
+      },
+      "native_fp32": {
+        "n": 40,
+        "correct": 40,
+        "accuracy": 1.0,
+        "wilson95": [
+          0.9123783988027135,
+          1.0000000000000002
+        ]
+      }
+    },
+    "negation": {
+      "browser_v3": {
+        "n": 20,
+        "correct": 16,
+        "accuracy": 0.8,
+        "wilson95": [
+          0.5839825677481064,
+          0.919342337420202
+        ]
+      },
+      "browser_reverse_v3": {
+        "n": 20,
+        "correct": 16,
+        "accuracy": 0.8,
+        "wilson95": [
+          0.5839825677481064,
+          0.919342337420202
+        ]
+      },
+      "browser_fixed_v3": {
+        "n": 20,
+        "correct": 15,
+        "accuracy": 0.75,
+        "wilson95": [
+          0.531299122381256,
+          0.8881382985923343
+        ]
+      },
+      "native_fp32": {
+        "n": 20,
+        "correct": 15,
+        "accuracy": 0.75,
+        "wilson95": [
+          0.531299122381256,
+          0.8881382985923343
+        ]
+      }
+    },
+    "paraphrase": {
+      "browser_v3": {
+        "n": 20,
+        "correct": 17,
+        "accuracy": 0.85,
+        "wilson95": [
+          0.6395811352592431,
+          0.9476312541037835
+        ]
+      },
+      "browser_reverse_v3": {
+        "n": 20,
+        "correct": 17,
+        "accuracy": 0.85,
+        "wilson95": [
+          0.6395811352592431,
+          0.9476312541037835
+        ]
+      },
+      "browser_fixed_v3": {
+        "n": 20,
+        "correct": 16,
+        "accuracy": 0.8,
+        "wilson95": [
+          0.5839825677481064,
+          0.919342337420202
+        ]
+      },
+      "native_fp32": {
+        "n": 20,
+        "correct": 16,
+        "accuracy": 0.8,
+        "wilson95": [
+          0.5839825677481064,
+          0.919342337420202
+        ]
+      }
+    }
+  },
+  "join": [
+    {
+      "id": "jev-001-en",
+      "language": "en",
+      "group": "group-001",
+      "category": "direct",
+      "scenario": "conveyor",
+      "expected_id": "set_speed",
+      "browser_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-001-zh",
+      "language": "zh",
+      "group": "group-001",
+      "category": "direct",
+      "scenario": "conveyor",
+      "expected_id": "set_speed",
+      "browser_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-002-en",
+      "language": "en",
+      "group": "group-002",
+      "category": "direct",
+      "scenario": "conveyor",
+      "expected_id": "status",
+      "browser_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-002-zh",
+      "language": "zh",
+      "group": "group-002",
+      "category": "direct",
+      "scenario": "conveyor",
+      "expected_id": "status",
+      "browser_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-003-en",
+      "language": "en",
+      "group": "group-003",
+      "category": "direct",
+      "scenario": "pump",
+      "expected_id": "start",
+      "browser_v3": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-003-zh",
+      "language": "zh",
+      "group": "group-003",
+      "category": "direct",
+      "scenario": "pump",
+      "expected_id": "start",
+      "browser_v3": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-004-en",
+      "language": "en",
+      "group": "group-004",
+      "category": "direct",
+      "scenario": "pump",
+      "expected_id": "stop",
+      "browser_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-004-zh",
+      "language": "zh",
+      "group": "group-004",
+      "category": "direct",
+      "scenario": "pump",
+      "expected_id": "stop",
+      "browser_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-005-en",
+      "language": "en",
+      "group": "group-005",
+      "category": "direct",
+      "scenario": "temperature",
+      "expected_id": "read_temp",
+      "browser_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-005-zh",
+      "language": "zh",
+      "group": "group-005",
+      "category": "direct",
+      "scenario": "temperature",
+      "expected_id": "read_temp",
+      "browser_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-006-en",
+      "language": "en",
+      "group": "group-006",
+      "category": "direct",
+      "scenario": "temperature",
+      "expected_id": "set_temp",
+      "browser_v3": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-006-zh",
+      "language": "zh",
+      "group": "group-006",
+      "category": "direct",
+      "scenario": "temperature",
+      "expected_id": "set_temp",
+      "browser_v3": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-007-en",
+      "language": "en",
+      "group": "group-007",
+      "category": "direct",
+      "scenario": "camera",
+      "expected_id": "start_stream",
+      "browser_v3": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-007-zh",
+      "language": "zh",
+      "group": "group-007",
+      "category": "direct",
+      "scenario": "camera",
+      "expected_id": "start_stream",
+      "browser_v3": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-008-en",
+      "language": "en",
+      "group": "group-008",
+      "category": "direct",
+      "scenario": "camera",
+      "expected_id": "stop_stream",
+      "browser_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-008-zh",
+      "language": "zh",
+      "group": "group-008",
+      "category": "direct",
+      "scenario": "camera",
+      "expected_id": "stop_stream",
+      "browser_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-009-en",
+      "language": "en",
+      "group": "group-009",
+      "category": "direct",
+      "scenario": "alarms",
+      "expected_id": "list_alarms",
+      "browser_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-009-zh",
+      "language": "zh",
+      "group": "group-009",
+      "category": "direct",
+      "scenario": "alarms",
+      "expected_id": "list_alarms",
+      "browser_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-010-en",
+      "language": "en",
+      "group": "group-010",
+      "category": "direct",
+      "scenario": "alarms",
+      "expected_id": "ack_alarm",
+      "browser_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-010-zh",
+      "language": "zh",
+      "group": "group-010",
+      "category": "direct",
+      "scenario": "alarms",
+      "expected_id": "ack_alarm",
+      "browser_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-011-en",
+      "language": "en",
+      "group": "group-011",
+      "category": "direct",
+      "scenario": "pump",
+      "expected_id": "set_rate",
+      "browser_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-011-zh",
+      "language": "zh",
+      "group": "group-011",
+      "category": "direct",
+      "scenario": "pump",
+      "expected_id": "set_rate",
+      "browser_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-012-en",
+      "language": "en",
+      "group": "group-012",
+      "category": "direct",
+      "scenario": "camera",
+      "expected_id": "camera_status",
+      "browser_v3": {
+        "selected_id": "camera_status",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "camera_status",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "camera_status",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "camera_status",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-012-zh",
+      "language": "zh",
+      "group": "group-012",
+      "category": "direct",
+      "scenario": "camera",
+      "expected_id": "camera_status",
+      "browser_v3": {
+        "selected_id": "camera_status",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "camera_status",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "camera_status",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "camera_status",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-013-en",
+      "language": "en",
+      "group": "group-013",
+      "category": "paraphrase",
+      "scenario": "conveyor",
+      "expected_id": "set_speed",
+      "browser_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-013-zh",
+      "language": "zh",
+      "group": "group-013",
+      "category": "paraphrase",
+      "scenario": "conveyor",
+      "expected_id": "set_speed",
+      "browser_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-014-en",
+      "language": "en",
+      "group": "group-014",
+      "category": "paraphrase",
+      "scenario": "pump",
+      "expected_id": "status",
+      "browser_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-014-zh",
+      "language": "zh",
+      "group": "group-014",
+      "category": "paraphrase",
+      "scenario": "pump",
+      "expected_id": "status",
+      "browser_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-015-en",
+      "language": "en",
+      "group": "group-015",
+      "category": "paraphrase",
+      "scenario": "temperature",
+      "expected_id": "read_temp",
+      "browser_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-015-zh",
+      "language": "zh",
+      "group": "group-015",
+      "category": "paraphrase",
+      "scenario": "temperature",
+      "expected_id": "read_temp",
+      "browser_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-016-en",
+      "language": "en",
+      "group": "group-016",
+      "category": "paraphrase",
+      "scenario": "camera",
+      "expected_id": "start_stream",
+      "browser_v3": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-016-zh",
+      "language": "zh",
+      "group": "group-016",
+      "category": "paraphrase",
+      "scenario": "camera",
+      "expected_id": "start_stream",
+      "browser_v3": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-017-en",
+      "language": "en",
+      "group": "group-017",
+      "category": "paraphrase",
+      "scenario": "alarms",
+      "expected_id": "list_alarms",
+      "browser_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-017-zh",
+      "language": "zh",
+      "group": "group-017",
+      "category": "paraphrase",
+      "scenario": "alarms",
+      "expected_id": "list_alarms",
+      "browser_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-018-en",
+      "language": "en",
+      "group": "group-018",
+      "category": "paraphrase",
+      "scenario": "pump",
+      "expected_id": "set_rate",
+      "browser_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-018-zh",
+      "language": "zh",
+      "group": "group-018",
+      "category": "paraphrase",
+      "scenario": "pump",
+      "expected_id": "set_rate",
+      "browser_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "read_rate",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-019-en",
+      "language": "en",
+      "group": "group-019",
+      "category": "paraphrase",
+      "scenario": "conveyor",
+      "expected_id": "status",
+      "browser_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-019-zh",
+      "language": "zh",
+      "group": "group-019",
+      "category": "paraphrase",
+      "scenario": "conveyor",
+      "expected_id": "status",
+      "browser_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-020-en",
+      "language": "en",
+      "group": "group-020",
+      "category": "paraphrase",
+      "scenario": "alarms",
+      "expected_id": "ack_alarm",
+      "browser_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-020-zh",
+      "language": "zh",
+      "group": "group-020",
+      "category": "paraphrase",
+      "scenario": "alarms",
+      "expected_id": "ack_alarm",
+      "browser_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-021-en",
+      "language": "en",
+      "group": "group-021",
+      "category": "paraphrase",
+      "scenario": "camera",
+      "expected_id": "stop_stream",
+      "browser_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-021-zh",
+      "language": "zh",
+      "group": "group-021",
+      "category": "paraphrase",
+      "scenario": "camera",
+      "expected_id": "stop_stream",
+      "browser_v3": {
+        "selected_id": "start_stream",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start_stream",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "start_stream",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "start_stream",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-022-en",
+      "language": "en",
+      "group": "group-022",
+      "category": "paraphrase",
+      "scenario": "temperature",
+      "expected_id": "read_temp",
+      "browser_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-022-zh",
+      "language": "zh",
+      "group": "group-022",
+      "category": "paraphrase",
+      "scenario": "temperature",
+      "expected_id": "read_temp",
+      "browser_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-023-en",
+      "language": "en",
+      "group": "group-023",
+      "category": "negation",
+      "scenario": "pump",
+      "expected_id": "stop",
+      "browser_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-023-zh",
+      "language": "zh",
+      "group": "group-023",
+      "category": "negation",
+      "scenario": "pump",
+      "expected_id": "stop",
+      "browser_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-024-en",
+      "language": "en",
+      "group": "group-024",
+      "category": "negation",
+      "scenario": "conveyor",
+      "expected_id": "status",
+      "browser_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-024-zh",
+      "language": "zh",
+      "group": "group-024",
+      "category": "negation",
+      "scenario": "conveyor",
+      "expected_id": "status",
+      "browser_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-025-en",
+      "language": "en",
+      "group": "group-025",
+      "category": "negation",
+      "scenario": "temperature",
+      "expected_id": "read_temp",
+      "browser_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-025-zh",
+      "language": "zh",
+      "group": "group-025",
+      "category": "negation",
+      "scenario": "temperature",
+      "expected_id": "read_temp",
+      "browser_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-026-en",
+      "language": "en",
+      "group": "group-026",
+      "category": "negation",
+      "scenario": "camera",
+      "expected_id": "stop_stream",
+      "browser_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-026-zh",
+      "language": "zh",
+      "group": "group-026",
+      "category": "negation",
+      "scenario": "camera",
+      "expected_id": "stop_stream",
+      "browser_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-027-en",
+      "language": "en",
+      "group": "group-027",
+      "category": "negation",
+      "scenario": "alarms",
+      "expected_id": "list_alarms",
+      "browser_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-027-zh",
+      "language": "zh",
+      "group": "group-027",
+      "category": "negation",
+      "scenario": "alarms",
+      "expected_id": "list_alarms",
+      "browser_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "list_alarms",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-028-en",
+      "language": "en",
+      "group": "group-028",
+      "category": "negation",
+      "scenario": "pump",
+      "expected_id": "set_rate",
+      "browser_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-028-zh",
+      "language": "zh",
+      "group": "group-028",
+      "category": "negation",
+      "scenario": "pump",
+      "expected_id": "set_rate",
+      "browser_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_rate",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-029-en",
+      "language": "en",
+      "group": "group-029",
+      "category": "negation",
+      "scenario": "conveyor",
+      "expected_id": "status",
+      "browser_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "status",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-029-zh",
+      "language": "zh",
+      "group": "group-029",
+      "category": "negation",
+      "scenario": "conveyor",
+      "expected_id": "status",
+      "browser_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-030-en",
+      "language": "en",
+      "group": "group-030",
+      "category": "negation",
+      "scenario": "camera",
+      "expected_id": "start_stream",
+      "browser_v3": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "start_stream",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-030-zh",
+      "language": "zh",
+      "group": "group-030",
+      "category": "negation",
+      "scenario": "camera",
+      "expected_id": "start_stream",
+      "browser_v3": {
+        "selected_id": "stop_stream",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "stop_stream",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "stop_stream",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "stop_stream",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-031-en",
+      "language": "en",
+      "group": "group-031",
+      "category": "negation",
+      "scenario": "alarms",
+      "expected_id": "ack_alarm",
+      "browser_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-031-zh",
+      "language": "zh",
+      "group": "group-031",
+      "category": "negation",
+      "scenario": "alarms",
+      "expected_id": "ack_alarm",
+      "browser_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "ack_alarm",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-032-en",
+      "language": "en",
+      "group": "group-032",
+      "category": "negation",
+      "scenario": "temperature",
+      "expected_id": "read_temp",
+      "browser_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "read_temp",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-032-zh",
+      "language": "zh",
+      "group": "group-032",
+      "category": "negation",
+      "scenario": "temperature",
+      "expected_id": "read_temp",
+      "browser_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-033-en",
+      "language": "en",
+      "group": "group-033",
+      "category": "ambiguous",
+      "scenario": "conveyor",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "set_speed",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_speed",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_speed",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_speed",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-033-zh",
+      "language": "zh",
+      "group": "group-033",
+      "category": "ambiguous",
+      "scenario": "conveyor",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "status",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-034-en",
+      "language": "en",
+      "group": "group-034",
+      "category": "ambiguous",
+      "scenario": "pump",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-034-zh",
+      "language": "zh",
+      "group": "group-034",
+      "category": "ambiguous",
+      "scenario": "pump",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "clarify",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "clarify",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "clarify",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "clarify",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-035-en",
+      "language": "en",
+      "group": "group-035",
+      "category": "ambiguous",
+      "scenario": "temperature",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-035-zh",
+      "language": "zh",
+      "group": "group-035",
+      "category": "ambiguous",
+      "scenario": "temperature",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-036-en",
+      "language": "en",
+      "group": "group-036",
+      "category": "ambiguous",
+      "scenario": "camera",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "start_stream",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start_stream",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "start_stream",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "camera_status",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-036-zh",
+      "language": "zh",
+      "group": "group-036",
+      "category": "ambiguous",
+      "scenario": "camera",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "clarify",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-037-en",
+      "language": "en",
+      "group": "group-037",
+      "category": "ambiguous",
+      "scenario": "alarms",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-037-zh",
+      "language": "zh",
+      "group": "group-037",
+      "category": "ambiguous",
+      "scenario": "alarms",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-038-en",
+      "language": "en",
+      "group": "group-038",
+      "category": "ambiguous",
+      "scenario": "conveyor",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "set_speed",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_speed",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_speed",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_speed",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-038-zh",
+      "language": "zh",
+      "group": "group-038",
+      "category": "ambiguous",
+      "scenario": "conveyor",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "set_speed",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_speed",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_speed",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_speed",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-039-en",
+      "language": "en",
+      "group": "group-039",
+      "category": "ambiguous",
+      "scenario": "pump",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "set_rate",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_rate",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_rate",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_rate",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-039-zh",
+      "language": "zh",
+      "group": "group-039",
+      "category": "ambiguous",
+      "scenario": "pump",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "set_rate",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_rate",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_rate",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_rate",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-040-en",
+      "language": "en",
+      "group": "group-040",
+      "category": "ambiguous",
+      "scenario": "temperature",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "read_temp",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "read_temp",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "read_temp",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-040-zh",
+      "language": "zh",
+      "group": "group-040",
+      "category": "ambiguous",
+      "scenario": "temperature",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "clarify",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "clarify",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "clarify",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "clarify",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-041-en",
+      "language": "en",
+      "group": "group-041",
+      "category": "ambiguous",
+      "scenario": "camera",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "camera_auto",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "camera_auto",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "camera_auto",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "camera_auto",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-041-zh",
+      "language": "zh",
+      "group": "group-041",
+      "category": "ambiguous",
+      "scenario": "camera",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "clarify",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "clarify",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "reject",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "clarify",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-042-en",
+      "language": "en",
+      "group": "group-042",
+      "category": "ambiguous",
+      "scenario": "alarms",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-042-zh",
+      "language": "zh",
+      "group": "group-042",
+      "category": "ambiguous",
+      "scenario": "alarms",
+      "expected_id": "clarify",
+      "browser_v3": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "ack_alarm",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-043-en",
+      "language": "en",
+      "group": "group-043",
+      "category": "OOS",
+      "scenario": "conveyor",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "status",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "status",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "status",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "status",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-043-zh",
+      "language": "zh",
+      "group": "group-043",
+      "category": "OOS",
+      "scenario": "conveyor",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "reject",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "reject",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "reject",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "reject",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-044-en",
+      "language": "en",
+      "group": "group-044",
+      "category": "OOS",
+      "scenario": "pump",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_rate",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-044-zh",
+      "language": "zh",
+      "group": "group-044",
+      "category": "OOS",
+      "scenario": "pump",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-045-en",
+      "language": "en",
+      "group": "group-045",
+      "category": "OOS",
+      "scenario": "temperature",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-045-zh",
+      "language": "zh",
+      "group": "group-045",
+      "category": "OOS",
+      "scenario": "temperature",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-046-en",
+      "language": "en",
+      "group": "group-046",
+      "category": "OOS",
+      "scenario": "camera",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "camera_status",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "camera_status",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "camera_auto",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "camera_status",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-046-zh",
+      "language": "zh",
+      "group": "group-046",
+      "category": "OOS",
+      "scenario": "camera",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "reject",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-047-en",
+      "language": "en",
+      "group": "group-047",
+      "category": "OOS",
+      "scenario": "alarms",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "alarm_count",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "alarm_count",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "alarm_count",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "list_alarms",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-047-zh",
+      "language": "zh",
+      "group": "group-047",
+      "category": "OOS",
+      "scenario": "alarms",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "reject",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "reject",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "list_alarms",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "list_alarms",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-048-en",
+      "language": "en",
+      "group": "group-048",
+      "category": "OOS",
+      "scenario": "pump",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-048-zh",
+      "language": "zh",
+      "group": "group-048",
+      "category": "OOS",
+      "scenario": "pump",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "stop",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-049-en",
+      "language": "en",
+      "group": "group-049",
+      "category": "OOS",
+      "scenario": "camera",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "camera_auto",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "camera_auto",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "camera_auto",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "camera_auto",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-049-zh",
+      "language": "zh",
+      "group": "group-049",
+      "category": "OOS",
+      "scenario": "camera",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "reject",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "reject",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-050-en",
+      "language": "en",
+      "group": "group-050",
+      "category": "OOS",
+      "scenario": "temperature",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-050-zh",
+      "language": "zh",
+      "group": "group-050",
+      "category": "OOS",
+      "scenario": "temperature",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_temp",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-051-en",
+      "language": "en",
+      "group": "group-051",
+      "category": "OOS",
+      "scenario": "conveyor",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-051-zh",
+      "language": "zh",
+      "group": "group-051",
+      "category": "OOS",
+      "scenario": "conveyor",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-052-en",
+      "language": "en",
+      "group": "group-052",
+      "category": "OOS",
+      "scenario": "pump",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "reject",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "start",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-052-zh",
+      "language": "zh",
+      "group": "group-052",
+      "category": "OOS",
+      "scenario": "pump",
+      "expected_id": "reject",
+      "browser_v3": {
+        "selected_id": "reject",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "reject",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "clarify",
+        "correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-053-en",
+      "language": "en",
+      "group": "group-053",
+      "category": "direct",
+      "scenario": "conveyor",
+      "expected_id": "set_speed",
+      "browser_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-053-zh",
+      "language": "zh",
+      "group": "group-053",
+      "category": "direct",
+      "scenario": "conveyor",
+      "expected_id": "set_speed",
+      "browser_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_speed",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-054-en",
+      "language": "en",
+      "group": "group-054",
+      "category": "direct",
+      "scenario": "conveyor",
+      "expected_id": "stop",
+      "browser_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-054-zh",
+      "language": "zh",
+      "group": "group-054",
+      "category": "direct",
+      "scenario": "conveyor",
+      "expected_id": "stop",
+      "browser_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "stop",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-055-en",
+      "language": "en",
+      "group": "group-055",
+      "category": "direct",
+      "scenario": "pump",
+      "expected_id": "read_rate",
+      "browser_v3": {
+        "selected_id": "read_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "read_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "read_rate",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "read_rate",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-055-zh",
+      "language": "zh",
+      "group": "group-055",
+      "category": "direct",
+      "scenario": "pump",
+      "expected_id": "read_rate",
+      "browser_v3": {
+        "selected_id": "read_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "read_rate",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "read_rate",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "read_rate",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-056-en",
+      "language": "en",
+      "group": "group-056",
+      "category": "direct",
+      "scenario": "camera",
+      "expected_id": "camera_auto",
+      "browser_v3": {
+        "selected_id": "camera_auto",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "camera_auto",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "camera_auto",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "camera_auto",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-056-zh",
+      "language": "zh",
+      "group": "group-056",
+      "category": "direct",
+      "scenario": "camera",
+      "expected_id": "camera_auto",
+      "browser_v3": {
+        "selected_id": "camera_auto",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "camera_auto",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "camera_auto",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "camera_auto",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-057-en",
+      "language": "en",
+      "group": "group-057",
+      "category": "direct",
+      "scenario": "alarms",
+      "expected_id": "alarm_count",
+      "browser_v3": {
+        "selected_id": "alarm_count",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "alarm_count",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "alarm_count",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "alarm_count",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-057-zh",
+      "language": "zh",
+      "group": "group-057",
+      "category": "direct",
+      "scenario": "alarms",
+      "expected_id": "alarm_count",
+      "browser_v3": {
+        "selected_id": "alarm_count",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "alarm_count",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "alarm_count",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "alarm_count",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-058-en",
+      "language": "en",
+      "group": "group-058",
+      "category": "direct",
+      "scenario": "temperature",
+      "expected_id": "set_temp",
+      "browser_v3": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-058-zh",
+      "language": "zh",
+      "group": "group-058",
+      "category": "direct",
+      "scenario": "temperature",
+      "expected_id": "set_temp",
+      "browser_v3": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "set_temp",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-059-en",
+      "language": "en",
+      "group": "group-059",
+      "category": "direct",
+      "scenario": "conveyor",
+      "expected_id": "start",
+      "browser_v3": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-059-zh",
+      "language": "zh",
+      "group": "group-059",
+      "category": "direct",
+      "scenario": "conveyor",
+      "expected_id": "start",
+      "browser_v3": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "start",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-060-en",
+      "language": "en",
+      "group": "group-060",
+      "category": "direct",
+      "scenario": "camera",
+      "expected_id": "stop_stream",
+      "browser_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "jev-060-zh",
+      "language": "zh",
+      "group": "group-060",
+      "category": "direct",
+      "scenario": "camera",
+      "expected_id": "stop_stream",
+      "browser_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_reverse_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "browser_fixed_v3": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      },
+      "native_fp32": {
+        "selected_id": "stop_stream",
+        "correct": true,
+        "error": null
+      }
+    }
+  ]
+}

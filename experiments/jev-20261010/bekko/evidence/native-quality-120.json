@@ -1,0 +1,4126 @@
+[
+  {
+    "id": "jev-001-en",
+    "language": "en",
+    "selected_id": "set_speed",
+    "selected_model_id": "Set conveyor speed",
+    "expected_id": "set_speed",
+    "correct": true,
+    "probabilities": [
+      0.00030367725412361324,
+      5.2669038268504664e-05,
+      0.99960857629776,
+      1.7584023908057134e-06,
+      2.285939990542829e-05,
+      1.0473802831256762e-05
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Set the conveyor speed to 40 percent.\"}",
+      "candidate_texts": [
+        "Candidate: Start the conveyor: Start selected device",
+        "Candidate: Stop the conveyor: Stop selected device",
+        "Candidate: Set conveyor speed: Set specified speed",
+        "Candidate: Read conveyor status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 481.7877900204621
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-001-zh",
+    "language": "zh",
+    "selected_id": "set_speed",
+    "selected_model_id": "设置输送带速度",
+    "expected_id": "set_speed",
+    "correct": true,
+    "probabilities": [
+      0.00027170724933966994,
+      0.001172357238829136,
+      0.9926717281341553,
+      0.00015515020641032606,
+      0.005285437684506178,
+      0.00044360931497067213
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"将输送带速度设置为 40%。\"}",
+      "candidate_texts": [
+        "Candidate: 启动输送带: 启动当前设备",
+        "Candidate: 停止输送带: 停止当前设备",
+        "Candidate: 设置输送带速度: 设置指定速度",
+        "Candidate: 读取输送带状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 60.87043404113501
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-002-en",
+    "language": "en",
+    "selected_id": "status",
+    "selected_model_id": "Read conveyor status",
+    "expected_id": "status",
+    "correct": true,
+    "probabilities": [
+      1.6029605831135996e-05,
+      5.84804638492642e-07,
+      1.3068218152056943e-07,
+      0.9999740123748779,
+      4.095257736480562e-06,
+      5.1682286539289635e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Read the current conveyor status.\"}",
+      "candidate_texts": [
+        "Candidate: Start the conveyor: Start selected device",
+        "Candidate: Stop the conveyor: Stop selected device",
+        "Candidate: Set conveyor speed: Set specified speed",
+        "Candidate: Read conveyor status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 74.74184199236333
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-002-zh",
+    "language": "zh",
+    "selected_id": "status",
+    "selected_model_id": "读取输送带状态",
+    "expected_id": "status",
+    "correct": true,
+    "probabilities": [
+      0.00026436717598699033,
+      0.0005911726038902998,
+      1.4606906006520148e-05,
+      0.9970898032188416,
+      0.0006266041309572756,
+      0.0014133919030427933
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"读取当前输送带状态。\"}",
+      "candidate_texts": [
+        "Candidate: 启动输送带: 启动当前设备",
+        "Candidate: 停止输送带: 停止当前设备",
+        "Candidate: 设置输送带速度: 设置指定速度",
+        "Candidate: 读取输送带状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 39.11788098048419
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-003-en",
+    "language": "en",
+    "selected_id": "start",
+    "selected_model_id": "Start the pump",
+    "expected_id": "start",
+    "correct": true,
+    "probabilities": [
+      0.9973965883255005,
+      0.0012619287008419633,
+      0.0005642439937219024,
+      6.466569902841002e-05,
+      0.00022011857072357088,
+      0.00029170041671022773,
+      0.00020080785907339305
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Start the pump.\"}",
+      "candidate_texts": [
+        "Candidate: Start the pump: Start selected device",
+        "Candidate: Stop the pump: Stop selected device",
+        "Candidate: Set pump rate: Set specified rate",
+        "Candidate: Read pump rate: Read current rate",
+        "Candidate: Read pump status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 54.6203029807657
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-003-zh",
+    "language": "zh",
+    "selected_id": "start",
+    "selected_model_id": "启动泵",
+    "expected_id": "start",
+    "correct": true,
+    "probabilities": [
+      0.6252919435501099,
+      0.09042651951313019,
+      0.007490219082683325,
+      0.001277413684874773,
+      0.0012558844173327088,
+      0.22705811262130737,
+      0.04719989374279976
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"启动泵。\"}",
+      "candidate_texts": [
+        "Candidate: 启动泵: 启动当前设备",
+        "Candidate: 停止泵: 停止当前设备",
+        "Candidate: 设置泵速率: 设置指定速率",
+        "Candidate: 读取泵速率: 读取当前速率",
+        "Candidate: 读取泵状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 56.633930013049394
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-004-en",
+    "language": "en",
+    "selected_id": "stop",
+    "selected_model_id": "Stop the pump",
+    "expected_id": "stop",
+    "correct": true,
+    "probabilities": [
+      0.012508004903793335,
+      0.9720670580863953,
+      0.0001950547593878582,
+      0.00028119346825405955,
+      0.007361102849245071,
+      0.006654856260865927,
+      0.0009326935396529734
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Stop the pump.\"}",
+      "candidate_texts": [
+        "Candidate: Start the pump: Start selected device",
+        "Candidate: Stop the pump: Stop selected device",
+        "Candidate: Set pump rate: Set specified rate",
+        "Candidate: Read pump rate: Read current rate",
+        "Candidate: Read pump status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 23.18209403892979
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-004-zh",
+    "language": "zh",
+    "selected_id": "stop",
+    "selected_model_id": "停止泵",
+    "expected_id": "stop",
+    "correct": true,
+    "probabilities": [
+      0.015505016781389713,
+      0.46791207790374756,
+      0.005186100490391254,
+      0.006801892071962357,
+      0.005360644310712814,
+      0.30627304315567017,
+      0.19296124577522278
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"停止泵。\"}",
+      "candidate_texts": [
+        "Candidate: 启动泵: 启动当前设备",
+        "Candidate: 停止泵: 停止当前设备",
+        "Candidate: 设置泵速率: 设置指定速率",
+        "Candidate: 读取泵速率: 读取当前速率",
+        "Candidate: 读取泵状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 52.466147986706346
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-005-en",
+    "language": "en",
+    "selected_id": "read_temp",
+    "selected_model_id": "Read current temperature",
+    "expected_id": "read_temp",
+    "correct": true,
+    "probabilities": [
+      0.9998488426208496,
+      0.0001001194104901515,
+      3.792964344029315e-05,
+      1.3104833669785876e-05
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Read the current temperature.\"}",
+      "candidate_texts": [
+        "Candidate: Read current temperature: Read current temperature",
+        "Candidate: Set temperature target: Set specified temperature",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 53.342262050136924
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-005-zh",
+    "language": "zh",
+    "selected_id": "read_temp",
+    "selected_model_id": "读取当前温度",
+    "expected_id": "read_temp",
+    "correct": true,
+    "probabilities": [
+      0.9993583559989929,
+      0.0006103122723288834,
+      2.8292608476476744e-05,
+      3.1608849440090125e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"读取当前温度。\"}",
+      "candidate_texts": [
+        "Candidate: 读取当前温度: 读取当前温度",
+        "Candidate: 设置温度目标: 设置指定温度",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 32.168419973459095
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-006-en",
+    "language": "en",
+    "selected_id": "set_temp",
+    "selected_model_id": "Set temperature target",
+    "expected_id": "set_temp",
+    "correct": true,
+    "probabilities": [
+      0.0005030069733038545,
+      0.9993987083435059,
+      7.245667075039819e-05,
+      2.59114403888816e-05
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Set the temperature target to 22 degrees.\"}",
+      "candidate_texts": [
+        "Candidate: Read current temperature: Read current temperature",
+        "Candidate: Set temperature target: Set specified temperature",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 62.82352301059291
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-006-zh",
+    "language": "zh",
+    "selected_id": "set_temp",
+    "selected_model_id": "设置温度目标",
+    "expected_id": "set_temp",
+    "correct": true,
+    "probabilities": [
+      0.0033340025693178177,
+      0.9953972697257996,
+      0.0011526866583153605,
+      0.0001160391402663663
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"将温度目标设置为 22 度。\"}",
+      "candidate_texts": [
+        "Candidate: 读取当前温度: 读取当前温度",
+        "Candidate: 设置温度目标: 设置指定温度",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 66.16774899885058
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-007-en",
+    "language": "en",
+    "selected_id": "start_stream",
+    "selected_model_id": "Start camera stream",
+    "expected_id": "start_stream",
+    "correct": true,
+    "probabilities": [
+      0.9998934268951416,
+      3.729578384081833e-05,
+      2.402453901595436e-06,
+      6.51412847219035e-05,
+      1.1077620456489967e-06,
+      6.51369987281214e-07
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Start the camera stream.\"}",
+      "candidate_texts": [
+        "Candidate: Start camera stream: Start camera stream",
+        "Candidate: Stop camera stream: Stop camera stream",
+        "Candidate: Read camera status: Read camera status",
+        "Candidate: Set automatic exposure: Set automatic exposure",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 39.61377899395302
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-007-zh",
+    "language": "zh",
+    "selected_id": "start_stream",
+    "selected_model_id": "启动相机视频流",
+    "expected_id": "start_stream",
+    "correct": true,
+    "probabilities": [
+      0.9979598522186279,
+      0.001418599276803434,
+      1.847577550506685e-05,
+      0.0002107774344040081,
+      0.0001402287307428196,
+      0.0002521160349715501
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"启动相机视频流。\"}",
+      "candidate_texts": [
+        "Candidate: 启动相机视频流: 启动相机视频流",
+        "Candidate: 停止相机视频流: 停止相机视频流",
+        "Candidate: 读取相机状态: 读取相机状态",
+        "Candidate: 设置自动曝光: 设置自动曝光",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 53.690611966885626
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-008-en",
+    "language": "en",
+    "selected_id": "stop_stream",
+    "selected_model_id": "Stop camera stream",
+    "expected_id": "stop_stream",
+    "correct": true,
+    "probabilities": [
+      0.00041211233474314213,
+      0.999292254447937,
+      6.328547897282988e-05,
+      0.00016851826512720436,
+      5.9556474298005924e-05,
+      4.2255087464582175e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Stop the camera stream.\"}",
+      "candidate_texts": [
+        "Candidate: Start camera stream: Start camera stream",
+        "Candidate: Stop camera stream: Stop camera stream",
+        "Candidate: Read camera status: Read camera status",
+        "Candidate: Set automatic exposure: Set automatic exposure",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 38.04169601062313
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-008-zh",
+    "language": "zh",
+    "selected_id": "stop_stream",
+    "selected_model_id": "停止相机视频流",
+    "expected_id": "stop_stream",
+    "correct": true,
+    "probabilities": [
+      0.01319925021380186,
+      0.9703304767608643,
+      0.000787064665928483,
+      0.002000885782763362,
+      0.0028253402560949326,
+      0.01085696741938591
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"停止相机视频流。\"}",
+      "candidate_texts": [
+        "Candidate: 启动相机视频流: 启动相机视频流",
+        "Candidate: 停止相机视频流: 停止相机视频流",
+        "Candidate: 读取相机状态: 读取相机状态",
+        "Candidate: 设置自动曝光: 设置自动曝光",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 74.63958900189027
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-009-en",
+    "language": "en",
+    "selected_id": "list_alarms",
+    "selected_model_id": "List active alarms",
+    "expected_id": "list_alarms",
+    "correct": true,
+    "probabilities": [
+      0.9966239929199219,
+      0.0013817724538967013,
+      0.0019849210511893034,
+      3.1616355045116507e-06,
+      6.233201474969974e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"List active alarms.\"}",
+      "candidate_texts": [
+        "Candidate: List active alarms: List active alarms",
+        "Candidate: Acknowledge current alarm: Acknowledge current alarm",
+        "Candidate: Read alarm count: Read alarm count",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 39.882614044472575
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-009-zh",
+    "language": "zh",
+    "selected_id": "list_alarms",
+    "selected_model_id": "列出活动告警",
+    "expected_id": "list_alarms",
+    "correct": true,
+    "probabilities": [
+      0.9998513460159302,
+      1.9779174181167036e-05,
+      0.00012498772412072867,
+      1.8686129124034778e-06,
+      1.9444903500698274e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"列出当前活动告警。\"}",
+      "candidate_texts": [
+        "Candidate: 列出活动告警: 列出活动告警",
+        "Candidate: 确认当前告警: 确认当前告警",
+        "Candidate: 读取告警数量: 读取告警数量",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 75.35104005364701
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-010-en",
+    "language": "en",
+    "selected_id": "ack_alarm",
+    "selected_model_id": "Acknowledge current alarm",
+    "expected_id": "ack_alarm",
+    "correct": true,
+    "probabilities": [
+      0.0001542699901619926,
+      0.9996123909950256,
+      0.000162656040629372,
+      5.5654738389421254e-05,
+      1.5087210158526432e-05
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Acknowledge the current alarm.\"}",
+      "candidate_texts": [
+        "Candidate: List active alarms: List active alarms",
+        "Candidate: Acknowledge current alarm: Acknowledge current alarm",
+        "Candidate: Read alarm count: Read alarm count",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 62.51072703162208
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-010-zh",
+    "language": "zh",
+    "selected_id": "ack_alarm",
+    "selected_model_id": "确认当前告警",
+    "expected_id": "ack_alarm",
+    "correct": true,
+    "probabilities": [
+      6.6727143348543905e-06,
+      0.9999545812606812,
+      6.529862730531022e-06,
+      1.2727186003758106e-05,
+      1.9438928575254977e-05
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"确认当前告警。\"}",
+      "candidate_texts": [
+        "Candidate: 列出活动告警: 列出活动告警",
+        "Candidate: 确认当前告警: 确认当前告警",
+        "Candidate: 读取告警数量: 读取告警数量",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 67.11875402834266
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-011-en",
+    "language": "en",
+    "selected_id": "set_rate",
+    "selected_model_id": "Set pump rate",
+    "expected_id": "set_rate",
+    "correct": true,
+    "probabilities": [
+      0.00030851727933622897,
+      2.5041133994818665e-05,
+      0.9985761642456055,
+      0.0010710557689890265,
+      3.734002802957548e-06,
+      1.0391843716206495e-05,
+      5.132457772560883e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Set the pump rate to 60 percent.\"}",
+      "candidate_texts": [
+        "Candidate: Start the pump: Start selected device",
+        "Candidate: Stop the pump: Stop selected device",
+        "Candidate: Set pump rate: Set specified rate",
+        "Candidate: Read pump rate: Read current rate",
+        "Candidate: Read pump status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 65.46532898209989
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-011-zh",
+    "language": "zh",
+    "selected_id": "set_rate",
+    "selected_model_id": "设置泵速率",
+    "expected_id": "set_rate",
+    "correct": true,
+    "probabilities": [
+      0.00016179561498574913,
+      0.002467416925355792,
+      0.9717180728912354,
+      0.014695792458951473,
+      2.0751551346620545e-05,
+      0.010522505268454552,
+      0.0004136754432693124
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"将泵速率设置为 60%。\"}",
+      "candidate_texts": [
+        "Candidate: 启动泵: 启动当前设备",
+        "Candidate: 停止泵: 停止当前设备",
+        "Candidate: 设置泵速率: 设置指定速率",
+        "Candidate: 读取泵速率: 读取当前速率",
+        "Candidate: 读取泵状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 66.83615100337192
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-012-en",
+    "language": "en",
+    "selected_id": "camera_status",
+    "selected_model_id": "Read camera status",
+    "expected_id": "camera_status",
+    "correct": true,
+    "probabilities": [
+      3.3544515645189676e-06,
+      4.3495256818459893e-07,
+      0.999992847442627,
+      9.177427706674735e-09,
+      1.4750139598618262e-06,
+      1.76707533228182e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Read the camera status.\"}",
+      "candidate_texts": [
+        "Candidate: Start camera stream: Start camera stream",
+        "Candidate: Stop camera stream: Stop camera stream",
+        "Candidate: Read camera status: Read camera status",
+        "Candidate: Set automatic exposure: Set automatic exposure",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 62.04719003289938
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-012-zh",
+    "language": "zh",
+    "selected_id": "camera_status",
+    "selected_model_id": "读取相机状态",
+    "expected_id": "camera_status",
+    "correct": true,
+    "probabilities": [
+      2.218859299318865e-05,
+      7.601982360938564e-05,
+      0.9952758550643921,
+      9.159959881799296e-05,
+      0.002916310215368867,
+      0.001618022215552628
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"读取相机状态。\"}",
+      "candidate_texts": [
+        "Candidate: 启动相机视频流: 启动相机视频流",
+        "Candidate: 停止相机视频流: 停止相机视频流",
+        "Candidate: 读取相机状态: 读取相机状态",
+        "Candidate: 设置自动曝光: 设置自动曝光",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 64.47993696201593
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-013-en",
+    "language": "en",
+    "selected_id": "set_speed",
+    "selected_model_id": "Set conveyor speed",
+    "expected_id": "set_speed",
+    "correct": true,
+    "probabilities": [
+      0.0023898594081401825,
+      0.0002192273095715791,
+      0.9972355961799622,
+      7.059561994537944e-06,
+      0.00012147661618655547,
+      2.683244747458957e-05
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Make the conveyor run at forty percent.\"}",
+      "candidate_texts": [
+        "Candidate: Start the conveyor: Start selected device",
+        "Candidate: Stop the conveyor: Stop selected device",
+        "Candidate: Set conveyor speed: Set specified speed",
+        "Candidate: Read conveyor status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 52.51724901609123
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-013-zh",
+    "language": "zh",
+    "selected_id": "set_speed",
+    "selected_model_id": "设置输送带速度",
+    "expected_id": "set_speed",
+    "correct": true,
+    "probabilities": [
+      0.0032959142699837685,
+      0.030823880806565285,
+      0.8677319884300232,
+      0.007066124584525824,
+      0.04087987542152405,
+      0.050202157348394394
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"让输送带运行在百分之四十。\"}",
+      "candidate_texts": [
+        "Candidate: 启动输送带: 启动当前设备",
+        "Candidate: 停止输送带: 停止当前设备",
+        "Candidate: 设置输送带速度: 设置指定速度",
+        "Candidate: 读取输送带状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 34.97524600243196
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-014-en",
+    "language": "en",
+    "selected_id": "status",
+    "selected_model_id": "Read pump status",
+    "expected_id": "status",
+    "correct": true,
+    "probabilities": [
+      0.0020582445431500673,
+      0.0002670043904799968,
+      3.923677468264941e-06,
+      0.0026711048558354378,
+      0.9939940571784973,
+      0.0007188125164248049,
+      0.00028687765006907284
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Tell me whether the pump is running.\"}",
+      "candidate_texts": [
+        "Candidate: Start the pump: Start selected device",
+        "Candidate: Stop the pump: Stop selected device",
+        "Candidate: Set pump rate: Set specified rate",
+        "Candidate: Read pump rate: Read current rate",
+        "Candidate: Read pump status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 54.28729299455881
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-014-zh",
+    "language": "zh",
+    "selected_id": "reject",
+    "selected_model_id": "拒绝不支持的请求",
+    "expected_id": "status",
+    "correct": false,
+    "probabilities": [
+      0.054426975548267365,
+      0.09857472032308578,
+      0.0028500466141849756,
+      0.006071784533560276,
+      0.17554737627506256,
+      0.3073793053627014,
+      0.3551498353481293
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"告诉我泵是否正在运行。\"}",
+      "candidate_texts": [
+        "Candidate: 启动泵: 启动当前设备",
+        "Candidate: 停止泵: 停止当前设备",
+        "Candidate: 设置泵速率: 设置指定速率",
+        "Candidate: 读取泵速率: 读取当前速率",
+        "Candidate: 读取泵状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 73.40302702505141
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-015-en",
+    "language": "en",
+    "selected_id": "read_temp",
+    "selected_model_id": "Read current temperature",
+    "expected_id": "read_temp",
+    "correct": true,
+    "probabilities": [
+      0.9877035617828369,
+      0.006071376148611307,
+      0.006179712247103453,
+      4.5310149289434776e-05
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"What temperature is it showing now?\"}",
+      "candidate_texts": [
+        "Candidate: Read current temperature: Read current temperature",
+        "Candidate: Set temperature target: Set specified temperature",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 24.592306988779455
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-015-zh",
+    "language": "zh",
+    "selected_id": "read_temp",
+    "selected_model_id": "读取当前温度",
+    "expected_id": "read_temp",
+    "correct": true,
+    "probabilities": [
+      0.7980199456214905,
+      0.17633187770843506,
+      0.023236919194459915,
+      0.0024112630635499954
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"现在显示的温度是多少？\"}",
+      "candidate_texts": [
+        "Candidate: 读取当前温度: 读取当前温度",
+        "Candidate: 设置温度目标: 设置指定温度",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 66.24159001512453
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-016-en",
+    "language": "en",
+    "selected_id": "start_stream",
+    "selected_model_id": "Start camera stream",
+    "expected_id": "start_stream",
+    "correct": true,
+    "probabilities": [
+      0.9605259299278259,
+      0.007233408745378256,
+      0.028782125562429428,
+      0.0024063880555331707,
+      0.00010893758008023724,
+      0.0009433225495740771
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Bring the camera feed online.\"}",
+      "candidate_texts": [
+        "Candidate: Start camera stream: Start camera stream",
+        "Candidate: Stop camera stream: Stop camera stream",
+        "Candidate: Read camera status: Read camera status",
+        "Candidate: Set automatic exposure: Set automatic exposure",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 40.78220500377938
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-016-zh",
+    "language": "zh",
+    "selected_id": "start_stream",
+    "selected_model_id": "启动相机视频流",
+    "expected_id": "start_stream",
+    "correct": true,
+    "probabilities": [
+      0.7810533046722412,
+      0.188707172870636,
+      0.0010037327883765101,
+      0.002633314812555909,
+      0.00849298108369112,
+      0.018109459429979324
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"让相机视频上线。\"}",
+      "candidate_texts": [
+        "Candidate: 启动相机视频流: 启动相机视频流",
+        "Candidate: 停止相机视频流: 停止相机视频流",
+        "Candidate: 读取相机状态: 读取相机状态",
+        "Candidate: 设置自动曝光: 设置自动曝光",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 42.40043001482263
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-017-en",
+    "language": "en",
+    "selected_id": "list_alarms",
+    "selected_model_id": "List active alarms",
+    "expected_id": "list_alarms",
+    "correct": true,
+    "probabilities": [
+      0.9985162615776062,
+      0.0002991379296872765,
+      0.00118174497038126,
+      6.041532856215781e-07,
+      2.300094820384402e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Show me alarms that are still active.\"}",
+      "candidate_texts": [
+        "Candidate: List active alarms: List active alarms",
+        "Candidate: Acknowledge current alarm: Acknowledge current alarm",
+        "Candidate: Read alarm count: Read alarm count",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 47.530737007036805
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-017-zh",
+    "language": "zh",
+    "selected_id": "list_alarms",
+    "selected_model_id": "列出活动告警",
+    "expected_id": "list_alarms",
+    "correct": true,
+    "probabilities": [
+      0.9757409691810608,
+      0.008237699046730995,
+      0.004027014132589102,
+      0.006970553193241358,
+      0.005023709032684565
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"显示仍处于活动状态的告警。\"}",
+      "candidate_texts": [
+        "Candidate: 列出活动告警: 列出活动告警",
+        "Candidate: 确认当前告警: 确认当前告警",
+        "Candidate: 读取告警数量: 读取告警数量",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 25.906355993356556
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-018-en",
+    "language": "en",
+    "selected_id": "set_rate",
+    "selected_model_id": "Set pump rate",
+    "expected_id": "set_rate",
+    "correct": true,
+    "probabilities": [
+      0.0014878021320328116,
+      0.00017159793060272932,
+      0.9972688555717468,
+      0.0010343252215534449,
+      9.276292075810488e-06,
+      1.9253524442319758e-05,
+      8.828938916849438e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Put the pump at sixty percent.\"}",
+      "candidate_texts": [
+        "Candidate: Start the pump: Start selected device",
+        "Candidate: Stop the pump: Stop selected device",
+        "Candidate: Set pump rate: Set specified rate",
+        "Candidate: Read pump rate: Read current rate",
+        "Candidate: Read pump status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 50.4533129860647
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-018-zh",
+    "language": "zh",
+    "selected_id": "read_rate",
+    "selected_model_id": "读取泵速率",
+    "expected_id": "set_rate",
+    "correct": false,
+    "probabilities": [
+      0.005974454805254936,
+      0.0678243637084961,
+      0.22684518992900848,
+      0.24921447038650513,
+      0.004120390396565199,
+      0.22506681084632874,
+      0.22095434367656708
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"把泵调到百分之六十。\"}",
+      "candidate_texts": [
+        "Candidate: 启动泵: 启动当前设备",
+        "Candidate: 停止泵: 停止当前设备",
+        "Candidate: 设置泵速率: 设置指定速率",
+        "Candidate: 读取泵速率: 读取当前速率",
+        "Candidate: 读取泵状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 36.41738696023822
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-019-en",
+    "language": "en",
+    "selected_id": "status",
+    "selected_model_id": "Read conveyor status",
+    "expected_id": "status",
+    "correct": true,
+    "probabilities": [
+      0.00699845002964139,
+      0.0007804680499248207,
+      2.8808235583710484e-05,
+      0.4882286489009857,
+      0.45134803652763367,
+      0.052615582942962646
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Can you confirm the belt is operating?\"}",
+      "candidate_texts": [
+        "Candidate: Start the conveyor: Start selected device",
+        "Candidate: Stop the conveyor: Stop selected device",
+        "Candidate: Set conveyor speed: Set specified speed",
+        "Candidate: Read conveyor status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 27.317742991726846
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-019-zh",
+    "language": "zh",
+    "selected_id": "reject",
+    "selected_model_id": "拒绝不支持的请求",
+    "expected_id": "status",
+    "correct": false,
+    "probabilities": [
+      0.0910433679819107,
+      0.08054913580417633,
+      0.017853684723377228,
+      0.2359483242034912,
+      0.1912044733762741,
+      0.3834010064601898
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"能确认输送带正在运行吗？\"}",
+      "candidate_texts": [
+        "Candidate: 启动输送带: 启动当前设备",
+        "Candidate: 停止输送带: 停止当前设备",
+        "Candidate: 设置输送带速度: 设置指定速度",
+        "Candidate: 读取输送带状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 32.81602298375219
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-020-en",
+    "language": "en",
+    "selected_id": "ack_alarm",
+    "selected_model_id": "Acknowledge current alarm",
+    "expected_id": "ack_alarm",
+    "correct": true,
+    "probabilities": [
+      6.382143328664824e-05,
+      0.9998536109924316,
+      6.0011549066985026e-05,
+      1.5373516362160444e-05,
+      7.155528692237567e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Mark the current alarm as acknowledged.\"}",
+      "candidate_texts": [
+        "Candidate: List active alarms: List active alarms",
+        "Candidate: Acknowledge current alarm: Acknowledge current alarm",
+        "Candidate: Read alarm count: Read alarm count",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 59.96859597507864
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-020-zh",
+    "language": "zh",
+    "selected_id": "ack_alarm",
+    "selected_model_id": "确认当前告警",
+    "expected_id": "ack_alarm",
+    "correct": true,
+    "probabilities": [
+      0.00015288544818758965,
+      0.9990842342376709,
+      0.00024024311278481036,
+      0.0003016901027876884,
+      0.00022090440324973315
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"将当前告警标记为已确认。\"}",
+      "candidate_texts": [
+        "Candidate: 列出活动告警: 列出活动告警",
+        "Candidate: 确认当前告警: 确认当前告警",
+        "Candidate: 读取告警数量: 读取告警数量",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 24.467037001159042
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-021-en",
+    "language": "en",
+    "selected_id": "stop_stream",
+    "selected_model_id": "Stop camera stream",
+    "expected_id": "stop_stream",
+    "correct": true,
+    "probabilities": [
+      0.02133151888847351,
+      0.9014168977737427,
+      0.06840965896844864,
+      0.001324571785517037,
+      0.0015822341665625572,
+      0.0059351748786866665
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Take the camera feed offline.\"}",
+      "candidate_texts": [
+        "Candidate: Start camera stream: Start camera stream",
+        "Candidate: Stop camera stream: Stop camera stream",
+        "Candidate: Read camera status: Read camera status",
+        "Candidate: Set automatic exposure: Set automatic exposure",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 30.25711403461173
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-021-zh",
+    "language": "zh",
+    "selected_id": "start_stream",
+    "selected_model_id": "启动相机视频流",
+    "expected_id": "stop_stream",
+    "correct": false,
+    "probabilities": [
+      0.8502820730209351,
+      0.1317451149225235,
+      0.0005014953785575926,
+      0.0021020721178501844,
+      0.004178384784609079,
+      0.011190835386514664
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"让相机视频下线。\"}",
+      "candidate_texts": [
+        "Candidate: 启动相机视频流: 启动相机视频流",
+        "Candidate: 停止相机视频流: 停止相机视频流",
+        "Candidate: 读取相机状态: 读取相机状态",
+        "Candidate: 设置自动曝光: 设置自动曝光",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 31.949658994562924
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-022-en",
+    "language": "en",
+    "selected_id": "read_temp",
+    "selected_model_id": "Read current temperature",
+    "expected_id": "read_temp",
+    "correct": true,
+    "probabilities": [
+      0.9998968839645386,
+      1.4640082554251421e-05,
+      8.463093399768695e-05,
+      3.840079443762079e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Tell me the current temperature reading.\"}",
+      "candidate_texts": [
+        "Candidate: Read current temperature: Read current temperature",
+        "Candidate: Set temperature target: Set specified temperature",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 27.982256026007235
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-022-zh",
+    "language": "zh",
+    "selected_id": "read_temp",
+    "selected_model_id": "读取当前温度",
+    "expected_id": "read_temp",
+    "correct": true,
+    "probabilities": [
+      0.9934056997299194,
+      0.0018506828928366303,
+      0.004335631616413593,
+      0.00040799914859235287
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"告诉我当前温度读数。\"}",
+      "candidate_texts": [
+        "Candidate: 读取当前温度: 读取当前温度",
+        "Candidate: 设置温度目标: 设置指定温度",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 37.15179703431204
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-023-en",
+    "language": "en",
+    "selected_id": "stop",
+    "selected_model_id": "Stop the pump",
+    "expected_id": "stop",
+    "correct": true,
+    "probabilities": [
+      0.016770033165812492,
+      0.9498135447502136,
+      0.00015826095477677882,
+      0.00011009205627487972,
+      0.0024777294602245092,
+      0.028267350047826767,
+      0.0024029500782489777
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Do not start the pump; stop it if it is running.\"}",
+      "candidate_texts": [
+        "Candidate: Start the pump: Start selected device",
+        "Candidate: Stop the pump: Stop selected device",
+        "Candidate: Set pump rate: Set specified rate",
+        "Candidate: Read pump rate: Read current rate",
+        "Candidate: Read pump status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 27.101721963845193
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-023-zh",
+    "language": "zh",
+    "selected_id": "clarify",
+    "selected_model_id": "请求澄清",
+    "expected_id": "stop",
+    "correct": false,
+    "probabilities": [
+      0.02331716939806938,
+      0.2650219202041626,
+      0.00344581576064229,
+      0.0038836863823235035,
+      0.005430164281278849,
+      0.5036211013793945,
+      0.19528017938137054
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"不要启动泵；如果正在运行就停止。\"}",
+      "candidate_texts": [
+        "Candidate: 启动泵: 启动当前设备",
+        "Candidate: 停止泵: 停止当前设备",
+        "Candidate: 设置泵速率: 设置指定速率",
+        "Candidate: 读取泵速率: 读取当前速率",
+        "Candidate: 读取泵状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 44.59205496823415
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-024-en",
+    "language": "en",
+    "selected_id": "status",
+    "selected_model_id": "Read conveyor status",
+    "expected_id": "status",
+    "correct": true,
+    "probabilities": [
+      4.768385224451777e-06,
+      5.895119556953432e-06,
+      0.00023424917890224606,
+      0.9996814727783203,
+      5.959142799838446e-05,
+      1.396808056597365e-05
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Do not change the conveyor speed; report its status.\"}",
+      "candidate_texts": [
+        "Candidate: Start the conveyor: Start selected device",
+        "Candidate: Stop the conveyor: Stop selected device",
+        "Candidate: Set conveyor speed: Set specified speed",
+        "Candidate: Read conveyor status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 29.63628200814128
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-024-zh",
+    "language": "zh",
+    "selected_id": "reject",
+    "selected_model_id": "拒绝不支持的请求",
+    "expected_id": "status",
+    "correct": false,
+    "probabilities": [
+      0.0068607269786298275,
+      0.09184807538986206,
+      0.01197200920432806,
+      0.2686382532119751,
+      0.12561346590518951,
+      0.49506744742393494
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"不要改变输送带速度；报告其状态。\"}",
+      "candidate_texts": [
+        "Candidate: 启动输送带: 启动当前设备",
+        "Candidate: 停止输送带: 停止当前设备",
+        "Candidate: 设置输送带速度: 设置指定速度",
+        "Candidate: 读取输送带状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 61.580391018651426
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-025-en",
+    "language": "en",
+    "selected_id": "read_temp",
+    "selected_model_id": "Read current temperature",
+    "expected_id": "read_temp",
+    "correct": true,
+    "probabilities": [
+      0.9991890788078308,
+      0.0003877072304021567,
+      0.0004136910429224372,
+      9.549374226480722e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Do not set a new temperature target; read the current value.\"}",
+      "candidate_texts": [
+        "Candidate: Read current temperature: Read current temperature",
+        "Candidate: Set temperature target: Set specified temperature",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 38.21392700774595
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-025-zh",
+    "language": "zh",
+    "selected_id": "read_temp",
+    "selected_model_id": "读取当前温度",
+    "expected_id": "read_temp",
+    "correct": true,
+    "probabilities": [
+      0.9926573634147644,
+      0.0009664353565312922,
+      0.004813492298126221,
+      0.0015626978129148483
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"不要设置新的温度目标；读取当前值。\"}",
+      "candidate_texts": [
+        "Candidate: 读取当前温度: 读取当前温度",
+        "Candidate: 设置温度目标: 设置指定温度",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 27.36676298081875
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-026-en",
+    "language": "en",
+    "selected_id": "stop_stream",
+    "selected_model_id": "Stop camera stream",
+    "expected_id": "stop_stream",
+    "correct": true,
+    "probabilities": [
+      0.00125475088134408,
+      0.9971832633018494,
+      7.350818486884236e-05,
+      0.0008631926611997187,
+      0.0005463193519972265,
+      7.894659938756377e-05
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Do not start the camera stream; stop it if active.\"}",
+      "candidate_texts": [
+        "Candidate: Start camera stream: Start camera stream",
+        "Candidate: Stop camera stream: Stop camera stream",
+        "Candidate: Read camera status: Read camera status",
+        "Candidate: Set automatic exposure: Set automatic exposure",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 57.61192401405424
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-026-zh",
+    "language": "zh",
+    "selected_id": "stop_stream",
+    "selected_model_id": "停止相机视频流",
+    "expected_id": "stop_stream",
+    "correct": true,
+    "probabilities": [
+      0.000974512193351984,
+      0.9840222001075745,
+      1.639187576074619e-05,
+      0.0003932187973987311,
+      0.00877488125115633,
+      0.005818773526698351
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"不要启动相机视频流；如果已启动就停止。\"}",
+      "candidate_texts": [
+        "Candidate: 启动相机视频流: 启动相机视频流",
+        "Candidate: 停止相机视频流: 停止相机视频流",
+        "Candidate: 读取相机状态: 读取相机状态",
+        "Candidate: 设置自动曝光: 设置自动曝光",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 55.402459984179586
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-027-en",
+    "language": "en",
+    "selected_id": "list_alarms",
+    "selected_model_id": "List active alarms",
+    "expected_id": "list_alarms",
+    "correct": true,
+    "probabilities": [
+      0.996121346950531,
+      0.00020913944172207266,
+      0.0036628451198339462,
+      4.6367144932446536e-06,
+      2.0258235053915996e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Do not acknowledge an alarm yet; list active alarms.\"}",
+      "candidate_texts": [
+        "Candidate: List active alarms: List active alarms",
+        "Candidate: Acknowledge current alarm: Acknowledge current alarm",
+        "Candidate: Read alarm count: Read alarm count",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 27.273719024378806
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-027-zh",
+    "language": "zh",
+    "selected_id": "list_alarms",
+    "selected_model_id": "列出活动告警",
+    "expected_id": "list_alarms",
+    "correct": true,
+    "probabilities": [
+      0.9632508754730225,
+      0.00011066814477089792,
+      0.00030974752735346556,
+      0.0013546367408707738,
+      0.034974105656147
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"暂时不要确认告警；列出活动告警。\"}",
+      "candidate_texts": [
+        "Candidate: 列出活动告警: 列出活动告警",
+        "Candidate: 确认当前告警: 确认当前告警",
+        "Candidate: 读取告警数量: 读取告警数量",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 26.51866397354752
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-028-en",
+    "language": "en",
+    "selected_id": "set_rate",
+    "selected_model_id": "Set pump rate",
+    "expected_id": "set_rate",
+    "correct": true,
+    "probabilities": [
+      0.002681293524801731,
+      0.008256005123257637,
+      0.9499949216842651,
+      0.02212435007095337,
+      0.0005915829096920788,
+      0.010982310399413109,
+      0.005369605962187052
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Do not raise the pump rate; set it to 30 percent.\"}",
+      "candidate_texts": [
+        "Candidate: Start the pump: Start selected device",
+        "Candidate: Stop the pump: Stop selected device",
+        "Candidate: Set pump rate: Set specified rate",
+        "Candidate: Read pump rate: Read current rate",
+        "Candidate: Read pump status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 54.829823959153146
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-028-zh",
+    "language": "zh",
+    "selected_id": "set_rate",
+    "selected_model_id": "设置泵速率",
+    "expected_id": "set_rate",
+    "correct": true,
+    "probabilities": [
+      0.0008695574360899627,
+      0.05881091579794884,
+      0.6544272303581238,
+      0.08789961785078049,
+      0.0004126995336264372,
+      0.1679520159959793,
+      0.029627922922372818
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"不要提高泵速率；将其设置为 30%。\"}",
+      "candidate_texts": [
+        "Candidate: 启动泵: 启动当前设备",
+        "Candidate: 停止泵: 停止当前设备",
+        "Candidate: 设置泵速率: 设置指定速率",
+        "Candidate: 读取泵速率: 读取当前速率",
+        "Candidate: 读取泵状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 32.4976269621402
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-029-en",
+    "language": "en",
+    "selected_id": "status",
+    "selected_model_id": "Read conveyor status",
+    "expected_id": "status",
+    "correct": true,
+    "probabilities": [
+      1.1729377547453623e-05,
+      2.3966753360582516e-05,
+      5.529599320652778e-07,
+      0.9998899698257446,
+      5.965811214991845e-05,
+      1.405041530233575e-05
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Do not stop the conveyor; read its status.\"}",
+      "candidate_texts": [
+        "Candidate: Start the conveyor: Start selected device",
+        "Candidate: Stop the conveyor: Stop selected device",
+        "Candidate: Set conveyor speed: Set specified speed",
+        "Candidate: Read conveyor status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 61.69006496202201
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-029-zh",
+    "language": "zh",
+    "selected_id": "reject",
+    "selected_model_id": "拒绝不支持的请求",
+    "expected_id": "status",
+    "correct": false,
+    "probabilities": [
+      0.003493398427963257,
+      0.04796218499541283,
+      0.00158125685993582,
+      0.16278237104415894,
+      0.17932137846946716,
+      0.6048593521118164
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"不要停止输送带；读取其状态。\"}",
+      "candidate_texts": [
+        "Candidate: 启动输送带: 启动当前设备",
+        "Candidate: 停止输送带: 停止当前设备",
+        "Candidate: 设置输送带速度: 设置指定速度",
+        "Candidate: 读取输送带状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 54.99299499206245
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-030-en",
+    "language": "en",
+    "selected_id": "start_stream",
+    "selected_model_id": "Start camera stream",
+    "expected_id": "start_stream",
+    "correct": true,
+    "probabilities": [
+      0.9666356444358826,
+      0.024004140868782997,
+      0.004190454725176096,
+      0.0013514709426090121,
+      0.00166995357722044,
+      0.002148411003872752
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Do not take the camera feed offline; start it.\"}",
+      "candidate_texts": [
+        "Candidate: Start camera stream: Start camera stream",
+        "Candidate: Stop camera stream: Stop camera stream",
+        "Candidate: Read camera status: Read camera status",
+        "Candidate: Set automatic exposure: Set automatic exposure",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 58.48232499556616
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-030-zh",
+    "language": "zh",
+    "selected_id": "stop_stream",
+    "selected_model_id": "停止相机视频流",
+    "expected_id": "start_stream",
+    "correct": false,
+    "probabilities": [
+      0.33614033460617065,
+      0.4267069399356842,
+      0.00026488807634450495,
+      0.005408107303082943,
+      0.02624041587114334,
+      0.20523923635482788
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"不要让相机视频下线；启动它。\"}",
+      "candidate_texts": [
+        "Candidate: 启动相机视频流: 启动相机视频流",
+        "Candidate: 停止相机视频流: 停止相机视频流",
+        "Candidate: 读取相机状态: 读取相机状态",
+        "Candidate: 设置自动曝光: 设置自动曝光",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 43.21873397566378
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-031-en",
+    "language": "en",
+    "selected_id": "ack_alarm",
+    "selected_model_id": "Acknowledge current alarm",
+    "expected_id": "ack_alarm",
+    "correct": true,
+    "probabilities": [
+      7.799046579748392e-05,
+      0.9992671608924866,
+      6.697791832266375e-05,
+      0.0005485815345309675,
+      3.929296144633554e-05
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Do not clear the alarm; acknowledge the current one.\"}",
+      "candidate_texts": [
+        "Candidate: List active alarms: List active alarms",
+        "Candidate: Acknowledge current alarm: Acknowledge current alarm",
+        "Candidate: Read alarm count: Read alarm count",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 45.76717800227925
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-031-zh",
+    "language": "zh",
+    "selected_id": "ack_alarm",
+    "selected_model_id": "确认当前告警",
+    "expected_id": "ack_alarm",
+    "correct": true,
+    "probabilities": [
+      1.7104228390962817e-05,
+      0.9996101260185242,
+      2.958866616609157e-06,
+      9.093795961234719e-05,
+      0.00027897293330170214
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"不要清除告警；确认当前告警。\"}",
+      "candidate_texts": [
+        "Candidate: 列出活动告警: 列出活动告警",
+        "Candidate: 确认当前告警: 确认当前告警",
+        "Candidate: 读取告警数量: 读取告警数量",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 39.5788709865883
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-032-en",
+    "language": "en",
+    "selected_id": "read_temp",
+    "selected_model_id": "Read current temperature",
+    "expected_id": "read_temp",
+    "correct": true,
+    "probabilities": [
+      0.863625168800354,
+      0.044239576905965805,
+      0.0853022038936615,
+      0.0068330648355185986
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Do not change the temperature; report it.\"}",
+      "candidate_texts": [
+        "Candidate: Read current temperature: Read current temperature",
+        "Candidate: Set temperature target: Set specified temperature",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 40.26946396334097
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-032-zh",
+    "language": "zh",
+    "selected_id": "clarify",
+    "selected_model_id": "请求澄清",
+    "expected_id": "read_temp",
+    "correct": false,
+    "probabilities": [
+      0.15025542676448822,
+      0.1650129109621048,
+      0.4683394134044647,
+      0.21639227867126465
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"不要改变温度；报告温度。\"}",
+      "candidate_texts": [
+        "Candidate: 读取当前温度: 读取当前温度",
+        "Candidate: 设置温度目标: 设置指定温度",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 47.69055196084082
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-033-en",
+    "language": "en",
+    "selected_id": "set_speed",
+    "selected_model_id": "Set conveyor speed",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      0.17899611592292786,
+      0.07881149649620056,
+      0.5930143594741821,
+      0.06468657404184341,
+      0.06427690386772156,
+      0.020214596763253212
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Adjust the conveyor.\"}",
+      "candidate_texts": [
+        "Candidate: Start the conveyor: Start selected device",
+        "Candidate: Stop the conveyor: Stop selected device",
+        "Candidate: Set conveyor speed: Set specified speed",
+        "Candidate: Read conveyor status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 46.52501700911671
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-033-zh",
+    "language": "zh",
+    "selected_id": "reject",
+    "selected_model_id": "拒绝不支持的请求",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      0.08489397168159485,
+      0.1681775450706482,
+      0.010140183381736279,
+      0.07861055433750153,
+      0.225108340382576,
+      0.4330694079399109
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"调整输送带。\"}",
+      "candidate_texts": [
+        "Candidate: 启动输送带: 启动当前设备",
+        "Candidate: 停止输送带: 停止当前设备",
+        "Candidate: 设置输送带速度: 设置指定速度",
+        "Candidate: 读取输送带状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 34.371577959973365
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-034-en",
+    "language": "en",
+    "selected_id": "start",
+    "selected_model_id": "Start the pump",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      0.6440195441246033,
+      0.1414613276720047,
+      0.0033292286098003387,
+      0.016197444871068,
+      0.09923835098743439,
+      0.06318802386522293,
+      0.03256608918309212
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Handle the pump.\"}",
+      "candidate_texts": [
+        "Candidate: Start the pump: Start selected device",
+        "Candidate: Stop the pump: Stop selected device",
+        "Candidate: Set pump rate: Set specified rate",
+        "Candidate: Read pump rate: Read current rate",
+        "Candidate: Read pump status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 39.325270045083016
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-034-zh",
+    "language": "zh",
+    "selected_id": "clarify",
+    "selected_model_id": "请求澄清",
+    "expected_id": "clarify",
+    "correct": true,
+    "probabilities": [
+      0.02570083737373352,
+      0.3288591802120209,
+      0.0080539146438241,
+      0.006573482416570187,
+      0.004518797621130943,
+      0.47573599219322205,
+      0.1505577564239502
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"处理泵。\"}",
+      "candidate_texts": [
+        "Candidate: 启动泵: 启动当前设备",
+        "Candidate: 停止泵: 停止当前设备",
+        "Candidate: 设置泵速率: 设置指定速率",
+        "Candidate: 读取泵速率: 读取当前速率",
+        "Candidate: 读取泵状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 29.20837904093787
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-035-en",
+    "language": "en",
+    "selected_id": "set_temp",
+    "selected_model_id": "Set temperature target",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      0.009053714573383331,
+      0.9893993735313416,
+      0.0014233436668291688,
+      0.00012350331235211343
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Make the temperature right.\"}",
+      "candidate_texts": [
+        "Candidate: Read current temperature: Read current temperature",
+        "Candidate: Set temperature target: Set specified temperature",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 24.777418992016464
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-035-zh",
+    "language": "zh",
+    "selected_id": "set_temp",
+    "selected_model_id": "设置温度目标",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      0.022418711334466934,
+      0.9397700428962708,
+      0.03355531394481659,
+      0.0042560468427836895
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"把温度调合适。\"}",
+      "candidate_texts": [
+        "Candidate: 读取当前温度: 读取当前温度",
+        "Candidate: 设置温度目标: 设置指定温度",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 49.93764701066539
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-036-en",
+    "language": "en",
+    "selected_id": "camera_status",
+    "selected_model_id": "Read camera status",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      0.3802882730960846,
+      0.09832844138145447,
+      0.44861501455307007,
+      0.02877744846045971,
+      0.025825168937444687,
+      0.01816561631858349
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Deal with the camera.\"}",
+      "candidate_texts": [
+        "Candidate: Start camera stream: Start camera stream",
+        "Candidate: Stop camera stream: Stop camera stream",
+        "Candidate: Read camera status: Read camera status",
+        "Candidate: Set automatic exposure: Set automatic exposure",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 58.51631402038038
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-036-zh",
+    "language": "zh",
+    "selected_id": "clarify",
+    "selected_model_id": "请求澄清",
+    "expected_id": "clarify",
+    "correct": true,
+    "probabilities": [
+      0.007126259617507458,
+      0.02824094146490097,
+      0.09819120168685913,
+      0.027028072625398636,
+      0.42729127407073975,
+      0.41212233901023865
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"处理相机。\"}",
+      "candidate_texts": [
+        "Candidate: 启动相机视频流: 启动相机视频流",
+        "Candidate: 停止相机视频流: 停止相机视频流",
+        "Candidate: 读取相机状态: 读取相机状态",
+        "Candidate: 设置自动曝光: 设置自动曝光",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 63.595317013096064
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-037-en",
+    "language": "en",
+    "selected_id": "ack_alarm",
+    "selected_model_id": "Acknowledge current alarm",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      0.024044586345553398,
+      0.9160954356193542,
+      0.031075380742549896,
+      0.024873478338122368,
+      0.003911132458597422
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Take care of the alarm.\"}",
+      "candidate_texts": [
+        "Candidate: List active alarms: List active alarms",
+        "Candidate: Acknowledge current alarm: Acknowledge current alarm",
+        "Candidate: Read alarm count: Read alarm count",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 50.387079012580216
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-037-zh",
+    "language": "zh",
+    "selected_id": "ack_alarm",
+    "selected_model_id": "确认当前告警",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      0.099146269261837,
+      0.8570863008499146,
+      0.03188928961753845,
+      0.006447302643209696,
+      0.005430855322629213
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"处理告警。\"}",
+      "candidate_texts": [
+        "Candidate: 列出活动告警: 列出活动告警",
+        "Candidate: 确认当前告警: 确认当前告警",
+        "Candidate: 读取告警数量: 读取告警数量",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 53.650334011763334
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-038-en",
+    "language": "en",
+    "selected_id": "set_speed",
+    "selected_model_id": "Set conveyor speed",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      0.0007259861449711025,
+      9.089658124139532e-05,
+      0.9987381100654602,
+      5.974281975795748e-06,
+      0.00036941998405382037,
+      6.958219455555081e-05
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Set the belt to a suitable speed.\"}",
+      "candidate_texts": [
+        "Candidate: Start the conveyor: Start selected device",
+        "Candidate: Stop the conveyor: Stop selected device",
+        "Candidate: Set conveyor speed: Set specified speed",
+        "Candidate: Read conveyor status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 52.904322976246476
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-038-zh",
+    "language": "zh",
+    "selected_id": "set_speed",
+    "selected_model_id": "设置输送带速度",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      0.000467951555037871,
+      0.00034579919883981347,
+      0.9963909983634949,
+      0.00016588953440077603,
+      0.0017807596595957875,
+      0.0008486034348607063
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"把输送带设置为合适速度。\"}",
+      "candidate_texts": [
+        "Candidate: 启动输送带: 启动当前设备",
+        "Candidate: 停止输送带: 停止当前设备",
+        "Candidate: 设置输送带速度: 设置指定速度",
+        "Candidate: 读取输送带状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 51.060843048617244
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-039-en",
+    "language": "en",
+    "selected_id": "set_rate",
+    "selected_model_id": "Set pump rate",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      9.832638170337304e-05,
+      2.7176101866643876e-05,
+      0.9966291785240173,
+      0.003123319474980235,
+      2.5577055566827767e-05,
+      6.417536496883258e-05,
+      3.2137526432052255e-05
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Change the pump rate as needed.\"}",
+      "candidate_texts": [
+        "Candidate: Start the pump: Start selected device",
+        "Candidate: Stop the pump: Stop selected device",
+        "Candidate: Set pump rate: Set specified rate",
+        "Candidate: Read pump rate: Read current rate",
+        "Candidate: Read pump status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 28.23612600332126
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-039-zh",
+    "language": "zh",
+    "selected_id": "set_rate",
+    "selected_model_id": "设置泵速率",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      0.001676355255767703,
+      0.008287712931632996,
+      0.8237142562866211,
+      0.06892993301153183,
+      0.00022768584312871099,
+      0.08847466856241226,
+      0.0086893355473876
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"按需要调整泵速率。\"}",
+      "candidate_texts": [
+        "Candidate: 启动泵: 启动当前设备",
+        "Candidate: 停止泵: 停止当前设备",
+        "Candidate: 设置泵速率: 设置指定速率",
+        "Candidate: 读取泵速率: 读取当前速率",
+        "Candidate: 读取泵状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 65.10066002374515
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-040-en",
+    "language": "en",
+    "selected_id": "read_temp",
+    "selected_model_id": "Read current temperature",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      0.5521373748779297,
+      0.275301456451416,
+      0.13663384318351746,
+      0.035927362740039825
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Fix the temperature issue.\"}",
+      "candidate_texts": [
+        "Candidate: Read current temperature: Read current temperature",
+        "Candidate: Set temperature target: Set specified temperature",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 28.10779499122873
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-040-zh",
+    "language": "zh",
+    "selected_id": "clarify",
+    "selected_model_id": "请求澄清",
+    "expected_id": "clarify",
+    "correct": true,
+    "probabilities": [
+      0.0576174296438694,
+      0.18222425878047943,
+      0.6229502558708191,
+      0.13720807433128357
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"解决温度问题。\"}",
+      "candidate_texts": [
+        "Candidate: 读取当前温度: 读取当前温度",
+        "Candidate: 设置温度目标: 设置指定温度",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 53.689405031036586
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-041-en",
+    "language": "en",
+    "selected_id": "camera_auto",
+    "selected_model_id": "Set automatic exposure",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      0.026391562074422836,
+      0.010703790001571178,
+      0.021425927057862282,
+      0.9263685345649719,
+      0.012634393759071827,
+      0.0024758311919867992
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Change camera settings.\"}",
+      "candidate_texts": [
+        "Candidate: Start camera stream: Start camera stream",
+        "Candidate: Stop camera stream: Stop camera stream",
+        "Candidate: Read camera status: Read camera status",
+        "Candidate: Set automatic exposure: Set automatic exposure",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 30.636387993581593
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-041-zh",
+    "language": "zh",
+    "selected_id": "clarify",
+    "selected_model_id": "请求澄清",
+    "expected_id": "clarify",
+    "correct": true,
+    "probabilities": [
+      0.001658741501159966,
+      0.014499173499643803,
+      0.015558470971882343,
+      0.08133302628993988,
+      0.5380574464797974,
+      0.3488931357860565
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"修改相机设置。\"}",
+      "candidate_texts": [
+        "Candidate: 启动相机视频流: 启动相机视频流",
+        "Candidate: 停止相机视频流: 停止相机视频流",
+        "Candidate: 读取相机状态: 读取相机状态",
+        "Candidate: 设置自动曝光: 设置自动曝光",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 42.518161004409194
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-042-en",
+    "language": "en",
+    "selected_id": "ack_alarm",
+    "selected_model_id": "Acknowledge current alarm",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      0.3943440616130829,
+      0.46595796942710876,
+      0.05575813353061676,
+      0.05915680155158043,
+      0.0247830580919981
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Make these alarms go away.\"}",
+      "candidate_texts": [
+        "Candidate: List active alarms: List active alarms",
+        "Candidate: Acknowledge current alarm: Acknowledge current alarm",
+        "Candidate: Read alarm count: Read alarm count",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 61.22568401042372
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-042-zh",
+    "language": "zh",
+    "selected_id": "ack_alarm",
+    "selected_model_id": "确认当前告警",
+    "expected_id": "clarify",
+    "correct": false,
+    "probabilities": [
+      0.010372084565460682,
+      0.5944579839706421,
+      0.003636589040979743,
+      0.11634694784879684,
+      0.27518635988235474
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"让这些告警消失。\"}",
+      "candidate_texts": [
+        "Candidate: 列出活动告警: 列出活动告警",
+        "Candidate: 确认当前告警: 确认当前告警",
+        "Candidate: 读取告警数量: 读取告警数量",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 52.344176976475865
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-043-en",
+    "language": "en",
+    "selected_id": "status",
+    "selected_model_id": "Read conveyor status",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.20550398528575897,
+      0.007837622426450253,
+      0.0005501788109540939,
+      0.6605298519134521,
+      0.008826020173728466,
+      0.11675239354372025
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Send an email about the conveyor.\"}",
+      "candidate_texts": [
+        "Candidate: Start the conveyor: Start selected device",
+        "Candidate: Stop the conveyor: Stop selected device",
+        "Candidate: Set conveyor speed: Set specified speed",
+        "Candidate: Read conveyor status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 25.74913197895512
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-043-zh",
+    "language": "zh",
+    "selected_id": "reject",
+    "selected_model_id": "拒绝不支持的请求",
+    "expected_id": "reject",
+    "correct": true,
+    "probabilities": [
+      0.16134263575077057,
+      0.0842675194144249,
+      0.006754444446414709,
+      0.020548783242702484,
+      0.1434929072856903,
+      0.5835937261581421
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"发送关于输送带的电子邮件。\"}",
+      "candidate_texts": [
+        "Candidate: 启动输送带: 启动当前设备",
+        "Candidate: 停止输送带: 停止当前设备",
+        "Candidate: 设置输送带速度: 设置指定速度",
+        "Candidate: 读取输送带状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 48.61953400541097
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-044-en",
+    "language": "en",
+    "selected_id": "start",
+    "selected_model_id": "Start the pump",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.7060152292251587,
+      0.06399472057819366,
+      0.02170986495912075,
+      0.006577672902494669,
+      0.1233973503112793,
+      0.017539938911795616,
+      0.060765184462070465
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Order a replacement pump.\"}",
+      "candidate_texts": [
+        "Candidate: Start the pump: Start selected device",
+        "Candidate: Stop the pump: Stop selected device",
+        "Candidate: Set pump rate: Set specified rate",
+        "Candidate: Read pump rate: Read current rate",
+        "Candidate: Read pump status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 31.424472981598228
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-044-zh",
+    "language": "zh",
+    "selected_id": "clarify",
+    "selected_model_id": "请求澄清",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.021458014845848083,
+      0.2383383959531784,
+      0.026887109503149986,
+      0.012786664068698883,
+      0.00789358839392662,
+      0.5369603037834167,
+      0.15567588806152344
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"订购替换泵。\"}",
+      "candidate_texts": [
+        "Candidate: 启动泵: 启动当前设备",
+        "Candidate: 停止泵: 停止当前设备",
+        "Candidate: 设置泵速率: 设置指定速率",
+        "Candidate: 读取泵速率: 读取当前速率",
+        "Candidate: 读取泵状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 41.373167012352496
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-045-en",
+    "language": "en",
+    "selected_id": "set_temp",
+    "selected_model_id": "Set temperature target",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.03746938332915306,
+      0.956712007522583,
+      0.003910803701728582,
+      0.0019078237237408757
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Predict tomorrow’s temperature.\"}",
+      "candidate_texts": [
+        "Candidate: Read current temperature: Read current temperature",
+        "Candidate: Set temperature target: Set specified temperature",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 23.198409005999565
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-045-zh",
+    "language": "zh",
+    "selected_id": "set_temp",
+    "selected_model_id": "设置温度目标",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.06714554876089096,
+      0.9313874244689941,
+      0.001331619336269796,
+      0.0001353148400085047
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"预测明天的温度。\"}",
+      "candidate_texts": [
+        "Candidate: 读取当前温度: 读取当前温度",
+        "Candidate: 设置温度目标: 设置指定温度",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 61.059847997967154
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-046-en",
+    "language": "en",
+    "selected_id": "camera_status",
+    "selected_model_id": "Read camera status",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.006695696618407965,
+      0.0008566540200263262,
+      0.7338759899139404,
+      0.004557095933705568,
+      0.20187893509864807,
+      0.05213557183742523
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Recognize a person in the camera image.\"}",
+      "candidate_texts": [
+        "Candidate: Start camera stream: Start camera stream",
+        "Candidate: Stop camera stream: Stop camera stream",
+        "Candidate: Read camera status: Read camera status",
+        "Candidate: Set automatic exposure: Set automatic exposure",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 22.89982495130971
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-046-zh",
+    "language": "zh",
+    "selected_id": "clarify",
+    "selected_model_id": "请求澄清",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.06397175043821335,
+      0.04174988344311714,
+      0.07333789020776749,
+      0.003087955294176936,
+      0.5024457573890686,
+      0.3154067397117615
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"识别相机画面中的人员。\"}",
+      "candidate_texts": [
+        "Candidate: 启动相机视频流: 启动相机视频流",
+        "Candidate: 停止相机视频流: 停止相机视频流",
+        "Candidate: 读取相机状态: 读取相机状态",
+        "Candidate: 设置自动曝光: 设置自动曝光",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 56.12748902058229
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-047-en",
+    "language": "en",
+    "selected_id": "list_alarms",
+    "selected_model_id": "List active alarms",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.4683370590209961,
+      0.03823992237448692,
+      0.4326026439666748,
+      0.03973980247974396,
+      0.021080585196614265
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Delete all alarm history.\"}",
+      "candidate_texts": [
+        "Candidate: List active alarms: List active alarms",
+        "Candidate: Acknowledge current alarm: Acknowledge current alarm",
+        "Candidate: Read alarm count: Read alarm count",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 38.347713998518884
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-047-zh",
+    "language": "zh",
+    "selected_id": "list_alarms",
+    "selected_model_id": "列出活动告警",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.42781898379325867,
+      0.04492943361401558,
+      0.058218467980623245,
+      0.09876519441604614,
+      0.37026792764663696
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"删除全部告警历史。\"}",
+      "candidate_texts": [
+        "Candidate: 列出活动告警: 列出活动告警",
+        "Candidate: 确认当前告警: 确认当前告警",
+        "Candidate: 读取告警数量: 读取告警数量",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 60.28153299121186
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-048-en",
+    "language": "en",
+    "selected_id": "start",
+    "selected_model_id": "Start the pump",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.99114990234375,
+      0.005142412148416042,
+      0.0001657946122577414,
+      0.00015183801588136703,
+      0.0011733255814760923,
+      0.0012510388623923063,
+      0.0009657921036705375
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Open the pump housing.\"}",
+      "candidate_texts": [
+        "Candidate: Start the pump: Start selected device",
+        "Candidate: Stop the pump: Stop selected device",
+        "Candidate: Set pump rate: Set specified rate",
+        "Candidate: Read pump rate: Read current rate",
+        "Candidate: Read pump status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 48.41321404092014
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-048-zh",
+    "language": "zh",
+    "selected_id": "clarify",
+    "selected_model_id": "请求澄清",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.04616038501262665,
+      0.13191011548042297,
+      0.09363940358161926,
+      0.011829647235572338,
+      0.0018678619526326656,
+      0.5842228531837463,
+      0.13036973774433136
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"打开泵外壳。\"}",
+      "candidate_texts": [
+        "Candidate: 启动泵: 启动当前设备",
+        "Candidate: 停止泵: 停止当前设备",
+        "Candidate: 设置泵速率: 设置指定速率",
+        "Candidate: 读取泵速率: 读取当前速率",
+        "Candidate: 读取泵状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 47.03621903900057
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-049-en",
+    "language": "en",
+    "selected_id": "camera_auto",
+    "selected_model_id": "Set automatic exposure",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.04837112873792648,
+      0.00970160961151123,
+      0.024238543584942818,
+      0.6861522197723389,
+      0.2151031643152237,
+      0.01643338054418564
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Calibrate the camera lens.\"}",
+      "candidate_texts": [
+        "Candidate: Start camera stream: Start camera stream",
+        "Candidate: Stop camera stream: Stop camera stream",
+        "Candidate: Read camera status: Read camera status",
+        "Candidate: Set automatic exposure: Set automatic exposure",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 70.92226500390097
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-049-zh",
+    "language": "zh",
+    "selected_id": "reject",
+    "selected_model_id": "拒绝不支持的请求",
+    "expected_id": "reject",
+    "correct": true,
+    "probabilities": [
+      0.020949427038431168,
+      0.019183479249477386,
+      0.02622167021036148,
+      0.07878780364990234,
+      0.4034684896469116,
+      0.4513891637325287
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"校准相机镜头。\"}",
+      "candidate_texts": [
+        "Candidate: 启动相机视频流: 启动相机视频流",
+        "Candidate: 停止相机视频流: 停止相机视频流",
+        "Candidate: 读取相机状态: 读取相机状态",
+        "Candidate: 设置自动曝光: 设置自动曝光",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 38.92160800751299
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-050-en",
+    "language": "en",
+    "selected_id": "set_temp",
+    "selected_model_id": "Set temperature target",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.027500301599502563,
+      0.9420852661132812,
+      0.029758505523204803,
+      0.0006560304900631309
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Change the temperature unit to Fahrenheit.\"}",
+      "candidate_texts": [
+        "Candidate: Read current temperature: Read current temperature",
+        "Candidate: Set temperature target: Set specified temperature",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 41.15675296634436
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-050-zh",
+    "language": "zh",
+    "selected_id": "set_temp",
+    "selected_model_id": "设置温度目标",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.0062562511302530766,
+      0.9718070030212402,
+      0.016664445400238037,
+      0.005272234790027142
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"将温度单位改为华氏度。\"}",
+      "candidate_texts": [
+        "Candidate: 读取当前温度: 读取当前温度",
+        "Candidate: 设置温度目标: 设置指定温度",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 56.65636499179527
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-051-en",
+    "language": "en",
+    "selected_id": "start",
+    "selected_model_id": "Start the conveyor",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.6910595893859863,
+      0.0068335020914673805,
+      0.006330609321594238,
+      0.00028449660749174654,
+      0.008704803884029388,
+      0.28678691387176514
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Start every machine in the building.\"}",
+      "candidate_texts": [
+        "Candidate: Start the conveyor: Start selected device",
+        "Candidate: Stop the conveyor: Stop selected device",
+        "Candidate: Set conveyor speed: Set specified speed",
+        "Candidate: Read conveyor status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 44.988331967033446
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-051-zh",
+    "language": "zh",
+    "selected_id": "clarify",
+    "selected_model_id": "请求澄清",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.2484140247106552,
+      0.01967654749751091,
+      0.011537180282175541,
+      0.0008525841403752565,
+      0.5487131476402283,
+      0.17080651223659515
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"启动整栋楼的所有机器。\"}",
+      "candidate_texts": [
+        "Candidate: 启动输送带: 启动当前设备",
+        "Candidate: 停止输送带: 停止当前设备",
+        "Candidate: 设置输送带速度: 设置指定速度",
+        "Candidate: 读取输送带状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 64.17190399952233
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-052-en",
+    "language": "en",
+    "selected_id": "start",
+    "selected_model_id": "Start the pump",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.743237316608429,
+      0.03302936628460884,
+      0.008295907638967037,
+      0.03079923428595066,
+      0.0914454236626625,
+      0.056558363139629364,
+      0.03663444519042969
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Tell me the manufacturer of the pump.\"}",
+      "candidate_texts": [
+        "Candidate: Start the pump: Start selected device",
+        "Candidate: Stop the pump: Stop selected device",
+        "Candidate: Set pump rate: Set specified rate",
+        "Candidate: Read pump rate: Read current rate",
+        "Candidate: Read pump status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 60.71901798713952
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-052-zh",
+    "language": "zh",
+    "selected_id": "clarify",
+    "selected_model_id": "请求澄清",
+    "expected_id": "reject",
+    "correct": false,
+    "probabilities": [
+      0.00924568809568882,
+      0.038570959120988846,
+      0.0033921669237315655,
+      0.0038563564885407686,
+      0.015603134408593178,
+      0.49947839975357056,
+      0.4298533499240875
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"告诉我泵的制造商。\"}",
+      "candidate_texts": [
+        "Candidate: 启动泵: 启动当前设备",
+        "Candidate: 停止泵: 停止当前设备",
+        "Candidate: 设置泵速率: 设置指定速率",
+        "Candidate: 读取泵速率: 读取当前速率",
+        "Candidate: 读取泵状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 26.078423019498587
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-053-en",
+    "language": "en",
+    "selected_id": "set_speed",
+    "selected_model_id": "Set conveyor speed",
+    "expected_id": "set_speed",
+    "correct": true,
+    "probabilities": [
+      0.00029469095170497894,
+      4.94225459988229e-05,
+      0.9996300935745239,
+      1.449690671506687e-06,
+      1.539926051918883e-05,
+      9.00572649698006e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Set the conveyor speed to 70 percent.\"}",
+      "candidate_texts": [
+        "Candidate: Start the conveyor: Start selected device",
+        "Candidate: Stop the conveyor: Stop selected device",
+        "Candidate: Set conveyor speed: Set specified speed",
+        "Candidate: Read conveyor status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 54.91412995615974
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-053-zh",
+    "language": "zh",
+    "selected_id": "set_speed",
+    "selected_model_id": "设置输送带速度",
+    "expected_id": "set_speed",
+    "correct": true,
+    "probabilities": [
+      0.00011132961662951857,
+      0.00048068552860058844,
+      0.9964098334312439,
+      8.553425141144544e-05,
+      0.0027821087278425694,
+      0.00013055121235083789
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"将输送带速度设置为 70%。\"}",
+      "candidate_texts": [
+        "Candidate: 启动输送带: 启动当前设备",
+        "Candidate: 停止输送带: 停止当前设备",
+        "Candidate: 设置输送带速度: 设置指定速度",
+        "Candidate: 读取输送带状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 53.331475995946676
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-054-en",
+    "language": "en",
+    "selected_id": "stop",
+    "selected_model_id": "Stop the conveyor",
+    "expected_id": "stop",
+    "correct": true,
+    "probabilities": [
+      0.017582565546035767,
+      0.9548219442367554,
+      0.00274873455055058,
+      0.006634600926190615,
+      0.014536519534885883,
+      0.0036757111083716154
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Stop the conveyor.\"}",
+      "candidate_texts": [
+        "Candidate: Start the conveyor: Start selected device",
+        "Candidate: Stop the conveyor: Stop selected device",
+        "Candidate: Set conveyor speed: Set specified speed",
+        "Candidate: Read conveyor status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 51.070671004708856
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-054-zh",
+    "language": "zh",
+    "selected_id": "stop",
+    "selected_model_id": "停止输送带",
+    "expected_id": "stop",
+    "correct": true,
+    "probabilities": [
+      0.005067313089966774,
+      0.6606111526489258,
+      0.001259006792679429,
+      0.005647677928209305,
+      0.06967427581548691,
+      0.2577405571937561
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"停止输送带。\"}",
+      "candidate_texts": [
+        "Candidate: 启动输送带: 启动当前设备",
+        "Candidate: 停止输送带: 停止当前设备",
+        "Candidate: 设置输送带速度: 设置指定速度",
+        "Candidate: 读取输送带状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 43.14206901472062
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-055-en",
+    "language": "en",
+    "selected_id": "read_rate",
+    "selected_model_id": "Read pump rate",
+    "expected_id": "read_rate",
+    "correct": true,
+    "probabilities": [
+      4.979104414815083e-05,
+      2.703630798350787e-06,
+      0.0033071148209273815,
+      0.9336356520652771,
+      0.06298136711120605,
+      1.7773365470930003e-05,
+      5.585771759797353e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Read the pump rate.\"}",
+      "candidate_texts": [
+        "Candidate: Start the pump: Start selected device",
+        "Candidate: Stop the pump: Stop selected device",
+        "Candidate: Set pump rate: Set specified rate",
+        "Candidate: Read pump rate: Read current rate",
+        "Candidate: Read pump status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 61.26248004147783
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-055-zh",
+    "language": "zh",
+    "selected_id": "read_rate",
+    "selected_model_id": "读取泵速率",
+    "expected_id": "read_rate",
+    "correct": true,
+    "probabilities": [
+      0.0006956857396289706,
+      0.005535940174013376,
+      0.2259538173675537,
+      0.6356363892555237,
+      0.0030278032645583153,
+      0.12497244030237198,
+      0.004177910275757313
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"读取泵速率。\"}",
+      "candidate_texts": [
+        "Candidate: 启动泵: 启动当前设备",
+        "Candidate: 停止泵: 停止当前设备",
+        "Candidate: 设置泵速率: 设置指定速率",
+        "Candidate: 读取泵速率: 读取当前速率",
+        "Candidate: 读取泵状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 66.37568201404065
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-056-en",
+    "language": "en",
+    "selected_id": "camera_auto",
+    "selected_model_id": "Set automatic exposure",
+    "expected_id": "camera_auto",
+    "correct": true,
+    "probabilities": [
+      5.494132710737176e-05,
+      3.229954018024728e-05,
+      5.087314548291033e-06,
+      0.999900221824646,
+      6.423239938158076e-06,
+      1.0516856718822964e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Set the camera exposure to automatic.\"}",
+      "candidate_texts": [
+        "Candidate: Start camera stream: Start camera stream",
+        "Candidate: Stop camera stream: Stop camera stream",
+        "Candidate: Read camera status: Read camera status",
+        "Candidate: Set automatic exposure: Set automatic exposure",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 23.673702031373978
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-056-zh",
+    "language": "zh",
+    "selected_id": "camera_auto",
+    "selected_model_id": "设置自动曝光",
+    "expected_id": "camera_auto",
+    "correct": true,
+    "probabilities": [
+      5.828880148328608e-06,
+      2.8245794965187088e-06,
+      1.238311000406611e-07,
+      0.999975323677063,
+      6.9417196755239274e-06,
+      9.034707545652054e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"将相机曝光设置为自动。\"}",
+      "candidate_texts": [
+        "Candidate: 启动相机视频流: 启动相机视频流",
+        "Candidate: 停止相机视频流: 停止相机视频流",
+        "Candidate: 读取相机状态: 读取相机状态",
+        "Candidate: 设置自动曝光: 设置自动曝光",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 34.19894998660311
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-057-en",
+    "language": "en",
+    "selected_id": "alarm_count",
+    "selected_model_id": "Read alarm count",
+    "expected_id": "alarm_count",
+    "correct": true,
+    "probabilities": [
+      0.0020485427230596542,
+      0.0009687087149359286,
+      0.9969708919525146,
+      9.197843610309064e-06,
+      2.706121904338943e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Read the alarm count.\"}",
+      "candidate_texts": [
+        "Candidate: List active alarms: List active alarms",
+        "Candidate: Acknowledge current alarm: Acknowledge current alarm",
+        "Candidate: Read alarm count: Read alarm count",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 44.58176402840763
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-057-zh",
+    "language": "zh",
+    "selected_id": "alarm_count",
+    "selected_model_id": "读取告警数量",
+    "expected_id": "alarm_count",
+    "correct": true,
+    "probabilities": [
+      0.0002218458103016019,
+      3.2180705602513626e-05,
+      0.9997352957725525,
+      8.451043868262786e-06,
+      2.2611259282712126e-06
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"读取告警数量。\"}",
+      "candidate_texts": [
+        "Candidate: 列出活动告警: 列出活动告警",
+        "Candidate: 确认当前告警: 确认当前告警",
+        "Candidate: 读取告警数量: 读取告警数量",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 33.7789379991591
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-058-en",
+    "language": "en",
+    "selected_id": "set_temp",
+    "selected_model_id": "Set temperature target",
+    "expected_id": "set_temp",
+    "correct": true,
+    "probabilities": [
+      0.0007133560720831156,
+      0.999187171459198,
+      7.983965042512864e-05,
+      1.9641056496766396e-05
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Set the temperature target to 18 degrees.\"}",
+      "candidate_texts": [
+        "Candidate: Read current temperature: Read current temperature",
+        "Candidate: Set temperature target: Set specified temperature",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 22.40759803680703
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-058-zh",
+    "language": "zh",
+    "selected_id": "set_temp",
+    "selected_model_id": "设置温度目标",
+    "expected_id": "set_temp",
+    "correct": true,
+    "probabilities": [
+      0.002592163858935237,
+      0.9955456256866455,
+      0.0017591110663488507,
+      0.00010317776468582451
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"将温度目标设置为 18 度。\"}",
+      "candidate_texts": [
+        "Candidate: 读取当前温度: 读取当前温度",
+        "Candidate: 设置温度目标: 设置指定温度",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 28.07213901542127
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-059-en",
+    "language": "en",
+    "selected_id": "start",
+    "selected_model_id": "Start the conveyor",
+    "expected_id": "start",
+    "correct": true,
+    "probabilities": [
+      0.9944937825202942,
+      0.0011614004615694284,
+      0.0029680160805583,
+      0.00026139721740037203,
+      0.0005236336728557944,
+      0.000591802061535418
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Start the conveyor.\"}",
+      "candidate_texts": [
+        "Candidate: Start the conveyor: Start selected device",
+        "Candidate: Stop the conveyor: Stop selected device",
+        "Candidate: Set conveyor speed: Set specified speed",
+        "Candidate: Read conveyor status: Read current status",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 63.04440897656605
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-059-zh",
+    "language": "zh",
+    "selected_id": "start",
+    "selected_model_id": "启动输送带",
+    "expected_id": "start",
+    "correct": true,
+    "probabilities": [
+      0.9368253946304321,
+      0.017611440271139145,
+      0.0050145648419857025,
+      0.005661459174007177,
+      0.014940546825528145,
+      0.019946608692407608
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"启动输送带。\"}",
+      "candidate_texts": [
+        "Candidate: 启动输送带: 启动当前设备",
+        "Candidate: 停止输送带: 停止当前设备",
+        "Candidate: 设置输送带速度: 设置指定速度",
+        "Candidate: 读取输送带状态: 读取当前状态",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 59.45661599980667
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-060-en",
+    "language": "en",
+    "selected_id": "stop_stream",
+    "selected_model_id": "Stop camera stream",
+    "expected_id": "stop_stream",
+    "correct": true,
+    "probabilities": [
+      0.0008213114342652261,
+      0.9981980919837952,
+      0.0008788311388343573,
+      4.982997052138671e-05,
+      2.6211188014713116e-05,
+      2.5747325707925484e-05
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "Select one command for the selected device; clarify missing action or required value; reject unsupported or multiple-device requests; classify only.",
+      "state": "{\"input\":\"Stop camera 2's live stream.\"}",
+      "candidate_texts": [
+        "Candidate: Start camera stream: Start camera stream",
+        "Candidate: Stop camera stream: Stop camera stream",
+        "Candidate: Read camera status: Read camera status",
+        "Candidate: Set automatic exposure: Set automatic exposure",
+        "Candidate: Ask for clarification: Missing action or value",
+        "Candidate: Reject unsupported request: Unsupported or multiple devices"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 31.102654989808798
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  },
+  {
+    "id": "jev-060-zh",
+    "language": "zh",
+    "selected_id": "stop_stream",
+    "selected_model_id": "停止相机视频流",
+    "expected_id": "stop_stream",
+    "correct": true,
+    "probabilities": [
+      0.303325891494751,
+      0.6895435452461243,
+      0.000811389007139951,
+      0.00025196652859449387,
+      0.0014682963956147432,
+      0.004598885774612427
+    ],
+    "finite_active_probabilities": true,
+    "model_visible_input": {
+      "instruction": "为当前选定设备选择一个命令；动作或必需数值缺失时澄清；不支持或多设备请求时拒绝；仅分类。",
+      "state": "{\"input\":\"停止二号相机的实时视频流。\"}",
+      "candidate_texts": [
+        "Candidate: 启动相机视频流: 启动相机视频流",
+        "Candidate: 停止相机视频流: 停止相机视频流",
+        "Candidate: 读取相机状态: 读取相机状态",
+        "Candidate: 设置自动曝光: 设置自动曝光",
+        "Candidate: 请求澄清: 动作或数值缺失",
+        "Candidate: 拒绝不支持的请求: 不支持或涉及多设备"
+      ]
+    },
+    "timing_ms": {
+      "end_to_end": 60.03794202115387
+    },
+    "model_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+    "tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+    "inference_code_sha256": "cb0f8126709d4cab3726f6d6475b386e6d8143cd57736da2c5d66710a52353ee"
+  }
+]
