@@ -1,0 +1,3 @@
+torch 2.14.0+cu130 cuda 13.0 available True
+device NVIDIA GB10 (12, 1) mem_info_before (8882188288, 130663165952)
+tensor_smoke_ok torch.Size([1024, 1024]) 329.44094901904464 True mem_info_after (8469078016, 130663165952)

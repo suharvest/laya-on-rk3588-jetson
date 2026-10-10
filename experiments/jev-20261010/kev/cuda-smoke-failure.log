@@ -1,0 +1,41 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights:   0%|          | 1/320 [00:00<03:57,  1.34it/s]Loading weights:  30%|██▉       | 95/320 [00:00<00:01, 144.56it/s]Loading weights:  43%|████▎     | 137/320 [00:00<00:00, 187.89it/s]Loading weights:  57%|█████▋    | 182/320 [00:01<00:00, 230.21it/s]Loading weights:  69%|██████▉   | 221/320 [00:01<00:00, 249.98it/s]Loading weights:  80%|████████  | 257/320 [00:01<00:00, 215.95it/s]Loading weights:  89%|████████▉ | 286/320 [00:01<00:00, 126.29it/s]Loading weights:  96%|█████████▋| 308/320 [00:02<00:00, 133.31it/s]Loading weights: 100%|██████████| 320/320 [00:02<00:00, 145.83it/s]
+Traceback (most recent call last):
+  File "/home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/kev_eval.py", line 132, in <module>
+    main()
+  File "/home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/kev_eval.py", line 57, in main
+    predictor = LocalPredictor(args.checkpoint, args.device, options)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kev-source-audit-20261010/kev/predictors.py", line 120, in __init__
+    self.tok, self.model = checkpoint.load(device, opts)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kev-source-audit-20261010/kev/checkpoint.py", line 233, in load
+    m = self._load_mlx(tok, opts) if self.backend(device, opts) == "mlx" else self._load_torch(tok, device, opts)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kev-source-audit-20261010/kev/checkpoint.py", line 257, in _load_torch
+    m, merged = self._full_torch(tok, device, opts) if self.full else self._adapted_torch(tok, device, opts)
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kev-source-audit-20261010/kev/checkpoint.py", line 298, in _adapted_torch
+    m = DecisionModel(meta.base, tok, device, lora=None, revision=meta.base_revision, head_dim=meta.head_dim,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kev-source-audit-20261010/kev/model.py", line 278, in __init__
+    self.to(device)
+  File "/home/harvest/tmp/jev-20261010/kev/cuda-venv11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1388, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/harvest/tmp/jev-20261010/kev/cuda-venv11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+  File "/home/harvest/tmp/jev-20261010/kev/cuda-venv11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+  File "/home/harvest/tmp/jev-20261010/kev/cuda-venv11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 966, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/harvest/tmp/jev-20261010/kev/cuda-venv11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1374, in convert
+    return t.to(
+           ^^^^^
+torch.AcceleratorError: CUDA error: out of memory
+Search for `cudaErrorMemoryAllocation' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+The CUDA driver logged these messages, which may provide useful details:
+Returning 2 (CUDA_ERROR_OUT_OF_MEMORY) from cuDevicePrimaryCtxRetain
+
+
+RC=1

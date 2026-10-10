@@ -1,0 +1,80 @@
+=== package versions ===
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/__init__.py", line 2422, in <module>
+    from torch import (
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/export/__init__.py", line 64, in <module>
+    from .dynamic_shapes import Constraint, Dim, dims, dynamic_dim, ShapesCollection
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/export/dynamic_shapes.py", line 18, in <module>
+    from .exported_program import ExportedProgram
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/export/exported_program.py", line 24, in <module>
+    from torch._higher_order_ops.utils import autograd_not_implemented
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_higher_order_ops/__init__.py", line 1, in <module>
+    from torch._higher_order_ops.cond import cond
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_higher_order_ops/cond.py", line 5, in <module>
+    import torch._subclasses.functional_tensor
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py", line 42, in <module>
+    class FunctionalTensor(torch.Tensor):
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py", line 267, in FunctionalTensor
+    cpu = _conversion_method_template(device=torch.device("cpu"))
+/home/harvest/.local/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py:267: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at /opt/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+[0;93m2026-10-09 22:09:13.048855612 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"[m
+2.5.0a0+872d972e41.nv24.08 12.6 True
+5.6.2
+0.21.2
+Using Python 3.10.12 environment at: tmp/jev-20261010/kev/nx-venv
+datasets 5.1.0
+peft     0.21.2
+=== disk ===
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1  233G  229G  2.1G 100% /
+1835417756	total
+=== first smoke log ===
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/harvest/tmp/jev-20261010/kev/kev_eval.py", line 6, in <module>
+    import torch
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/__init__.py", line 2422, in <module>
+    from torch import (
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/export/__init__.py", line 64, in <module>
+    from .dynamic_shapes import Constraint, Dim, dims, dynamic_dim, ShapesCollection
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/export/dynamic_shapes.py", line 18, in <module>
+    from .exported_program import ExportedProgram
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/export/exported_program.py", line 24, in <module>
+    from torch._higher_order_ops.utils import autograd_not_implemented
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_higher_order_ops/__init__.py", line 1, in <module>
+    from torch._higher_order_ops.cond import cond
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_higher_order_ops/cond.py", line 5, in <module>
+    import torch._subclasses.functional_tensor
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py", line 42, in <module>
+    class FunctionalTensor(torch.Tensor):
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py", line 267, in FunctionalTensor
+    cpu = _conversion_method_template(device=torch.device("cpu"))
+/home/harvest/.local/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py:267: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at /opt/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+Traceback (most recent call last):
+  File "/home/harvest/tmp/jev-20261010/kev/kev_eval.py", line 10, in <module>
+    from kev.data import api_request
+  File "/home/harvest/tmp/jev-20261010/kev/kev-source/kev/data.py", line 12, in <module>
+    from datasets import load_dataset
+ModuleNotFoundError: No module named 'datasets'
+=== second import failure ===
+datasets==5.1.0 installed --no-deps; import failed: ModuleNotFoundError: No module named multiprocess
