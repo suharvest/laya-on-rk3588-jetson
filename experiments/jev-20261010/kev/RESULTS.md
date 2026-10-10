@@ -58,3 +58,10 @@ The pinned runtime files were transferred once from Spark to Orin NX after a dis
 ### Final dependency-closure attempt
 
 Package metadata showed that `datasets` requires `pyarrow`, `dill`, `multiprocess`, and `xxhash`; these were installed in one bounded operation together with venv-only `numpy==1.26.4`. Kev module import then reached the datasets/Hugging Face boundary but failed with `ImportError: cannot import name 'httpx' from huggingface_hub.utils`. The final environment versions were Torch `2.5.0a0+872d972e41.nv24.8`, Transformers `5.6.2`, huggingface-hub metadata `1.13.0`, PEFT `0.21.2`, datasets `5.1.0`, pyarrow `25.0.1`, dill `0.3.8`, multiprocess `0.70.16`, xxhash `3.5.0`, and NumPy `1.26.4`. The final import log is `nx-final-import.log` (SHA256 `69a292094c79a833dac8d326adb57ca33ccaaab2787f4ff3fa29fa88cdc64c5d`). No model load or 5-case inference was reached; no further package changes were made.
+
+
+## Bekko comparison status
+
+The Bekko browser dynamic INT8 ONNX route scored 79/120 on the original frozen order (English 40/60, Chinese 39/60), and 79/120 after option reordering. The fixed/native FP32 comparison scored 77/120 and is a separate, non-equivalent variant. The tested browser embedding shapes were prefix width 128 and document width 384.
+
+The external WSL run compiled/exported the FP32 ONNX source model to an RKNN artifact: 291,453,711 bytes, SHA-256 `18570b7a1e61a256a15a0040e9819bb1472f0743c12eaab3c5a8c8641803025f`, elapsed 7:07.94, peak RSS 5.176 GB. Three WSL→Radxa/Spark transfers ended with SIGINT and no target file while both endpoints were online, so target runtime and formal NPU latency remain unverified. One native export parity sample measured `max_abs_logit_error=0.0540218353`; the 77/120 quality result is not full numeric parity. Model weights and bundled inference code have pending license declarations; no HF upload or public redistribution was performed.

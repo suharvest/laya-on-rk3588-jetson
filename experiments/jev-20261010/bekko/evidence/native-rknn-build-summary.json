@@ -1,0 +1,46 @@
+{
+  "schema": "jev.bekko.native-rknn-build-summary.v1",
+  "observed_at_utc": "2026-10-10",
+  "observer": "parent-agent fleet exec verification",
+  "source": {
+    "device": "wsl2-local",
+    "path": "/home/harve/tmp/bekko-native-20261010/native-fixed128-384-fp32-cpu.rknn",
+    "build_ret": 0,
+    "export_ret": 0,
+    "exit": 0,
+    "size_bytes": 291453711,
+    "sha256": "18570b7a1e61a256a15a0040e9819bb1472f0743c12eaab3c5a8c8641803025f",
+    "elapsed": "7:07.94",
+    "max_rss_kb": 5176688
+  },
+  "target": {
+    "hardware": "rk3588",
+    "runtime_tested": false,
+    "runtime_status": "unverified"
+  },
+  "transfer_attempts": [
+    {
+      "route": "WSL->Radxa",
+      "elapsed_seconds": 252,
+      "signal": "SIGINT",
+      "target_file_present": false,
+      "endpoints_online": true
+    },
+    {
+      "route": "WSL->Spark",
+      "elapsed_seconds": 68,
+      "signal": "SIGINT",
+      "target_file_present": false,
+      "endpoints_online": true
+    },
+    {
+      "route": "WSL->Radxa/Spark",
+      "elapsed_seconds": 113,
+      "signal": "SIGINT",
+      "target_file_present": false,
+      "endpoints_online": true
+    }
+  ],
+  "transfer_provenance_note": "Agent-reported attempts are recorded separately from the parent-observed build. Exact transfer stderr was not retained; no offline or NPU-unsupported claim is made.",
+  "license_status": "native weights and bundled inference code license pending; no HF upload"
+}
