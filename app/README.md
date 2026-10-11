@@ -123,3 +123,10 @@ The 0.1.1 development candidate was opened from Spark at `:18868` with `DECISION
 `docker/docker-compose.jetson.yml` mounts `/usr/local/cuda/lib64`, `/usr/lib/aarch64-linux-gnu/nvidia`, `/lib/aarch64-linux-gnu`, and the host Python 3.10 TensorRT package read-only. Set `LAYA_JETSON_MODEL_DIR` to a directory containing `model.engine`, `model_metadata.json`, and `tokenizer/`. The sample target metadata in `docker/target-metadata.jetson.json` records the minimum contract: TensorRT, `seq_len=90`, `max_options=16`, five named inputs with fixed shapes, and a `[1,16]` choice output. The serialized engine must be inspected and tested on the target Jetson; the historical Orin figures are not a current Workbench acceptance.
 
 The RKNN Dockerfile remains the shared Rockchip image path. Its healthcheck now requires `status=ok` and `model_ready=true`, then compares the reported backend and shapes with `EXPECTED_BACKEND`, `EXPECTED_SEQ_LEN`, and `EXPECTED_MAX_OPTIONS` when supplied. This keeps RK3576 `seq=90` and a separately supplied RK3588 model configurable without embedding one target in the checker.
+
+
+## RKLLM Kev ARM64 container
+
+The shared `docker/Dockerfile` keeps the RKNN path as the default and accepts `BUILD_KEV_RKLLM=1` plus a pinned `KEV_SDK_DIR` containing `rkllm.h`. That build compiles `native/kev_runtime.cpp` into `/opt/kev/libkev_runtime.so`; the RKLLM runtime library is supplied separately and mounted at `/opt/kev/librkllmrt.so`. The image does not overwrite host runtime libraries.
+
+`docker/docker-compose.rkllm.yml` is parameterized for an external model directory (`KEV_MODEL_DIR`), runtime directory (`RKLLM_RUNTIME_DIR`), optional `MODEL_SERVICES_JSON`, and optional `VOICE_SERVICE_URL`. It selects `DECISION_BACKEND=rkllm`, `MODEL_ID=kev`, context length 8192, and requires `/api/health` to report `model_ready=true` and `backend=rkllm`. The Kev engine, FP32 Q/K head, tokenizer, and runtime library remain external pinned artifacts. The pinned SDK header and its license/NOTICE text are vendored under `docker/vendor/rkllm-v1.3.1/`; this repository does not contain model weights or runtime binaries.
