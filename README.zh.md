@@ -291,7 +291,14 @@ gemm 也没掉出 int8（48 个变成带残差 Add 的 int8 融合核），**唯
 
 ## Kev 500-token 上下文基准
 
-可复现的 Kev 500-token 基准方法和生成输入见 [`experiments/jev-20261011/context500/README.zh.md`](experiments/jev-20261011/context500/README.zh.md)。测试使用 120 条冻结语义 case，按原顺序和反转候选顺序各发送一次，每台设备 240 条计分请求，另有 5 条不计分 warmup。基准分开记录 loopback client 时间与服务端 encoding/inference/total 时间，并报告总体、语言、类别、顺序、错误和错误选择。设备 summary 只在逐请求原始证据与 artifact pin 齐全后加入。
+可复现方法、两台设备完整结果、逐请求 JSONL、summary、analysis 和 SHA256 证据见 [`experiments/jev-20261011/context500/README.zh.md`](experiments/jev-20261011/context500/README.zh.md)。基准使用 60 组中英文配对语义 case（120 条语言样本），每条 4–7 个候选，完整 Kev assembly 精确 500 tokens，并按原/反转候选顺序发送，每台设备 240 条计分请求。
+
+| 设备 | HTTP | 正确 | 准确率 | client mean / p50 / p95 |
+|---|---:|---:|---:|---:|
+| RK3576 | 240/240 | 189/240 | 78.75% | 7220.982 / 7115.307 / 7574.560 ms |
+| RK3588 | 240/240 | 189/240 | 78.75% | 3958.615 / 3946.517 / 4770.961 ms |
+
+准确率是 `selected_option_id` exact match。误动作是期望 `clarify`/`reject` 时模型误选执行类候选；本基准只发送决策请求，不执行工业命令。两板使用不同芯片、量化和部署 context guard，结果不单独归因量化差异。
 
 ## 多平台工作台运行时
 

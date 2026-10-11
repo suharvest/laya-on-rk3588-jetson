@@ -208,7 +208,14 @@ The application API is shared across backends, while runtime images remain targe
 
 ## Kev context-500 benchmark
 
-The reproducible 500-token Kev benchmark method and generated inputs are documented in [`experiments/jev-20261011/context500/README.md`](experiments/jev-20261011/context500/README.md). It evaluates the same 120 frozen semantic cases in original and reversed option order, 240 scored requests per device, with five excluded warmups. The benchmark separates loopback client timing from server encoding/inference/total timing and records overall, language, category, order, errors, and wrong predictions. Device result summaries are added only after the corresponding raw evidence and artifact pins are available.
+The reproducible method, full per-device results, raw JSONL, summaries, analyses, and SHA256 evidence are in [`experiments/jev-20261011/context500/README.md`](experiments/jev-20261011/context500/README.md). The benchmark uses 60 paired English/Chinese semantic groups (120 language samples), 4–7 candidates per request, exact 500-token Kev assemblies, and original/reverse option order for 240 scored requests per device.
+
+| device | HTTP | correct | accuracy | client mean / p50 / p95 |
+|---|---:|---:|---:|---:|
+| RK3576 | 240/240 | 189/240 | 78.75% | 7220.982 / 7115.307 / 7574.560 ms |
+| RK3588 | 240/240 | 189/240 | 78.75% | 3958.615 / 3946.517 / 4770.961 ms |
+
+Accuracy is exact `selected_option_id` match. False-action entries are model selection errors for expected `clarify`/`reject`; this benchmark sent decision requests and did not execute industrial commands. The two devices use different chip, quantization, and deployment context-guard configurations, so the result does not isolate quantization as a cause.
 
 ## Verified Kev workbench UI evidence
 
