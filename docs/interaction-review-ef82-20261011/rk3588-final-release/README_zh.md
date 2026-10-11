@@ -13,3 +13,7 @@
 - image 内置 helper `/opt/kev/libkev_runtime.so` 已校验，SHA-256 为 `022e0102f9dd4c8839ba7acbc68f03d8811bf020cde84d6cf1343829cd66f919`；没有使用外部 helper mount。
 
 此前的 `a556`/`d870` 14 文件 bootstrap 记录保留为历史证据。此次验证不包含 voice 和 ASR。证据目录只包含选定元数据及原始请求、响应、耗时文件，不包含模型权重和 image archive。
+
+## 当前支持范围
+
+当前支持范围保留 RK3576 RKNN 和既有 RK3576 Kev 2K 路径；8K cat-remote 运行单独记录，超限输入在实际 2088 tokens 后由 guard 拒绝。RK3588 Kev 8K 已由本目录的 stock release evidence 验证。Jetson 仍是历史 native Kev 路径，本工作台不将其声明为已就绪部署目标。

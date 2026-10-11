@@ -13,3 +13,7 @@ This directory records the final stock deployment of source `ef82f8360c2b787f97c
 - The helper was verified inside the image at `/opt/kev/libkev_runtime.so`, SHA-256 `022e0102f9dd4c8839ba7acbc68f03d8811bf020cde84d6cf1343829cd66f919`; no external helper mount was used.
 
 The earlier `a556`/`d870` 14-file bootstrap record remains historical. Voice and ASR were not part of this validation. The evidence contains selected metadata and raw request/response/timing files; it excludes model weights and image archives.
+
+## Current support scope
+
+RK3576 RKNN and the existing RK3576 Kev 2K path remain supported; the 8K cat-remote run is recorded separately because its guard rejects over-limit input after 2088 actual tokens. RK3588 Kev 8K is now verified by the stock release evidence in this directory. Jetson remains a historical native Kev path and is not claimed as a ready deployment target here.
