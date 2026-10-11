@@ -130,3 +130,26 @@ The RKNN Dockerfile remains the shared Rockchip image path. Its healthcheck now 
 The shared `docker/Dockerfile` keeps the RKNN path as the default and accepts `BUILD_KEV_RKLLM=1` plus a pinned `KEV_SDK_DIR` containing `rkllm.h`. That build compiles `native/kev_runtime.cpp` into `/opt/kev/libkev_runtime.so`; the RKLLM runtime library is supplied separately and mounted at `/opt/kev/librkllmrt.so`. The image does not overwrite host runtime libraries.
 
 `docker/docker-compose.rkllm.yml` is parameterized for an external model directory (`KEV_MODEL_DIR`), runtime directory (`RKLLM_RUNTIME_DIR`), optional `MODEL_SERVICES_JSON`, and optional `VOICE_SERVICE_URL`. It selects `DECISION_BACKEND=rkllm`, `MODEL_ID=kev`, context length 8192, and requires `/api/health` to report `model_ready=true` and `backend=rkllm`. The Kev engine, FP32 Q/K head, tokenizer, and runtime library remain external pinned artifacts. The pinned SDK header and its license/NOTICE text are vendored under `docker/vendor/rkllm-v1.3.1/`; this repository does not contain model weights or runtime binaries.
+
+
+For the current RKLLM ARM64 release, download the published archive from the recorded Hugging Face path before starting Compose:
+
+```sh
+HF_ENDPOINT=https://hf-mirror.com \
+  hf download harvestsu/laya-multilingual-rknn-tensorrt \
+  --revision db0545065d4da3598d009407fc3bd0c7632ca199 \
+  --include releases/edge-workbench-0.3.0/edge-command-workbench-rockchip-rkllm-0.3.1-arm64-ef82.tar
+```
+
+The archive is 291152384 bytes with SHA-256 `251cb7fef080f489bf311b37c5bddbba1cd72e887e71f10ce12fc25a1fe64f77`. Load it as the image tag `edge-command-workbench:rockchip-rkllm-0.3.1-review`, or set `EDGE_WORKBENCH_IMAGE` to an equivalent verified local tag. The published image source is the `ef82` candidate at revision `db0545065d4da3598d009407fc3bd0c7632ca199`; this worktree change updates the Compose deployment default and does not rebuild or modify the image contents. Model weights, tokenizer, FP32 Q/K head, runtime library, and SDK artifacts remain external pinned inputs.
+
+当前 RKLLM ARM64 发布版启动 Compose 前，先从记录的 Hugging Face 路径下载并校验归档：
+
+```sh
+HF_ENDPOINT=https://hf-mirror.com \
+  hf download harvestsu/laya-multilingual-rknn-tensorrt \
+  --revision db0545065d4da3598d009407fc3bd0c7632ca199 \
+  --include releases/edge-workbench-0.3.0/edge-command-workbench-rockchip-rkllm-0.3.1-arm64-ef82.tar
+```
+
+归档大小为 291152384 字节，SHA-256 为 `251cb7fef080f489bf311b37c5bddbba1cd72e887e71f10ce12fc25a1fe64f77`。导入后使用镜像标签 `edge-command-workbench:rockchip-rkllm-0.3.1-review`，也可以将 `EDGE_WORKBENCH_IMAGE` 设置为已校验的本地等价标签。发布镜像源是 revision `db0545065d4da3598d009407fc3bd0c7632ca199` 中的 `ef82` candidate；本次工作区改动只更新 Compose 部署默认值，不重建或声称修改镜像内容。模型权重、tokenizer、FP32 Q/K head、运行库和 SDK 仍是外部固定输入。

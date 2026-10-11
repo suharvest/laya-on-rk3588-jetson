@@ -287,7 +287,7 @@ gemm 也没掉出 int8（48 个变成带残差 Add 的 int8 融合核），**唯
 
 `app/` 包含 RK3576 `seq=90` 命令选择模型的 FastAPI 服务和静态界面。首个完整目标是 RK3576；其他文档中的 RK3588 与 Jetson 产物属于历史目标，本工作台不宣称它们已就绪。ARM64 镜像、模型、tokenizer 与元数据发布在 `harvestsu/laya-multilingual-rknn-tensorrt` Hugging Face 仓库的记录路径中。
 
-界面支持中文和英文。只有未编辑的内置场景会在语言切换时本地化；用户编辑过的提示词、候选字段、输入、历史记录和设备配置保持原样。远端 API、RKNN 挂载、health 条件与验证记录见 [`app/README.md`](app/README.md)。 设备实测记录见 [`docs/rk3576-cat-validation-20261009.md`](docs/rk3576-cat-validation-20261009.md)，转换约束见 [`docs/rk3576-conversion-20261009.md`](docs/rk3576-conversion-20261009.md)。
+界面支持中文和英文。只有未编辑的内置场景会在语言切换时本地化；用户编辑过的提示词、候选字段、输入、历史记录和设备配置保持原样。远端 API、RKNN 挂载、health 条件与验证记录见 [`app/README.md`](app/README.md)。 设备实测记录见 [`docs/rk3576-cat-validation-20261009.md`](docs/rk3576-cat-validation-20261009.md)，转换约束见 [`docs/rk3576-conversion-20261009.md`](docs/rk3576-conversion-20261009.md)。 RKLLM 当前发布归档、固定 revision 和双语部署步骤也见 [`app/README.md`](app/README.md)；RKNN 与 Jetson 的历史边界保持不变。
 
 ## 多平台工作台运行时
 
