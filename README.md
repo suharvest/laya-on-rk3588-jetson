@@ -204,3 +204,8 @@ The UI supports Chinese and English. Language switching localizes only an untouc
 ## Multi-platform Workbench runtime
 
 The current Workbench source shares one five-input native contract across RKNN and TensorRT, while runtime images remain target-specific. RK3576 `seq=90` is the first complete validated target. RK3588 `seq=512` and Jetson Orin `seq=512` remain historical artifact paths and require independent model, tokenizer, runtime, and device acceptance. See [docs/multiplatform-runtime.md](docs/multiplatform-runtime.md) and [app/README.md](app/README.md).
+
+
+## Verified Kev workbench UI evidence
+
+The final device check for the command-selection UI used the Radxa service at `http://100.77.150.16:18769/`. The recorded service identity was `model_id=kev`, `backend=rkllm`, `max_sequence_tokens=8192`, and `max_options=16`. The evidence index, screenshots, AX snapshots, and three-frame GIF montage are in [`docs/kev-final-qa-20261011.md`](docs/kev-final-qa-20261011.md). The screenshots were captured before the later display-only rounding change; API and evidence JSON retain raw score and timing values.
