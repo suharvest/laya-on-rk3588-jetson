@@ -29,12 +29,12 @@
 |---|---|---:|---:|---:|---:|---:|---:|
 | RK3576 | client 端到端 | 240 | 7220.982 | 7067.254 | 7115.307 | 7574.560 | 7773.237 |
 | RK3576 | server inference | 240 | 7217.131 | 7063.492 | 7111.639 | 7570.440 | 7769.592 |
-| RK3576 | server total | 240 | 7217.305 | 7063.657 | 7111.869 | 7570.654 | 7769.754 |
+| RK3576 | server total | 240 | 7217.305 | 7063.657 | 7111.868 | 7570.654 | 7769.754 |
 | RK3588 | client 端到端 | 240 | 3958.615 | 3479.071 | 3946.517 | 4770.961 | 5371.268 |
 | RK3588 | server inference | 240 | 3955.264 | 3475.535 | 3943.280 | 4767.696 | 5368.083 |
 | RK3588 | server total | 240 | 3955.432 | 3475.699 | 3943.448 | 4767.862 | 5368.251 |
 
-480 条计分响应全部有完整 timing 对象且无 HTTP 错误。当前 Kev native instrumentation 将 `encoding_ms` 写为 `0.0`；它不是 tokenizer wall time 的实测值，也不表示编码真实耗时为零。KevCodec 编码、RKLLM hidden-state 推理和 FP32 head 打分都位于 inference 计时路径内。两板使用不同芯片、量化和部署 context guard，本结果不单独归因量化差异。
+p50 使用 median；p95 使用 nearest-rank 索引 `ceil(0.95*n)`。480 条计分响应全部有完整 timing 对象且无 HTTP 错误。当前 Kev native instrumentation 将 `encoding_ms` 写为 `0.0`；它不是 tokenizer wall time 的实测值，也不表示编码真实耗时为零。KevCodec 编码、RKLLM hidden-state 推理和 FP32 head 打分都位于 inference 计时路径内。两板使用不同芯片、量化和部署 context guard，本结果不单独归因量化差异。
 
 响应中观察到的 runtime/model identity 为 `model_id=kev`、`backend=rkllm`、`model_ready=true`；两个 engine 都按 8K context 导出，部署 cap 分别为 RK3576 `max_sequence_tokens=2048`、RK3588 `8192`，两者 `max_options=16`。量化方式为 RK3576 Kev W4A16 g128、RK3588 Kev W8A8。两轮复用已有 release evidence 中的 image `edge-command-workbench:rockchip-rkllm-0.3.1-review` 和 Hugging Face revision `db0545065d4da3598d009407fc3bd0c7632ca199`（[RK3576 release evidence](../../../docs/interaction-review-ef82-20261011/rk3576-final-release/)、[RK3588 release evidence](../../../docs/interaction-review-ef82-20261011/rk3588-final-release/)）；本报告不宣称重新进行了第二次 artifact SHA 验证。benchmark tokenizer 和 Kev codec SHA 仍记录在 [`context500-metadata.json`](context500-metadata.json)。
 

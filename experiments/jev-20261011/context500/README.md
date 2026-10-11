@@ -29,12 +29,12 @@ Category accuracy is: RK3576 direct 80/80, paraphrase 39/40, negation 37/40, amb
 |---|---|---:|---:|---:|---:|---:|---:|
 | RK3576 | client end-to-end | 240 | 7220.982 | 7067.254 | 7115.307 | 7574.560 | 7773.237 |
 | RK3576 | server inference | 240 | 7217.131 | 7063.492 | 7111.639 | 7570.440 | 7769.592 |
-| RK3576 | server total | 240 | 7217.305 | 7063.657 | 7111.869 | 7570.654 | 7769.754 |
+| RK3576 | server total | 240 | 7217.305 | 7063.657 | 7111.868 | 7570.654 | 7769.754 |
 | RK3588 | client end-to-end | 240 | 3958.615 | 3479.071 | 3946.517 | 4770.961 | 5371.268 |
 | RK3588 | server inference | 240 | 3955.264 | 3475.535 | 3943.280 | 4767.696 | 5368.083 |
 | RK3588 | server total | 240 | 3955.432 | 3475.699 | 3943.448 | 4767.862 | 5368.251 |
 
-All 480 scored responses had complete timing objects and zero HTTP errors. `encoding_ms` is emitted as `0.0` by the current Kev native instrumentation; it is not measured tokenizer wall time and is not a claim of zero-cost encoding. KevCodec encoding, RKLLM hidden-state inference, and FP32 head scoring occur inside the measured inference path. The two boards use different chip, quantization, and deployment context-guard configurations; these results do not isolate quantization as the cause of any difference.
+p50 is the median; p95 uses the nearest-rank index `ceil(0.95*n)`. All 480 scored responses had complete timing objects and zero HTTP errors. `encoding_ms` is emitted as `0.0` by the current Kev native instrumentation; it is not measured tokenizer wall time and is not a claim of zero-cost encoding. KevCodec encoding, RKLLM hidden-state inference, and FP32 head scoring occur inside the measured inference path. The two boards use different chip, quantization, and deployment context-guard configurations; these results do not isolate quantization as the cause of any difference.
 
 The runtime/model identity observed in the responses was `model_id=kev`, `backend=rkllm`, `model_ready=true`; both engines were exported for 8K context, while deployment caps were RK3576 `max_sequence_tokens=2048` and RK3588 `8192`, with `max_options=16`. The recorded quantization modes are RK3576 Kev W4A16 g128 and RK3588 Kev W8A8. Both runs reuse image `edge-command-workbench:rockchip-rkllm-0.3.1-review` and Hugging Face revision `db0545065d4da3598d009407fc3bd0c7632ca199` from the existing release evidence ([RK3576 release evidence](../../../docs/interaction-review-ef82-20261011/rk3576-final-release/), [RK3588 release evidence](../../../docs/interaction-review-ef82-20261011/rk3588-final-release/)); this benchmark report does not claim a second artifact revalidation. The benchmark tokenizer and Kev codec hashes remain in [`context500-metadata.json`](context500-metadata.json).
 
