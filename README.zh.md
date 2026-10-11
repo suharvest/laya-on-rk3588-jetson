@@ -285,10 +285,10 @@ gemm 也没掉出 int8（48 个变成带残差 Add 的 int8 融合核），**唯
 
 ## 命令选择工作台
 
-`app/` 包含 RK3576 `seq=90` 命令选择模型的 FastAPI 服务和静态界面。首个完整目标是 RK3576；其他文档中的 RK3588 与 Jetson 产物属于历史目标，本工作台不宣称它们已就绪。ARM64 镜像、模型、tokenizer 与元数据发布在 `harvestsu/laya-multilingual-rknn-tensorrt` Hugging Face 仓库的记录路径中。
+`app/` 包含 RK3576 RKNN `seq=90` 和 Kev RKLLM 命令选择服务及静态界面。RK3576 Kev 部署 guard 将设备请求限制为 2K；cat-remote 的 8K 验证保留为边界证据，实际 2088 tokens 的超限请求在 NPU 前被拒绝。RK3588 Kev RKLLM 8K 已在 stock Radxa 部署上验证。Jetson 的 native Kev 路径仍是历史路径，尚未完成真机验证。ARM64 镜像、模型、tokenizer 与元数据发布在 `harvestsu/laya-multilingual-rknn-tensorrt` Hugging Face 仓库的记录路径中。
 
-界面支持中文和英文。只有未编辑的内置场景会在语言切换时本地化；用户编辑过的提示词、候选字段、输入、历史记录和设备配置保持原样。远端 API、RKNN 挂载、health 条件与验证记录见 [`app/README.md`](app/README.md)。 设备实测记录见 [`docs/rk3576-cat-validation-20261009.md`](docs/rk3576-cat-validation-20261009.md)，转换约束见 [`docs/rk3576-conversion-20261009.md`](docs/rk3576-conversion-20261009.md)。 RKLLM 当前发布归档、固定 revision 和双语部署步骤也见 [`app/README.md`](app/README.md)；RKNN 与 Jetson 的历史边界保持不变。
+界面支持中文和英文。只有未编辑的内置场景会在语言切换时本地化；用户编辑过的提示词、候选字段、输入、历史记录和设备配置保持原样。远端 API、RKNN 挂载、health 条件与验证记录见 [`app/README.md`](app/README.md)。设备实测记录见 [`docs/rk3576-cat-validation-20261009.md`](docs/rk3576-cat-validation-20261009.md)，转换约束见 [`docs/rk3576-conversion-20261009.md`](docs/rk3576-conversion-20261009.md)。当前发布证据见 [`RK3576 第二轮验证`](docs/interaction-review-ef82-20261011/rk3576-final-release/second-validation/) 和 [`RK3588 stock 发布`](docs/interaction-review-ef82-20261011/rk3588-final-release/)。
 
 ## 多平台工作台运行时
 
-当前工作台源码在 RKNN 与 TensorRT 间共享五输入 native 契约，但运行时镜像按目标平台分开。RK3576 `seq=90` 是首个已完成验证的目标；RK3588 `seq=512` 与 Jetson Orin `seq=512` 仍是历史产物路径，必须分别核对模型、tokenizer、运行库和真机验收。参见 [docs/multiplatform-runtime.md](docs/multiplatform-runtime.md) 与 [app/README.md](app/README.md)。
+当前工作台源码在 RKNN、RKLLM 与 TensorRT 间共享五输入 native 契约，但运行时镜像按目标平台分开。RK3576 RKNN `seq=90` 与 Kev RKLLM 2K guard 已验证；RK3588 Kev RKLLM 8K 已完成 stock 真机验证。Jetson Orin native Kev 仍是历史路径，必须单独核对模型、tokenizer、运行库和真机验收。参见 [docs/multiplatform-runtime.md](docs/multiplatform-runtime.md) 与 [app/README.md](app/README.md)。
