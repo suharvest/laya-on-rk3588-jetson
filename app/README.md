@@ -141,7 +141,7 @@ HF_ENDPOINT=https://hf-mirror.com \
   --include releases/edge-workbench-0.3.0/edge-command-workbench-rockchip-rkllm-0.3.1-arm64-ef82.tar
 ```
 
-The archive is 291152384 bytes with SHA-256 `251cb7fef080f489bf311b37c5bddbba1cd72e887e71f10ce12fc25a1fe64f77`. Load it as the image tag `edge-command-workbench:rockchip-rkllm-0.3.1-review`, or set `EDGE_WORKBENCH_IMAGE` to an equivalent verified local tag. The published image source is the `ef82` candidate at revision `db0545065d4da3598d009407fc3bd0c7632ca199`; this worktree change updates the Compose deployment default and does not rebuild or modify the image contents. Model weights, tokenizer, FP32 Q/K head, runtime library, and SDK artifacts remain external pinned inputs.
+The archive is 291152384 bytes with SHA-256 `251cb7fef080f489bf311b37c5bddbba1cd72e887e71f10ce12fc25a1fe64f77`. Load it as the image tag `edge-command-workbench:rockchip-rkllm-0.3.1-review`, or set `EDGE_WORKBENCH_IMAGE` to an equivalent verified local tag. The image build source is Git commit `ef82f8360c2b787f97c958f89c92fe569c62ecb1`; the archive is stored at HF revision `db0545065d4da3598d009407fc3bd0c7632ca199`. This worktree change updates the Compose deployment default and does not rebuild or modify the image contents. Model weights, tokenizer, FP32 Q/K head, runtime library, and SDK artifacts remain external pinned inputs.
 
 当前 RKLLM ARM64 发布版启动 Compose 前，先从记录的 Hugging Face 路径下载并校验归档：
 
@@ -152,4 +152,4 @@ HF_ENDPOINT=https://hf-mirror.com \
   --include releases/edge-workbench-0.3.0/edge-command-workbench-rockchip-rkllm-0.3.1-arm64-ef82.tar
 ```
 
-归档大小为 291152384 字节，SHA-256 为 `251cb7fef080f489bf311b37c5bddbba1cd72e887e71f10ce12fc25a1fe64f77`。导入后使用镜像标签 `edge-command-workbench:rockchip-rkllm-0.3.1-review`，也可以将 `EDGE_WORKBENCH_IMAGE` 设置为已校验的本地等价标签。发布镜像源是 revision `db0545065d4da3598d009407fc3bd0c7632ca199` 中的 `ef82` candidate；本次工作区改动只更新 Compose 部署默认值，不重建或声称修改镜像内容。模型权重、tokenizer、FP32 Q/K head、运行库和 SDK 仍是外部固定输入。
+归档大小为 291152384 字节，SHA-256 为 `251cb7fef080f489bf311b37c5bddbba1cd72e887e71f10ce12fc25a1fe64f77`。导入后使用镜像标签 `edge-command-workbench:rockchip-rkllm-0.3.1-review`，也可以将 `EDGE_WORKBENCH_IMAGE` 设置为已校验的本地等价标签。镜像构建源是 Git commit `ef82f8360c2b787f97c958f89c92fe569c62ecb1`；归档存储在 HF revision `db0545065d4da3598d009407fc3bd0c7632ca199`。本次工作区改动只更新 Compose 部署默认值，不重建或声称修改镜像内容。模型权重、tokenizer、FP32 Q/K head、运行库和 SDK 仍是外部固定输入。
