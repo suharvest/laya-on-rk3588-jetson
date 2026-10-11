@@ -208,7 +208,7 @@ The application API is shared across backends, while runtime images remain targe
 
 ## Kev context-500 benchmark
 
-The reproducible method, full per-device results, raw JSONL, summaries, analyses, and SHA256 evidence are in [`experiments/jev-20261011/context500/README.md`](experiments/jev-20261011/context500/README.md). The benchmark uses 60 paired English/Chinese semantic groups (120 language samples), 4–7 candidates per request, exact 500-token Kev assemblies, and original/reverse option order for 240 scored requests per device.
+The reproducible method, full per-device results, raw JSONL, summaries, analyses, and SHA256 evidence are in [`experiments/jev-20261011/context500/README.md`](experiments/jev-20261011/context500/README.md). The benchmark uses 60 paired English/Chinese semantic groups (120 language samples), 4–7 candidates per request, exact 500-token Kev assemblies, and original/reverse option order for 240 scored requests per device. The 500-token context is a neutral synthetic background extension for measurement, not a natural complex-task accuracy claim. The recorded release uses image `edge-command-workbench:rockchip-rkllm-0.3.1-review` and Hugging Face revision `db0545065d4da3598d009407fc3bd0c7632ca199`.
 
 | device | HTTP | correct | accuracy | client mean / p50 / p95 |
 |---|---:|---:|---:|---:|

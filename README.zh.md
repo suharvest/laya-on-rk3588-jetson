@@ -291,7 +291,7 @@ gemm 也没掉出 int8（48 个变成带残差 Add 的 int8 融合核），**唯
 
 ## Kev 500-token 上下文基准
 
-可复现方法、两台设备完整结果、逐请求 JSONL、summary、analysis 和 SHA256 证据见 [`experiments/jev-20261011/context500/README.zh.md`](experiments/jev-20261011/context500/README.zh.md)。基准使用 60 组中英文配对语义 case（120 条语言样本），每条 4–7 个候选，完整 Kev assembly 精确 500 tokens，并按原/反转候选顺序发送，每台设备 240 条计分请求。
+可复现方法、两台设备完整结果、逐请求 JSONL、summary、analysis 和 SHA256 证据见 [`experiments/jev-20261011/context500/README.zh.md`](experiments/jev-20261011/context500/README.zh.md)。基准使用 60 组中英文配对语义 case（120 条语言样本），每条 4–7 个候选，完整 Kev assembly 精确 500 tokens，并按原/反转候选顺序发送，每台设备 240 条计分请求。 500-token 上下文是用于测量的中性合成背景扩展，不代表自然复杂长任务准确率。记录的发布使用 image `edge-command-workbench:rockchip-rkllm-0.3.1-review` 和 Hugging Face revision `db0545065d4da3598d009407fc3bd0c7632ca199`.
 
 | 设备 | HTTP | 正确 | 准确率 | client mean / p50 / p95 |
 |---|---:|---:|---:|---:|

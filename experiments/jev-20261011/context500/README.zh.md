@@ -20,8 +20,8 @@
 
 | 设备 | model identity | HTTP | 正确 | 准确率 | 原顺序 | 反转顺序 | 英文 | 中文 |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
-| RK3576 | `kev`、`rkllm`、max 2048 | 240/240 | 189/240 | 78.75% | 95/120 | 94/120 | 93/120 | 96/120 |
-| RK3588 | `kev`、`rkllm`、max 8192 | 240/240 | 189/240 | 78.75% | 92/120 | 97/120 | 94/120 | 95/120 |
+| RK3576 | `kev`、`rkllm`、W4A16 g128、max 2048 | 240/240 | 189/240 | 78.75% | 95/120 | 94/120 | 93/120 | 96/120 |
+| RK3588 | `kev`、`rkllm`、W8A8、max 8192 | 240/240 | 189/240 | 78.75% | 92/120 | 97/120 | 94/120 | 95/120 |
 
 类别准确率：RK3576 direct 80/80、paraphrase 39/40、negation 37/40、ambiguous 14/40、范围外 19/40；RK3588 direct 80/80、paraphrase 38/40、negation 38/40、ambiguous 12/40、范围外 21/40。误动作比例：RK3576 `clarify` 为 16/40（40.00%）、`reject` 为 3/40（7.50%）；RK3588 `clarify` 为 22/40（55.00%）、`reject` 为 2/40（5.00%）。两台设备的无效 selected ID 均为 0。候选顺序反转后，RK3576 有 5/120 对 selected ID 改变、3 对正确性改变；RK3588 有 9/120 对 selected ID 改变、5 对正确性改变。
 
@@ -36,9 +36,11 @@
 
 480 条计分响应全部有完整 timing 对象且无 HTTP 错误。当前 Kev native instrumentation 将 `encoding_ms` 写为 `0.0`；它不是 tokenizer wall time 的实测值，也不表示编码真实耗时为零。KevCodec 编码、RKLLM hidden-state 推理和 FP32 head 打分都位于 inference 计时路径内。两板使用不同芯片、量化和部署 context guard，本结果不单独归因量化差异。
 
-响应中观察到的 runtime/model identity 为 `model_id=kev`、`backend=rkllm`、`model_ready=true`；RK3576 为 `max_sequence_tokens=2048`，RK3588 为 `8192`，两者 `max_options=16`。image、runtime、model、tokenizer 与 Hugging Face pin 复用已有 release evidence；本报告不宣称重新进行了第二次 artifact SHA 验证。benchmark tokenizer 和 Kev codec SHA 仍记录在 [`context500-metadata.json`](context500-metadata.json)。
+响应中观察到的 runtime/model identity 为 `model_id=kev`、`backend=rkllm`、`model_ready=true`；两个 engine 都按 8K context 导出，部署 cap 分别为 RK3576 `max_sequence_tokens=2048`、RK3588 `8192`，两者 `max_options=16`。量化方式为 RK3576 Kev W4A16 g128、RK3588 Kev W8A8。两轮复用已有 release evidence 中的 image `edge-command-workbench:rockchip-rkllm-0.3.1-review` 和 Hugging Face revision `db0545065d4da3598d009407fc3bd0c7632ca199`（[RK3576 release evidence](../../../docs/interaction-review-ef82-20261011/rk3576-final-release/)、[RK3588 release evidence](../../../docs/interaction-review-ef82-20261011/rk3588-final-release/)）；本报告不宣称重新进行了第二次 artifact SHA 验证。benchmark tokenizer 和 Kev codec SHA 仍记录在 [`context500-metadata.json`](context500-metadata.json)。
 
 按设备链接证据：[RK3576 raw results](rk3576/stable-v2/results-v2.jsonl)、[RK3576 summary](rk3576/stable-v2/results-v2.summary.json)、[RK3576 analysis](rk3576/stable-v2/analysis.json)、[RK3576 exit](rk3576/stable-v2/results-v2.exit)、[RK3588 raw results](rk3588/stable-v2/results-v2.jsonl)、[RK3588 summary](rk3588/stable-v2/results-v2.summary.json)、[RK3588 analysis](rk3588/stable-v2/analysis.json)、[RK3588 exit](rk3588/stable-v2/results-v2.exit)。SHA256：RK3576 results `7ed7869b43e562ae31ebc9d2c0a4fa72cf1a73a65066f93bd0525cc12e049f7f`，summary `2f687c7366d5ae09078ab9899757b9e3dc92a11e5b180a816348b70041647463`，analysis `aa1a66773f969f70eea9fa91c11bee9243163aac743a3d715af92eda0f44f544`；RK3588 results `5b49681b5e093202d9b184ac2fb94e471bde503669ba07c1f9573f665a73e782`，summary `fa0a3dbaed58a2c94f818bc4ee67a4007b6f47b956bd1dfe3829f986ada6cf5f`，analysis `86d64fce7b14988c77d7a78582456002a0dec20b3e91688d4ec61f47890e1e4a`。两份 dataset 均匹配 `e9d77a3c96a1d0645bc9561cdf9ead06cbd57d8ef081906c2d5094d55e54ba6e`。
+
+复现命令（需要完整源代码 checkout、`app/` 与 tokenizer fixture）：`uv run --no-project python experiments/jev-20261011/context500/run_context500.py --dataset experiments/jev-20261011/context500/context500-cases.jsonl --out /tmp/context500-results.jsonl --timeout 120 --warmup 5 --base-url http://127.0.0.1:18771/api/decide`。重新生成 dataset 还需要完整源仓库、应用包和 tokenizer fixture；小型交付副本只包含结果证据。
 
 ## 测量范围
 
@@ -46,4 +48,4 @@ client elapsed 是 loopback HTTP 请求外层的计时；服务端 `encoding_ms`
 
 准确率使用同一批 240 条计分请求，分别报告总体、语言、类别和候选顺序。summary 包含完整错误清单，以及 HTTP 200 但选中项不同于期望标签的 `wrong_predictions`。5 条 warmup 不进入准确率或性能分母。服务端每次请求清理 KV cache，不共享请求历史；runner 串行发送请求。
 
-硬件结果只会在设备 worker 生成逐请求原始 JSONL、程序 summary 和 artifact/hash 证据后写入 `rk3576/` 与 `rk3588/`。这些文件出现前，本文件描述的是测试方法和范围，不代表设备结果已经完成。
+逐请求原始 JSONL、程序 summary、analysis、exit code 与 artifact/hash 证据已分别保存在 `rk3576/` 与 `rk3588/`。上文记录的是已测结果；小型交付副本包含结果证据，不重复复制 12.8 MB tokenizer fixture。
