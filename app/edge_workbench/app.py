@@ -54,6 +54,7 @@ class DecideRequest(BaseModel):
 
 class RemoteHealthRequest(BaseModel):
     service_url: str
+    model_id: str | None = None
 
 
 def _detail(exc: DecisionError) -> dict[str, Any]:
@@ -99,8 +100,11 @@ def create_app(settings: Settings | None = None, service: DecisionService | None
                         result.update(model_ready=False, reason=f"remote health returned HTTP {remote.status_code}")
                     else:
                         data = remote.json()
+                        identity_reason = _remote_identity_reason(data, settings.model_id)
                         if not _valid_health(data):
                             result.update(model_ready=False, reason="remote health response has an invalid schema")
+                        elif identity_reason:
+                            result.update(model_ready=False, reason=identity_reason)
                         else:
                             result.update(model_ready=data["model_ready"], backend=data["backend"],
                                           name=data["name"], max_sequence_tokens=data["max_sequence_tokens"],
@@ -113,9 +117,17 @@ def create_app(settings: Settings | None = None, service: DecisionService | None
     async def models(request: Request) -> dict[str, Any]:
         rows = service.model_catalog()
         for row in rows:
-            if row.get("local") or not row.get("service_url"):
+            if row.get("local") and settings.backend != "http":
                 continue
-            url = _safe_service_url(str(row["service_url"]))
+            if row.get("local"):
+                url = _safe_service_url(settings.decision_service_url)
+                if not url:
+                    row.update(model_ready=False, reason="decision service URL is not configured")
+                    continue
+            elif not row.get("service_url"):
+                continue
+            else:
+                url = _safe_service_url(str(row["service_url"]))
             if not url or _is_self_url(url, request):
                 row["reason"] = "invalid or self service URL"
                 continue
@@ -123,7 +135,8 @@ def create_app(settings: Settings | None = None, service: DecisionService | None
                 async with httpx.AsyncClient(timeout=3.0) as client:
                     response = await client.get(url.rstrip("/") + "/api/health")
                 data = response.json() if response.status_code < 400 else {}
-                if _valid_health(data) and data.get("model_id") == row["id"]:
+                identity_reason = _remote_identity_reason(data, row["id"])
+                if _valid_health(data) and not identity_reason:
                     row.update(model_ready=bool(data["model_ready"]), backend=data["backend"],
                                name=data["name"], max_sequence_tokens=data["max_sequence_tokens"],
                                max_options=data["max_options"], reason=data.get("reason"))
@@ -155,6 +168,9 @@ def create_app(settings: Settings | None = None, service: DecisionService | None
             raise HTTPException(502, {"code": "remote_unavailable", "message": f"remote health request failed: {exc}"}) from exc
         if not _valid_health(data):
             raise HTTPException(502, {"code": "remote_invalid", "message": "remote health response has an invalid schema"})
+        identity_reason = _remote_identity_reason(data, req.model_id or settings.model_id)
+        if identity_reason:
+            data = {**data, "model_ready": False, "reason": identity_reason}
         return data
 
     @app.post("/api/decide")
@@ -258,3 +274,16 @@ def _valid_health(data: Any) -> bool:
     if not isinstance(data["model_ready"], bool) or isinstance(data["max_sequence_tokens"], bool) or not isinstance(data["max_sequence_tokens"], int) or data["max_sequence_tokens"] < 1:
         return False
     return not isinstance(data["max_options"], bool) and isinstance(data["max_options"], int) and 2 <= data["max_options"] <= 16
+
+
+def _remote_identity_reason(data: Any, expected_id: str) -> str | None:
+    if not isinstance(data, dict):
+        return "remote health response has an invalid schema"
+    actual_id = data.get("model_id")
+    if actual_id is None and expected_id == "laya":
+        return None
+    if actual_id != expected_id:
+        if actual_id is None:
+            return f"remote health did not confirm model_id {expected_id}"
+        return f"remote health model_id {actual_id} does not match expected {expected_id}"
+    return None

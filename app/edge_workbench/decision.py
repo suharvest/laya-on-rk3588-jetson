@@ -123,8 +123,8 @@ class NativeBackend(UnavailableBackend):
 class HttpBackend:
     def __init__(self, settings: Settings):
         self.settings = settings
-        self.info = ModelInfo("http", "remote", settings.seq_len)
-        self.ready, self.reason = True, None
+        self.info = ModelInfo("http", "remote", settings.seq_len, settings.model_id)
+        self.ready, self.reason = False, "remote service health has not been verified"
 
     async def infer(self, body: dict[str, Any], url: str) -> dict[str, Any]:
         target = _safe_service_url(url)

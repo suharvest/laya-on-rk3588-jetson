@@ -144,9 +144,91 @@ def test_remote_missing_timings_is_invalid(monkeypatch):
 
 
 def test_http_health_without_url_is_unready():
-    r = TestClient(create_app(Settings(backend="http"))).get("/api/health")
+    c = TestClient(create_app(Settings(backend="http")))
+    r = c.get("/api/health")
     assert r.status_code == 200
     assert r.json()["model_ready"] is False
+    models = c.get("/api/models").json()
+    assert models["default_model_id"] == "laya"
+    assert models["models"][0]["model_ready"] is False
+
+
+def test_http_default_kev_confirms_remote_identity(monkeypatch):
+    class Response:
+        status_code = 200
+        def json(self):
+            return {"selected_option_id": "b", "ranking": [
+                {"option_id": "b", "score": 2}, {"option_id": "a", "score": 1}],
+                "model": {"model_id": "kev", "backend": "rkllm", "name": "Kev",
+                          "max_sequence_tokens": 8192, "max_options": 16},
+                "timings": {"encoding_ms": 1, "inference_ms": 2, "total_ms": 3}}
+    class Client:
+        async def __aenter__(self): return self
+        async def __aexit__(self, *args): pass
+        async def post(self, url, json): return Response()
+    monkeypatch.setattr(httpx, "AsyncClient", lambda **kw: Client())
+    settings = Settings(backend="http", model_id="kev", decision_service_url="http://device:8000")
+    response = TestClient(create_app(settings)).post("/api/decide", json=body())
+    assert response.status_code == 200
+    assert response.json()["model"]["model_id"] == "kev"
+
+
+def test_http_models_use_remote_health_for_ready_and_capabilities(monkeypatch):
+    class Response:
+        status_code = 200
+        def json(self):
+            return {"status": "ok", "model_ready": True, "backend": "rkllm", "name": "Kev",
+                    "model_id": "kev", "max_sequence_tokens": 8192, "max_options": 16}
+    class Client:
+        async def __aenter__(self): return self
+        async def __aexit__(self, *args): pass
+        async def get(self, url): return Response()
+    monkeypatch.setattr(httpx, "AsyncClient", lambda **kw: Client())
+    settings = Settings(backend="http", model_id="kev", decision_service_url="http://device:8000")
+    data = TestClient(create_app(settings)).get("/api/models").json()
+    row = data["models"][0]
+    assert data["default_model_id"] == "kev"
+    assert row["model_ready"] is True
+    assert row["backend"] == "rkllm"
+    assert row["max_sequence_tokens"] == 8192
+
+
+def test_http_default_kev_rejects_wrong_remote_identity(monkeypatch):
+    class Response:
+        status_code = 200
+        def json(self):
+            return {"selected_option_id": "b", "ranking": [
+                {"option_id": "b", "score": 2}, {"option_id": "a", "score": 1}],
+                "model": {"model_id": "laya", "backend": "rknn", "name": "Laya",
+                          "max_sequence_tokens": 90, "max_options": 16},
+                "timings": {"encoding_ms": 1, "inference_ms": 2, "total_ms": 3}}
+    class Client:
+        async def __aenter__(self): return self
+        async def __aexit__(self, *args): pass
+        async def post(self, url, json): return Response()
+    monkeypatch.setattr(httpx, "AsyncClient", lambda **kw: Client())
+    settings = Settings(backend="http", model_id="kev", decision_service_url="http://device:8000")
+    response = TestClient(create_app(settings)).post("/api/decide", json=body())
+    assert response.status_code == 502
+    assert response.json()["detail"]["code"] == "remote_identity_mismatch"
+
+
+def test_http_default_laya_allows_legacy_missing_identity(monkeypatch):
+    class Response:
+        status_code = 200
+        def json(self):
+            return {"selected_option_id": "b", "ranking": [
+                {"option_id": "b", "score": 2}, {"option_id": "a", "score": 1}],
+                "timings": {"encoding_ms": 1, "inference_ms": 2, "total_ms": 3}}
+    class Client:
+        async def __aenter__(self): return self
+        async def __aexit__(self, *args): pass
+        async def post(self, url, json): return Response()
+    monkeypatch.setattr(httpx, "AsyncClient", lambda **kw: Client())
+    settings = Settings(backend="http", model_id="laya", decision_service_url="http://device:8000")
+    response = TestClient(create_app(settings)).post("/api/decide", json=body())
+    assert response.status_code == 200
+    assert response.json()["model"]["model_id"] == "laya"
 
 
 def test_self_service_url_has_distinct_error():
