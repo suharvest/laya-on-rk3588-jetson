@@ -289,6 +289,10 @@ gemm 也没掉出 int8（48 个变成带残差 Add 的 int8 融合核），**唯
 
 界面支持中文和英文。只有未编辑的内置场景会在语言切换时本地化；用户编辑过的提示词、候选字段、输入、历史记录和设备配置保持原样。远端 API、RKNN 挂载、health 条件与验证记录见 [`app/README.md`](app/README.md)。设备实测记录见 [`docs/rk3576-cat-validation-20261009.md`](docs/rk3576-cat-validation-20261009.md)，转换约束见 [`docs/rk3576-conversion-20261009.md`](docs/rk3576-conversion-20261009.md)。当前发布证据见 [`RK3576 第二轮验证`](docs/interaction-review-ef82-20261011/rk3576-final-release/second-validation/) 和 [`RK3588 stock 发布`](docs/interaction-review-ef82-20261011/rk3588-final-release/)。
 
+## Kev 500-token 上下文基准
+
+可复现的 Kev 500-token 基准方法和生成输入见 [`experiments/jev-20261011/context500/README.zh.md`](experiments/jev-20261011/context500/README.zh.md)。测试使用 120 条冻结语义 case，按原顺序和反转候选顺序各发送一次，每台设备 240 条计分请求，另有 5 条不计分 warmup。基准分开记录 loopback client 时间与服务端 encoding/inference/total 时间，并报告总体、语言、类别、顺序、错误和错误选择。设备 summary 只在逐请求原始证据与 artifact pin 齐全后加入。
+
 ## 多平台工作台运行时
 
 应用 API 在各后端间保持一致，但运行时镜像按目标平台分开。RKNN 与 TensorRT 共享五输入 native 契约；RKLLM 使用独立的 token/hidden-state 适配。RK3576 RKNN `seq=90` 与 Kev RKLLM 2K guard 已验证；RK3588 Kev RKLLM 8K 已完成 stock 真机验证。Jetson Orin native Kev 仍是历史路径，必须单独核对模型、tokenizer、运行库和真机验收。参见 [docs/multiplatform-runtime.md](docs/multiplatform-runtime.md) 与 [app/README.md](app/README.md)。

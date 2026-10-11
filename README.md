@@ -206,6 +206,10 @@ The UI supports Chinese and English. Language switching localizes only an untouc
 The application API is shared across backends, while runtime images remain target-specific. RKNN and TensorRT share the five-input native contract; RKLLM uses an independent token/hidden-state adapter. RK3576 RKNN `seq=90` and the Kev RKLLM 2K guard are validated; Kev RKLLM 8K is verified on a stock RK3588 device. The Jetson Orin native Kev path remains historical and requires independent model, tokenizer, runtime, and hardware acceptance. See [docs/multiplatform-runtime.md](docs/multiplatform-runtime.md) and [app/README.md](app/README.md).
 
 
+## Kev context-500 benchmark
+
+The reproducible 500-token Kev benchmark method and generated inputs are documented in [`experiments/jev-20261011/context500/README.md`](experiments/jev-20261011/context500/README.md). It evaluates the same 120 frozen semantic cases in original and reversed option order, 240 scored requests per device, with five excluded warmups. The benchmark separates loopback client timing from server encoding/inference/total timing and records overall, language, category, order, errors, and wrong predictions. Device result summaries are added only after the corresponding raw evidence and artifact pins are available.
+
 ## Verified Kev workbench UI evidence
 
 The final device check for the command-selection UI used the Radxa service at `http://100.77.150.16:18769/`. The recorded service identity was `model_id=kev`, `backend=rkllm`, `max_sequence_tokens=8192`, and `max_options=16`. The evidence index, screenshots, AX snapshots, and three-frame GIF montage are in [`docs/kev-final-qa-20261011.md`](docs/kev-final-qa-20261011.md). The screenshots were captured before the later display-only rounding change; API and evidence JSON retain raw score and timing values.
