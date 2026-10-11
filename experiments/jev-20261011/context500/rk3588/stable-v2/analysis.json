@@ -1,6 +1,8 @@
 {
   "dataset_sha256": "e9d77a3c96a1d0645bc9561cdf9ead06cbd57d8ef081906c2d5094d55e54ba6e",
   "results_file_sha256": "5b49681b5e093202d9b184ac2fb94e471bde503669ba07c1f9573f665a73e782",
+  "paired_semantic_group_count": 60,
+  "language_sample_count": 120,
   "dataset_cases": 120,
   "scored_requests": 240,
   "semantic_sample_denominator": 120,
