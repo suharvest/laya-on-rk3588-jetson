@@ -1,0 +1,7 @@
+image=edge-command-workbench:rockchip-rkllm-0.3.0 id=sha256:4eb2a6a4cc8a1564d605666bd5dca04e7cfdee4e635a21c1c3e3fe38d4c41a1d
+container=kev-app-final-qa-18771
+health=model_ready=true max_sequence_tokens=2048; SDK max_context_limit=8192
+1800 alpha words -> tokenizer approximately 1800 input tokens; assembled request 1819; HTTP 200; elapsed_ms=28131.6
+2050 alpha words -> assembled input 2069; HTTP 422 input_too_long max_tokens=2048; elapsed_ms=39.5; no NPU inference
+OOM evidence=kev-8k-oom-evidence.txt sha256=8ba187d03c4c9428c91b44700626f4feb328e828e64963e4b899514a609fa0a3
+perf raw=kev-perf-bins-final.jsonl sha256=bcc3cc2a31a49b7985a6fc3dc96eea346036f38ec45f0dd19550e3f99c81daec

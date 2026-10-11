@@ -1,0 +1,7 @@
+name=/edge-workbench-rkllm-ef82-qa
+container_id=46aa2e8dce4ae0031421a5c826f44320ff1bb7fdf43b5fea478b25e4984e4e56
+port=18775
+state=running
+health=healthy
+network=host
+repo=edge-command-workbench:rockchip-rkllm-0.3.1-review id=sha256:8acbe96dc6548ef18eb424f405d68d812a0245e02006dbfd1f9801f600820f16 arch=arm64 os=linux size=291113842

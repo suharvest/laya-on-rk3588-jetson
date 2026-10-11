@@ -1,0 +1,12 @@
+{
+  "engine_sha256": "f53070dd831deedf137d7acf639553a8920c1e391cc6da0738f82a357d3a161d",
+  "source_model_safetensors_sha256": "9f1ae1c891195e1ed16b999618580f138f32ec51f8f193b2d4598fecf9f8e540",
+  "calibration": {"file": "short calibration.json", "sha256": "3879a040f3e2532c15d8ebc04edf51b85bf48196e0cc453fca6b3a7a4c0eaad7"},
+  "sdk": "RKLLM toolkit/runtime 1.3.1",
+  "target": "RK3588, W8A8, 3 NPU cores, max_context_len=8192",
+  "frozen_quality_manifest_sha256": "a647c769375d9282cc14cb9d03a5a0d10df50c1a30bad4ebcc01c35966d32f86",
+  "long_input_manifest_sha256": "2d539d8cad983117a620dd59877377c9359148ca626b936acb3f611054f53c95",
+  "timing_summary_sha256": "673b44aa6debca09d016469f9fdd5d1c2c9800829f2beaa0649cb7ce9754988e",
+  "runtime_source_sha256": "4d41ad7a278cdf89df4e48cd659d94642068cae03474271aea34002f227a792c",
+  "quality_runtime_source_sha256": "3da5fe089b11d6048a8c3044b331d52cf4500bb8a5ec1e80530a2686bb7c1d421"
+}

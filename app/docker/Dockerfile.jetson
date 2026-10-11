@@ -1,0 +1,66 @@
+# Jetson runtime image: TensorRT/CUDA libraries and Python bindings come from the host.
+ARG BASE_IMAGE=ubuntu:22.04
+ARG UBUNTU_APT_MIRROR=http://ports.ubuntu.com/ubuntu-ports
+
+FROM ${BASE_IMAGE} AS builder
+
+ARG DEBIAN_FRONTEND=noninteractive
+ARG UBUNTU_APT_MIRROR
+ARG UV_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+ENV UV_INDEX_URL=${UV_INDEX_URL} \
+    UV_LINK_MODE=copy \
+    UV_PROJECT_ENVIRONMENT=/opt/venv
+
+RUN rm -f /etc/apt/sources.list /etc/apt/sources.list.d/ubuntu.sources \
+    && printf "deb %s jammy main restricted universe multiverse\ndeb %s jammy-updates main restricted universe multiverse\ndeb %s jammy-security main restricted universe multiverse\n" "$UBUNTU_APT_MIRROR" "$UBUNTU_APT_MIRROR" "$UBUNTU_APT_MIRROR" > /etc/apt/sources.list.d/laya-ubuntu.list \
+    && printf 'Acquire::Retries "2";\nAcquire::http::Timeout "20";\nAcquire::https::Timeout "20";\n' > /etc/apt/apt.conf.d/99laya-timeouts \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends ca-certificates python3.10 python3.10-venv \
+    && rm -rf /var/lib/apt/lists/*
+WORKDIR /src
+RUN python3.10 -m venv /opt/uv-bootstrap \
+    && /opt/uv-bootstrap/bin/python -m pip install --no-cache-dir --index-url "${UV_INDEX_URL}" uv
+ENV PATH=/opt/uv-bootstrap/bin:${PATH}
+ENV UV_HTTP_TIMEOUT=120 UV_CONCURRENT_DOWNLOADS=2
+COPY pyproject.toml uv.lock ./
+RUN uv sync --frozen --no-dev --extra jetson --no-install-project
+
+FROM ${BASE_IMAGE} AS runtime
+ARG DEBIAN_FRONTEND=noninteractive
+ARG UBUNTU_APT_MIRROR
+RUN rm -f /etc/apt/sources.list /etc/apt/sources.list.d/ubuntu.sources \
+    && printf "deb %s jammy main restricted universe multiverse\ndeb %s jammy-updates main restricted universe multiverse\ndeb %s jammy-security main restricted universe multiverse\n" "$UBUNTU_APT_MIRROR" "$UBUNTU_APT_MIRROR" "$UBUNTU_APT_MIRROR" > /etc/apt/sources.list.d/laya-ubuntu.list \
+    && printf 'Acquire::Retries "2";\nAcquire::http::Timeout "20";\nAcquire::https::Timeout "20";\n' > /etc/apt/apt.conf.d/99laya-timeouts \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends ca-certificates python3.10 \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV PATH=/opt/venv/bin:${PATH} \
+    PYTHONPATH=/app:/usr/lib/python3.10/dist-packages \
+    PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    LD_LIBRARY_PATH=/usr/lib/python3.10/dist-packages/tensorrt:/host-nvidia-libs:/host-libs:/host-cuda \
+    NVIDIA_VISIBLE_DEVICES=all \
+    NVIDIA_DRIVER_CAPABILITIES=compute,utility \
+    DECISION_BACKEND=tensorrt \
+    MODEL_PATH=/models/model.engine \
+    TOKENIZER_PATH=/models/tokenizer \
+    MODEL_METADATA_PATH=/models/model_metadata.json \
+    TARGET_METADATA_PATH=/app/docker/target-metadata.jetson.json \
+    SEQ_LEN=90 \
+    MAX_OPTIONS=16 \
+    EXPECTED_BACKEND=tensorrt \
+    EXPECTED_SEQ_LEN=90 \
+    EXPECTED_MAX_OPTIONS=16
+RUN ln -sf /usr/bin/python3.10 /usr/bin/python3
+WORKDIR /app
+COPY --from=builder /opt/venv /opt/venv
+COPY edge_workbench ./edge_workbench
+COPY web ./web
+COPY docker/healthcheck.py ./docker/healthcheck.py
+COPY docker/entrypoint.py ./docker/entrypoint.py
+COPY docker/target-metadata.jetson.json ./docker/target-metadata.jetson.json
+EXPOSE 18768
+HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=3 \
+  CMD ["python", "/app/docker/healthcheck.py"]
+ENTRYPOINT ["python", "/app/docker/entrypoint.py"]

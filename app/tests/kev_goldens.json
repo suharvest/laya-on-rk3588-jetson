@@ -1,0 +1,7 @@
+[
+  {"id":"jev-001-en","tokens":94,"option_end_indices":[45,54,63,72,82,92],"decision_index":93},
+  {"id":"jev-001-zh","tokens":97,"option_end_indices":[44,53,63,73,83,95],"decision_index":96},
+  {"id":"jev-002-en","tokens":90,"option_end_indices":[41,50,59,68,78,88],"decision_index":89},
+  {"id":"jev-002-zh","tokens":93,"option_end_indices":[40,49,59,69,79,91],"decision_index":92},
+  {"id":"jev-003-en","tokens":97,"option_end_indices":[39,48,57,66,75,85,95],"decision_index":96}
+]

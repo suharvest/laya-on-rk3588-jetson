@@ -1,0 +1,15 @@
+{
+  "backend": "tensorrt",
+  "seq_len": 90,
+  "max_options": 16,
+  "inputs": {
+    "input_ids": [1, 90],
+    "attention_mask": [1, 90],
+    "marker_pos": [1, 16],
+    "marker_mask": [1, 16],
+    "qtype": [1]
+  },
+  "outputs": {"choice_logits": [1, 16]},
+  "artifact": "model.engine",
+  "runtime": "host TensorRT/CUDA bindings"
+}

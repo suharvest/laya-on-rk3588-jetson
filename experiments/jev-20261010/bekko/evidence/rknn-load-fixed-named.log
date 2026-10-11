@@ -1,0 +1,8 @@
+/home/harve/rknn-venv-a1/lib/python3.12/site-packages/rknn/api/rknn.py:51: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  self.rknn_base = RKNNBase(cur_path, verbose)
+I rknn-toolkit2 version: 2.3.2
+[1;33mW[0m [1;33mload_onnx: If you don't need to crop the model, don't set 'inputs'/'input_size_list'/'outputs'![0m
+CONFIG_RET 0
+LOAD_BEGIN ['prefix_ids', 'prefix_mask', 'doc_ids', 'doc_mask', 'owners'] [[1, 128], [1, 128], [7, 384], [7, 384], [7]]
+I Loading :   0%|                                                           | 0/123 [00:00<?, ?it/s]I Loading : 100%|███████████████████████████████████████████████| 123/123 [00:00<00:00, 2390.64it/s]
+LOAD_RET 0

@@ -1,0 +1,73 @@
+# ef82 独立实际审查
+
+审查时间：2026-10-11 12:20–12:25（Asia/Shanghai）
+实际地址：<http://192.0.2.16:18772/>
+部署状态：前半段浏览器 route review 使用 d870；该阶段没有更新 18772 容器或发布 UI。后续真实容器 QA 在 18775 使用 ef82 candidate，见文末 section。
+
+## 复测版本与限制
+
+- 源文件：`/tmp/edge-workbench-web-ef82f83/app.js`
+- SHA-256：`02c44a4da2b0a9e298aec9ef9154a5c5488e29875aff729fd0f26348dda0ed9e`
+- 仅在独立浏览器 review 会话中将 `/app.js` 路由替换为上述文件。
+- `/api/models`、`/api/decide`、`/api/health/remote` 等真实 API 仍请求 18772。
+- 因此本报告证明的是 route 替换后的浏览器行为，不证明 d870 容器已包含 ef82。
+
+## 候选构建关联
+
+- 本地 candidate source commit：`ef82f8360c2b787f97c958f89c92fe569c62ecb1`。
+- candidate image：`edge-command-workbench:rockchip-rkllm-0.3.1-review`，image/config blob SHA-256：`d7a81c4f8ef3eaa2c21560b2d37939c6088357ec0c1d41c3089ff5fbc3836de9`。
+- candidate archive SHA-256：`251cb7fef080f489bf311b37c5bddbba1cd72e887e71f10ce12fc25a1fe64f77`。
+- 本报告前半段 route review 的真实 API 复测仍连接 18772 的 d870 部署；文末 container QA 只启动独立 18775 容器，未更新 18772 生产服务。
+
+## 已确认
+
+- ZH/EN 结果标签随语言切换正确更新；已有结果保留，切换语言没有新增历史记录。证据：[ef82-zh-result.yaml](./ef82-zh-result.yaml)、[ef82-en-result.yaml](./ef82-en-result.yaml)。
+- 两个真实模型均完成判断：`model.rknn → laya`（90 tokens），`model.rkllm → kev`（8192 tokens）。证据：[ef82-zh-result.yaml](./ef82-zh-result.yaml)、[ef82-rkllm-result-en.yaml](./ef82-rkllm-result-en.yaml)。
+- Test and connect 失败后显示错误；清空地址后重新测试恢复连接。证据：[ef82-connect-fail.yaml](./ef82-connect-fail.yaml)、[ef82-connect-recovered.yaml](./ef82-connect-recovered.yaml)。
+- 鼠标重复点击已复测为受保护：第一次后按钮 disabled，第二次被拒绝，request 数为 1。旧的“鼠标重复点击会重复请求” finding 撤回。证据：[ef82-mouse-click-repro.txt](./ef82-mouse-click-repro.txt)。
+- Ctrl+Enter 连续两次只产生 1 个 `/api/decide` 请求。证据：[ef82-ctrl-enter-repro.txt](./ef82-ctrl-enter-repro.txt)。
+- 快速切换模型时旧 health 请求被 abort，最终 metadata 对齐最后选择。证据：[ef82-modelhealth-race-network.log](./ef82-modelhealth-race-network.log)、[ef82-modelhealth-race.txt](./ef82-modelhealth-race.txt)。
+
+## 边界
+
+- 未配置真实语音服务；录音入口保持 disabled。本轮没有把合成 WebSocket final 消息当作真实 ASR 证据，真实 ASR 仍需连接实际服务后验证。
+- `/api/health/remote` 失败恢复会在 Console 留下 502 记录，这是本轮故意输入不可达地址产生的诊断证据，不是发布状态。
+
+## 证据产物
+
+- 完成结果全页截图（Kev / rkllm / 8192）：[ef82-completed-zh.png](./ef82-completed-zh.png)、[ef82-completed-en.png](./ef82-completed-en.png)
+- 两帧完成结果语言切换 GIF（非实时演示）：[ef82-completed-zh-en.gif](./ef82-completed-zh-en.gif)
+- 完成结果响应、文本和 history 计数：[ef82-completed-zh-runtime.txt](./ef82-completed-zh-runtime.txt)、[ef82-completed-en-runtime.txt](./ef82-completed-en-runtime.txt)
+- 请求 payload：[ef82-request-payload.txt](./ef82-request-payload.txt)
+- Console：[ef82-console-latest.log](./ef82-console-latest.log)
+
+SHA-256：
+
+```text
+ef82-completed-zh.png  fc330da7cbb79a1e219a1199551aa2a3f531e2552210c5c26a382e52a082f16b
+ef82-completed-en.png  9ae42e4d7b0ba2390426f47639482426474531003ac5d272d97cd8d8efdee958
+ef82-completed-zh-en.gif  324c79531ad390f01888756aee950ce830fdda186629cda424da516c124e5696
+```
+
+## 真实容器 QA
+
+- QA 容器：`edge-workbench-rkllm-ef82-qa`，端口 `18775`，独立 tag `edge-command-workbench:rockchip-rkllm-0.3.1-review`；没有停止或替换既有容器。容器状态和镜像信息见 [container-info.txt](./container-qa/container-info.txt)。
+- 容器 health 返回 `model_ready=true`、`model_id=kev`、`backend=rkllm`、`max_sequence_tokens=8192`；catalog 同时返回 ready 的 Kev/RKLLM 8192 和 Laya/RKNN 90。原始响应：[health.json](./container-qa/health.json)、[models.json](./container-qa/models.json)。
+- 相同短 payload 的真实 POST：Kev 返回 HTTP 200、`selected_option_id=cmd-3`、实际 `model_id=kev`；Laya 返回 HTTP 200、`selected_option_id=cmd-3`、实际 `model_id=laya`。原始请求/响应：[kev-request.json](./container-qa/kev-request.json)、[kev-response.json](./container-qa/kev-response.json)、[laya-request.json](./container-qa/laya-request.json)、[laya-response.json](./container-qa/laya-response.json)。
+- Kev/RKLLM 实测 `inference_ms=1338.0779240396805`，Laya/RKNN 实测 `inference_ms=457.5591559987515`；HTTP timing 和 curl exit：[kev-http.txt](./container-qa/kev-http.txt)、[laya-http.txt](./container-qa/laya-http.txt)、[kev-start.txt](./container-qa/kev-start.txt)、[kev-end.txt](./container-qa/kev-end.txt)、[laya-start.txt](./container-qa/laya-start.txt)、[laya-end.txt](./container-qa/laya-end.txt)。
+- archive 内 config blob SHA 为 `d7a81c4f8ef3eaa2c21560b2d37939c6088357ec0c1d41c3089ff5fbc3836de9`；Docker 29 加载后的 image ID 为 `sha256:8acbe96dc6548ef18eb424f405d68d812a0245e02006dbfd1f9801f600820f16`，两者差异保留在 [archive-config-vs-loaded.txt](./container-qa/archive-config-vs-loaded.txt)。
+- candidate 内 `/app/web/app.js` SHA 为 `02c44a4da2b0a9e298aec9ef9154a5c5488e29875aff729fd0f26348dda0ed9e`，helper SHA 为 `022e0102f9dd4c8839ba7acbc68f03d8811bf020cde84d6cf1343829cd66f919`，见 [embedded-sha.txt](./container-qa/embedded-sha.txt)。启动日志见 [container.log](./container-qa/container.log)。
+- 本 QA 使用只读的现有 Radxa model/tokenizer/head/runtime 文件；仅部署独立 QA 容器，未更新生产服务、未 HF 发布或修改 source/math。
+## 直接浏览器复测（18775）
+
+- 本节证据来自实际 `http://192.0.2.16:18775/` 新浏览器会话，未使用 Playwright route 替换；`direct-browser/` 目录保存实际页面 asset、snapshot、network、request 和完成结果截图。
+- 实际 `app.js` SHA-256：`02c44a4da2b0a9e298aec9ef9154a5c5488e29875aff729fd0f26348dda0ed9e`；实际 `index.html` SHA-256：`75f2779f55ba3b2af3030e3739986b8217af7e69c7bc691e2a4f99795e4676ff`。
+- Kev 中文完成判断返回 HTTP 200，实际模型 `kev`、后端 `rkllm`、最大上下文 `8192`；切换 EN 后结果保留且 history 不增加。Laya 真实判断返回 HTTP 200，实际模型 `laya`、后端 `rknn`、最大上下文 `90`。
+- Ctrl+Enter pending guard 显示 `Running · 0s`，第一次后按钮 disabled，第二次不产生额外请求（request count `1`）。
+- 该 candidate 只在当前 QA 容器直接浏览器中复测，未 HF 发布；真实 ASR 未配置/未验证。GIF 是两张完成状态截图的非实时拼接，不表示实时录屏或推理时长。
+
+证据入口：[direct-browser/REVIEW.md](./direct-browser/REVIEW.md)。
+
+### 公开证据地址说明
+
+本目录的公开文本副本已将私有 Fleet/LAN 地址替换为 RFC 5737 文档地址；回环地址与合成基准数据保持不变。原始字节及原始哈希保存在私有审计记录中，目录内清单哈希对应脱敏副本。

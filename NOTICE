@@ -41,3 +41,22 @@ laya implements the same System One typed-decision request interface.
 
 "laya", "mmBERT", "Rockchip", "RK3588", "RKNN", "NVIDIA", "Jetson" and "TensorRT" are the
 property of their respective owners.
+
+Kev RKLLM artifact attribution
+------------------------------
+
+Kev adapter and head source
+  https://huggingface.co/jaredpalmer/kev-0.8b
+  Pinned revision: 9a45d25eb2ab761841196625383fa1dff0e56c1e
+  The upstream model card identifies the applicable license as Apache License, Version 2.0.
+
+Qwen base model source
+  Qwen3.5-0.8B-Base
+  Pinned revision: dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68
+  The upstream model card identifies the applicable license as Apache License, Version 2.0.
+
+The LoRA merge, GRQ-quantized RKLLM engines, and converted FP32 head NPZ are derivative
+artifacts of the pinned sources above. The head conversion source checkpoint SHA256 is
+f400bd12802b2b105ae45d6b03774a158a3db4fccff42413734ddca2e5c920b6. This notice records
+source attribution for these artifacts and does not make a separate claim about a Kev
+source-code license.

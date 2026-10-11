@@ -1,0 +1,50 @@
+Kev RK3576 W4A16 8K cat application evidence, 2026-10-11
+
+Candidate image archive (Spark source, not copied into repo):
+archive=/home/harvest/edge-workbench-candidate-20261011/edge-command-workbench-rockchip-rkllm-0.3.0-arm64-final.tar
+archive_sha256=6499f8b6ef179034672d79490711be2703017307aca522c5cc42472798446794
+image_config_blob_sha256=ea11f744f609fcd6d1078589fc7500d30e11d45da2967d1e6aabf4ea9b2c18a3
+loaded_image_id=sha256:4eb2a6a4cc8a1564d605666bd5dca04e7cfdee4e635a21c1c3e3fe38d4c41a1d
+
+Persistent cat model (not copied here):
+path=/home/cat/kev-rkllm/persist/kev-0.8b-w4a16-g128-rk3576-context8192-shortcalib.rkllm
+sha256=0370f1aa3a6cc119489817b442f3177f0ff9c50949a6b1a11bce6ca5eccee506
+SDK runtime sha256=f25e9b099db08aaacd0a3ac62b4697d3951d6ae61ae41ea09f6702cfa89eb32c
+SDK header sha256=4ad19442de58df1b7d1ed0884ed75b8d4b5107cc4e75b7e44900b1f95a32c57c
+native helper sha256=022e0102f9dd4c8839ba7acbc68f03d8811bf020cde84d6cf1343829cd66f919
+head.npz sha256=533a21e940e69a570d5cf12f50f1bef27bdb2847395a288fa6cbfc3f9a1a7a7b
+
+Backup canonical digests (source/target identical):
+whisper_build=982859709db915ad85a0f6fab15d4d34643e291de1cd309fbe547b255080ab32
+piper-frontend-migration-20260921=caa1f7d27e9a3efcebaf046920cc2467e0245663959bc4ef014fafd11d801343
+Spark archive=/home/harvest/archive/cat-remote/20261010/backup-complete-after-reboot-20261011
+
+Application final image 240 QA:
+API=127.0.0.1:18771; seq_len=8192; source_sha256=a1c18d3f86aa92eb11d06a5034ee1884de5b1228089b77648aeefa42fdd25a8a
+240/240 HTTP ok; accuracy 188/240 (78.33%); orig 95/120; reverse 93/120; errors=0; token_overflow_422=0
+mean_ms=1625.313; p95_ms=1989.885; elapsed_s=390.152
+raw_sha256=bed17c2f7ef85f3208543cc6c3728e8c14b212f3998c283316bb03bc8e90e876
+summary_sha256=1804211cfc56bc520989c68059949602d228bb30b4fefacb20fbec2c30e08ee8
+
+Performance/limit evidence:
+40 tokens: 0.889-0.922s (n=3)
+2000 tokens: 30.414-31.297s (n=3)
+7800 tokens: RemoteDisconnected then connection refused; no retry
+OOM: container OOMKilled=true exit=137; dmesg python anon-rss=3814616kB shmem-rss=880832kB at 10:00:42
+SEQ_LEN=2048 shadow: 1800-word input assembled 1819 tokens HTTP200 28.132s; 2050-word input assembled 2069 tokens HTTP422 input_too_long 39.5ms
+
+Health/resource tail after QA: production voice/display containers remained healthy; cat root free about 2.7G after candidate image load; model remained persistent. The 8K engine export is valid, but cat application deployment uses seq_len=2048 guard due observed global OOM.
+
+Reproducibility runners:
+run_kev_quality_final.py executes 120 source cases twice (original and reversed options), writes one flushed JSON record per request; gold/expected IDs are read from the shared JSONL and no gold labels are sent to the model input.
+run_perf_bins.py executes n=3 synthetic requests per bin.
+run_kev_goldens5.py executes the 5 pinned Kev golden IDs through the 2048 shadow API.
+
+Exact synthetic KevCodec assembled token counts (measured with the deployed tokenizer and KevCodec.encode):
+40 input tokens + 19 prompt/delimiter/option overhead = 59 assembled tokens
+2000 input tokens + 19 overhead = 2019 assembled tokens
+7800 input tokens + 19 overhead = 7819 assembled tokens
+
+SEQ_LEN=2048 five-golden shadow: 5/5 HTTP 200, expected IDs matched; raw SHA=6e6a8fbe7f58be9c5fb35cfb9650fdf3b19dbdadc3949dc6158f4fe00a4f3f5e.
+Machine/network/production tail raw evidence: machine-health-network-tail.txt SHA=c989dc7f609b979526c9e226bde170c4a6da6c033032261aad75afce4b2297cf.
+The final UI image changes web presentation only; core 240 quality results above are from the final image API and native runtime.

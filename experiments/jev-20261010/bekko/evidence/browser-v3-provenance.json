@@ -1,0 +1,19 @@
+{
+  "source_model": "hotchpotch/bekko-system-one-v0-68m",
+  "source_revision": "ab7685f23e5edbc1acb12ced4f2c4e12591efa69",
+  "model_license": "HF README says released-weight and bundled inference-code license declaration remains to be finalized",
+  "browser_onnx_sha256": "3b121d68a67f9678a1272a08f24dd2ccffb276f92f39a3f77953b30290cbc3e1",
+  "browser_tokenizer_sha256": "dd8374bb8bd74c2112989a24697e0ba494c6258ed758c0701a62957e67d38cea",
+  "native_weights_sha256": "db2f01fd59d5a0b38d14f8befd981a33db6d462cd652980cf9e29b0798aca71c",
+  "native_fp32_onnx_path": "/home/harve/tmp/bekko-native-20261010/native-fixed128-384-fp32-cpu.onnx",
+  "native_fp32_onnx_sha256": "42e69d0d6eb1a0fb96d99d0483bb8d4e2e43fbb45d307164c6978ac15cf93ef0",
+  "native_ort_smoke": {
+    "case": "jev-001-en",
+    "max_abs_logit_error": 0.05402183532714844,
+    "mean_abs_logit_error": 0.03401700779795647,
+    "finite": true
+  },
+  "codec_source": "https://github.com/hotchpotch/bekko-system-one/blob/main/browser/src/core.js",
+  "head_source": "manifest tasks [choice,noul,score]; predict column=tasks.indexOf(request.task), choice index 0",
+  "dataset_sha256": "a1c18d3f86aa92eb11d06a5034ee1884de5b1228089b77648aeefa42fdd25a8a"
+}

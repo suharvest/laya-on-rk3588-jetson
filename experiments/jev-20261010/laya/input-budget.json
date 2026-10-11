@@ -1,0 +1,16 @@
+{
+  "tokenizer": "/home/harvest/tmp/jev-20261010/laya/tokenizer/tokenizer.json",
+  "tokenizer_sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+  "codec": "app/edge_workbench/native.py:LayaCodec",
+  "seq_len": 512,
+  "max_options": 16,
+  "head_cap": 192,
+  "head_min_remaining": 16,
+  "option_cap": 48,
+  "rows": 120,
+  "errors": [],
+  "max_head_budget": 101,
+  "max_total_tokens": 117,
+  "max_option_tokens": 13,
+  "all_fit": true
+}

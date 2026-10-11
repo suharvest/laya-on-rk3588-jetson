@@ -1,0 +1,31 @@
+{
+  "status": "completed",
+  "dataset_sha256": "a1c18d3f86aa92eb11d06a5034ee1884de5b1228089b77648aeefa42fdd25a8a",
+  "engine_sha256": "0d90bf8cb2e61f8ffc9ec0c3604bfd276ede5e0ba5d501241b2a73b845dc8938",
+  "tokenizer_sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+  "original": {
+    "correct": 70,
+    "n": 120,
+    "accuracy": 0.5833333333333334,
+    "errors": 0
+  },
+  "permutation": {
+    "seed": 20261010,
+    "correct": 72,
+    "n": 120,
+    "accuracy": 0.6,
+    "errors": 0
+  },
+  "invariance": {
+    "same_selected": 106,
+    "n": 120,
+    "changed": 14
+  },
+  "timing_ms": {
+    "warmup": 20,
+    "iters": 50,
+    "p95_nearest_rank": 19.809182733297348,
+    "median": 19.66879330575466
+  },
+  "raw_sha256": "507814fd0a0749c8135ca7a07f49be241d16e7d23f2b2edc93e7d3dab70fd1ac"
+}

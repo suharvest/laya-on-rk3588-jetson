@@ -1,0 +1,5 @@
+a194c9504d38173525fb1aedb513c3261c01ff4860c9d4a0743abdc953b88b97  model.rk3588.rknn
+609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f  tokenizer.json
+6c6b2d8e3c84ce0e671c129cd6b374b235d6f9863042a5836358d00a89bbb5a1  tokenizer_config.json
+6cd1d9c67c63caef3a8fc2789e547e65a917e9a9d9957f6a8b597bbd4187af30  spark-native.py (historical native probes)
+5c434fa631efe7b60ea32353707ca2ee57c1adcba2e5772042928a192c2fa152  spark-native-current.py (rk3588-cli-validation.json)

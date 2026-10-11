@@ -1,0 +1,13 @@
+{
+  "total": 240,
+  "ok": 240,
+  "correct": 188,
+  "accuracy": 0.7833333333333333,
+  "errors": 0,
+  "token_overflow_422": 0,
+  "elapsed_s": 390.1515669822693,
+  "latency_ms_mean": 1625.3132462501526,
+  "latency_ms_p95": 1989.884853363037,
+  "raw": "/home/cat/kev-app/kev-quality-final-240.raw.jsonl",
+  "source_sha256": "a1c18d3f86aa92eb11d06a5034ee1884de5b1228089b77648aeefa42fdd25a8a"
+}

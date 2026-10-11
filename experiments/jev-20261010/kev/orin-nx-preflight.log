@@ -1,0 +1,94 @@
+HOST=orinnx
+Linux orinnx 5.15.148-tegra #1 SMP PREEMPT Thu May 22 09:38:12 UTC 2025 aarch64 aarch64 aarch64 GNU/Linux
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1  233G  227G  3.8G  99% /
+MemTotal:       16031788 kB
+MemAvailable:    8083976 kB
+Fri Oct  9 22:02:19 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 540.4.0                Driver Version: 540.4.0      CUDA Version: 12.6     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Orin (nvgpu)                  N/A  | N/A              N/A |                  N/A |
+| N/A   N/A  N/A               N/A /  N/A | Not Supported        |     N/A          N/A |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<stdin>", line 1, in <module>
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/__init__.py", line 2422, in <module>
+    from torch import (
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/export/__init__.py", line 64, in <module>
+    from .dynamic_shapes import Constraint, Dim, dims, dynamic_dim, ShapesCollection
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/export/dynamic_shapes.py", line 18, in <module>
+    from .exported_program import ExportedProgram
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/export/exported_program.py", line 24, in <module>
+    from torch._higher_order_ops.utils import autograd_not_implemented
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_higher_order_ops/__init__.py", line 1, in <module>
+    from torch._higher_order_ops.cond import cond
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_higher_order_ops/cond.py", line 5, in <module>
+    import torch._subclasses.functional_tensor
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py", line 42, in <module>
+    class FunctionalTensor(torch.Tensor):
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py", line 267, in FunctionalTensor
+    cpu = _conversion_method_template(device=torch.device("cpu"))
+/home/harvest/.local/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py:267: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at /opt/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+torch 2.5.0a0+872d972e41.nv24.08 cuda 12.6 available True device Orin cap (8, 7) mem_info (8075128832, 16416550912)
+tensor_smoke_ok True torch.Size([1024, 1024])
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<stdin>", line 3, in <module>
+  File "/home/harvest/.local/lib/python3.10/site-packages/accelerate/__init__.py", line 16, in <module>
+    from .accelerator import Accelerator
+  File "/home/harvest/.local/lib/python3.10/site-packages/accelerate/accelerator.py", line 32, in <module>
+    import torch
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/__init__.py", line 2422, in <module>
+    from torch import (
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/export/__init__.py", line 64, in <module>
+    from .dynamic_shapes import Constraint, Dim, dims, dynamic_dim, ShapesCollection
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/export/dynamic_shapes.py", line 18, in <module>
+    from .exported_program import ExportedProgram
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/export/exported_program.py", line 24, in <module>
+    from torch._higher_order_ops.utils import autograd_not_implemented
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_higher_order_ops/__init__.py", line 1, in <module>
+    from torch._higher_order_ops.cond import cond
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_higher_order_ops/cond.py", line 5, in <module>
+    import torch._subclasses.functional_tensor
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py", line 42, in <module>
+    class FunctionalTensor(torch.Tensor):
+  File "/home/harvest/.local/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py", line 267, in FunctionalTensor
+    cpu = _conversion_method_template(device=torch.device("cpu"))
+/home/harvest/.local/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py:267: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at /opt/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+transformers OK 5.6.2 /home/harvest/.local/lib/python3.10/site-packages/transformers/__init__.py
+peft ERR ModuleNotFoundError No module named 'peft'
+accelerate OK 1.13.0 /home/harvest/.local/lib/python3.10/site-packages/accelerate/__init__.py
+tokenizers OK 0.22.2 /home/harvest/.local/lib/python3.10/site-packages/tokenizers/__init__.py

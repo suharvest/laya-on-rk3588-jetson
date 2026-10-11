@@ -194,3 +194,33 @@ TensorRT 10.3.0, onnx-graphsurgeon, ONNX Runtime.
 
 This project is not affiliated with TypeSafe AI, Inc. "Jev" is their product; the references
 here are descriptive.
+
+## Command Selection Workbench
+
+`app/` contains the local FastAPI service and static UI for RK3576 RKNN `seq=90` and the Kev RKLLM command-selection path. A separate cat-remote 8K attempt reached 7819 actual tokens and hit global OOM. The later RK3576 Kev 2K deployment guard rejected a 2088-token over-limit request with HTTP 422 before NPU execution. Kev RKLLM 8K is now verified on a stock Radxa RK3588 deployment. The Jetson native Kev path remains historical and has not completed hardware validation. The ARM64 image, model, tokenizer, and metadata are published under the recorded release path in the `harvestsu/laya-multilingual-rknn-tensorrt` Hugging Face repository.
+
+The UI supports Chinese and English. Language switching localizes only an untouched built-in scene; user-edited prompt, candidate fields, input, history, and device settings remain as entered. See [`app/README.md`](app/README.md) for the remote API, RKNN runtime mounts, health requirements, and validation record. The device evidence is in [`docs/rk3576-cat-validation-20261009.md`](docs/rk3576-cat-validation-20261009.md); conversion constraints are in [`docs/rk3576-conversion-20261009.md`](docs/rk3576-conversion-20261009.md). The current release evidence is [`RK3576 second validation`](docs/interaction-review-ef82-20261011/rk3576-final-release/second-validation/) and [`RK3588 stock release`](docs/interaction-review-ef82-20261011/rk3588-final-release/).
+
+## Multi-platform Workbench runtime
+
+The application API is shared across backends, while runtime images remain target-specific. RKNN and TensorRT share the five-input native contract; RKLLM uses an independent token/hidden-state adapter. RK3576 RKNN `seq=90` and the Kev RKLLM 2K guard are validated; Kev RKLLM 8K is verified on a stock RK3588 device. The Jetson Orin native Kev path remains historical and requires independent model, tokenizer, runtime, and hardware acceptance. See [docs/multiplatform-runtime.md](docs/multiplatform-runtime.md) and [app/README.md](app/README.md).
+
+
+## Kev context-500 benchmark
+
+The reproducible method, full per-device results, raw JSONL, summaries, analyses, and SHA256 evidence are in [`experiments/jev-20261011/context500/README.md`](experiments/jev-20261011/context500/README.md). The benchmark uses 60 paired English/Chinese semantic groups (120 language samples), 4–7 candidates per request, exact 500-token Kev assemblies, and original/reverse option order for 240 scored requests per device. The 500-token context is a neutral synthetic background extension for measurement, not a natural complex-task accuracy claim. The recorded release uses image `edge-command-workbench:rockchip-rkllm-0.3.1-review` and Hugging Face revision `db0545065d4da3598d009407fc3bd0c7632ca199`.
+
+| device | HTTP | correct | accuracy | client mean / p50 / p95 |
+|---|---:|---:|---:|---:|
+| RK3576 | 240/240 | 189/240 | 78.75% | 7220.982 / 7115.307 / 7574.560 ms |
+| RK3588 | 240/240 | 189/240 | 78.75% | 3958.615 / 3946.517 / 4770.961 ms |
+
+Accuracy is exact `selected_option_id` match. False-action entries are model selection errors for expected `clarify`/`reject`; this benchmark sent decision requests and did not execute industrial commands. The two devices use different chip, quantization, and deployment context-guard configurations, so the result does not isolate quantization as a cause.
+
+## Verified Kev workbench UI evidence
+
+The final device check for the command-selection UI used the Radxa service at `http://192.0.2.16:18769/`. The recorded service identity was `model_id=kev`, `backend=rkllm`, `max_sequence_tokens=8192`, and `max_options=16`. The evidence index, screenshots, AX snapshots, and three-frame GIF montage are in [`docs/kev-final-qa-20261011.md`](docs/kev-final-qa-20261011.md). The screenshots were captured before the later display-only rounding change; API and evidence JSON retain raw score and timing values.
+
+### Public evidence network-address handling
+
+Public text evidence replaces private Fleet/LAN host addresses with RFC 5737 documentation addresses. Loopback addresses used by the synthetic benchmark remain unchanged. Original evidence bytes and their hashes are retained in a private audit workspace; public hashes refer to the sanitized copies.

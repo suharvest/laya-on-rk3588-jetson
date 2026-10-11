@@ -1,0 +1,454 @@
+W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
+{
+  "model": "/dev/shm/edge-workbench-rk3588-20261009/laya-multilingual.s90.m16.fp16.nanfix.rk3588.rknn",
+  "rows": [
+    {
+      "sample": "sample_0000",
+      "n_live": 3,
+      "top1_match": true,
+      "order_exact": true,
+      "logits_finite": true,
+      "rel_l2": 0.011254200810444629,
+      "max_abs_diff": 0.012861490249633789,
+      "order_ref": [
+        1,
+        2,
+        0
+      ],
+      "order_rknn": [
+        1,
+        2,
+        0
+      ],
+      "act_finite": true
+    },
+    {
+      "sample": "sample_0001",
+      "n_live": 12,
+      "top1_match": true,
+      "order_exact": true,
+      "logits_finite": true,
+      "rel_l2": 0.007236470596674635,
+      "max_abs_diff": 0.06093406677246094,
+      "order_ref": [
+        2,
+        4,
+        0,
+        1,
+        3,
+        6,
+        10,
+        11,
+        5,
+        9,
+        8,
+        7
+      ],
+      "order_rknn": [
+        2,
+        4,
+        0,
+        1,
+        3,
+        6,
+        10,
+        11,
+        5,
+        9,
+        8,
+        7
+      ],
+      "act_finite": true
+    },
+    {
+      "sample": "sample_0002",
+      "n_live": 8,
+      "top1_match": true,
+      "order_exact": true,
+      "logits_finite": true,
+      "rel_l2": 0.007793409707632805,
+      "max_abs_diff": 0.034598588943481445,
+      "order_ref": [
+        2,
+        1,
+        7,
+        5,
+        0,
+        3,
+        6,
+        4
+      ],
+      "order_rknn": [
+        2,
+        1,
+        7,
+        5,
+        0,
+        3,
+        6,
+        4
+      ],
+      "act_finite": true
+    },
+    {
+      "sample": "sample_0003",
+      "n_live": 12,
+      "top1_match": true,
+      "order_exact": false,
+      "logits_finite": true,
+      "rel_l2": 0.008569078156664989,
+      "max_abs_diff": 0.038857460021972656,
+      "order_ref": [
+        1,
+        0,
+        7,
+        3,
+        8,
+        11,
+        6,
+        9,
+        5,
+        2,
+        4,
+        10
+      ],
+      "order_rknn": [
+        1,
+        0,
+        7,
+        3,
+        8,
+        11,
+        6,
+        9,
+        2,
+        5,
+        4,
+        10
+      ],
+      "act_finite": true
+    },
+    {
+      "sample": "sample_0004",
+      "n_live": 8,
+      "top1_match": true,
+      "order_exact": true,
+      "logits_finite": true,
+      "rel_l2": 0.010589722111623403,
+      "max_abs_diff": 0.05981111526489258,
+      "order_ref": [
+        7,
+        1,
+        0,
+        4,
+        6,
+        2,
+        3,
+        5
+      ],
+      "order_rknn": [
+        7,
+        1,
+        0,
+        4,
+        6,
+        2,
+        3,
+        5
+      ],
+      "act_finite": true
+    },
+    {
+      "sample": "sample_0005",
+      "n_live": 2,
+      "top1_match": true,
+      "order_exact": true,
+      "logits_finite": true,
+      "rel_l2": 0.03357084271761209,
+      "max_abs_diff": 0.03769862651824951,
+      "order_ref": [
+        1,
+        0
+      ],
+      "order_rknn": [
+        1,
+        0
+      ],
+      "act_finite": true
+    },
+    {
+      "sample": "sample_0006",
+      "n_live": 8,
+      "top1_match": true,
+      "order_exact": true,
+      "logits_finite": true,
+      "rel_l2": 0.0034653228392233144,
+      "max_abs_diff": 0.02298903465270996,
+      "order_ref": [
+        7,
+        4,
+        6,
+        0,
+        2,
+        3,
+        5,
+        1
+      ],
+      "order_rknn": [
+        7,
+        4,
+        6,
+        0,
+        2,
+        3,
+        5,
+        1
+      ],
+      "act_finite": true
+    },
+    {
+      "sample": "sample_0007",
+      "n_live": 2,
+      "top1_match": true,
+      "order_exact": true,
+      "logits_finite": true,
+      "rel_l2": 0.030851518907600104,
+      "max_abs_diff": 0.015225410461425781,
+      "order_ref": [
+        0,
+        1
+      ],
+      "order_rknn": [
+        0,
+        1
+      ],
+      "act_finite": true
+    },
+    {
+      "sample": "sample_0008",
+      "n_live": 2,
+      "top1_match": true,
+      "order_exact": true,
+      "logits_finite": true,
+      "rel_l2": 0.021790711128308386,
+      "max_abs_diff": 0.07777881622314453,
+      "order_ref": [
+        0,
+        1
+      ],
+      "order_rknn": [
+        0,
+        1
+      ],
+      "act_finite": true
+    },
+    {
+      "sample": "sample_0009",
+      "n_live": 2,
+      "top1_match": true,
+      "order_exact": true,
+      "logits_finite": true,
+      "rel_l2": 0.019169543273445756,
+      "max_abs_diff": 0.03335428237915039,
+      "order_ref": [
+        1,
+        0
+      ],
+      "order_rknn": [
+        1,
+        0
+      ],
+      "act_finite": true
+    },
+    {
+      "sample": "sample_0010",
+      "n_live": 4,
+      "top1_match": true,
+      "order_exact": true,
+      "logits_finite": true,
+      "rel_l2": 0.015315260625349651,
+      "max_abs_diff": 0.03010380268096924,
+      "order_ref": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "order_rknn": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "act_finite": true
+    },
+    {
+      "sample": "sample_0011",
+      "n_live": 2,
+      "top1_match": true,
+      "order_exact": true,
+      "logits_finite": true,
+      "rel_l2": 0.026639259563308034,
+      "max_abs_diff": 0.029374003410339355,
+      "order_ref": [
+        1,
+        0
+      ],
+      "order_rknn": [
+        1,
+        0
+      ],
+      "act_finite": true
+    },
+    {
+      "sample": "sample_0012",
+      "n_live": 2,
+      "top1_match": true,
+      "order_exact": true,
+      "logits_finite": true,
+      "rel_l2": 0.013677600431270349,
+      "max_abs_diff": 0.05256938934326172,
+      "order_ref": [
+        1,
+        0
+      ],
+      "order_rknn": [
+        1,
+        0
+      ],
+      "act_finite": true
+    },
+    {
+      "sample": "sample_0013",
+      "n_live": 8,
+      "top1_match": true,
+      "order_exact": true,
+      "logits_finite": true,
+      "rel_l2": 0.01296298329398903,
+      "max_abs_diff": 0.0562586784362793,
+      "order_ref": [
+        7,
+        4,
+        6,
+        5,
+        1,
+        0,
+        3,
+        2
+      ],
+      "order_rknn": [
+        7,
+        4,
+        6,
+        5,
+        1,
+        0,
+        3,
+        2
+      ],
+      "act_finite": true
+    },
+    {
+      "sample": "sample_0014",
+      "n_live": 3,
+      "top1_match": true,
+      "order_exact": true,
+      "logits_finite": true,
+      "rel_l2": 0.029730351690041484,
+      "max_abs_diff": 0.15842247009277344,
+      "order_ref": [
+        0,
+        2,
+        1
+      ],
+      "order_rknn": [
+        0,
+        2,
+        1
+      ],
+      "act_finite": true
+    },
+    {
+      "sample": "sample_0015",
+      "n_live": 2,
+      "top1_match": true,
+      "order_exact": true,
+      "logits_finite": true,
+      "rel_l2": 0.011614035845128632,
+      "max_abs_diff": 0.01467287540435791,
+      "order_ref": [
+        0,
+        1
+      ],
+      "order_rknn": [
+        0,
+        1
+      ],
+      "act_finite": true
+    }
+  ],
+  "ok": true,
+  "runtime_version": [
+    "==============================================\nRKNN VERSION:\n  API: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)\n  DRV: 0.9.8\n==============================================\n",
+    "2.3.2 (429f97ae6b@2025-04-09T09:09:27)",
+    "0.9.8"
+  ],
+  "inputs": [
+    {
+      "name": "input_ids",
+      "type": 8,
+      "dims": [
+        1,
+        90
+      ],
+      "fmt": 3
+    },
+    {
+      "name": "attention_mask",
+      "type": 8,
+      "dims": [
+        1,
+        90
+      ],
+      "fmt": 3
+    },
+    {
+      "name": "marker_pos",
+      "type": 8,
+      "dims": [
+        1,
+        16
+      ],
+      "fmt": 3
+    },
+    {
+      "name": "marker_mask",
+      "type": 9,
+      "dims": [
+        1,
+        16
+      ],
+      "fmt": 3
+    },
+    {
+      "name": "qtype",
+      "type": 8,
+      "dims": [
+        1
+      ],
+      "fmt": 3
+    }
+  ],
+  "summary": {
+    "n": 16,
+    "top1_match": "16/16",
+    "order_exact": "15/16",
+    "all_logits_finite": true,
+    "all_act_finite": true,
+    "rel_l2_max": 0.03357084271761209
+  }
+}
+I RKNN: [13:55:51.261] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [13:55:51.261] RKNN Driver Information, version: 0.9.8
+I RKNN: [13:55:51.262] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), target: RKNPU v2, target platform: rk3588, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+W RKNN: [13:55:51.978] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes

@@ -1,0 +1,8 @@
+~/.rpty/bin/fleet status radxa
+~/.rpty/bin/fleet exec radxa -- "hostname; id -un; df -h / /dev/shm; free -h; ls -ld /dev/shm"
+~/.rpty/bin/fleet transfer wsl2-local:/mnt/f/laya-rk3588-s90-rebuild-20261009/laya-multilingual.s90.m16.fp16.nanfix.rk3588.rknn radxa:/dev/shm/edge-workbench-rk3588-20261009/laya-multilingual.s90.m16.fp16.nanfix.rk3588.rknn
+~/.rpty/bin/fleet transfer spark:/home/harvest/worktrees/laya-edge-workbench/app/edge_workbench/native.py radxa:/dev/shm/edge-workbench-rk3588-20261009/code/native.py
+~/.rpty/bin/fleet push radxa /tmp/edge-workbench-hf-upload-source/tokenizer.json /dev/shm/edge-workbench-rk3588-20261009/tokenizer/tokenizer.json
+~/.rpty/bin/fleet push radxa /tmp/edge-workbench-hf-upload-source/tokenizer_config.json /dev/shm/edge-workbench-rk3588-20261009/tokenizer/tokenizer_config.json
+/home/radxa/rkvoice-stream/.venv/bin/python /dev/shm/edge-workbench-rk3588-20261009/code/native_verify.py
+/home/radxa/rkvoice-stream/.venv/bin/python /dev/shm/edge-workbench-rk3588-20261009/code/rank_runtime.py

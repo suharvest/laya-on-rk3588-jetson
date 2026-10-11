@@ -1,0 +1,8 @@
+2026-10-11T10:01:31+08:00
+OOMKilled=true Exit=137 Started=2026-10-11T01:48:17.998616177Z Finished=2026-10-11T02:00:37.527711825Z
+[日 10月 11 10:00:42 2026] mali 27800000.gpu: OOM notifier: dev mali0  0 kB
+[日 10月 11 10:00:42 2026] python invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_COMP|__GFP_ZERO), order=0, oom_score_adj=0
+[日 10月 11 10:00:42 2026]  oom_kill_process+0x2dc/0x2e0
+[日 10月 11 10:00:42 2026] [  pid  ]   uid  tgid total_vm      rss pgtables_bytes swapents oom_score_adj name
+[日 10月 11 10:00:42 2026] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=docker-f6b93fb4bc1cff0a7cf7693cacb0cdc70be18f7054fd833590902a4d916a2121.scope,mems_allowed=0,global_oom,task_memcg=/system.slice/docker-f6b93fb4bc1cff0a7cf7693cacb0cdc70be18f7054fd833590902a4d916a2121.scope,task=python,pid=2781729,uid=0
+[日 10月 11 10:00:42 2026] Out of memory: Killed process 2781729 (python) total-vm:11349436kB, anon-rss:3814616kB, file-rss:0kB, shmem-rss:880832kB, UID:0 pgtables:9468kB oom_score_adj:0
