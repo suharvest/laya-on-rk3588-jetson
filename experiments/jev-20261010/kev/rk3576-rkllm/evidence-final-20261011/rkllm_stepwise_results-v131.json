@@ -1,0 +1,12 @@
+{
+  "kv_persists": true,
+  "prefill_ms": 525.3,
+  "decode_avg_ms": 79.8,
+  "decode_tok_s": 12.5,
+  "hidden_works": true,
+  "hidden_ms": 87.8,
+  "mode2_gives_logits": true,
+  "mode2_gives_hidden": false,
+  "mode1_gives_logits": false,
+  "mode1_gives_hidden": true
+}

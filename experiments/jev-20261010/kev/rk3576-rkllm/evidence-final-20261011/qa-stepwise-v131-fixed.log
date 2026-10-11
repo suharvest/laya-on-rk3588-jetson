@@ -1,0 +1,56 @@
+Embeds: [14, 1024]
+Init...
+I rkllm: rkllm-runtime version: 1.3.1, rknpu driver version: 0.9.8, platform: RK3576
+I rkllm: loading rkllm model from /home/cat/kev-rkllm/persist/kev-0.8b-w4a16-g128-rk3576-context8192-shortcalib.rkllm
+I rkllm: rkllm-toolkit version: 1.3.1, max_context_limit: 8192, npu_core_num: 2, target_platform: RK3576, model_dtype: W4A16_G128
+I rkllm: Enabled cpus: [4, 5, 6, 7]
+I rkllm: Enabled cpus num: 4
+OK
+
+--- TEST 1: KV-cache persistence ---
+  Prefill: 566.4ms, vocab=248320
+  Max logit diff: 13.3595
+  KV PERSISTS: YES
+
+--- TEST 2: 20-step AR decode loop ---
+  Prefill: 525.3ms, token=198
+  Avg decode: 79.8ms/step (12.5 tok/s)
+  Tokens: [198, 220, 198, 198, 198, 198, 220, 13, 220, 13, 198, 220, 198, 198, 198, 220, 198, 198, 198, 198, 198]
+
+--- TEST 3: Hidden states ---
+  Hidden: size=1024, time=87.8ms
+  Hidden[:8]: [-6.5876064   1.3788812   0.69969165 14.474498   -2.6966887   3.339703
+  0.07240029 -0.6938562 ]
+
+--- TEST 4: Mode output exclusivity ---
+  mode=2: logits=True, hidden=False
+  mode=1: logits=False, hidden=True
+
+============================================================
+RESULTS SUMMARY
+============================================================
+  decode_avg_ms: 79.8
+  decode_tok_s: 12.5
+  hidden_ms: 87.8
+  hidden_works: True
+  kv_persists: True
+  mode1_gives_hidden: True
+  mode1_gives_logits: False
+  mode2_gives_hidden: False
+  mode2_gives_logits: True
+  prefill_ms: 525.3
+
+FEASIBILITY:
+  Step-by-step AR loop: WORKS (keep_history=1 required)
+  Prefill: ~525ms
+  Decode: ~80ms/step (~12 tok/s)
+  Hidden states: WORKS (mode=1)
+
+  ARCHITECTURE NOTE:
+  mode=2 gives logits only, mode=1 gives hidden only.
+  For TTS: use mode=1 per step, extract hidden states,
+  then compute logits externally via codec_head weights.
+  This avoids the double-KV problem of calling both modes.
+
+Saved: /home/cat/kev-rkllm/persist/evidence/rkllm_stepwise_results-v131.json
+DONE

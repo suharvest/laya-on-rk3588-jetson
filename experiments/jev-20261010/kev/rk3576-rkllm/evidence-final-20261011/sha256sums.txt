@@ -1,0 +1,17 @@
+8ba187d03c4c9428c91b44700626f4feb328e828e64963e4b899514a609fa0a3  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/kev-8k-oom-evidence.txt
+6e6a8fbe7f58be9c5fb35cfb9650fdf3b19dbdadc3949dc6158f4fe00a4f3f5e  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/kev-goldens5-2048.raw.jsonl
+bcc3cc2a31a49b7985a6fc3dc96eea346036f38ec45f0dd19550e3f99c81daec  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/kev-perf-bins-final.jsonl
+bed17c2f7ef85f3208543cc6c3728e8c14b212f3998c283316bb03bc8e90e876  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/kev-quality-final-240.raw.jsonl
+1804211cfc56bc520989c68059949602d228bb30b4fefacb20fbec2c30e08ee8  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/kev-quality-final-240.summary.json
+7edd94faaf696df587081a7a362f0f12292ccce76560e26477984aa24c2ef6f4  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/kev-seq2048-boundary.txt
+c989dc7f609b979526c9e226bde170c4a6da6c033032261aad75afce4b2297cf  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/machine-health-network-tail.txt
+fd8ab3a7dd2f4475ab77d64231eea75ee5e688dfc876a35db453ec57ee0c6cd3  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/patch-qa.py
+4a9bc1d75fc99a47b44b17392e354782bc3e171daf52686519f0d7e65812556e  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/provenance-summary.txt
+bf3c35dfff6b8aa09e93f1aa5670ada4a837af572112041abaa322892ef706b5  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/qa-stepwise-v131-fixed.log
+efb0eb52ed45f81d0a2233a482b5ab2dd21d3a37d9529052f87a98e3edbfa118  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/rkllm_stepwise_results-v131.json
+21432faedf5a8adf0280282af34cfc54ad9eb171138cf69a93d019dafcb140fd  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/run_kev_goldens5.py
+a85acaa0d456cdd168690253e6d8511bc774141ab4e605aae7556a58da22ec3c  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/run_kev_quality_final.py
+90d1103f8ca378da4479c69999cd2456ff7b5c9d2985fa8e560ad0d3743756d3  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/run_perf_bins.py
+f07fc4a4a53d2e93467e37aba249118f06e0440367e5fa5468514a2e2c4e9bcb  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/sha256sums.txt
+0980aa6d852b44611f972eab0d0de4318d9b230cff00b2605a18d5a3e4264163  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/summary-rk3576-8k.txt
+6126b63ab439063ba9864721afe8d6dbc9b5584b161a1a3e7ba34f9afadd35ef  /home/harvest/worktrees/laya-edge-workbench/experiments/jev-20261010/kev/rk3576-rkllm/evidence-final-20261011/test_stepwise_rkllm.py

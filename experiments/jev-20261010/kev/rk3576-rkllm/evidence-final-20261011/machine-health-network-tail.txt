@@ -1,0 +1,12 @@
+2026-10-11T10:06:25+08:00
+文件系统        大小  已用  可用 已用% 挂载点
+/dev/mmcblk0p3   58G   53G  2.7G   96% /
+MemAvailable:    1631584 kB
+	Advertised link modes:  10baseT/Half 10baseT/Full
+	Speed: 1000Mb/s
+	Duplex: Full
+	Auto-negotiation: on
+kev-app-final-qa-18771 Up 4 minutes (healthy)
+conversational-voice-speech Up 14 hours (healthy)
+xiaozhi-display Up 14 hours (healthy)
+{"status":"ok","model_ready":true,"backend":"rkllm","name":"kev-0.8b-w4a16-g128-rk3576-context8192-shortcalib.rkllm","model_id":"kev","max_sequence_tokens":2048,"max_options":16}0370f1aa3a6cc119489817b442f3177f0ff9c50949a6b1a11bce6ca5eccee506  /home/cat/kev-rkllm/persist/kev-0.8b-w4a16-g128-rk3576-context8192-shortcalib.rkllm
