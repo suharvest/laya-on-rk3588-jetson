@@ -33,6 +33,7 @@ class DecideRequest(BaseModel):
     input_text: str
     prompt: str
     options: list[Option] = Field(min_length=2, max_length=16)
+    model_id: str | None = None
     model_service_url: str = ""
 
     @field_validator("input_text", "prompt")
@@ -71,8 +72,15 @@ def create_app(settings: Settings | None = None, service: DecisionService | None
         service.tokenizer = LocalTokenizer("")
         service.backend = UnavailableBackend(settings, exc.message)
         service._native_lock = __import__("threading").Lock()
+        service._profiles = settings.service_profiles()
     app = FastAPI(title="Edge Workbench", docs_url=None, redoc_url=None)
     app.state.settings, app.state.decision_service = settings, service
+
+    @app.on_event("shutdown")
+    async def shutdown_runtime() -> None:
+        close = getattr(service, "close", None)
+        if callable(close):
+            close()
 
     @app.get("/api/health")
     async def health(request: Request) -> dict[str, Any]:
@@ -100,6 +108,33 @@ def create_app(settings: Settings | None = None, service: DecisionService | None
                 except Exception as exc:
                     result.update(model_ready=False, reason=f"remote health request failed: {exc}")
         return {k: v for k, v in result.items() if v is not None}
+
+    @app.get("/api/models")
+    async def models(request: Request) -> dict[str, Any]:
+        rows = service.model_catalog()
+        for row in rows:
+            if row.get("local") or not row.get("service_url"):
+                continue
+            url = _safe_service_url(str(row["service_url"]))
+            if not url or _is_self_url(url, request):
+                row["reason"] = "invalid or self service URL"
+                continue
+            try:
+                async with httpx.AsyncClient(timeout=3.0) as client:
+                    response = await client.get(url.rstrip("/") + "/api/health")
+                data = response.json() if response.status_code < 400 else {}
+                if _valid_health(data) and data.get("model_id") == row["id"]:
+                    row.update(model_ready=bool(data["model_ready"]), backend=data["backend"],
+                               name=data["name"], max_sequence_tokens=data["max_sequence_tokens"],
+                               max_options=data["max_options"], reason=data.get("reason"))
+                elif _valid_health(data):
+                    row["reason"] = "remote health model_id does not match registered profile"
+                else:
+                    row["reason"] = "remote health response has an invalid schema"
+            except Exception as exc:
+                row["reason"] = f"remote health request failed: {exc}"
+        return {"models": rows,
+                "default_model_id": service.health().get("model_id", settings.model_id)}
 
     @app.post("/api/health/remote")
     async def remote_health(req: RemoteHealthRequest, request: Request) -> dict[str, Any]:

@@ -6,7 +6,7 @@ from fastapi.testclient import TestClient
 
 from edge_workbench.app import create_app
 from edge_workbench.config import Settings
-from edge_workbench.decision import DecisionService, ModelInfo, NativeBackend
+from edge_workbench.decision import DecisionError, DecisionService, ModelInfo, NativeBackend
 from edge_workbench.native import NativeError
 
 
@@ -176,3 +176,88 @@ async def test_remote_proxy_removes_override_and_maps_ids(monkeypatch):
     assert r.status_code == 200
     assert captured["url"].endswith("/api/decide")
     assert "model_service_url" not in captured["json"]
+
+def test_models_endpoint_and_unknown_model():
+    s = Settings(backend="test", model_services_json='{"kev":{"url":"http://edge:9000","name":"Kev"}}')
+    c = TestClient(create_app(s, DecisionService(s, backend=FakeBackend())))
+    data = c.get("/api/models").json()
+    assert data["default_model_id"] == "laya"
+    assert [m["id"] for m in data["models"]] == ["laya", "kev"]
+    assert data["models"][1]["model_ready"] is False
+    r = c.post("/api/decide", json=body(model_id="missing"))
+    assert r.status_code == 422
+    assert r.json()["detail"]["code"] == "unknown_model"
+
+
+def test_unconfigured_remote_profile_is_not_ready():
+    s = Settings(backend="test", model_services_json='{"kev":{"name":"Kev"}}')
+    c = TestClient(create_app(s, DecisionService(s, backend=FakeBackend())))
+    row = next(m for m in c.get("/api/models").json()["models"] if m["id"] == "kev")
+    assert row["model_ready"] is False
+
+
+def test_app_shutdown_closes_backend():
+    class ClosingBackend(FakeBackend):
+        def __init__(self):
+            self.closed = 0
+            self.ready = True
+            self.reason = None
+            self.info = ModelInfo("test", "fake", 90)
+        def close(self):
+            self.closed += 1
+    backend = ClosingBackend()
+    app = app_with(backend)
+    with TestClient(app):
+        assert backend.closed == 0
+    assert backend.closed == 1
+
+
+def test_models_endpoint_rejects_remote_identity_mismatch(monkeypatch):
+    class Response:
+        status_code = 200
+        def json(self):
+            return {"status": "ok", "model_ready": True, "backend": "http", "name": "Laya",
+                    "model_id": "laya", "max_sequence_tokens": 90, "max_options": 16}
+    class Client:
+        async def __aenter__(self): return self
+        async def __aexit__(self, *args): pass
+        async def get(self, url): return Response()
+    monkeypatch.setattr(httpx, "AsyncClient", lambda **kw: Client())
+    s = Settings(backend="test", model_services_json='{"kev":{"url":"http://edge:9000","name":"Kev"}}')
+    c = TestClient(create_app(s, DecisionService(s, backend=FakeBackend())))
+    row = next(m for m in c.get("/api/models").json()["models"] if m["id"] == "kev")
+    assert row["model_ready"] is False
+    assert "model_id" in row["reason"]
+
+
+def test_remote_override_rejects_explicit_identity_mismatch(monkeypatch):
+    class Response:
+        status_code = 200
+        def json(self):
+            return {"selected_option_id": "b", "ranking": [
+                {"option_id": "b", "score": 2}, {"option_id": "a", "score": 1}],
+                "model": {"model_id": "kev", "backend": "http", "name": "Kev",
+                          "max_sequence_tokens": 8192, "max_options": 16},
+                "timings": {"encoding_ms": 1, "inference_ms": 2, "total_ms": 3}}
+    class Client:
+        async def __aenter__(self): return self
+        async def __aexit__(self, *args): pass
+        async def post(self, url, json): return Response()
+    monkeypatch.setattr(httpx, "AsyncClient", lambda **kw: Client())
+    r = TestClient(create_app(Settings())).post("/api/decide", json=body(model_service_url="http://edge:9000"))
+    assert r.status_code == 502
+    assert r.json()["detail"]["code"] == "remote_identity_mismatch"
+
+
+def test_create_app_fallback_models_catalog(monkeypatch):
+    def fail_init(self, *args, **kwargs):
+        raise DecisionError("native_unavailable", "forced initialization failure")
+    monkeypatch.setattr(DecisionService, "__init__", fail_init)
+    settings = Settings(backend="rkllm", model_services_json='{"remote":{"url":"http://edge:9000","name":"Remote"}}')
+    client = TestClient(create_app(settings))
+    response = client.get("/api/models")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["default_model_id"] == "laya"
+    assert data["models"][0]["model_ready"] is False
+    assert [row["id"] for row in data["models"]] == ["laya", "remote"]
