@@ -48,3 +48,13 @@ ef82-completed-zh.png  fc330da7cbb79a1e219a1199551aa2a3f531e2552210c5c26a382e52a
 ef82-completed-en.png  9ae42e4d7b0ba2390426f47639482426474531003ac5d272d97cd8d8efdee958
 ef82-completed-zh-en.gif  324c79531ad390f01888756aee950ce830fdda186629cda424da516c124e5696
 ```
+
+## Real container QA
+
+- QA container: `edge-workbench-rkllm-ef82-qa`, port `18775`, independent tag `edge-command-workbench:rockchip-rkllm-0.3.1-review`; no existing container was stopped or replaced. See [container-info.txt](./container-qa/container-info.txt).
+- Container health returned `model_ready=true`, `model_id=kev`, `backend=rkllm`, and `max_sequence_tokens=8192`; the catalog returned both ready Kev/RKLLM 8192 and Laya/RKNN 90 profiles. Raw responses: [health.json](./container-qa/health.json), [models.json](./container-qa/models.json).
+- The same short payload produced HTTP 200 for both routes: Kev selected `cmd-3` with actual `model_id=kev`; Laya selected `cmd-3` with actual `model_id=laya`. Raw requests/responses: [kev-request.json](./container-qa/kev-request.json), [kev-response.json](./container-qa/kev-response.json), [laya-request.json](./container-qa/laya-request.json), [laya-response.json](./container-qa/laya-response.json).
+- Measured `inference_ms` was `1338.0779240396805` for Kev/RKLLM and `457.5591559987515` for Laya/RKNN. HTTP timing and curl exit records: [kev-http.txt](./container-qa/kev-http.txt), [laya-http.txt](./container-qa/laya-http.txt), [kev-start.txt](./container-qa/kev-start.txt), [kev-end.txt](./container-qa/kev-end.txt), [laya-start.txt](./container-qa/laya-start.txt), [laya-end.txt](./container-qa/laya-end.txt).
+- The archive config blob SHA is `d7a81c4f8ef3eaa2c21560b2d37939c6088357ec0c1d41c3089ff5fbc3836de9`; the Docker 29 loaded image ID is `sha256:8acbe96dc6548ef18eb424f405d68d812a0245e02006dbfd1f9801f600820f16`. The difference is recorded in [archive-config-vs-loaded.txt](./container-qa/archive-config-vs-loaded.txt).
+- The candidate `/app/web/app.js` SHA is `02c44a4da2b0a9e298aec9ef9154a5c5488e29875aff729fd0f26348dda0ed9`; the helper SHA is `022e0102f9dd4c8839ba7acbc68f03d8811bf020cde84d6cf1343829cd66f919`. See [embedded-sha.txt](./container-qa/embedded-sha.txt). Startup logs are in [container.log](./container-qa/container.log).
+- This QA used existing Radxa model/tokenizer/head/runtime files as read-only mounts. It did not upload to HF, publish an image, deploy the candidate, or change source/math.
