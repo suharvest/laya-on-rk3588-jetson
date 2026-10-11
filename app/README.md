@@ -108,9 +108,9 @@ When the current prompt and all candidate commands still exactly match a built-i
 
 ### Spark UI evidence / Spark 界面证据
 
-The 0.1.1 development candidate was opened from Spark at `:18868` with `DECISION_BACKEND=http` and proxied the real RK3576 service at `100.89.94.11:18768`. The Chinese default scene selected `cmd-1` in 357.710 ms total (339.080 ms inference); the English scene selected `cmd-1` in 352.178 ms total (335.366 ms inference). These screenshots document the development candidate and are not a release claim.
+The 0.1.1 development candidate was opened from Spark at `:18868` with `DECISION_BACKEND=http` and proxied the real RK3576 service at `192.0.2.11:18768`. The Chinese default scene selected `cmd-1` in 357.710 ms total (339.080 ms inference); the English scene selected `cmd-1` in 352.178 ms total (335.366 ms inference). These screenshots document the development candidate and are not a release claim.
 
-候选版本 0.1.1 在 Spark `:18868` 打开，设置 `DECISION_BACKEND=http`，请求转发到 `100.89.94.11:18768` 的真实 RK3576 服务。中文默认场景选择 `cmd-1`，总耗时 357.710 ms、推理 339.080 ms；英文场景选择 `cmd-1`，总耗时 352.178 ms、推理 335.366 ms。截图仅记录开发候选版本，不代表发布版本声明。
+候选版本 0.1.1 在 Spark `:18868` 打开，设置 `DECISION_BACKEND=http`，请求转发到 `192.0.2.11:18768` 的真实 RK3576 服务。中文默认场景选择 `cmd-1`，总耗时 357.710 ms、推理 339.080 ms；英文场景选择 `cmd-1`，总耗时 352.178 ms、推理 335.366 ms。截图仅记录开发候选版本，不代表发布版本声明。
 
 ![English Spark result](docs/media/07-spark-english-result.jpg)
 

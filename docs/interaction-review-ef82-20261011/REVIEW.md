@@ -1,7 +1,7 @@
 # ef82 独立实际审查
 
 审查时间：2026-10-11 12:20–12:25（Asia/Shanghai）
-实际地址：<http://100.77.150.16:18772/>
+实际地址：<http://192.0.2.16:18772/>
 部署状态：前半段浏览器 route review 使用 d870；该阶段没有更新 18772 容器或发布 UI。后续真实容器 QA 在 18775 使用 ef82 candidate，见文末 section。
 
 ## 复测版本与限制
@@ -60,7 +60,7 @@ ef82-completed-zh-en.gif  324c79531ad390f01888756aee950ce830fdda186629cda424da51
 - 本 QA 使用只读的现有 Radxa model/tokenizer/head/runtime 文件；仅部署独立 QA 容器，未更新生产服务、未 HF 发布或修改 source/math。
 ## 直接浏览器复测（18775）
 
-- 本节证据来自实际 `http://100.77.150.16:18775/` 新浏览器会话，未使用 Playwright route 替换；`direct-browser/` 目录保存实际页面 asset、snapshot、network、request 和完成结果截图。
+- 本节证据来自实际 `http://192.0.2.16:18775/` 新浏览器会话，未使用 Playwright route 替换；`direct-browser/` 目录保存实际页面 asset、snapshot、network、request 和完成结果截图。
 - 实际 `app.js` SHA-256：`02c44a4da2b0a9e298aec9ef9154a5c5488e29875aff729fd0f26348dda0ed9e`；实际 `index.html` SHA-256：`75f2779f55ba3b2af3030e3739986b8217af7e69c7bc691e2a4f99795e4676ff`。
 - Kev 中文完成判断返回 HTTP 200，实际模型 `kev`、后端 `rkllm`、最大上下文 `8192`；切换 EN 后结果保留且 history 不增加。Laya 真实判断返回 HTTP 200，实际模型 `laya`、后端 `rknn`、最大上下文 `90`。
 - Ctrl+Enter pending guard 显示 `Running · 0s`，第一次后按钮 disabled，第二次不产生额外请求（request count `1`）。
@@ -68,3 +68,6 @@ ef82-completed-zh-en.gif  324c79531ad390f01888756aee950ce830fdda186629cda424da51
 
 证据入口：[direct-browser/REVIEW.md](./direct-browser/REVIEW.md)。
 
+### 公开证据地址说明
+
+本目录的公开文本副本已将私有 Fleet/LAN 地址替换为 RFC 5737 文档地址；回环地址与合成基准数据保持不变。原始字节及原始哈希保存在私有审计记录中，目录内清单哈希对应脱敏副本。

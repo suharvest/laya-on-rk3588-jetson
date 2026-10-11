@@ -303,3 +303,7 @@ gemm 也没掉出 int8（48 个变成带残差 Add 的 int8 融合核），**唯
 ## 多平台工作台运行时
 
 应用 API 在各后端间保持一致，但运行时镜像按目标平台分开。RKNN 与 TensorRT 共享五输入 native 契约；RKLLM 使用独立的 token/hidden-state 适配。RK3576 RKNN `seq=90` 与 Kev RKLLM 2K guard 已验证；RK3588 Kev RKLLM 8K 已完成 stock 真机验证。Jetson Orin native Kev 仍是历史路径，必须单独核对模型、tokenizer、运行库和真机验收。参见 [docs/multiplatform-runtime.md](docs/multiplatform-runtime.md) 与 [app/README.md](app/README.md)。
+
+### 公开证据中的网络地址处理
+
+公开文本证据已将私有 Fleet/LAN 主机地址替换为 RFC 5737 文档地址。合成基准使用的回环地址保持不变。原始证据字节及其哈希保存在私有审计工作区；公开哈希对应脱敏后的副本。

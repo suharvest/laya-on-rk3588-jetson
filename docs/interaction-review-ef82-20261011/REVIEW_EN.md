@@ -1,7 +1,7 @@
 # ef82 Independent Runtime Review
 
 Review time: 2026-10-11 12:20–12:25 (Asia/Shanghai)
-Runtime URL: <http://100.77.150.16:18772/>
+Runtime URL: <http://192.0.2.16:18772/>
 Deployment status: the first browser route review used d870; that phase did not update the 18772 container or publish UI. The later real-container QA used the ef82 candidate on 18775, as documented below.
 
 ## Version and route limitation
@@ -60,7 +60,7 @@ ef82-completed-zh-en.gif  324c79531ad390f01888756aee950ce830fdda186629cda424da51
 - This QA used existing Radxa model/tokenizer/head/runtime files as read-only mounts. It deployed only the independent QA container; it did not update the production service, publish to HF, or change source/math.
 ## Direct browser re-test (18775)
 
-- This evidence comes from a fresh browser session against `http://100.77.150.16:18775/` with no Playwright route replacement. The `direct-browser/` directory contains the actual page assets, snapshots, network/request records, and completed-result screenshots.
+- This evidence comes from a fresh browser session against `http://192.0.2.16:18775/` with no Playwright route replacement. The `direct-browser/` directory contains the actual page assets, snapshots, network/request records, and completed-result screenshots.
 - Actual `app.js` SHA-256: `02c44a4da2b0a9e298aec9ef9154a5c5488e29875aff729fd0f26348dda0ed9e`; actual `index.html` SHA-256: `75f2779f55ba3b2af3030e3739986b8217af7e69c7bc691e2a4f99795e4676ff`.
 - The Kev Chinese completed decision returned HTTP 200 with actual model `kev`, backend `rkllm`, and max context `8192`; switching to EN preserved the result without increasing history. The Laya real decision returned HTTP 200 with actual model `laya`, backend `rknn`, and max context `90`.
 - The Ctrl+Enter pending guard showed `Running · 0s`; the button was disabled after the first keypress and the second keypress produced no extra request (request count `1`).
@@ -68,3 +68,6 @@ ef82-completed-zh-en.gif  324c79531ad390f01888756aee950ce830fdda186629cda424da51
 
 Evidence entry: [direct-browser/REVIEW.md](./direct-browser/REVIEW.md).
 
+### Public evidence address handling
+
+Public text copies in this directory replace private Fleet/LAN addresses with RFC 5737 documentation addresses; loopback addresses and synthetic benchmark data are unchanged. Original bytes and original hashes are retained in a private audit record, while the directory manifests hash the sanitized copies.

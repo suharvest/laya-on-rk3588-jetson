@@ -1,6 +1,6 @@
 # Kev 实机 UI 验证证据（2026-10-11）
 
-本组素材记录 Radxa 实际 Kev 服务上的最小 UI 验证。页面地址为 `http://100.77.150.16:18769/`，中文和英文页面均通过真实 `/api/health`、`/api/models` 与 `/api/decide` 请求验证。服务响应身份为 `model_id=kev`、`backend=rkllm`、`max_sequence_tokens=8192`、`max_options=16`。
+本组素材记录 Radxa 实际 Kev 服务上的最小 UI 验证。页面地址为 `http://192.0.2.16:18769/`，中文和英文页面均通过真实 `/api/health`、`/api/models` 与 `/api/decide` 请求验证。服务响应身份为 `model_id=kev`、`backend=rkllm`、`max_sequence_tokens=8192`、`max_options=16`。
 
 ## 素材
 
@@ -10,7 +10,7 @@
 | `kev-final-en-pending-20261011.png` | `abe18a89512700cf46c742d6a495643f70a59661badbde6b360c052082654741` | 英文真实请求进行中，显示 Running 与 spinner |
 | `kev-final-en-result-20261011.png` | `f574485d31c02750904aab42807f38a382337921d3505e22dcaf4efa740911cb` | 英文完成态，显示 Kev / rkllm / 8192 |
 | `kev-final-qa-20261011.gif` | `308b3d77b5030b83b95d4277d9b7183c5b30fb69c004f8c4409b8809b1803748` | 中文完成、英文 pending、英文完成三帧 montage |
-| `kev-final-evidence-20261011.json` | `e6d496da79d2d4119849b202e9b9faa6a19392e9ad86137a0dde570b4122cda6` | URL、时间、健康状态、请求阶段和素材 SHA |
+| `kev-final-evidence-20261011.json` | `c43205f092efd026c9c8101ebc22bdf0a6f2617f6e47fb8789061ab46c95f193` | URL、时间、健康状态、请求阶段和素材 SHA |
 | `kev-final-zh-result-20261011.yml` | `c45e65c63fa86f0ee9fcbabd1d2375f9ef6022aa60e9e3f59b45f2d6ca474d3f` | 中文 AX 快照，保留 API 原始分数与毫秒值 |
 | `kev-final-en-result-20261011.yml` | `09312859910f5f975838777213acb2e9c02b4f93a3391eeb1c1a2aceca1bbbac` | 英文 AX 快照，保留 API 原始分数与毫秒值 |
 
@@ -31,8 +31,8 @@ sha256sum docs/kev-final-zh-result-20261011.png \
   docs/kev-final-en-result-20261011.png \
   docs/kev-final-qa-20261011.gif \
   docs/kev-final-evidence-20261011.json
-curl -fsS http://100.77.150.16:18769/api/health
-curl -fsS http://100.77.150.16:18769/api/models
+curl -fsS http://192.0.2.16:18769/api/health
+curl -fsS http://192.0.2.16:18769/api/models
 ```
 
 浏览器素材的 `app.js` served SHA 为 `870dfe9abcac8ae6556f2b35e61987857babd6adc9a27b06c2e5ec745640b358`；截图录制时使用的是同一 served web source。该证据覆盖 Kev 实机的中文完成态、英文 pending 态和英文完成态；Laya 实际切换待其服务可用后另行记录。

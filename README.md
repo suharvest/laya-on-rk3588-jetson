@@ -219,4 +219,8 @@ Accuracy is exact `selected_option_id` match. False-action entries are model sel
 
 ## Verified Kev workbench UI evidence
 
-The final device check for the command-selection UI used the Radxa service at `http://100.77.150.16:18769/`. The recorded service identity was `model_id=kev`, `backend=rkllm`, `max_sequence_tokens=8192`, and `max_options=16`. The evidence index, screenshots, AX snapshots, and three-frame GIF montage are in [`docs/kev-final-qa-20261011.md`](docs/kev-final-qa-20261011.md). The screenshots were captured before the later display-only rounding change; API and evidence JSON retain raw score and timing values.
+The final device check for the command-selection UI used the Radxa service at `http://192.0.2.16:18769/`. The recorded service identity was `model_id=kev`, `backend=rkllm`, `max_sequence_tokens=8192`, and `max_options=16`. The evidence index, screenshots, AX snapshots, and three-frame GIF montage are in [`docs/kev-final-qa-20261011.md`](docs/kev-final-qa-20261011.md). The screenshots were captured before the later display-only rounding change; API and evidence JSON retain raw score and timing values.
+
+### Public evidence network-address handling
+
+Public text evidence replaces private Fleet/LAN host addresses with RFC 5737 documentation addresses. Loopback addresses used by the synthetic benchmark remain unchanged. Original evidence bytes and their hashes are retained in a private audit workspace; public hashes refer to the sanitized copies.

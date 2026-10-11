@@ -18,13 +18,13 @@ INFO:     127.0.0.1:39680 - "GET /api/models HTTP/1.1" 200 OK
 INFO:     127.0.0.1:54164 - "GET /api/health HTTP/1.1" 200 OK
 INFO:     127.0.0.1:54486 - "GET /api/health HTTP/1.1" 200 OK
 INFO:     127.0.0.1:35106 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     100.124.103.64:64728 - "GET / HTTP/1.1" 200 OK
-INFO:     100.124.103.64:64729 - "GET /app.js?v=20261011-qa3 HTTP/1.1" 200 OK
-INFO:     100.124.103.64:64856 - "GET / HTTP/1.1" 200 OK
-INFO:     100.124.103.64:64856 - "GET /style.css HTTP/1.1" 200 OK
-INFO:     100.124.103.64:64857 - "GET /state.css HTTP/1.1" 200 OK
-INFO:     100.124.103.64:64858 - "GET /app.js?v=20261011-qa3 HTTP/1.1" 200 OK
-INFO:     100.124.103.64:64858 - "GET /vendor/openvoicestream/mic-capture.js HTTP/1.1" 200 OK
-INFO:     100.124.103.64:64857 - "GET /favicon.ico HTTP/1.1" 404 Not Found
-INFO:     100.124.103.64:64858 - "GET /api/models HTTP/1.1" 200 OK
-INFO:     100.124.103.64:64858 - "GET /api/models HTTP/1.1" 200 OK
+INFO:     192.0.2.12:64728 - "GET / HTTP/1.1" 200 OK
+INFO:     192.0.2.12:64729 - "GET /app.js?v=20261011-qa3 HTTP/1.1" 200 OK
+INFO:     192.0.2.12:64856 - "GET / HTTP/1.1" 200 OK
+INFO:     192.0.2.12:64856 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     192.0.2.12:64857 - "GET /state.css HTTP/1.1" 200 OK
+INFO:     192.0.2.12:64858 - "GET /app.js?v=20261011-qa3 HTTP/1.1" 200 OK
+INFO:     192.0.2.12:64858 - "GET /vendor/openvoicestream/mic-capture.js HTTP/1.1" 200 OK
+INFO:     192.0.2.12:64857 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.0.2.12:64858 - "GET /api/models HTTP/1.1" 200 OK
+INFO:     192.0.2.12:64858 - "GET /api/models HTTP/1.1" 200 OK
