@@ -2,7 +2,7 @@
 
 Review time: 2026-10-11 12:20–12:25 (Asia/Shanghai)
 Runtime URL: <http://100.77.150.16:18772/>
-Deployment status: still d870; no container update or UI publication was performed.
+Deployment status: the first browser route review used d870; that phase did not update the 18772 container or publish UI. The later real-container QA used the ef82 candidate on 18775, as documented below.
 
 ## Version and route limitation
 
@@ -17,7 +17,7 @@ Deployment status: still d870; no container update or UI publication was perform
 - Local candidate source commit: `ef82f8360c2b787f97c958f89c92fe569c62ecb1`.
 - Candidate image: `edge-command-workbench:rockchip-rkllm-0.3.1-review`; image/config blob SHA-256: `d7a81c4f8ef3eaa2c21560b2d37939c6088357ec0c1d41c3089ff5fbc3836de9`.
 - Candidate archive SHA-256: `251cb7fef080f489bf311b37c5bddbba1cd72e887e71f10ce12fc25a1fe64f77`.
-- The real API review calls in this report still used the d870 deployment on port 18772; the candidate was not deployed.
+- The real API calls in the first route-review phase used the d870 deployment on port 18772; the container-QA section below started only an independent QA container on 18775 and did not update the 18772 production service.
 
 ## Confirmed
 
@@ -56,5 +56,5 @@ ef82-completed-zh-en.gif  324c79531ad390f01888756aee950ce830fdda186629cda424da51
 - The same short payload produced HTTP 200 for both routes: Kev selected `cmd-3` with actual `model_id=kev`; Laya selected `cmd-3` with actual `model_id=laya`. Raw requests/responses: [kev-request.json](./container-qa/kev-request.json), [kev-response.json](./container-qa/kev-response.json), [laya-request.json](./container-qa/laya-request.json), [laya-response.json](./container-qa/laya-response.json).
 - Measured `inference_ms` was `1338.0779240396805` for Kev/RKLLM and `457.5591559987515` for Laya/RKNN. HTTP timing and curl exit records: [kev-http.txt](./container-qa/kev-http.txt), [laya-http.txt](./container-qa/laya-http.txt), [kev-start.txt](./container-qa/kev-start.txt), [kev-end.txt](./container-qa/kev-end.txt), [laya-start.txt](./container-qa/laya-start.txt), [laya-end.txt](./container-qa/laya-end.txt).
 - The archive config blob SHA is `d7a81c4f8ef3eaa2c21560b2d37939c6088357ec0c1d41c3089ff5fbc3836de9`; the Docker 29 loaded image ID is `sha256:8acbe96dc6548ef18eb424f405d68d812a0245e02006dbfd1f9801f600820f16`. The difference is recorded in [archive-config-vs-loaded.txt](./container-qa/archive-config-vs-loaded.txt).
-- The candidate `/app/web/app.js` SHA is `02c44a4da2b0a9e298aec9ef9154a5c5488e29875aff729fd0f26348dda0ed9`; the helper SHA is `022e0102f9dd4c8839ba7acbc68f03d8811bf020cde84d6cf1343829cd66f919`. See [embedded-sha.txt](./container-qa/embedded-sha.txt). Startup logs are in [container.log](./container-qa/container.log).
-- This QA used existing Radxa model/tokenizer/head/runtime files as read-only mounts. It did not upload to HF, publish an image, deploy the candidate, or change source/math.
+- The candidate `/app/web/app.js` SHA is `02c44a4da2b0a9e298aec9ef9154a5c5488e29875aff729fd0f26348dda0ed9e`; the helper SHA is `022e0102f9dd4c8839ba7acbc68f03d8811bf020cde84d6cf1343829cd66f919`. See [embedded-sha.txt](./container-qa/embedded-sha.txt). Startup logs are in [container.log](./container-qa/container.log).
+- This QA used existing Radxa model/tokenizer/head/runtime files as read-only mounts. It deployed only the independent QA container; it did not update the production service, publish to HF, or change source/math.

@@ -2,7 +2,7 @@
 
 审查时间：2026-10-11 12:20–12:25（Asia/Shanghai）
 实际地址：<http://100.77.150.16:18772/>
-部署状态：仍为 d870；本轮没有更新容器或发布 UI。
+部署状态：前半段浏览器 route review 使用 d870；该阶段没有更新 18772 容器或发布 UI。后续真实容器 QA 在 18775 使用 ef82 candidate，见文末 section。
 
 ## 复测版本与限制
 
@@ -17,7 +17,7 @@
 - 本地 candidate source commit：`ef82f8360c2b787f97c958f89c92fe569c62ecb1`。
 - candidate image：`edge-command-workbench:rockchip-rkllm-0.3.1-review`，image/config blob SHA-256：`d7a81c4f8ef3eaa2c21560b2d37939c6088357ec0c1d41c3089ff5fbc3836de9`。
 - candidate archive SHA-256：`251cb7fef080f489bf311b37c5bddbba1cd72e887e71f10ce12fc25a1fe64f77`。
-- 本报告的真实 API 复测仍连接 18772 的 d870 部署；candidate 未部署。
+- 本报告前半段 route review 的真实 API 复测仍连接 18772 的 d870 部署；文末 container QA 只启动独立 18775 容器，未更新 18772 生产服务。
 
 ## 已确认
 
@@ -56,5 +56,5 @@ ef82-completed-zh-en.gif  324c79531ad390f01888756aee950ce830fdda186629cda424da51
 - 相同短 payload 的真实 POST：Kev 返回 HTTP 200、`selected_option_id=cmd-3`、实际 `model_id=kev`；Laya 返回 HTTP 200、`selected_option_id=cmd-3`、实际 `model_id=laya`。原始请求/响应：[kev-request.json](./container-qa/kev-request.json)、[kev-response.json](./container-qa/kev-response.json)、[laya-request.json](./container-qa/laya-request.json)、[laya-response.json](./container-qa/laya-response.json)。
 - Kev/RKLLM 实测 `inference_ms=1338.0779240396805`，Laya/RKNN 实测 `inference_ms=457.5591559987515`；HTTP timing 和 curl exit：[kev-http.txt](./container-qa/kev-http.txt)、[laya-http.txt](./container-qa/laya-http.txt)、[kev-start.txt](./container-qa/kev-start.txt)、[kev-end.txt](./container-qa/kev-end.txt)、[laya-start.txt](./container-qa/laya-start.txt)、[laya-end.txt](./container-qa/laya-end.txt)。
 - archive 内 config blob SHA 为 `d7a81c4f8ef3eaa2c21560b2d37939c6088357ec0c1d41c3089ff5fbc3836de9`；Docker 29 加载后的 image ID 为 `sha256:8acbe96dc6548ef18eb424f405d68d812a0245e02006dbfd1f9801f600820f16`，两者差异保留在 [archive-config-vs-loaded.txt](./container-qa/archive-config-vs-loaded.txt)。
-- candidate 内 `/app/web/app.js` SHA 为 `02c44a4da2b0a9e298aec9ef9154a5c5488e29875aff729fd0f26348dda0ed9`，helper SHA 为 `022e0102f9dd4c8839ba7acbc68f03d8811bf020cde84d6cf1343829cd66f919`，见 [embedded-sha.txt](./container-qa/embedded-sha.txt)。启动日志见 [container.log](./container-qa/container.log)。
-- 本 QA 使用只读的现有 Radxa model/tokenizer/head/runtime 文件；没有上传 HF、发布 image、部署 candidate 或修改 source/math。
+- candidate 内 `/app/web/app.js` SHA 为 `02c44a4da2b0a9e298aec9ef9154a5c5488e29875aff729fd0f26348dda0ed9e`，helper SHA 为 `022e0102f9dd4c8839ba7acbc68f03d8811bf020cde84d6cf1343829cd66f919`，见 [embedded-sha.txt](./container-qa/embedded-sha.txt)。启动日志见 [container.log](./container-qa/container.log)。
+- 本 QA 使用只读的现有 Radxa model/tokenizer/head/runtime 文件；仅部署独立 QA 容器，未更新生产服务、未 HF 发布或修改 source/math。
