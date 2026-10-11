@@ -58,3 +58,13 @@ ef82-completed-zh-en.gif  324c79531ad390f01888756aee950ce830fdda186629cda424da51
 - archive 内 config blob SHA 为 `d7a81c4f8ef3eaa2c21560b2d37939c6088357ec0c1d41c3089ff5fbc3836de9`；Docker 29 加载后的 image ID 为 `sha256:8acbe96dc6548ef18eb424f405d68d812a0245e02006dbfd1f9801f600820f16`，两者差异保留在 [archive-config-vs-loaded.txt](./container-qa/archive-config-vs-loaded.txt)。
 - candidate 内 `/app/web/app.js` SHA 为 `02c44a4da2b0a9e298aec9ef9154a5c5488e29875aff729fd0f26348dda0ed9e`，helper SHA 为 `022e0102f9dd4c8839ba7acbc68f03d8811bf020cde84d6cf1343829cd66f919`，见 [embedded-sha.txt](./container-qa/embedded-sha.txt)。启动日志见 [container.log](./container-qa/container.log)。
 - 本 QA 使用只读的现有 Radxa model/tokenizer/head/runtime 文件；仅部署独立 QA 容器，未更新生产服务、未 HF 发布或修改 source/math。
+## 直接浏览器复测（18775）
+
+- 本节证据来自实际 `http://100.77.150.16:18775/` 新浏览器会话，未使用 Playwright route 替换；`direct-browser/` 目录保存实际页面 asset、snapshot、network、request 和完成结果截图。
+- 实际 `app.js` SHA-256：`02c44a4da2b0a9e298aec9ef9154a5c5488e29875aff729fd0f26348dda0ed9e`；实际 `index.html` SHA-256：`75f2779f55ba3b2af3030e3739986b8217af7e69c7bc691e2a4f99795e4676ff`。
+- Kev 中文完成判断返回 HTTP 200，实际模型 `kev`、后端 `rkllm`、最大上下文 `8192`；切换 EN 后结果保留且 history 不增加。Laya 真实判断返回 HTTP 200，实际模型 `laya`、后端 `rknn`、最大上下文 `90`。
+- Ctrl+Enter pending guard 显示 `Running · 0s`，第一次后按钮 disabled，第二次不产生额外请求（request count `1`）。
+- 该 candidate 只在当前 QA 容器直接浏览器中复测，未 HF 发布；真实 ASR 未配置/未验证。GIF 是两张完成状态截图的非实时拼接，不表示实时录屏或推理时长。
+
+证据入口：[direct-browser/REVIEW.md](./direct-browser/REVIEW.md)。
+

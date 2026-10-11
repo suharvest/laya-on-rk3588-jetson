@@ -58,3 +58,13 @@ ef82-completed-zh-en.gif  324c79531ad390f01888756aee950ce830fdda186629cda424da51
 - The archive config blob SHA is `d7a81c4f8ef3eaa2c21560b2d37939c6088357ec0c1d41c3089ff5fbc3836de9`; the Docker 29 loaded image ID is `sha256:8acbe96dc6548ef18eb424f405d68d812a0245e02006dbfd1f9801f600820f16`. The difference is recorded in [archive-config-vs-loaded.txt](./container-qa/archive-config-vs-loaded.txt).
 - The candidate `/app/web/app.js` SHA is `02c44a4da2b0a9e298aec9ef9154a5c5488e29875aff729fd0f26348dda0ed9e`; the helper SHA is `022e0102f9dd4c8839ba7acbc68f03d8811bf020cde84d6cf1343829cd66f919`. See [embedded-sha.txt](./container-qa/embedded-sha.txt). Startup logs are in [container.log](./container-qa/container.log).
 - This QA used existing Radxa model/tokenizer/head/runtime files as read-only mounts. It deployed only the independent QA container; it did not update the production service, publish to HF, or change source/math.
+## Direct browser re-test (18775)
+
+- This evidence comes from a fresh browser session against `http://100.77.150.16:18775/` with no Playwright route replacement. The `direct-browser/` directory contains the actual page assets, snapshots, network/request records, and completed-result screenshots.
+- Actual `app.js` SHA-256: `02c44a4da2b0a9e298aec9ef9154a5c5488e29875aff729fd0f26348dda0ed9e`; actual `index.html` SHA-256: `75f2779f55ba3b2af3030e3739986b8217af7e69c7bc691e2a4f99795e4676ff`.
+- The Kev Chinese completed decision returned HTTP 200 with actual model `kev`, backend `rkllm`, and max context `8192`; switching to EN preserved the result without increasing history. The Laya real decision returned HTTP 200 with actual model `laya`, backend `rknn`, and max context `90`.
+- The Ctrl+Enter pending guard showed `Running · 0s`; the button was disabled after the first keypress and the second keypress produced no extra request (request count `1`).
+- This candidate was tested only in the current QA container and was not published to HF. Real ASR was not configured or validated. The GIF is a non-realtime montage of two completed screenshots and does not represent live recording or inference duration.
+
+Evidence entry: [direct-browser/REVIEW.md](./direct-browser/REVIEW.md).
+
