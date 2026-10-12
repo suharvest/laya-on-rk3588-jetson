@@ -1,43 +1,58 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License: Apache-2.0"></a>
   <img src="https://img.shields.io/badge/Platform-RK3588%20%7C%20RK3576%20%7C%20Jetson%20Orin-orange.svg" alt="Platform">
-  <img src="https://img.shields.io/badge/Model-mmBERT--base%20322M-2f80ed.svg" alt="Model">
-  <img src="https://img.shields.io/badge/Precision-fp16%20%7C%20INT8%20evaluated-f97316.svg" alt="Precision">
-  <img src="https://img.shields.io/badge/Context-512%20tokens-6c757d.svg" alt="Context">
+  <img src="https://img.shields.io/badge/Model-Laya%20%7C%20Kev-2f80ed.svg" alt="Model">
+  <img src="https://img.shields.io/badge/Backend-RKNN%20%7C%20RKLLM%20%7C%20TensorRT%20historical-f97316.svg" alt="Backend">
+  <img src="https://img.shields.io/badge/Context-2K%20%7C%208K-6c757d.svg" alt="Context">
 </p>
 
-<h1 align="center">laya-on-rk3588-jetson</h1>
+<h1 align="center">Edge Command Router</h1>
+
+<p align="center"><a href="README.md">English</a> | <a href="README.zh.md">中文</a></p>
 
 <p align="center">
-  Run <a href="https://github.com/NandhaKishorM/laya">laya</a> — the open, Jev-compatible System One
-  decision model — on Rockchip NPU and NVIDIA Jetson, entirely on-device.<br>
-  <strong>RK3588 509 ms · Jetson Orin NX 18.9 ms · 16/16 decision accuracy</strong>
+  Self-hosted edge command routing with Laya and Kev — open alternatives to Jev on Rockchip NPU.<br>
+  <strong>Fixed candidate commands, local inference, measured responses</strong>
 </p>
 
-<!-- TODO: Add a demo visual — a ~15s terminal capture showing:
-     (1) python3 live_rank.py against the RK3588 .rknn, printing the 16-row ranking table
-     (2) the same command against the Jetson .engine
-     Suggested tool: asciinema + agg, or Kap for screen recording.
-     Place at media/demo.gif and reference it here. -->
+<p align="center">
+  <img src="docs/kev-final-switch-20261011.gif" alt="Edge Command Router switching between Kev and Laya" width="860">
+</p>
+
 
 ## What is this?
 
-Conversion recipes, measured latency and a reproducible acceptance protocol for
-[`convaiinnovations/laya-multilingual`](https://huggingface.co/convaiinnovations/laya-multilingual)
-(mmBERT-base, 322M parameters) on two edge NPU families: **Rockchip RK3588** (RKNN) and
-**NVIDIA Jetson Orin** (TensorRT).
+**Edge Command Router** accepts context, a natural-language instruction, and a fixed list of
+candidate commands. It returns a selected option and ranking scores; it does not execute an
+industrial command. The local application contract is [`POST /api/decide`](app/README.md).
 
-laya is a non-autoregressive System One decision model: one forward pass returns typed
-choices, scores and yes/no answers over a piece of text, in 100+ languages. It implements the
-same typed-decision request interface as TypeSafe's Jev, so it is the open path for the same
-product shape — and, like any 322M encoder, it needs to be converted and quantized before it
-will run on an NPU.
+This project sits beside three related names:
 
-This repository is what came out of doing that conversion for real: the exact graph surgery
-required, the latency each platform delivers, **which precisions do not work and why**, and a
-ranking-based acceptance test that catches accuracy collapse which aggregate metrics miss.
+- [Jev](https://typesafe.ai/jev) is TypeSafe's hosted/commercial System One service.
+- [Laya](https://github.com/NandhaKishorM/laya) is an open/self-hosted decision-model path.
+- [Kev](https://github.com/jaredpalmer/kev) is an open Jev-like model family. This repository
+  uses its pinned adapter and head through the RKLLM backend; it does not claim to implement
+  Jev's hosted API or a full `/v1/systemone` drop-in.
 
-## Performance
+The older sections below preserve the Laya conversion, measurement, and acceptance record.
+Attribution and pinned artifact revisions are recorded in [`NOTICE`](NOTICE).
+
+## Current Edge Command Router support
+
+| Backend | Target | Runtime input cap | Status |
+|---|---|---:|---|
+| Laya RKNN | RK3576 | 90 tokens | Real choice path validated |
+| Kev RKLLM | RK3576 | 2,048 tokens | Real path and context guard validated |
+| Kev RKLLM | RK3588 | 8,192 tokens | Stock deployment verified |
+| TensorRT / Laya artifacts | Jetson Orin | Historical seq=512 records | Development target; no current Workbench hardware acceptance |
+
+The one-click deployment entry is the [SenseCraft Edge Command Workbench solution](https://github.com/suharvest/sensecraft-solutions/tree/main/solutions/edge_command_workbench).
+The paired context-500 evaluation selected the exact expected option ID in **189/240 requests
+(78.75%) on each RK3576 and RK3588 run**. It uses neutral synthetic background text to reach
+exactly 500 assembled tokens; this is a length-extension evaluation, not a claim about
+accuracy on naturally complex long tasks. See [`experiments/jev-20261011/context500/README.md`](experiments/jev-20261011/context500/README.md).
+
+## Historical Laya conversion performance
 
 Fixed buckets, `seq = 512`. `top1` is the argmax over the model's live candidate classes on 16
 held-out samples; `order_exact` is the full ranking of those classes. Reference is ONNX Runtime
@@ -68,12 +83,27 @@ RK3588 p50 is only reproducible with the CPU governor pinned to `performance` �
 - **Negative results with mechanisms**: six quantization attempts across three platforms, each
   failing for a different, identified reason. The ceiling is the quantization scheme, not the
   silicon.
-- **The model's own limits**, measured separately from the deployment: 8k context does not work,
+- **The historical Laya model's own limits**, measured separately from the deployment: 8k context does not work,
   and it does not work in fp32 either.
 - **A ranking-based acceptance protocol** that would have caught two failures that `rel_l2`
   and layer tables both reported as passing.
 
-## Quick start
+## Edge Command Router local preview / development
+
+This command starts the local FastAPI service and UI with the default unavailable backend.
+It is for interface and API development; it does not load a model or perform inference.
+
+~~~bash
+cd app
+uv sync --extra test
+uv run edge-workbench --host 127.0.0.1 --port 8000
+~~~
+
+For a ready model-backed deployment, use the [SenseCraft Edge Command Workbench solution](https://github.com/suharvest/sensecraft-solutions/tree/main/solutions/edge_command_workbench)
+and its target-specific deployment inputs. The [service contract and runtime notes](app/README.md)
+describe the operator-supplied model, tokenizer, head, and runtime artifacts.
+
+## Historical conversion acceptance quick start
 
 Run the acceptance test against a converted artifact. This is the check every number in this
 repository was gated on, and it is the check to run against us.

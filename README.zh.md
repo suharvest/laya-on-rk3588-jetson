@@ -1,4 +1,40 @@
-# laya 在 Rockchip NPU 与 Jetson 上的部署评测
+# Edge Command Router
+
+[English](README.md) | 中文
+
+**基于 Laya 与 Kev 的边缘命令路由，面向自部署 Jev 替代方案。** Edge Command Router
+接收上下文、自然语言指令和固定候选命令，返回一个候选项及排序分数；服务只做决策，不执行工业命令。
+本地应用接口是 POST /api/decide。
+
+<p align="center">
+  <img src="docs/kev-final-switch-20261011.gif" alt="Edge Command Router 在 Kev 与 Laya 之间切换" width="860">
+</p>
+
+相关项目的关系如下：
+
+- [Jev](https://typesafe.ai/jev) 是 TypeSafe 提供的托管/商业 System One 服务。
+- [Laya](https://github.com/NandhaKishorM/laya) 是开放、自托管的决策模型路径。
+- [Kev](https://github.com/jaredpalmer/kev) 是开放的 Jev-like 模型家族。本项目通过 RKLLM 后端使用固定版本的 Kev adapter/head，不宣称实现 Jev 托管 API 或完整 `/v1/systemone` drop-in。
+
+当前支持矩阵：
+
+| 后端 | 目标设备 | 运行时输入上限 | 状态 |
+|---|---|---:|---|
+| Laya RKNN | RK3576 | 90 tokens | 已验证真实选择路径 |
+| Kev RKLLM | RK3576 | 2,048 tokens | 已验证真实路径与上下文 guard |
+| Kev RKLLM | RK3588 | 8,192 tokens | 已验证 stock 部署 |
+| TensorRT / Laya artifact | Jetson Orin | 历史 seq=512 记录 | 开发目标；当前 Workbench 未做硬件验收 |
+
+一键部署入口是 [SenseCraft Edge Command Workbench 方案](https://github.com/suharvest/sensecraft-solutions/tree/main/solutions/edge_command_workbench)。
+context-500 配对评测在 RK3576 和 RK3588 各自 **240 次请求中正确选择 189 次（78.75%）**，
+指标是 `selected_option_id` 精确匹配。测试通过中性合成背景把完整输入扩展到恰好 500 tokens，
+用于长度扩展评测，不代表自然复杂长任务的准确率。详见
+[`experiments/jev-20261011/context500/README.zh.md`](experiments/jev-20261011/context500/README.zh.md)，英文报告见 [`README.md`](experiments/jev-20261011/context500/README.md)。
+
+来源与固定 artifact 版本见 [`NOTICE`](NOTICE)。
+
+## 历史 Laya 转换与评测
+
 
 对 TypeSafe Jev 的开源替代 [`laya`](https://github.com/NandhaKishorM/laya)（`convaiinnovations/laya-multilingual`，
 mmBERT-base 322M 双向编码器决策模型）在三类边缘设备上的移植、精度与性能评测。
@@ -14,6 +50,7 @@ mmBERT-base 322M 双向编码器决策模型）在三类边缘设备上的移植
 关键原始输出见 [`evidence/`](evidence/)。
 
 ---
+
 
 ## 1. 背景约束
 
