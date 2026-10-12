@@ -1,4 +1,4 @@
-# Edge Workbench service
+# Edge Command Router service
 
 This directory contains the local FastAPI service used by the command selection workbench. It serves `/api/health`, `/api/health/remote`, `/api/decide`, and the same origin WebSocket voice relay at `/api/voice/stream`.
 
@@ -9,7 +9,7 @@ uv sync --extra test
 uv run edge-workbench --host 127.0.0.1 --port 8000
 ```
 
-The default is `DECISION_BACKEND=unavailable`. In that state the UI and health endpoint stay available, while `/api/decide` returns HTTP 503 with `model_unavailable`; the service never produces heuristic or mock decisions. Settings are read from `DECISION_BACKEND` (`unavailable`, `rknn`, `tensorrt`, `http`), `MODEL_PATH`, `TOKENIZER_PATH`, `SEQ_LEN` (90 or 512), `MAX_OPTIONS`, `DECISION_SERVICE_URL`, and `VOICE_SERVICE_URL`. Tokenizers and model files are local only. No startup path downloads weights.
+The default is `DECISION_BACKEND=unavailable`. In that state the UI and health endpoint stay available, while `/api/decide` returns HTTP 503 with `model_unavailable`; the service never produces heuristic or mock decisions. Settings are read from `DECISION_BACKEND` (`unavailable`, `rknn`, `rkllm`, `tensorrt`, `http`), `MODEL_PATH`, `TOKENIZER_PATH`, `SEQ_LEN` (backend/artifact-dependent; RK3576 Kev guard 2048, RK3588 Kev 8192), `MAX_OPTIONS`, `DECISION_SERVICE_URL`, and `VOICE_SERVICE_URL`. Tokenizers and model files are local only. No startup path downloads weights.
 
 For a remote decision service, set `DECISION_BACKEND=http` and `DECISION_SERVICE_URL=http://device:port`, or pass `model_service_url` per request. The proxy strips that field before forwarding, validates option IDs and finite ranking scores, and measures its own elapsed time. An HTTP backend delegates token-budget validation to the target service instead of applying a local tokenizer limit first. Remote URLs may use only `http` or `https` and cannot contain credentials or fragments.
 
@@ -39,11 +39,16 @@ sequence returns HTTP 422 with `input_too_long`.
 
 ## Command Selection Workbench / 命令选择工作台
 
+The public project name is **Edge Command Router**. It exposes the local /api/decide
+contract for a fixed candidate list. Laya is the open/self-hosted path, Kev is the pinned
+Jev-like model family used by the RKLLM backend, and Jev is the related TypeSafe hosted service;
+these names refer to related model/service paths, not interchangeable backends.
+
 The Workbench is a small-device, single-decision application. It accepts a text instruction or a Local Voice transcript, selects one candidate from the submitted options, and uses limited edge compute to shorten the response path. The UI follows the lightweight static-page strategy (design strategy C). It selects an option only; it does not execute an on-site command. User configuration and history remain in the browser's local storage.
 
 命令选择工作台面向小设备完成单次选择：输入文字或 Local Voice 转写，模型从候选项中选择一个，用有限算力缩短现场指令的响应路径。界面采用策略 C 的轻量静态页面。服务只返回选择结果，不执行现场命令；用户配置和历史记录保存在浏览器本地。
 
-The model service can be replaced by the local HTTP, RKNN, or TensorRT backend. The default is a real `unavailable` state: health remains readable, while a decision returns `503 model_unavailable`; the UI never substitutes a heuristic or mock result. From this directory, create a vendor-aware environment and start the service with:
+The model service can be replaced by the local HTTP, RKNN, RKLLM, or TensorRT backend. The default is a real `unavailable` state: health remains readable, while a decision returns `503 model_unavailable`; the UI never substitutes a heuristic or mock result. From this directory, create a vendor-aware environment and start the service with:
 
 ```sh
 uv venv --system-site-packages
@@ -53,9 +58,16 @@ uv run edge-workbench --host 127.0.0.1 --port 8000
 
 The static production UI is `app/web/`; the earlier browser prototype is `app/prototype/`. `--host` and `--port` are passed to `uv run edge-workbench`, and the service serves `web/` at `/` when that directory is present. Reported timings are the returned measured milliseconds and are not probabilities.
 
-Environment settings are `MODEL_PATH`, `TOKENIZER_PATH`, `MODEL_METADATA_PATH`, `SEQ_LEN` (the model sequence length), `MAX_OPTIONS` (16 by default and capped at 16), `RKNN_CORE` (`auto` by default), `VOICE_SERVICE_URL`, and `DECISION_SERVICE_URL`. `DECISION_BACKEND` selects `unavailable`, `rknn`, `tensorrt`, or `http`. Model and tokenizer directories are supplied by the operator; startup does not download weights.
+Environment settings are `MODEL_PATH`, `TOKENIZER_PATH`, `MODEL_METADATA_PATH`, `SEQ_LEN` (the model sequence length), `MAX_OPTIONS` (16 by default and capped at 16), `RKNN_CORE` (`auto` by default), `VOICE_SERVICE_URL`, and `DECISION_SERVICE_URL`. `DECISION_BACKEND` selects `unavailable`, `rknn`, `rkllm`, `tensorrt`, or `http`. Model and tokenizer directories are supplied by the operator; startup does not download weights.
 
-The RK3576 `seq=90` artifact is a choice-only offline artifact for up to 16 options. Its `acthead` output is not used and a NaN acthead does not grant execution permission. The RK3588 `seq=512` and Jetson Orin `seq=512` acceptance records are separate historical artifact checks. Their historical speed figures must not be read as a new Workbench benchmark. The RK3576 ARM64 image and model were exercised on the validated cat board with the real RKNN runtime; the Chinese default scenario completed a real decision request. RK3588 and Jetson remain historical targets outside this Workbench validation.
+The RK3576 seq=90 artifact is a choice-only offline artifact for up to 16 options. Its
+acthead output is not used and a NaN acthead does not grant execution permission. The RK3588
+seq=512 and Jetson Orin seq=512 records are historical Laya artifact checks; their speed
+figures are not Kev benchmarks. The RK3576 ARM64 image and model were exercised on the validated
+cat board with the real RKNN runtime, and the Chinese default scenario completed a real decision
+request. The current Kev RKLLM release separately verifies a stock RK3588 deployment with an
+8192-token context cap. Jetson remains a development and historical target without current
+Workbench hardware acceptance.
 
 ### Remote API compatibility / Remote API 兼容协议
 
@@ -124,6 +136,14 @@ The 0.1.1 development candidate was opened from Spark at `:18868` with `DECISION
 
 The RKNN Dockerfile remains the shared Rockchip image path. Its healthcheck now requires `status=ok` and `model_ready=true`, then compares the reported backend and shapes with `EXPECTED_BACKEND`, `EXPECTED_SEQ_LEN`, and `EXPECTED_MAX_OPTIONS` when supplied. This keeps RK3576 `seq=90` and a separately supplied RK3588 model configurable without embedding one target in the checker.
 
+
+## SenseCraft deployment entry
+
+The [SenseCraft Edge Command Workbench solution](https://github.com/suharvest/sensecraft-solutions/tree/main/solutions/edge_command_workbench)
+is the one-click deployment entry. The checked-in [RKLLM compose file](docker/docker-compose.rkllm.yml)
+defines the image, health check, port, context cap, and read-only runtime/model mounts. Operators
+supply the SHA-verified model, tokenizer, head, and runtime directories described below; historical
+Laya/TensorRT figures are separate measurements.
 
 ## RKLLM Kev ARM64 container
 
