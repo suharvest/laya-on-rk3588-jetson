@@ -1,0 +1,6 @@
+Request fixture SHA256: c23549c523089e4c44738d4dffd59deedb9abf6951db7c229abcb497abca7255
+The fixture was counted by the deployed container's own KevCodec, using /models/tokenizer/tokenizer.json, seq_len=8192, max_options=16. The exact preflight command raised:
+  NativeError: input_too_long: assembled input has 40025 tokens; maximum is 8192
+No NPU inference was entered.
+The same request to POST /api/decide returned HTTP 422:
+  {"detail":{"code":"input_too_long","message":"assembled input has 40025 tokens; maximum is 8192","max_tokens":8192,"actual_tokens":40025}}

@@ -324,7 +324,7 @@ gemm 也没掉出 int8（48 个变成带残差 Add 的 int8 融合核），**唯
 
 `app/` 包含 RK3576 RKNN `seq=90` 和 Kev RKLLM 命令选择服务及静态界面。一次独立的 cat-remote 8K 尝试实际达到 7819 tokens 后触发全局 OOM；后续 RK3576 Kev 2K 部署 guard 对实际 2088 tokens 的超限请求在 NPU 前返回 HTTP 422。RK3588 Kev RKLLM 8K 已在 stock Radxa 部署上验证。Jetson 的 native Kev 路径仍是历史路径，尚未完成真机验证。ARM64 镜像、模型、tokenizer 与元数据发布在 `harvestsu/laya-multilingual-rknn-tensorrt` Hugging Face 仓库的记录路径中。
 
-界面支持中文和英文。只有未编辑的内置场景会在语言切换时本地化；用户编辑过的提示词、候选字段、输入、历史记录和设备配置保持原样。远端 API、RKNN 挂载、health 条件与验证记录见 [`app/README.md`](app/README.md)。设备实测记录见 [`docs/rk3576-cat-validation-20261009.md`](docs/rk3576-cat-validation-20261009.md)，转换约束见 [`docs/rk3576-conversion-20261009.md`](docs/rk3576-conversion-20261009.md)。当前发布证据见 [`RK3576 第二轮验证`](docs/interaction-review-ef82-20261011/rk3576-final-release/second-validation/) 和 [`RK3588 stock 发布`](docs/interaction-review-ef82-20261011/rk3588-final-release/)。
+界面支持中文和英文。只有未编辑的内置场景会在语言切换时本地化；用户编辑过的提示词、候选字段、输入、历史记录和设备配置保持原样。远端 API、RKNN 挂载、health 条件与验证记录见 [`app/README.md`](app/README.md)。设备实测记录见 [`docs/rk3576-cat-validation-20261009.md`](docs/rk3576-cat-validation-20261009.md)，转换约束见 [`docs/rk3576-conversion-20261009.md`](docs/rk3576-conversion-20261009.md)。当前发布证据见 [`RK3576 第二轮验证`](docs/interaction-review-ef82-20261011/rk3576-final-release/second-validation/) 和 [`RK3588 stock 发布`](docs/interaction-review-ef82-20261011/rk3588-final-release/)。2026-10-15 real-engine RK3588 部署报告见 [`docs/engine-deployment-rk3588-20261015/`](docs/engine-deployment-rk3588-20261015/)。
 
 ## Kev 500-token 上下文基准
 

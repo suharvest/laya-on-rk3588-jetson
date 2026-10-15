@@ -140,7 +140,7 @@ The RKNN Dockerfile remains the shared Rockchip image path. Its healthcheck now 
 ## SenseCraft deployment entry
 
 The [SenseCraft Edge Command Router solution](https://github.com/suharvest/sensecraft-solutions/tree/main/solutions/edge_command_workbench)
-is the one-click deployment entry. The checked-in [RKLLM compose file](docker/docker-compose.rkllm.yml)
+is the one-click deployment entry. The 2026-10-15 RK3588 real-engine deployment report is in [`../docs/engine-deployment-rk3588-20261015/`](../docs/engine-deployment-rk3588-20261015/). The checked-in [RKLLM compose file](docker/docker-compose.rkllm.yml)
 defines the image, health check, port, context cap, and read-only runtime/model mounts. Operators
 supply the SHA-verified model, tokenizer, head, and runtime directories described below; historical
 Laya/TensorRT figures are separate measurements.
