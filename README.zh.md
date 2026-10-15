@@ -25,7 +25,7 @@
 | Kev RKLLM | RK3588 | 8,192 tokens | 已验证 stock 部署 |
 | TensorRT / Laya artifact | Jetson Orin | 历史 seq=512 记录 | 开发目标；当前 Workbench 未做硬件验收 |
 
-一键部署入口是 [SenseCraft Edge Command Workbench 方案](https://github.com/suharvest/sensecraft-solutions/tree/main/solutions/edge_command_workbench)。
+一键部署入口是 [SenseCraft Edge Command Router 方案](https://github.com/suharvest/sensecraft-solutions/tree/main/solutions/edge_command_workbench)。
 context-500 配对评测在 RK3576 和 RK3588 各自 **240 次请求中正确选择 189 次（78.75%）**，
 指标是 `selected_option_id` 精确匹配。测试通过中性合成背景把完整输入扩展到恰好 500 tokens，
 用于长度扩展评测，不代表自然复杂长任务的准确率。详见
