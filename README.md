@@ -46,7 +46,7 @@ Attribution and pinned artifact revisions are recorded in [`NOTICE`](NOTICE).
 | Kev RKLLM | RK3588 | 8,192 tokens | Stock deployment verified |
 | TensorRT / Laya artifacts | Jetson Orin | Historical seq=512 records | Development target; no current Workbench hardware acceptance |
 
-The one-click deployment entry is the [SenseCraft Edge Command Workbench solution](https://github.com/suharvest/sensecraft-solutions/tree/main/solutions/edge_command_workbench).
+The one-click deployment entry is the [SenseCraft Edge Command Router solution](https://github.com/suharvest/sensecraft-solutions/tree/main/solutions/edge_command_workbench).
 The paired context-500 evaluation selected the exact expected option ID in **189/240 requests
 (78.75%) on each RK3576 and RK3588 run**. It uses neutral synthetic background text to reach
 exactly 500 assembled tokens; this is a length-extension evaluation, not a claim about
@@ -99,7 +99,7 @@ uv sync --extra test
 uv run edge-workbench --host 127.0.0.1 --port 8000
 ~~~
 
-For a ready model-backed deployment, use the [SenseCraft Edge Command Workbench solution](https://github.com/suharvest/sensecraft-solutions/tree/main/solutions/edge_command_workbench)
+For a ready model-backed deployment, use the [SenseCraft Edge Command Router solution](https://github.com/suharvest/sensecraft-solutions/tree/main/solutions/edge_command_workbench)
 and its target-specific deployment inputs. The [service contract and runtime notes](app/README.md)
 describe the operator-supplied model, tokenizer, head, and runtime artifacts.
 
