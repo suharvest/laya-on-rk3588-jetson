@@ -1,0 +1,19 @@
+{
+  "solution_id": "edge_command_workbench",
+  "preset_id": "rk3588_rkllm_remote",
+  "selected_devices": [
+    "deploy_rk3588_rkllm"
+  ],
+  "device_connections": {
+    "deploy_rk3588_rkllm": {
+      "port": 22,
+      "username": "radxa",
+      "target": "rk3588_rkllm",
+      "target_type": "remote",
+      "auto_replace_containers": true,
+      "model_services_json": "{\"laya\":{\"name\":\"Laya\",\"url\":\"http://<LOCALHOST>:18771\"}}",
+      "voice_service_url": ""
+    }
+  },
+  "language": "en"
+}
